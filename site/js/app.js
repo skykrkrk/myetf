@@ -69,8 +69,10 @@ function renderTable() {
     return (b.annual_yield || 0) - (a.annual_yield || 0);
   });
   $("resultCount").textContent = `${number(visibleFunds.length)}개 종목`;
-  $("emptyData").hidden = funds.length > 0;
-  const tbody = $("etfTable");
+  const emptyData = $("emptyData");
+  if (emptyData) emptyData.hidden = funds.length > 0;
+  const tbody = getTableBody();
+  if (!tbody) throw new Error("ETF 목록 표를 찾을 수 없습니다. 페이지를 새로고침해 주세요.");
   if (!visibleFunds.length) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
     return;
@@ -94,6 +96,15 @@ function renderTable() {
       if (event.key === "Enter" || event.key === " ") { event.preventDefault(); showDetails(row.dataset.symbol); }
     });
   });
+}
+
+function getTableBody() {
+  const byId = $("etfTable");
+  if (byId) return byId;
+  const table = document.querySelector("#tbl");
+  if (!table) return document.querySelector("table tbody");
+  if (table.tagName.toLowerCase() === "tbody") return table;
+  return table.tBodies[0] || table.createTBody();
 }
 
 function showDetails(symbol) {
@@ -157,8 +168,18 @@ async function loadData() {
     calculate();
   } catch (error) {
     console.error(error);
-    $("updatedAt").textContent = "데이터를 불러오지 못했습니다";
-    $("etfTable").innerHTML = '<tr><td colspan="6" class="empty">ETF 데이터 파일을 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.</td></tr>';
+    const updatedAt = $("updatedAt");
+    if (updatedAt) updatedAt.textContent = "데이터를 불러오지 못했습니다";
+    const tbody = getTableBody();
+    if (tbody) {
+      tbody.innerHTML = `<tr><td colspan="6" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
+    } else {
+      const main = document.querySelector("main") || document.body;
+      const message = document.createElement("p");
+      message.className = "empty";
+      message.textContent = `데이터를 표시하지 못했습니다: ${error.message}`;
+      main.prepend(message);
+    }
   }
 }
 
