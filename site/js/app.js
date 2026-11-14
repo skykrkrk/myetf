@@ -176,8 +176,8 @@ async function loadData() {
     funds = Array.isArray(data.funds) ? data.funds : [];
     $("updatedAt").textContent = data.updated_at ? `마지막 업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
     $("priceDate").textContent = data.price_date || "—";
-    if (data.source?.listing || data.source?.dividend) {
-      $("dataSource").textContent = `자료: ${[data.source.listing, data.source.dividend].filter(Boolean).join(" · ")}`;
+    if (data.source?.listing || data.source?.dividend || data.source?.distribution_details) {
+      $("dataSource").textContent = `자료: ${[data.source.listing, data.source.dividend, data.source.distribution_details].filter(Boolean).join(" · ")}`;
     }
     renderStats();
     renderSelect();

@@ -1,15 +1,19 @@
 
 import json
 import logging
+import re
 import time
 
+from io import BytesIO
 from pathlib import Path
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from html.parser import HTMLParser
 
 import pandas as pd
 import FinanceDataReader as fdr
+import requests
 import yfinance as yf
 
 
@@ -26,6 +30,7 @@ TODAY = NOW.date()
 
 MAX_WORKERS = 4
 RETRY_COUNT = 3
+SOURCE_TIMEOUT = 20
 
 logging.basicConfig(
     level=logging.INFO,
@@ -152,6 +157,178 @@ def fetch_etf_listing():
 # 분배금 수집
 # =====================================
 
+class SamsungProductLinkParser(HTMLParser):
+    """공식 KODEX 검색 결과에서 종목코드가 일치하는 상품 ID를 찾습니다."""
+
+    def __init__(self, symbol):
+        super().__init__()
+        self.symbol = symbol
+        self.current_product_id = None
+        self.current_text = []
+        self.product_id = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "a":
+            return
+        href = dict(attrs).get("href", "")
+        match = re.search(r"/etf/product/view\.do\?id=([A-Za-z0-9]+)", href)
+        if match:
+            self.current_product_id = match.group(1)
+            self.current_text = []
+
+    def handle_data(self, data):
+        if self.current_product_id:
+            self.current_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() != "a" or not self.current_product_id:
+            return
+        text = "".join(self.current_text)
+        if self.symbol in text:
+            self.product_id = self.current_product_id
+        self.current_product_id = None
+        self.current_text = []
+
+
+def parse_official_date(value):
+    if value is None or pd.isna(value):
+        return None
+    if isinstance(value, (datetime, pd.Timestamp)):
+        return pd.Timestamp(value).strftime("%Y-%m-%d")
+
+    text = str(value).strip()
+    match = re.search(r"(\d{2,4})[.年/-]\s*(\d{1,2})[.월/-]\s*(\d{1,2})", text)
+    if not match:
+        return None
+    year, month, day = map(int, match.groups())
+    if year < 100:
+        year += 2000
+    try:
+        return datetime(year, month, day).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def parse_official_amount(value):
+    if value is None or pd.isna(value):
+        return None
+    text = str(value).strip().replace(",", "").replace("원", "")
+    if text in {"", "-", "–", "—"}:
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def fetch_kodex_distribution_records(symbol):
+    """KODEX 공식 상품 이력 파일에서 기준일·실지급일·과세표준을 읽습니다."""
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (compatible; MonthlyDividendTracker/1.0)",
+        "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8"
+    })
+
+    search_url = "https://www.samsungfund.com/etf/search.do"
+    response = session.get(
+        search_url,
+        params={"searchText": symbol},
+        timeout=SOURCE_TIMEOUT
+    )
+    response.raise_for_status()
+
+    parser = SamsungProductLinkParser(symbol)
+    parser.feed(response.text)
+    if not parser.product_id:
+        logging.info("KODEX 공식 상품 검색 결과 없음: %s", symbol)
+        return []
+
+    file_response = session.get(
+        "https://www.samsungfund.com/excel-divid-list.do",
+        params={"id": parser.product_id},
+        timeout=SOURCE_TIMEOUT
+    )
+    file_response.raise_for_status()
+
+    raw = pd.read_excel(BytesIO(file_response.content), header=None, engine="openpyxl")
+    header_row = None
+    for row_index in range(min(len(raw), 12)):
+        labels = [str(value).replace(" ", "") for value in raw.iloc[row_index].tolist() if not pd.isna(value)]
+        if any("지급기준일" in label for label in labels) and any("분배금액" in label for label in labels):
+            header_row = row_index
+            break
+    if header_row is None:
+        raise ValueError(f"KODEX 분배 이력 파일의 표 머리글을 찾지 못했습니다: {symbol}")
+
+    headers = ["" if pd.isna(value) else str(value).replace(" ", "") for value in raw.iloc[header_row].tolist()]
+
+    def find_column(*needles):
+        for index, label in enumerate(headers):
+            if any(needle in label for needle in needles):
+                return index
+        return None
+
+    record_col = find_column("지급기준일")
+    payment_col = find_column("실지급일", "지급일")
+    amount_col = find_column("분배금액")
+    tax_col = find_column("과세표준액", "과세표준")
+    if record_col is None or amount_col is None:
+        raise ValueError(f"KODEX 분배 이력 파일에 필수 열이 없습니다: {symbol}")
+
+    records = []
+    for values in raw.iloc[header_row + 1:].itertuples(index=False, name=None):
+        record_date = parse_official_date(values[record_col] if record_col < len(values) else None)
+        amount = parse_official_amount(values[amount_col] if amount_col < len(values) else None)
+        if not record_date or amount is None:
+            continue
+        records.append({
+            "record_date": record_date,
+            "payment_date": parse_official_date(values[payment_col]) if payment_col is not None and payment_col < len(values) else None,
+            "amount": amount,
+            "tax_base": parse_official_amount(values[tax_col]) if tax_col is not None and tax_col < len(values) else None,
+            "source": "삼성자산운용 KODEX 공식 분배금 현황"
+        })
+    return records
+
+
+def enrich_kodex_events(symbol, events):
+    try:
+        records = fetch_kodex_distribution_records(symbol)
+    except Exception as exc:
+        logging.warning("KODEX 공식 분배 자료 조회 실패 %s: %s", symbol, exc)
+        return 0
+
+    unused_events = set(range(len(events)))
+    enriched = 0
+    for record in records:
+        record_day = datetime.strptime(record["record_date"], "%Y-%m-%d").date()
+        candidates = []
+        for index in unused_events:
+            event = events[index]
+            try:
+                ex_day = datetime.strptime(event["ex_date"], "%Y-%m-%d").date()
+            except (KeyError, TypeError, ValueError):
+                continue
+            distance = abs((record_day - ex_day).days)
+            if distance <= 7:
+                amount_distance = abs(float(event.get("amount", 0)) - record["amount"])
+                candidates.append((amount_distance, distance, index))
+
+        if not candidates:
+            continue
+
+        _, _, index = min(candidates)
+        events[index].update({
+            "record_date": record["record_date"],
+            "payment_date": record["payment_date"],
+            "tax_base": record["tax_base"],
+            "official_source": record["source"]
+        })
+        unused_events.remove(index)
+        enriched += 1
+
+    return enriched
+
 def fetch_dividends(symbol):
     """
     Yahoo Finance의 국내 ETF 분배금 이력 조회.
@@ -274,6 +451,10 @@ def process_fund(row):
         and dividend_months >= 8
     )
 
+    official_event_count = 0
+    if is_monthly and name.upper().startswith("KODEX "):
+        official_event_count = enrich_kodex_events(symbol, events)
+
     annual_yield = None
 
     if price > 0 and dividend_status == "available":
@@ -312,6 +493,8 @@ def process_fund(row):
         "event_count_12m": len(recent_events),
 
         "dividend_months_12m": dividend_months,
+
+        "official_distribution_event_count": official_event_count,
 
         "events": events
     }
@@ -422,7 +605,8 @@ def main():
         "source": {
             "listing": "FinanceDataReader / Naver Finance",
             "price": "Naver Finance ETF listing",
-            "dividend": "Yahoo Finance"
+            "dividend": "Yahoo Finance",
+            "distribution_details": "Samsung Asset Management KODEX distribution history (KODEX monthly ETFs only)"
         },
 
         "total_count": len(results),
