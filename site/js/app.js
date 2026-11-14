@@ -14,6 +14,10 @@ function latestEvent(fund) {
   return [...(fund.events || [])].sort((a, b) => String(b.ex_date).localeCompare(String(a.ex_date)))[0];
 }
 
+function getTaxBase(event) {
+  return event?.tax_base ?? event?.tax_base_amount ?? event?.taxable_amount ?? event?.taxable_base ?? null;
+}
+
 function getTiming(fund) {
   const day = Number(latestEvent(fund)?.ex_date?.slice(-2));
   if (!day) return "unknown";
@@ -74,20 +78,27 @@ function renderTable() {
   const tbody = getTableBody();
   if (!tbody) throw new Error("ETF 목록 표를 찾을 수 없습니다. 페이지를 새로고침해 주세요.");
   if (!visibleFunds.length) {
-    tbody.innerHTML = `<tr><td colspan="6" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="10" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
     return;
   }
   tbody.innerHTML = visibleFunds.map((fund) => {
     const latest = latestEvent(fund);
-    const day = Number(latest?.ex_date?.slice(-2));
-    const dateLabel = latest ? `${latest.ex_date} · ${day <= 20 ? "월중" : "월말"}` : "기록 없음";
+    const timing = getTiming(fund);
+    const taxable = getTaxBase(latest);
+    const taxableRate = taxable != null && Number(latest?.amount) > 0
+      ? (Number(taxable) / Number(latest.amount) * 100).toFixed(1)
+      : null;
     return `<tr class="fund-row" data-symbol="${safe(fund.symbol)}" tabindex="0" aria-label="${safe(fund.name)} 상세 보기">
       <td><span class="fund-name">${safe(fund.name)}</span><span class="fund-code">${safe(fund.symbol)}</span></td>
-      <td><span class="timing-badge">${safe(dateLabel)}</span></td>
       <td>${latest ? money(latest.amount) : "—"}</td>
+      <td>${taxable == null ? "자료 없음" : money(taxable)}</td>
+      <td>${taxableRate == null ? "—" : `${taxableRate}%`}</td>
       <td>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</td>
       <td class="yield-value">${fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`}</td>
-      <td><span class="type-badge">${safe(getCategory(fund))}</span></td>
+      <td>${safe(latest?.ex_date || "자료 없음")}</td>
+      <td>${safe(latest?.record_date || "자료 없음")}</td>
+      <td>${safe(latest?.payment_date || "자료 없음")}</td>
+      <td><span class="timing-badge ${timing}">${timing === "mid" ? "월중" : timing === "end" ? "월말" : "시점 미확인"}</span><span class="type-badge">${safe(getCategory(fund))}</span></td>
     </tr>`;
   }).join("");
   tbody.querySelectorAll(".fund-row").forEach((row) => {
@@ -120,7 +131,7 @@ function showDetails(symbol) {
       <div class="detail-metric"><span>분배 월 수</span><strong>${number(fund.dividend_months_12m || 0)}개월</strong></div>
     </div>
     <h3 class="history-title">최근 분배 내역</h3>
-    <div class="history-list">${events.length ? events.slice(0, 18).map((event) => `<div class="history-item"><span>${safe(event.ex_date)}</span><span>${money(event.amount)}</span></div>`).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
+    <div class="history-list">${events.length ? events.slice(0, 18).map((event) => `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락</small></span><span>${safe(event.record_date || "자료 없음")}<small>기준일</small></span><span>${safe(event.payment_date || "자료 없음")}<small>지급일</small></span><span>${money(event.amount)}<small>분배금</small></span></div>`).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
 
@@ -140,8 +151,14 @@ function calculate() {
 }
 
 function downloadCSV() {
-  const headers = ["종목코드", "종목명", "가격(원)", "최근 분배금(원)", "최근 12개월 분배금(원)", "연 분배율(%)", "분류", "최근 분배일"];
-  const rows = visibleFunds.map((fund) => [fund.symbol, fund.name, fund.price, latestEvent(fund)?.amount ?? "", fund.dividend_12m ?? "", fund.annual_yield ?? "", getCategory(fund), latestEvent(fund)?.ex_date ?? ""]);
+  const headers = ["종목코드", "종목명", "가격(원)", "최근 분배금(원)", "과표(원)", "과표율(%)", "최근 12개월 분배금(원)", "연 분배율(%)", "배당락일", "배당기준일", "배당지급일", "유형"];
+  const rows = visibleFunds.map((fund) => {
+    const event = latestEvent(fund);
+    const taxBase = getTaxBase(event) ?? "";
+    const taxRate = taxBase !== "" && Number(event?.amount) > 0 ? (Number(taxBase) / Number(event.amount) * 100).toFixed(1) : "";
+    const timing = getTiming(fund);
+    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, fund.dividend_12m ?? "", fund.annual_yield ?? "", event?.ex_date ?? "", event?.record_date ?? "", event?.payment_date ?? "", `${timing === "mid" ? "월중" : timing === "end" ? "월말" : "미확인"} · ${getCategory(fund)}`];
+  });
   const csv = "\uFEFF" + [headers, ...rows].map((row) => row.map((value) => `"${String(value ?? "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
   const link = document.createElement("a");
@@ -172,7 +189,7 @@ async function loadData() {
     if (updatedAt) updatedAt.textContent = "데이터를 불러오지 못했습니다";
     const tbody = getTableBody();
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="6" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="10" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
     } else {
       const main = document.querySelector("main") || document.body;
       const message = document.createElement("p");
