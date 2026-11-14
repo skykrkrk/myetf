@@ -9,9 +9,9 @@
     "distribution_details": "ETF CHECK monthly taxable base; KODEX official distribution history as fallback"
   },
   "total_count": 1188,
-  "monthly_count": 167,
+  "monthly_count": 168,
   "dividend_available_count": 965,
-  "classification_rule": "최근 12개월 동안 분배 이력이 있는 월이 8개월 이상인 ETF",
+  "classification_rule": "최근 12개월 분배월이 8개월 이상이거나, 상장 1년 미만이며 최근 3개 분배월 간격이 월 단위인 ETF",
   "funds": [
     {
       "symbol": "451060",
@@ -15910,7 +15910,7 @@
       "dividend_12m": 631.0,
       "annual_yield": 10.2602,
       "monthly_dividend_avg": 52.5833,
-      "is_monthly": false,
+      "is_monthly": true,
       "category": "커버드콜",
       "dividend_status": "available",
       "event_count_12m": 4,

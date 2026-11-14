@@ -353,6 +353,34 @@ def normalize_tax_symbol(value):
     return ""
 
 
+def has_new_monthly_distribution_pattern(events, today):
+    """1년 미만 이력에서도 최근 3개 분배월이 월 간격이면 월분배로 판정합니다."""
+    dated_events = []
+    for event in events:
+        try:
+            event_day = datetime.strptime(event["ex_date"], "%Y-%m-%d").date()
+        except (KeyError, TypeError, ValueError):
+            continue
+        if event_day <= today:
+            dated_events.append(event_day)
+
+    if not dated_events:
+        return False
+    first_event = min(dated_events)
+    if (today - first_event).days >= 365:
+        return False
+
+    month_dates = {}
+    for event_day in sorted(dated_events):
+        month_dates[event_day.strftime("%Y-%m")] = event_day
+    recent_months = sorted(month_dates.values())[-3:]
+    if len(recent_months) < 3:
+        return False
+
+    gaps = [(recent_months[index] - recent_months[index - 1]).days for index in range(1, 3)]
+    return all(24 <= gap <= 40 for gap in gaps)
+
+
 def fetch_etfcheck_tax_records():
     """ETF CHECK 과표 JSON에서 종목별 월 분배금·과표 자료를 가져옵니다."""
     session = requests.Session()
@@ -529,7 +557,10 @@ def process_fund(row, tax_records):
 
     is_monthly = (
         dividend_status == "available"
-        and dividend_months >= 8
+        and (
+            dividend_months >= 8
+            or has_new_monthly_distribution_pattern(events, TODAY)
+        )
     )
 
     tax_event_count = enrich_etfcheck_events(symbol, events, tax_records)
@@ -706,8 +737,8 @@ def main():
         "dividend_available_count": available_count,
 
         "classification_rule": (
-            "최근 12개월 동안 분배 이력이 있는 "
-            "월이 8개월 이상인 ETF"
+            "최근 12개월 분배월이 8개월 이상이거나, 상장 1년 미만이며 "
+            "최근 3개 분배월 간격이 월 단위인 ETF"
         ),
 
         "funds": results
