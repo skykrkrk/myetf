@@ -25,12 +25,12 @@ function getTiming(fund) {
 }
 
 function getCategory(fund) {
-  if (fund.category && ["커버드콜", "리츠", "채권"].includes(fund.category)) return fund.category;
+  if (fund.category && ["커버드콜", "국내", "리츠", "채권"].includes(fund.category)) return fund.category;
   const name = fund.name || "";
   if (/커버드콜|타겟커버드콜|프리미엄/.test(name)) return "커버드콜";
   if (/리츠|부동산/.test(name)) return "리츠";
   if (/채권|국고채|회사채|단기채/.test(name)) return "채권";
-  if (/국내/.test(name)) return "국내";
+  if ([" 200", " 코스", " 반도체", " 고배당주", " 주주환원", " SK하이닉스", " 단기", " 증권", " 현대차", " 금융", " K고배당"].some((term) => name.includes(term))) return "국내";
   return "기타";
 }
 
