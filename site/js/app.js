@@ -120,8 +120,10 @@ function showDetails(symbol) {
   const fund = funds.find((item) => item.symbol === symbol);
   if (!fund) return;
   const events = [...(fund.events || [])].sort((a, b) => String(b.ex_date).localeCompare(String(a.ex_date)));
+  const funEtfUrl = `https://www.funetf.co.kr/product/etf/view/KR7${encodeURIComponent(fund.symbol)}005`;
   $("fundDetails").innerHTML = `
-    <h2>${safe(fund.name)}</h2><p class="dialog-meta">${safe(fund.symbol)} · ${safe(getCategory(fund))}</p>
+    <h2><a class="fund-title-link" href="${funEtfUrl}" target="_blank" rel="noopener noreferrer">${safe(fund.name)} <span aria-hidden="true">↗</span></a></h2><p class="dialog-meta">${safe(fund.symbol)} · ${safe(getCategory(fund))}</p>
+    <a class="funetf-preview-link" href="${funEtfUrl}" target="_blank" rel="noopener noreferrer">FunETF에서 이 종목 보기 <span aria-hidden="true">↗</span><small>${safe(funEtfUrl)}</small></a>
     <div class="detail-grid">
       <div class="detail-metric"><span>현재 가격</span><strong>${money(fund.price)}</strong></div>
       <div class="detail-metric"><span>12개월 분배금</span><strong>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</strong></div>
