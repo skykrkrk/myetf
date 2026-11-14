@@ -3,13 +3,19 @@ name: Update ETF Data and Deploy
 
 on:
   schedule:
+    # 한국시간 매일 오전 8시 30분
     - cron: "30 23 * * *"
 
   workflow_dispatch:
 
   push:
     branches:
-      - chatgpt
+      - main
+    paths:
+      - "collector/**"
+      - "site/**"
+      - "requirements.txt"
+      - ".github/workflows/update-and-deploy.yml"
 
 permissions:
   contents: write
@@ -27,12 +33,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
-          ref: chatgpt
+          ref: main
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -54,7 +60,7 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Update daily ETF dividend data"
-            git push origin HEAD:chatgpt
+            git push origin HEAD:main
           else
             echo "No data changes."
           fi
@@ -63,7 +69,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
