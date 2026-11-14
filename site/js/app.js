@@ -131,7 +131,11 @@ function showDetails(symbol) {
       <div class="detail-metric"><span>분배 월 수</span><strong>${number(fund.dividend_months_12m || 0)}개월</strong></div>
     </div>
     <h3 class="history-title">최근 분배 내역</h3>
-    <div class="history-list">${events.length ? events.slice(0, 18).map((event) => `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락</small></span><span>${safe(event.record_date || "자료 없음")}<small>기준일</small></span><span>${safe(event.payment_date || "자료 없음")}<small>지급일</small></span><span>${money(event.amount)}<small>분배금</small></span></div>`).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
+    <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
+      const taxBase = getTaxBase(event);
+      const taxRate = taxBase != null && Number(event.amount) > 0 ? `${(Number(taxBase) / Number(event.amount) * 100).toFixed(1)}%` : "자료 없음";
+      return `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락</small></span><span>${safe(event.record_date || "자료 없음")}<small>기준일</small></span><span>${safe(event.payment_date || "자료 없음")}<small>지급일</small></span><span>${money(event.amount)}<small>분배금</small></span><span>${taxBase == null ? "자료 없음" : money(taxBase)}<small>과표</small></span><span>${taxRate}<small>과표율</small></span></div>`;
+    }).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
 

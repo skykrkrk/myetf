@@ -344,6 +344,15 @@ def normalize_tax_month(value):
     return f"{int(match.group(1)):04d}-{int(match.group(2)):02d}"
 
 
+def normalize_tax_symbol(value):
+    code = str(value or "").strip().upper()
+    if len(code) == 6 and re.fullmatch(r"[A-Z0-9]{6}", code):
+        return code
+    if re.fullmatch(r"\d{1,5}", code):
+        return code.zfill(6)
+    return ""
+
+
 def fetch_etfcheck_tax_records():
     """ETF CHECK 과표 JSON에서 종목별 월 분배금·과표 자료를 가져옵니다."""
     session = requests.Session()
@@ -352,9 +361,7 @@ def fetch_etfcheck_tax_records():
 
     def walk(node, symbol=None):
         if isinstance(node, dict):
-            code = str(node.get("code", node.get("symbol", symbol or ""))).zfill(6)
-            if not code.isdigit():
-                code = symbol
+            code = normalize_tax_symbol(node.get("code", node.get("symbol", symbol or ""))) or symbol
             # ETF CHECK의 월별 레코드는 [연월, 분배금, 과표] 형태입니다.
             month = node.get("month", node.get("ym", node.get("date")))
             amount = node.get("amount", node.get("distribution"))
@@ -362,7 +369,7 @@ def fetch_etfcheck_tax_records():
             if code and month is not None and amount is not None and tax is not None:
                 records.setdefault(code, []).append((normalize_tax_month(month), amount, tax))
             for key, value in node.items():
-                child_symbol = str(key).zfill(6) if str(key).isdigit() and len(str(key)) <= 6 else code
+                child_symbol = normalize_tax_symbol(key) or code
                 walk(value, child_symbol)
         elif isinstance(node, list):
             if symbol and len(node) >= 3 and not isinstance(node[0], (list, dict)):
@@ -388,7 +395,7 @@ def enrich_etfcheck_events(symbol, events, tax_records):
     enriched = 0
     for event in events:
         month = event.get("ex_date", "")[:7]
-        candidates = tax_records.get(str(symbol).zfill(6), [])
+        candidates = tax_records.get(normalize_tax_symbol(symbol), [])
         match = next((row for row in candidates if row[0] == month), None)
         if not match:
             continue
