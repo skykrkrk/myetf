@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14 20:57:58",
+  "updated_at": "2026-11-14 21:25:19",
   "price_date": "2026-11-14",
   "price_date_note": "가격 조회일 기준. 실제 마지막 거래일과 차이가 있을 수 있음.",
   "source": {
@@ -65,15 +65,19 @@
       "event_count_12m": 2,
       "dividend_months_12m": 2,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 2,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 64.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -139,11 +143,13 @@
       "event_count_12m": 1,
       "dividend_months_12m": 1,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 1,
       "events": [
         {
           "ex_date": "2026-10-29",
-          "amount": 106.0
+          "amount": 106.0,
+          "tax_base": 106.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -345,27 +351,37 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 5,
       "events": [
         {
           "ex_date": "2025-10-30",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 38.0
+          "amount": 38.0,
+          "tax_base": 38.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 90.0
+          "amount": 90.0,
+          "tax_base": 90.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -421,23 +437,31 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 4,
       "events": [
         {
           "ex_date": "2026-01-29",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 78.0
+          "amount": 78.0,
+          "tax_base": 78.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -481,83 +505,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 26.0
+          "amount": 26.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 23.0
+          "amount": 23.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 26.0
+          "amount": 26.0,
+          "tax_base": 26.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 26.0
+          "amount": 26.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -657,19 +719,25 @@
       "event_count_12m": 3,
       "dividend_months_12m": 3,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 3,
       "events": [
         {
           "ex_date": "2026-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -900,15 +968,19 @@
       "event_count_12m": 2,
       "dividend_months_12m": 2,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 2,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 26.0
+          "amount": 26.0,
+          "tax_base": 23.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -952,11 +1024,13 @@
       "event_count_12m": 1,
       "dividend_months_12m": 1,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 1,
       "events": [
         {
           "ex_date": "2026-11-12",
-          "amount": 57.0
+          "amount": 57.0,
+          "tax_base": 56.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -1586,51 +1660,73 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 11,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -1648,27 +1744,37 @@
       "event_count_12m": 5,
       "dividend_months_12m": 5,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 5,
       "events": [
         {
           "ex_date": "2026-06-29",
-          "amount": 168.0
+          "amount": 168.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 168.0
+          "amount": 168.0,
+          "tax_base": 24.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 157.0
+          "amount": 157.0,
+          "tax_base": 1.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 183.0
+          "amount": 183.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -2740,43 +2846,61 @@
       "event_count_12m": 9,
       "dividend_months_12m": 9,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 9,
       "events": [
         {
           "ex_date": "2026-02-26",
-          "amount": 72.0
+          "amount": 72.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 26.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -2838,67 +2962,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-08-28",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -2916,67 +3070,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-08-28",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -4852,75 +5036,109 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 17,
       "events": [
         {
           "ex_date": "2025-06-27",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -4938,71 +5156,103 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 16,
       "events": [
         {
           "ex_date": "2025-07-30",
-          "amount": 63.0
+          "amount": 63.0,
+          "tax_base": 63.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 64.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 65.0
+          "amount": 65.0,
+          "tax_base": 65.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 68.0
+          "amount": 68.0,
+          "tax_base": 68.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 68.0
+          "amount": 68.0,
+          "tax_base": 68.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 69.0
+          "amount": 69.0,
+          "tax_base": 69.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 69.0
+          "amount": 69.0,
+          "tax_base": 69.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 69.0
+          "amount": 69.0,
+          "tax_base": 69.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 69.0
+          "amount": 69.0,
+          "tax_base": 69.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 71.0
+          "amount": 71.0,
+          "tax_base": 71.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 73.0
+          "amount": 73.0,
+          "tax_base": 73.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 74.0
+          "amount": 74.0,
+          "tax_base": 74.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 70.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 68.0
+          "amount": 68.0,
+          "tax_base": 68.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 67.0
+          "amount": 67.0,
+          "tax_base": 67.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 64.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -5020,75 +5270,109 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 17,
       "events": [
         {
           "ex_date": "2025-06-27",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 25.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 23.0
+          "amount": 23.0,
+          "tax_base": 23.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 21.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 24.0
+          "amount": 24.0,
+          "tax_base": 24.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 21.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -6083,15 +6367,19 @@
       "event_count_12m": 2,
       "dividend_months_12m": 2,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 2,
       "events": [
         {
           "ex_date": "2026-09-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -7401,23 +7689,31 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 4,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 4.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -7435,35 +7731,49 @@
       "event_count_12m": 7,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 7,
       "events": [
         {
           "ex_date": "2026-04-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -7545,35 +7855,49 @@
       "event_count_12m": 7,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 7,
       "events": [
         {
           "ex_date": "2026-04-29",
-          "amount": 195.0
+          "amount": 195.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 325.0
+          "amount": 325.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 165.0
+          "amount": 165.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 185.0
+          "amount": 185.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 220.0
+          "amount": 220.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 170.0
+          "amount": 170.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -7721,71 +8045,103 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 16,
       "events": [
         {
           "ex_date": "2025-07-30",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 95.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 105.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 114.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 122.0
+          "amount": 122.0,
+          "tax_base": 122.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 120.0
+          "amount": 120.0,
+          "tax_base": 120.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 110.0
+          "amount": 110.0,
+          "tax_base": 110.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 116.0
+          "amount": 116.0,
+          "tax_base": 116.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 112.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 108.0
+          "amount": 108.0,
+          "tax_base": 108.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 105.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 100.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 100.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 83.0
+          "amount": 83.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 79.0
+          "amount": 79.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 75.0
+          "amount": 75.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -9950,47 +10306,67 @@
       "event_count_12m": 10,
       "dividend_months_12m": 10,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 10,
       "events": [
         {
           "ex_date": "2026-01-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 25.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -12152,51 +12528,73 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 11,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -12248,51 +12646,73 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 11,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 23.0
+          "amount": 23.0,
+          "tax_base": 23.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -12394,59 +12814,85 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 13,
       "events": [
         {
           "ex_date": "2025-10-30",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -12646,55 +13092,79 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 12,
       "events": [
         {
           "ex_date": "2025-11-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -13095,19 +13565,25 @@
       "event_count_12m": 3,
       "dividend_months_12m": 3,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 3,
       "events": [
         {
           "ex_date": "2026-08-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -13175,67 +13651,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -13389,35 +13895,49 @@
       "event_count_12m": 7,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 7,
       "events": [
         {
           "ex_date": "2026-05-14",
-          "amount": 152.0
+          "amount": 152.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 159.0
+          "amount": 159.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 160.0
+          "amount": 160.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 139.0
+          "amount": 139.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 151.0
+          "amount": 151.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 146.0
+          "amount": 146.0,
+          "tax_base": 64.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 160.0
+          "amount": 160.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -13473,83 +13993,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -14079,23 +14637,31 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 4,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 225.0
+          "amount": 225.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 215.0
+          "amount": 215.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 180.0
+          "amount": 180.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -14317,83 +14883,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -14411,63 +15015,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-09-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 45.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 45.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 55.0
+          "amount": 55.0,
+          "tax_base": 55.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 55.0
+          "amount": 55.0,
+          "tax_base": 55.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 55.0
+          "amount": 55.0,
+          "tax_base": 55.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -14485,19 +15117,25 @@
       "event_count_12m": 3,
       "dividend_months_12m": 3,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 3,
       "events": [
         {
           "ex_date": "2026-08-28",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -15278,23 +15916,31 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 4,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 153.0
+          "amount": 153.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 167.0
+          "amount": 167.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 136.0
+          "amount": 136.0,
+          "tax_base": 42.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -19095,59 +19741,85 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 13,
       "events": [
         {
           "ex_date": "2025-11-13",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 27.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 2.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 62.0
+          "amount": 62.0,
+          "tax_base": 62.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 66.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 67.0
+          "amount": 67.0,
+          "tax_base": 67.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 64.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 62.0
+          "amount": 62.0,
+          "tax_base": 49.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 61.0
+          "amount": 61.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -20341,63 +21013,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-10-14",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 48.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -21637,91 +22337,133 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 21,
       "events": [
         {
           "ex_date": "2025-01-24",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-02-27",
-          "amount": 90.0
+          "amount": 90.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-04-29",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 108.0
+          "amount": 108.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 110.0
+          "amount": 110.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 115.0
+          "amount": 115.0,
+          "tax_base": 90.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 116.0
+          "amount": 116.0,
+          "tax_base": 85.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 119.0
+          "amount": 119.0,
+          "tax_base": 119.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 120.0
+          "amount": 120.0,
+          "tax_base": 120.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 122.0
+          "amount": 122.0,
+          "tax_base": 122.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 125.0
+          "amount": 125.0,
+          "tax_base": 125.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 123.0
+          "amount": 123.0,
+          "tax_base": 123.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 119.0
+          "amount": 119.0,
+          "tax_base": 119.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 121.0
+          "amount": 121.0,
+          "tax_base": 121.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 124.0
+          "amount": 124.0,
+          "tax_base": 124.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 131.0
+          "amount": 131.0,
+          "tax_base": 131.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 132.0
+          "amount": 132.0,
+          "tax_base": 132.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 126.0
+          "amount": 126.0,
+          "tax_base": 126.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 119.0
+          "amount": 119.0,
+          "tax_base": 119.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 119.0
+          "amount": 119.0,
+          "tax_base": 2.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -21937,63 +22679,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-09-29",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 7.0
+          "amount": 7.0,
+          "tax_base": 7.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 138.0
+          "amount": 138.0,
+          "tax_base": 138.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 7.0
+          "amount": 7.0,
+          "tax_base": 7.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 8.0
+          "amount": 8.0,
+          "tax_base": 8.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -23174,75 +23944,109 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 17,
       "events": [
         {
           "ex_date": "2025-06-27",
-          "amount": 74.0
+          "amount": 74.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 62.0
+          "amount": 62.0,
+          "tax_base": 53.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 67.0
+          "amount": 67.0,
+          "tax_base": 67.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 56.0
+          "amount": 56.0,
+          "tax_base": 56.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 52.0
+          "amount": 52.0,
+          "tax_base": 52.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 55.0
+          "amount": 55.0,
+          "tax_base": 55.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 53.0
+          "amount": 53.0,
+          "tax_base": 53.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 49.0
+          "amount": 49.0,
+          "tax_base": 49.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 43.0
+          "amount": 43.0,
+          "tax_base": 43.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 61.0
+          "amount": 61.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 61.0
+          "amount": 61.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -24307,47 +25111,67 @@
       "event_count_12m": 10,
       "dividend_months_12m": 10,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 10,
       "events": [
         {
           "ex_date": "2026-01-29",
-          "amount": 97.0
+          "amount": 97.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 94.0
+          "amount": 94.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 93.0
+          "amount": 93.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 99.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 107.0
+          "amount": 107.0,
+          "tax_base": 107.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 106.0
+          "amount": 106.0,
+          "tax_base": 106.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 97.0
+          "amount": 97.0,
+          "tax_base": 97.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 90.0
+          "amount": 90.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -24910,31 +25734,43 @@
       "event_count_12m": 6,
       "dividend_months_12m": 6,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 6,
       "events": [
         {
           "ex_date": "2026-05-28",
-          "amount": 83.0
+          "amount": 83.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 82.0
+          "amount": 82.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 68.0
+          "amount": 68.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -25389,39 +26225,55 @@
       "event_count_12m": 8,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 8,
       "events": [
         {
           "ex_date": "2026-05-14",
-          "amount": 15.0
+          "amount": 15.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 23.0
+          "amount": 23.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 24.0
+          "amount": 24.0,
+          "tax_base": 24.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -27211,43 +28063,61 @@
       "event_count_12m": 9,
       "dividend_months_12m": 9,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 9,
       "events": [
         {
           "ex_date": "2026-03-12",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 42.0
+          "amount": 42.0,
+          "tax_base": 42.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 8.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -29773,19 +30643,25 @@
       "event_count_12m": 3,
       "dividend_months_12m": 3,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 3,
       "events": [
         {
           "ex_date": "2026-08-28",
-          "amount": 85.0
+          "amount": 85.0,
+          "tax_base": 25.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 82.0
+          "amount": 82.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 72.0
+          "amount": 72.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -30934,27 +31810,37 @@
       "event_count_12m": 5,
       "dividend_months_12m": 5,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 5,
       "events": [
         {
           "ex_date": "2026-06-29",
-          "amount": 74.0
+          "amount": 74.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 65.0
+          "amount": 65.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 63.0
+          "amount": 63.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 57.0
+          "amount": 57.0,
+          "tax_base": 49.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -30972,23 +31858,31 @@
       "event_count_12m": 4,
       "dividend_months_12m": 4,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 4,
       "events": [
         {
           "ex_date": "2026-07-30",
-          "amount": 139.0
+          "amount": 139.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 147.0
+          "amount": 147.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 152.0
+          "amount": 152.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -31944,91 +32838,133 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 21,
       "events": [
         {
           "ex_date": "2025-03-13",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-04-14",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 114.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-14",
-          "amount": 128.0
+          "amount": 128.0,
+          "tax_base": 128.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-12",
-          "amount": 145.0
+          "amount": 145.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-14",
-          "amount": 155.0
+          "amount": 155.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-13",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 21.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-12",
-          "amount": 145.0
+          "amount": 145.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 140.0
+          "amount": 140.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 145.0
+          "amount": 145.0,
+          "tax_base": 57.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 173.0
+          "amount": 173.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 159.0
+          "amount": 159.0,
+          "tax_base": 115.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 163.0
+          "amount": 163.0,
+          "tax_base": 163.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 159.0
+          "amount": 159.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 139.0
+          "amount": 139.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 138.0
+          "amount": 138.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 136.0
+          "amount": 136.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 135.0
+          "amount": 135.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 127.0
+          "amount": 127.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 116.0
+          "amount": 116.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -32974,55 +33910,79 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 12,
       "events": [
         {
           "ex_date": "2025-10-30",
-          "amount": 53.0
+          "amount": 53.0,
+          "tax_base": 53.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -33090,43 +34050,61 @@
       "event_count_12m": 9,
       "dividend_months_12m": 9,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 9,
       "events": [
         {
           "ex_date": "2026-02-26",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 45.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 48.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 47.0
+          "amount": 47.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 48.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 45.0
+          "amount": 45.0,
+          "tax_base": 45.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 43.0
+          "amount": 43.0,
+          "tax_base": 43.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -33144,51 +34122,73 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 11,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 38.0
+          "amount": 38.0,
+          "tax_base": 38.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 9.0
+          "amount": 9.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -34301,63 +35301,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-10-14",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 70.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 70.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 70.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 62.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 38.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 37.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -34548,51 +35576,73 @@
       "event_count_12m": 11,
       "dividend_months_12m": 11,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 11,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 117.0
+          "amount": 117.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 121.0
+          "amount": 121.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 108.0
+          "amount": 108.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 104.0
+          "amount": 104.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 81.0
+          "amount": 81.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 69.0
+          "amount": 69.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -35117,55 +36167,79 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 12,
       "events": [
         {
           "ex_date": "2025-12-12",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 212.0
+          "amount": 212.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 200.0
+          "amount": 200.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 195.0
+          "amount": 195.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 180.0
+          "amount": 180.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 187.0
+          "amount": 187.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 178.0
+          "amount": 178.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 177.0
+          "amount": 177.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 161.0
+          "amount": 161.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 160.0
+          "amount": 160.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 179.0
+          "amount": 179.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 160.0
+          "amount": 160.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -39812,55 +40886,79 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 12,
       "events": [
         {
           "ex_date": "2025-12-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 119.0
+          "amount": 119.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 118.0
+          "amount": 118.0,
+          "tax_base": 59.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 163.0
+          "amount": 163.0,
+          "tax_base": 163.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 109.0
+          "amount": 109.0,
+          "tax_base": 109.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 144.0
+          "amount": 144.0,
+          "tax_base": 144.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 118.0
+          "amount": 118.0,
+          "tax_base": 118.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 74.0
+          "amount": 74.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 91.0
+          "amount": 91.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -40168,55 +41266,79 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 12,
       "events": [
         {
           "ex_date": "2025-12-12",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 34.0
+          "amount": 34.0,
+          "tax_base": 34.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 33.0
+          "amount": 33.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 30.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -40789,83 +41911,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 19.0
+          "amount": 19.0,
+          "tax_base": 19.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 19.0
+          "amount": 19.0,
+          "tax_base": 19.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 19.0
+          "amount": 19.0,
+          "tax_base": 19.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 21.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 19.0
+          "amount": 19.0,
+          "tax_base": 19.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 21.0
+          "amount": 21.0,
+          "tax_base": 21.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 23.0
+          "amount": 23.0,
+          "tax_base": 23.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 17.0
+          "amount": 17.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -42497,63 +43657,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-09-29",
-          "amount": 102.0
+          "amount": 102.0,
+          "tax_base": 102.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 103.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 87.0
+          "amount": 87.0,
+          "tax_base": 87.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 108.0
+          "amount": 108.0,
+          "tax_base": 108.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 101.0
+          "amount": 101.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 87.0
+          "amount": 87.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 89.0
+          "amount": 89.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 87.0
+          "amount": 87.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 84.0
+          "amount": 84.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 83.0
+          "amount": 83.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 83.0
+          "amount": 83.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 76.0
+          "amount": 76.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 64.0
+          "amount": 64.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -42897,63 +44085,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-10-14",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 210.0
+          "amount": 210.0,
+          "tax_base": 8.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 125.0
+          "amount": 125.0,
+          "tax_base": 8.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 190.0
+          "amount": 190.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 310.0
+          "amount": 310.0,
+          "tax_base": 1.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 400.0
+          "amount": 400.0,
+          "tax_base": 47.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 340.0
+          "amount": 340.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 390.0
+          "amount": 390.0,
+          "tax_base": 8.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 420.0
+          "amount": 420.0,
+          "tax_base": 7.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 590.0
+          "amount": 590.0,
+          "tax_base": 1.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 580.0
+          "amount": 580.0,
+          "tax_base": 23.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 540.0
+          "amount": 540.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 465.0
+          "amount": 465.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 420.0
+          "amount": 420.0,
+          "tax_base": 15.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -43086,19 +44302,25 @@
       "event_count_12m": 3,
       "dividend_months_12m": 3,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 3,
       "events": [
         {
           "ex_date": "2026-08-28",
-          "amount": 219.0
+          "amount": 219.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 235.0
+          "amount": 235.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 260.0
+          "amount": 260.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -43236,83 +44458,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 113.0
+          "amount": 113.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 109.0
+          "amount": 109.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 118.0
+          "amount": 118.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 127.0
+          "amount": 127.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 140.0
+          "amount": 140.0,
+          "tax_base": 140.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 132.0
+          "amount": 132.0,
+          "tax_base": 132.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 109.0
+          "amount": 109.0,
+          "tax_base": 109.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 110.0
+          "amount": 110.0,
+          "tax_base": 110.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 125.0
+          "amount": 125.0,
+          "tax_base": 125.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 120.0
+          "amount": 120.0,
+          "tax_base": 120.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 106.0
+          "amount": 106.0,
+          "tax_base": 106.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 120.0
+          "amount": 120.0,
+          "tax_base": 120.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 121.0
+          "amount": 121.0,
+          "tax_base": 121.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 102.0
+          "amount": 102.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 84.0
+          "amount": 84.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 93.0
+          "amount": 93.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -43720,35 +44980,49 @@
       "event_count_12m": 7,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 7,
       "events": [
         {
           "ex_date": "2026-04-29",
-          "amount": 250.0
+          "amount": 250.0,
+          "tax_base": 24.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 217.0
+          "amount": 217.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 223.0
+          "amount": 223.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 4.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 168.0
+          "amount": 168.0,
+          "tax_base": 4.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 170.0
+          "amount": 170.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 140.0
+          "amount": 140.0,
+          "tax_base": 61.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -44419,83 +45693,121 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 19,
       "events": [
         {
           "ex_date": "2025-04-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 36.0
+          "amount": 36.0,
+          "tax_base": 36.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 36.0
+          "amount": 36.0,
+          "tax_base": 36.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 36.0
+          "amount": 36.0,
+          "tax_base": 36.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 37.0
+          "amount": 37.0,
+          "tax_base": 37.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 40.0
+          "amount": 40.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 43.0
+          "amount": 43.0,
+          "tax_base": 43.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 49.0
+          "amount": 49.0,
+          "tax_base": 49.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 55.0
+          "amount": 55.0,
+          "tax_base": 55.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 56.0
+          "amount": 56.0,
+          "tax_base": 56.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 51.0
+          "amount": 51.0,
+          "tax_base": 51.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 51.0
+          "amount": 51.0,
+          "tax_base": 51.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 44.0
+          "amount": 44.0,
+          "tax_base": 44.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 46.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 43.0
+          "amount": 43.0,
+          "tax_base": 43.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 39.0
+          "amount": 39.0,
+          "tax_base": 39.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -45663,67 +46975,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-09-12",
-          "amount": 36.0
+          "amount": 36.0,
+          "tax_base": 36.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 16.0
+          "amount": 16.0,
+          "tax_base": 16.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 19.0
+          "amount": 19.0,
+          "tax_base": 19.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 11.0
+          "amount": 11.0,
+          "tax_base": 11.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 22.0
+          "amount": 22.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 20.0
+          "amount": 20.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 18.0
+          "amount": 18.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -47008,43 +48350,61 @@
       "event_count_12m": 9,
       "dividend_months_12m": 9,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 9,
       "events": [
         {
           "ex_date": "2026-02-26",
-          "amount": 70.0
+          "amount": 70.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -47463,59 +48823,85 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 13,
       "events": [
         {
           "ex_date": "2025-11-13",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 61.0
+          "amount": 61.0,
+          "tax_base": 18.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 42.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 60.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 17.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 60.0
+          "amount": 60.0,
+          "tax_base": 13.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -47631,27 +49017,37 @@
       "event_count_12m": 5,
       "dividend_months_12m": 5,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 5,
       "events": [
         {
           "ex_date": "2026-06-29",
-          "amount": 14.0
+          "amount": 14.0,
+          "tax_base": 14.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 12.0
+          "amount": 12.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 10.0
+          "amount": 10.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -47669,79 +49065,115 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 18,
       "events": [
         {
           "ex_date": "2025-05-29",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 250.0
+          "amount": 250.0,
+          "tax_base": 250.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 250.0
+          "amount": 250.0,
+          "tax_base": 250.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 250.0
+          "amount": 250.0,
+          "tax_base": 250.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 225.0
+          "amount": 225.0,
+          "tax_base": 225.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 205.0
+          "amount": 205.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 210.0
+          "amount": 210.0,
+          "tax_base": 210.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 175.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 150.0
+          "amount": 150.0,
+          "tax_base": 150.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 147.0
+          "amount": 147.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 141.0
+          "amount": 141.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 143.0
+          "amount": 143.0,
+          "tax_base": 100.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 140.0
+          "amount": 140.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 139.0
+          "amount": 139.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -47759,79 +49191,115 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 18,
       "events": [
         {
           "ex_date": "2025-05-29",
-          "amount": 230.0
+          "amount": 230.0,
+          "tax_base": 230.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 230.0
+          "amount": 230.0,
+          "tax_base": 230.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 240.0
+          "amount": 240.0,
+          "tax_base": 240.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 210.0
+          "amount": 210.0,
+          "tax_base": 210.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 210.0
+          "amount": 210.0,
+          "tax_base": 210.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 210.0
+          "amount": 210.0,
+          "tax_base": 210.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 200.0
+          "amount": 200.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 206.0
+          "amount": 206.0,
+          "tax_base": 206.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 194.0
+          "amount": 194.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 185.0
+          "amount": 185.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 190.0
+          "amount": 190.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 177.0
+          "amount": 177.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 175.0
+          "amount": 175.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 162.0
+          "amount": 162.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 162.0
+          "amount": 162.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 164.0
+          "amount": 164.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 160.0
+          "amount": 160.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 159.0
+          "amount": 159.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -50201,63 +51669,91 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 14,
       "events": [
         {
           "ex_date": "2025-10-14",
-          "amount": 62.0
+          "amount": 62.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 71.0
+          "amount": 71.0,
+          "tax_base": 2.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 72.0
+          "amount": 72.0,
+          "tax_base": 4.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 80.0
+          "amount": 80.0,
+          "tax_base": 24.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 97.0
+          "amount": 97.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 43.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 137.0
+          "amount": 137.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 141.0
+          "amount": 141.0,
+          "tax_base": 2.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 137.0
+          "amount": 137.0,
+          "tax_base": 5.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 126.0
+          "amount": 126.0,
+          "tax_base": 6.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 101.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 5.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -54236,67 +55732,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-09-12",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 2.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 22.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -54314,67 +55840,97 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 15,
       "events": [
         {
           "ex_date": "2025-09-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 36.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 54.0
+          "amount": 54.0,
+          "tax_base": 54.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -56077,11 +57633,13 @@
       "event_count_12m": 1,
       "dividend_months_12m": 1,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 1,
       "events": [
         {
           "ex_date": "2026-10-29",
-          "amount": 13.0
+          "amount": 13.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -58201,95 +59759,139 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 22,
       "events": [
         {
           "ex_date": "2025-02-13",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-03-13",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-04-14",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-14",
-          "amount": 90.0
+          "amount": 90.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-12",
-          "amount": 87.0
+          "amount": 87.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-14",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-13",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-12",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 87.0
+          "amount": 87.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 89.0
+          "amount": 89.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 91.0
+          "amount": 91.0,
+          "tax_base": 91.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 95.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 102.0
+          "amount": 102.0,
+          "tax_base": 102.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 101.0
+          "amount": 101.0,
+          "tax_base": 101.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 101.0
+          "amount": 101.0,
+          "tax_base": 101.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 102.0
+          "amount": 102.0,
+          "tax_base": 102.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 106.0
+          "amount": 106.0,
+          "tax_base": 106.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 104.0
+          "amount": 104.0,
+          "tax_base": 104.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 103.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 96.0
+          "amount": 96.0,
+          "tax_base": 96.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 92.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 99.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -58878,79 +60480,115 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 18,
       "events": [
         {
           "ex_date": "2025-05-29",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 30.0
+          "amount": 30.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 32.0
+          "amount": 32.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 35.0
+          "amount": 35.0,
+          "tax_base": 35.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 27.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 27.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 25.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 31.0
+          "amount": 31.0,
+          "tax_base": 31.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 27.0
+          "amount": 27.0,
+          "tax_base": 27.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 29.0
+          "amount": 29.0,
+          "tax_base": 29.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 28.0
+          "amount": 28.0,
+          "tax_base": 28.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 26.0
+          "amount": 26.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 24.0
+          "amount": 24.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 25.0
+          "amount": 25.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -60293,35 +61931,49 @@
       "event_count_12m": 7,
       "dividend_months_12m": 7,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 7,
       "events": [
         {
           "ex_date": "2026-05-14",
-          "amount": 170.0
+          "amount": 170.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 215.0
+          "amount": 215.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 205.0
+          "amount": 205.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 151.0
+          "amount": 151.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 177.0
+          "amount": 177.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 165.0
+          "amount": 165.0,
+          "tax_base": 40.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 118.0
+          "amount": 118.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -60825,15 +62477,19 @@
       "event_count_12m": 2,
       "dividend_months_12m": 2,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 2,
       "events": [
         {
           "ex_date": "2026-09-29",
-          "amount": 7.0
+          "amount": 7.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 46.0
+          "amount": 46.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -60942,95 +62598,139 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 22,
       "events": [
         {
           "ex_date": "2024-12-27",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-01-24",
-          "amount": 101.0
+          "amount": 101.0,
+          "tax_base": 101.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-02-27",
-          "amount": 97.0
+          "amount": 97.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-04-29",
-          "amount": 89.0
+          "amount": 89.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-05-29",
-          "amount": 89.0
+          "amount": 89.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-06-27",
-          "amount": 92.0
+          "amount": 92.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-07-30",
-          "amount": 97.0
+          "amount": 97.0,
+          "tax_base": 97.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-28",
-          "amount": 98.0
+          "amount": 98.0,
+          "tax_base": 98.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-29",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 99.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-30",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 105.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 104.0
+          "amount": 104.0,
+          "tax_base": 104.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 101.0
+          "amount": 101.0,
+          "tax_base": 101.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 99.0
+          "amount": 99.0,
+          "tax_base": 99.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 100.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 100.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 102.0
+          "amount": 102.0,
+          "tax_base": 102.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 103.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 104.0
+          "amount": 104.0,
+          "tax_base": 104.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 95.0
+          "amount": 95.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 91.0
+          "amount": 91.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 88.0
+          "amount": 88.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 85.0
+          "amount": 85.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -63530,75 +65230,109 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 17,
       "events": [
         {
           "ex_date": "2025-07-14",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-08-13",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 20.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-09-12",
-          "amount": 48.0
+          "amount": 48.0,
+          "tax_base": 32.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-10-14",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-13",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-12",
-          "amount": 50.0
+          "amount": 50.0,
+          "tax_base": 6.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-14",
-          "amount": 51.0
+          "amount": 51.0,
+          "tax_base": 51.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-12",
-          "amount": 51.0
+          "amount": 51.0,
+          "tax_base": 51.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-12",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 58.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-14",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 58.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-14",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 58.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-12",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 58.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-14",
-          "amount": 58.0
+          "amount": 58.0,
+          "tax_base": 58.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-13",
-          "amount": 61.0
+          "amount": 61.0,
+          "tax_base": 61.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-14",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 50.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-14",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-11-12",
-          "amount": 66.0
+          "amount": 66.0,
+          "tax_base": 33.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
@@ -63616,59 +65350,85 @@
       "event_count_12m": 12,
       "dividend_months_12m": 12,
       "official_distribution_event_count": 0,
-      "tax_base_event_count": 0,
+      "tax_base_event_count": 13,
       "events": [
         {
           "ex_date": "2025-10-30",
-          "amount": 98.0
+          "amount": 98.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-11-27",
-          "amount": 98.0
+          "amount": 98.0,
+          "tax_base": 9.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2025-12-29",
-          "amount": 100.0
+          "amount": 100.0,
+          "tax_base": 1.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-01-29",
-          "amount": 103.0
+          "amount": 103.0,
+          "tax_base": 103.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-02-26",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-03-30",
-          "amount": 112.0
+          "amount": 112.0,
+          "tax_base": 110.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-04-29",
-          "amount": 114.0
+          "amount": 114.0,
+          "tax_base": 94.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-05-28",
-          "amount": 113.0
+          "amount": 113.0,
+          "tax_base": 10.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-06-29",
-          "amount": 104.0
+          "amount": 104.0,
+          "tax_base": 3.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-07-30",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-08-28",
-          "amount": 109.0
+          "amount": 109.0,
+          "tax_base": 45.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-09-29",
-          "amount": 110.0
+          "amount": 110.0,
+          "tax_base": 6.0,
+          "tax_base_source": "ETF CHECK"
         },
         {
           "ex_date": "2026-10-29",
-          "amount": 105.0
+          "amount": 105.0,
+          "tax_base": 12.0,
+          "tax_base_source": "ETF CHECK"
         }
       ]
     },
