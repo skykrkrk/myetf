@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101319">
   <meta name="description" content="국내 상장 월배당 ETF의 분배금, 분배율과 배당 이력을 한눈에 비교하세요.">
   <title>월배당 ETF 트래커</title>
-  <link rel="stylesheet" href="./css/style.css?v=3">
+  <link rel="stylesheet" href="./css/style.css?v=4">
 </head>
 <body>
   <header class="topbar">
@@ -15,15 +15,6 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">ETF INCOME, MADE CLEAR</p>
-        <h1>월배당 ETF,<br><span>한눈에 비교하세요.</span></h1>
-        <p class="hero-desc">분배금 이력과 분배율을 확인하고, 내 투자금으로 예상 현금흐름을 계산해 보세요.</p>
-      </div>
-      <div class="hero-mark" aria-hidden="true"><span>₩</span><i></i><i></i><i></i><i></i><i></i></div>
-    </section>
-
     <section class="stats-grid" aria-label="ETF 요약">
       <article class="stat-card"><span>전체 ETF</span><strong id="totalCount">—</strong><small>수집된 국내 상장 ETF</small></article>
       <article class="stat-card"><span>월배당 ETF</span><strong id="monthlyCount">—</strong><small>최근 12개월 분배 이력 기준</small></article>
@@ -54,7 +45,7 @@
         <label class="filter-field"><span>ETF 유형</span><select id="category" aria-label="ETF 유형"><option value="all">모든 유형</option><option value="커버드콜">커버드콜</option><option value="리츠">리츠</option><option value="채권">채권</option><option value="기타">기타</option></select></label>
         <label class="filter-field"><span>정렬 기준</span><select id="sort" aria-label="정렬 기준"><option value="yield">연 분배율 높은 순</option><option value="dividend">12개월 분배금 순</option><option value="price">가격 높은 순</option><option value="name">이름 순</option></select></label>
       </div>
-      <div class="table-wrap"><table><thead><tr><th>종목명 · 코드</th><th>최근 분배금</th><th>과표</th><th>과표율</th><th>12개월 분배금</th><th>연 분배율</th><th>배당락일</th><th>배당기준일</th><th>배당지급일</th><th>유형</th></tr></thead><tbody id="etfTable"><tr><td colspan="10" class="empty">데이터를 불러오는 중입니다.</td></tr></tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>종목명 · 코드</th><th>최근 분배금</th><th>과표</th><th>과표율</th><th>12개월 분배금</th><th>연 분배율</th><th>배당락일</th><th>유형</th></tr></thead><tbody id="etfTable"><tr><td colspan="8" class="empty">데이터를 불러오는 중입니다.</td></tr></tbody></table></div>
       <div class="table-footer"><span id="resultCount">0개 종목</span><span>금액은 주당 원화 기준 · 원천 자료에 없는 값은 ‘자료 없음’으로 표시</span></div>
       <div id="emptyData" class="empty-state" hidden><span>◷</span><strong>아직 표시할 데이터가 없어요</strong><p>가격과 분배금 데이터가 준비되면 ETF 목록이 여기에 표시됩니다.</p></div>
     </section>
@@ -72,6 +63,6 @@
     <footer><strong>월배당 ETF 트래커</strong><span id="dataSource">자료: ETF 가격 및 분배 이력 데이터</span><span>본 페이지는 정보 제공을 목적으로 하며 투자 권유가 아닙니다.</span></footer>
   </main>
   <dialog id="fundDialog" class="fund-dialog"><form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form><div id="fundDetails"></div></dialog>
-  <script type="module" src="./js/app.js?v=3"></script>
+  <script type="module" src="./js/app.js?v=4"></script>
 </body>
 </html>

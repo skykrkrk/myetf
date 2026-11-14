@@ -78,7 +78,7 @@ function renderTable() {
   const tbody = getTableBody();
   if (!tbody) throw new Error("ETF 목록 표를 찾을 수 없습니다. 페이지를 새로고침해 주세요.");
   if (!visibleFunds.length) {
-    tbody.innerHTML = `<tr><td colspan="10" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
     return;
   }
   tbody.innerHTML = visibleFunds.map((fund) => {
@@ -96,8 +96,6 @@ function renderTable() {
       <td>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</td>
       <td class="yield-value">${fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`}</td>
       <td>${safe(latest?.ex_date || "자료 없음")}</td>
-      <td>${safe(latest?.record_date || "자료 없음")}</td>
-      <td>${safe(latest?.payment_date || "자료 없음")}</td>
       <td><span class="timing-badge ${timing}">${timing === "mid" ? "월중" : timing === "end" ? "월말" : "시점 미확인"}</span><span class="type-badge">${safe(getCategory(fund))}</span></td>
     </tr>`;
   }).join("");
@@ -134,7 +132,7 @@ function showDetails(symbol) {
     <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
       const taxBase = getTaxBase(event);
       const taxRate = taxBase != null && Number(event.amount) > 0 ? `${(Number(taxBase) / Number(event.amount) * 100).toFixed(1)}%` : "자료 없음";
-      return `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락</small></span><span>${safe(event.record_date || "자료 없음")}<small>기준일</small></span><span>${safe(event.payment_date || "자료 없음")}<small>지급일</small></span><span>${money(event.amount)}<small>분배금</small></span><span>${taxBase == null ? "자료 없음" : money(taxBase)}<small>과표</small></span><span>${taxRate}<small>과표율</small></span></div>`;
+      return `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락일</small></span><span>${money(event.amount)}<small>분배금</small></span><span>${taxBase == null ? "자료 없음" : money(taxBase)}<small>과표</small></span><span>${taxRate}<small>과표율</small></span></div>`;
     }).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
@@ -155,13 +153,13 @@ function calculate() {
 }
 
 function downloadCSV() {
-  const headers = ["종목코드", "종목명", "가격(원)", "최근 분배금(원)", "과표(원)", "과표율(%)", "최근 12개월 분배금(원)", "연 분배율(%)", "배당락일", "배당기준일", "배당지급일", "유형"];
+  const headers = ["종목코드", "종목명", "가격(원)", "최근 분배금(원)", "과표(원)", "과표율(%)", "최근 12개월 분배금(원)", "연 분배율(%)", "배당락일", "유형"];
   const rows = visibleFunds.map((fund) => {
     const event = latestEvent(fund);
     const taxBase = getTaxBase(event) ?? "";
     const taxRate = taxBase !== "" && Number(event?.amount) > 0 ? (Number(taxBase) / Number(event.amount) * 100).toFixed(1) : "";
     const timing = getTiming(fund);
-    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, fund.dividend_12m ?? "", fund.annual_yield ?? "", event?.ex_date ?? "", event?.record_date ?? "", event?.payment_date ?? "", `${timing === "mid" ? "월중" : timing === "end" ? "월말" : "미확인"} · ${getCategory(fund)}`];
+    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, fund.dividend_12m ?? "", fund.annual_yield ?? "", event?.ex_date ?? "", `${timing === "mid" ? "월중" : timing === "end" ? "월말" : "미확인"} · ${getCategory(fund)}`];
   });
   const csv = "\uFEFF" + [headers, ...rows].map((row) => row.map((value) => `"${String(value ?? "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
@@ -193,7 +191,7 @@ async function loadData() {
     if (updatedAt) updatedAt.textContent = "데이터를 불러오지 못했습니다";
     const tbody = getTableBody();
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="10" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="8" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
     } else {
       const main = document.querySelector("main") || document.body;
       const message = document.createElement("p");
