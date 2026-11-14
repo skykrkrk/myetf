@@ -134,7 +134,11 @@ function renderTable() {
       <td class="fund-name">${escapeHTML(f.name)}</td>
       <td class="fund-code">${escapeHTML(f.symbol)}</td>
       <td>${money(f.price)}</td>
-      <td>${money(f.dividend_12m)}</td>
+      <td>
+        ${f.dividend_12m == null
+          ? "데이터 없음"
+          : money(f.dividend_12m)}
+      </td>
       <td class="yield-value">
         ${f.annual_yield == null
           ? "-"
@@ -157,11 +161,22 @@ function escapeHTML(value) {
 
 function calculate() {
   const symbol = $("calcEtf").value;
-  const investment = Math.max(0, Number($("investment").value) || 0);
 
-  const fund = funds.find(f => f.symbol === symbol);
+  const investment = Math.max(
+    0,
+    Number($("investment").value) || 0
+  );
 
-  if (!fund || !fund.price || !fund.dividend_12m) {
+  const fund = funds.find(
+    f => f.symbol === symbol
+  );
+
+  if (
+    !fund ||
+    !fund.price ||
+    fund.dividend_status !== "available" ||
+    fund.dividend_12m == null
+  ) {
     $("shares").textContent = "-";
     $("monthlyIncome").textContent = "-";
     $("annualIncome").textContent = "-";
@@ -169,15 +184,23 @@ function calculate() {
     return;
   }
 
-  const shares = Math.floor(investment / fund.price);
+  const shares = Math.floor(
+    investment / fund.price
+  );
 
-  // 최근 12개월 실제 분배금 합계 × 보유 수량
-  const annual = shares * fund.dividend_12m;
+  const annual =
+    shares * fund.dividend_12m;
+
   const monthly = annual / 12;
 
-  $("shares").textContent = number(shares) + "주";
-  $("monthlyIncome").textContent = money(monthly);
-  $("annualIncome").textContent = money(annual);
+  $("shares").textContent =
+    number(shares) + "주";
+
+  $("monthlyIncome").textContent =
+    money(monthly);
+
+  $("annualIncome").textContent =
+    money(annual);
 
   $("calcYield").textContent =
     fund.annual_yield == null
