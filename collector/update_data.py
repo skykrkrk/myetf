@@ -329,6 +329,71 @@ def enrich_kodex_events(symbol, events):
 
     return enriched
 
+
+ETF_CHECK_TAX_URLS = (
+    "https://raw.githubusercontent.com/ttokjaeTV/montly-div/main/data/tax-base.json",
+    "https://raw.githubusercontent.com/ttokjaeTV/montly-div/main/data/tax-base-extra.json",
+)
+
+
+def fetch_etfcheck_tax_records():
+    """ETF CHECK 과표 JSON에서 종목별 월 분배금·과표 자료를 가져옵니다."""
+    session = requests.Session()
+    session.headers.update({"User-Agent": "Mozilla/5.0 (compatible; MonthlyDividendTracker/1.0)"})
+    records = {}
+
+    def walk(node, symbol=None):
+        if isinstance(node, dict):
+            code = str(node.get("code", node.get("symbol", symbol or ""))).zfill(6)
+            if not code.isdigit():
+                code = symbol
+            # ETF CHECK의 월별 레코드는 [연월, 분배금, 과표] 형태입니다.
+            month = node.get("month", node.get("ym", node.get("date")))
+            amount = node.get("amount", node.get("distribution"))
+            tax = node.get("tax_base", node.get("tax", node.get("taxable_amount")))
+            if code and month is not None and amount is not None and tax is not None:
+                records.setdefault(code, []).append((str(month)[:7].replace(".", "-"), amount, tax))
+            for key, value in node.items():
+                child_symbol = str(key).zfill(6) if str(key).isdigit() and len(str(key)) <= 6 else code
+                walk(value, child_symbol)
+        elif isinstance(node, list):
+            if symbol and len(node) >= 3 and not isinstance(node[0], (list, dict)):
+                month = str(node[0])[:7].replace(".", "-")
+                records.setdefault(symbol, []).append((month, node[1], node[2]))
+            else:
+                for item in node:
+                    walk(item, symbol)
+
+    for url in ETF_CHECK_TAX_URLS:
+        try:
+            response = session.get(url, timeout=SOURCE_TIMEOUT)
+            response.raise_for_status()
+            walk(response.json())
+        except Exception as exc:
+            logging.warning("ETF CHECK 과표 자료 조회 실패 %s: %s", url, exc)
+    return records
+
+
+def enrich_etfcheck_events(symbol, events, tax_records):
+    """월별 과표를 이벤트에 매칭하고 분배금 차이는 비례 보정합니다."""
+    enriched = 0
+    for event in events:
+        month = event.get("ex_date", "")[:7]
+        candidates = tax_records.get(str(symbol).zfill(6), [])
+        match = next((row for row in candidates if row[0] == month), None)
+        if not match:
+            continue
+        source_amount = parse_official_amount(match[1])
+        tax_base = parse_official_amount(match[2])
+        if source_amount is None or tax_base is None:
+            continue
+        amount = float(event.get("amount", 0))
+        if source_amount > 0 and abs(source_amount - amount) > 0.01:
+            tax_base = round(tax_base * amount / source_amount)
+        event.update({"tax_base": max(0, tax_base), "tax_base_source": "ETF CHECK"})
+        enriched += 1
+    return enriched
+
 def fetch_dividends(symbol):
     """
     Yahoo Finance의 국내 ETF 분배금 이력 조회.
@@ -404,7 +469,7 @@ def fetch_dividends(symbol):
 # ETF 데이터 계산
 # =====================================
 
-def process_fund(row):
+def process_fund(row, tax_records):
 
     symbol = str(row["Symbol"]).zfill(6)
     name = str(row["Name"])
@@ -451,9 +516,12 @@ def process_fund(row):
         and dividend_months >= 8
     )
 
+    tax_event_count = enrich_etfcheck_events(symbol, events, tax_records)
     official_event_count = 0
     if is_monthly and name.upper().startswith("KODEX "):
-        official_event_count = enrich_kodex_events(symbol, events)
+        missing_tax_events = [event for event in events if event.get("tax_base") is None]
+        official_event_count = enrich_kodex_events(symbol, missing_tax_events)
+        tax_event_count += official_event_count
 
     annual_yield = None
 
@@ -496,6 +564,8 @@ def process_fund(row):
 
         "official_distribution_event_count": official_event_count,
 
+        "tax_base_event_count": tax_event_count,
+
         "events": events
     }
 
@@ -513,6 +583,9 @@ def main():
     # 1. ETF 목록 조회
     listing = fetch_etf_listing()
 
+    tax_records = fetch_etfcheck_tax_records()
+    logging.info("ETF CHECK 월별 과표 자료: %d개 종목", len(tax_records))
+
     rows = listing.to_dict("records")
 
     results = []
@@ -525,7 +598,8 @@ def main():
         tasks = {
             executor.submit(
                 process_fund,
-                row
+                row,
+                tax_records
             ): row["Symbol"]
             for row in rows
         }
@@ -606,7 +680,7 @@ def main():
             "listing": "FinanceDataReader / Naver Finance",
             "price": "Naver Finance ETF listing",
             "dividend": "Yahoo Finance",
-            "distribution_details": "Samsung Asset Management KODEX distribution history (KODEX monthly ETFs only)"
+            "distribution_details": "ETF CHECK monthly taxable base; KODEX official distribution history as fallback"
         },
 
         "total_count": len(results),
