@@ -25,13 +25,25 @@ function getTiming(fund) {
 }
 
 function getCategory(fund) {
-  if (fund.category && ["커버드콜", "국내", "리츠", "채권"].includes(fund.category)) return fund.category;
+  if (fund.category && ["커버드콜", "리츠", "채권"].includes(fund.category)) return fund.category;
   const name = fund.name || "";
   if (/커버드콜|타겟커버드콜|프리미엄/.test(name)) return "커버드콜";
   if (/리츠|부동산/.test(name)) return "리츠";
   if (/채권|국고채|회사채|단기채/.test(name)) return "채권";
-  if ([" 200", " 코스", " 반도체", " 고배당주", " 주주환원", " SK하이닉스", " 단기", " 증권", " 현대차", " 금융", " K고배당"].some((term) => name.includes(term))) return "국내";
   return "기타";
+}
+
+function getRegion(fund) {
+  if (["국내", "해외", "혼합/미분류"].includes(fund.region)) return fund.region;
+  const name = fund.name || "";
+  const domestic = ["국내", "코스피", "코스닥", "코스", "KOSPI", "KOSDAQ", "KRX", " 200", "삼성전자", "SK하이닉스", "현대차", "고배당주", "주주환원", "국고채", "통안채", "금융", "증권", "K고배당"];
+  const overseas = ["미국", "S&P", "NASDAQ", "나스닥", "다우", "글로벌", "월드", "차이나", "중국", "일본", "인도", "유럽", "독일", "베트남", "인도네시아", "브라질", "홍콩", "항셍", "니케이", "필라델피아", "해외", "선진국", "신흥국", "대만", "프랑스", "영국", "호주", "캐나다", "멕시코", "미국채"];
+  const hasDomestic = domestic.some((term) => name.toUpperCase().includes(term.toUpperCase()));
+  const hasOverseas = overseas.some((term) => name.toUpperCase().includes(term.toUpperCase()));
+  if (hasDomestic && hasOverseas) return "혼합/미분류";
+  if (hasDomestic) return "국내";
+  if (hasOverseas) return "해외";
+  return "혼합/미분류";
 }
 
 function renderStats() {
@@ -60,12 +72,14 @@ function renderTable() {
   const keyword = $("search").value.trim().toLocaleLowerCase("ko");
   const timing = $("timing").value;
   const category = $("category").value;
+  const region = $("region").value;
   const sort = $("sort").value;
   visibleFunds = funds.filter((fund) => {
     const matchesText = `${fund.name || ""} ${fund.symbol || ""}`.toLocaleLowerCase("ko").includes(keyword);
     return fund.is_monthly && matchesText &&
       (timing === "all" || getTiming(fund) === timing) &&
-      (category === "all" || getCategory(fund) === category);
+      (category === "all" || getCategory(fund) === category) &&
+      (region === "all" || getRegion(fund) === region);
   });
   visibleFunds.sort((a, b) => {
     if (sort === "name") return (a.name || "").localeCompare(b.name || "", "ko");
@@ -208,6 +222,7 @@ async function loadData() {
 $("search").addEventListener("input", renderTable);
 $("timing").addEventListener("change", renderTable);
 $("category").addEventListener("change", renderTable);
+$("region").addEventListener("change", renderTable);
 $("sort").addEventListener("change", renderTable);
 $("calcEtf").addEventListener("change", calculate);
 $("investment").addEventListener("input", calculate);

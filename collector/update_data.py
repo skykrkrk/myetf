@@ -75,22 +75,32 @@ def classify_category(name):
     ]):
         return "채권"
 
-    if any(x in name for x in [
-        " 200",
-        " 코스",
-        " 반도체",
-        " 고배당주",
-        " 주주환원",
-        " SK하이닉스",
-        " 단기",
-        " 증권",
-        " 현대차",
-        " 금융",
-        " K고배당"
-    ]):
-        return "국내"
-
     return "기타"
+
+
+def classify_region(name):
+    """ETF 명칭의 시장 단서를 바탕으로 투자 지역을 분류합니다."""
+    name = str(name).upper()
+    domestic_terms = [
+        "국내", "코스피", "코스닥", "코스", "KOSPI", "KOSDAQ", "KRX", " 200",
+        "삼성전자", "SK하이닉스", "현대차", "고배당주", "주주환원", "국고채",
+        "통안채", "금융", "증권", "K고배당"
+    ]
+    overseas_terms = [
+        "미국", "S&P", "NASDAQ", "나스닥", "다우", "글로벌", "월드", "차이나",
+        "중국", "일본", "인도", "유럽", "독일", "베트남", "인도네시아", "브라질",
+        "홍콩", "항셍", "니케이", "필라델피아", "해외", "선진국", "신흥국",
+        "대만", "프랑스", "영국", "호주", "캐나다", "멕시코", "미국채"
+    ]
+    is_domestic = any(term in name for term in domestic_terms)
+    is_overseas = any(term in name for term in overseas_terms)
+    if is_domestic and is_overseas:
+        return "혼합/미분류"
+    if is_domestic:
+        return "국내"
+    if is_overseas:
+        return "해외"
+    return "혼합/미분류"
 
 
 def fetch_etf_listing():
@@ -617,6 +627,8 @@ def process_fund(row, tax_records):
         "is_monthly": is_monthly,
 
         "category": classify_category(name),
+
+        "region": classify_region(name),
 
         "dividend_status": dividend_status,
 
