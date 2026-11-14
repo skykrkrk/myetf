@@ -1,184 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101b30">
-  <meta name="description" content="국내 월배당 ETF 통합 분석 및 배당금 계산">
-  <title>Monthly Dividend | 월배당 ETF 분석</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbf7ef">
+  <meta name="description" content="국내 상장 월배당 ETF의 분배금, 분배율과 배당 이력을 한눈에 비교하세요.">
+  <title>월배당 ETF 트래커</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="logo" href="./">
-      <span class="logo-icon">₩</span>
-      MONTHLY DIVIDEND
-    </a>
-    <div class="top-info">
-      <span class="live-dot"></span>
-      <span id="updatedAt">데이터 확인 중</span>
-    </div>
+    <a class="logo" href="./"><span class="logo-icon">월</span><span>월배당 ETF 트래커<small>MONTHLY DIVIDEND TRACKER</small></span></a>
+    <div class="top-info"><span class="live-dot"></span><span id="updatedAt">데이터를 불러오는 중</span></div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div>
-        <p class="eyebrow">KOREA ETF DIVIDEND ANALYTICS</p>
-        <h1>월배당 ETF<br><span>통합 분석 플랫폼</span></h1>
-        <p class="hero-desc">
-          국내 상장 ETF의 가격과 분배금 정보를 한곳에서 확인하세요.
-        </p>
+      <div class="hero-copy">
+        <p class="eyebrow">ETF INCOME, MADE CLEAR</p>
+        <h1>월배당 ETF,<br><span>한눈에 비교하세요.</span></h1>
+        <p class="hero-desc">분배금 이력과 분배율을 확인하고, 내 투자금으로 예상 현금흐름을 계산해 보세요.</p>
       </div>
+      <div class="hero-mark" aria-hidden="true"><span>₩</span><i></i><i></i><i></i><i></i><i></i></div>
     </section>
 
-    <section class="stats-grid">
-      <article class="stat-card">
-        <span>전체 ETF</span>
-        <strong id="totalCount">-</strong>
-        <small>국내 상장 ETF</small>
-      </article>
-      <article class="stat-card">
-        <span>월배당 ETF</span>
-        <strong id="monthlyCount">-</strong>
-        <small>최근 12개월 분배 이력 기준</small>
-      </article>
-      <article class="stat-card">
-        <span>평균 연환산 분배율</span>
-        <strong id="avgYield">-</strong>
-        <small>월배당 ETF 단순 평균</small>
-      </article>
-      <article class="stat-card">
-        <span>데이터 기준일</span>
-        <strong id="priceDate" class="date-stat">-</strong>
-        <small>최근 수집된 가격 기준</small>
-      </article>
+    <section class="stats-grid" aria-label="ETF 요약">
+      <article class="stat-card"><span>전체 ETF</span><strong id="totalCount">—</strong><small>수집된 국내 상장 ETF</small></article>
+      <article class="stat-card"><span>월배당 ETF</span><strong id="monthlyCount">—</strong><small>최근 12개월 분배 이력 기준</small></article>
+      <article class="stat-card"><span>평균 연 분배율</span><strong id="avgYield">—</strong><small>월배당 ETF 단순 평균</small></article>
+      <article class="stat-card"><span>데이터 기준일</span><strong id="priceDate" class="date-stat">—</strong><small>가격 데이터 기준일</small></article>
     </section>
 
-    <section class="panel" id="calculator">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">DIVIDEND CALCULATOR</p>
-          <h2>예상 배당금 계산기</h2>
-        </div>
-        <span class="tag">투자 시뮬레이션</span>
-      </div>
-
+    <section class="panel calculator" id="calculator">
+      <div class="section-heading"><div><p class="eyebrow">INCOME ESTIMATOR</p><h2>내 예상 분배금 계산</h2></div><span class="tag">간편 계산</span></div>
       <div class="calculator-grid">
-        <div class="field">
-          <label for="calcEtf">투자 ETF</label>
-          <select id="calcEtf">
-            <option value="">ETF 선택</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="investment">투자금액 (원)</label>
-          <input id="investment" type="number"
-            value="10000000" min="0" step="100000">
-        </div>
+        <div class="field"><label for="calcEtf">ETF 선택</label><select id="calcEtf"><option value="">ETF를 선택하세요</option></select></div>
+        <div class="field"><label for="investment">투자 금액</label><div class="input-suffix"><input id="investment" type="number" value="10000000" min="0" step="100000"><span>원</span></div></div>
       </div>
-
       <div class="calc-results">
-        <div>
-          <span>매수 가능 수량</span>
-          <strong id="shares">-</strong>
-        </div>
-        <div>
-          <span>예상 월 분배금</span>
-          <strong class="green" id="monthlyIncome">-</strong>
-        </div>
-        <div>
-          <span>예상 연간 분배금</span>
-          <strong id="annualIncome">-</strong>
-        </div>
-        <div>
-          <span>연환산 분배율</span>
-          <strong id="calcYield">-</strong>
-        </div>
+        <div><span>매수 가능 수량</span><strong id="shares">—</strong></div>
+        <div><span>월 예상 분배금</span><strong class="accent" id="monthlyIncome">—</strong></div>
+        <div><span>연 예상 분배금</span><strong id="annualIncome">—</strong></div>
+        <div><span>최근 연 분배율</span><strong id="calcYield">—</strong></div>
       </div>
-      <p class="disclaimer">
-        과거 12개월 분배금 기준 단순 추정치입니다.
-        세금, 수수료, 가격변동 및 향후 분배금 변동은 반영하지 않습니다.
-      </p>
+      <p class="disclaimer">최근 12개월 분배금 기준의 단순 추정치입니다. 세금·수수료와 향후 분배금 및 가격 변동은 반영하지 않습니다.</p>
     </section>
 
-    <section class="panel">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">ETF DATABASE</p>
-          <h2>ETF 전체 목록</h2>
-        </div>
-        <button id="downloadCsv" class="button secondary">
-          ↓ CSV 다운로드
-        </button>
-      </div>
-
+    <section class="panel database">
+      <div class="section-heading"><div><p class="eyebrow">ETF DATABASE</p><h2>월배당 ETF 비교</h2><p class="section-subtitle">종목을 선택하면 최근 분배 내역을 확인할 수 있습니다.</p></div><button id="downloadCsv" class="button secondary">↓ 데이터 저장</button></div>
       <div class="filters">
-        <input id="search" type="search"
-          placeholder="종목명 / 종목코드 검색">
-
-        <select id="category">
-          <option value="all">전체 유형</option>
-          <option value="월배당">월배당</option>
-          <option value="커버드콜">커버드콜</option>
-          <option value="리츠">리츠</option>
-          <option value="기타">기타</option>
-        </select>
-
-        <select id="sort">
-          <option value="yield">분배율 높은 순</option>
-          <option value="price">가격 높은 순</option>
-          <option value="name">이름순</option>
-          <option value="dividend">최근 12개월 분배금 순</option>
-        </select>
+        <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="종목명 또는 종목코드 검색" aria-label="종목 검색"></label>
+        <select id="timing" aria-label="분배 시점"><option value="all">분배 시점 전체</option><option value="mid">월중 배당 (15일경)</option><option value="end">월말 배당 (말일경)</option></select>
+        <select id="category" aria-label="ETF 유형"><option value="all">모든 유형</option><option value="커버드콜">커버드콜</option><option value="리츠">리츠</option><option value="채권">채권</option><option value="기타">기타</option></select>
+        <select id="sort" aria-label="정렬"><option value="yield">연 분배율 높은 순</option><option value="dividend">12개월 분배금 순</option><option value="price">가격 높은 순</option><option value="name">이름 순</option></select>
       </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>종목명</th>
-              <th>종목코드</th>
-              <th>가격</th>
-              <th>최근 12개월 분배금</th>
-              <th>연환산 분배율</th>
-              <th>유형</th>
-            </tr>
-          </thead>
-          <tbody id="etfTable">
-            <tr><td colspan="6" class="empty">데이터 불러오는 중...</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="table-footer">
-        <span id="resultCount">0개 종목</span>
-        <span>금액 단위: 원</span>
-      </div>
+      <div class="table-wrap"><table><thead><tr><th>종목명 · 코드</th><th>배당 시점</th><th>최근 분배금</th><th>12개월 분배금</th><th>연 분배율</th><th>유형</th></tr></thead><tbody id="etfTable"><tr><td colspan="6" class="empty">데이터를 불러오는 중입니다.</td></tr></tbody></table></div>
+      <div class="table-footer"><span id="resultCount">0개 종목</span><span>금액은 주당 원화 기준</span></div>
+      <div id="emptyData" class="empty-state" hidden><span>◷</span><strong>아직 표시할 데이터가 없어요</strong><p>가격과 분배금 데이터가 준비되면 ETF 목록이 여기에 표시됩니다.</p></div>
     </section>
 
-    <section class="panel">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">DIVIDEND CALENDAR</p>
-          <h2>분배금 일정</h2>
-        </div>
-        <span class="tag">최근 / 예정일</span>
-      </div>
-      <div id="calendarList" class="calendar-list">
-        <p class="empty">분배금 이력을 불러오는 중...</p>
-      </div>
-      <p class="disclaimer">
-        아래 날짜는 데이터 제공처의 분배 관련 기준일이며,
-        실제 지급일과 다를 수 있습니다.
-      </p>
+    <section class="panel extras">
+      <button class="accordion" type="button" aria-expanded="false" aria-controls="macroContent"><span><b>01</b><span><strong>시장 지표 함께 보기</strong><small>ETF 비교에 참고할 데이터와 기준</small></span></span><em>＋</em></button>
+      <div class="accordion-content" id="macroContent" hidden><p>기준금리와 시장 지표는 ETF 분배금과 별도로 확인해야 합니다. 현재 이 사이트는 ETF 가격 및 분배 이력 데이터를 기준으로 비교합니다.</p></div>
+      <button class="accordion" type="button" aria-expanded="false" aria-controls="newContent"><span><b>02</b><span><strong>신규 상장 ETF</strong><small>최근 분배 이력이 짧은 종목 알아보기</small></span></span><em>＋</em></button>
+      <div class="accordion-content" id="newContent" hidden><p>상장 초기 ETF는 12개월 분배금 이력이 충분하지 않을 수 있어 연 분배율 비교에 유의하세요.</p></div>
+      <button class="accordion" type="button" aria-expanded="false" aria-controls="noticeContent"><span><b>03</b><span><strong>데이터 안내</strong><small>수집 시점과 계산 기준</small></span></span><em>＋</em></button>
+      <div class="accordion-content" id="noticeContent" hidden><p>분배율은 최근 12개월 분배금 합계를 현재 가격으로 나눈 값입니다. 분배금은 확정 수익이 아니며 변동될 수 있습니다.</p></div>
     </section>
 
-    <footer>
-      <p>MONTHLY DIVIDEND</p>
-      <span>Data updated automatically by GitHub Actions.</span>
-      <span>투자 참고용 정보이며 투자 권유가 아닙니다.</span>
-    </footer>
+    <aside class="retirement-card"><div><span class="retirement-icon">↗</span><strong>월별 현금흐름 계획이 필요하신가요?</strong><p>예상 분배금을 바탕으로 나만의 월급 달력을 만들어 보세요.</p></div><a href="#calculator">분배금 계산하기 <span>→</span></a></aside>
+    <footer><strong>월배당 ETF 트래커</strong><span id="dataSource">자료: ETF 가격 및 분배 이력 데이터</span><span>본 페이지는 정보 제공을 목적으로 하며 투자 권유가 아닙니다.</span></footer>
   </main>
-
+  <dialog id="fundDialog" class="fund-dialog"><form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form><div id="fundDetails"></div></dialog>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>
