@@ -11,3 +11,5 @@ body{color:var(--ink)}.topbar{background:#141820;border-color:var(--line)}.hero{
 .history-item{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 14px;align-items:center}.history-item span{min-width:0}.history-item span:last-child{font-weight:700}@media(max-width:520px){.history-item{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}}
 
 .tradingview-link{display:inline-flex;align-items:center;gap:5px;margin-top:10px;color:#ff9a76;text-decoration:none;font-size:11px;font-weight:700}.tradingview-link:hover{text-decoration:underline}.tradingview-link span{color:var(--orange)}
+
+.region-badge{display:inline-block;padding:5px 7px;border-radius:5px;font-size:9px;white-space:nowrap}.region-badge.domestic{background:#263b34;color:#a1d8ba}.region-badge.overseas{background:#2d3445;color:#a9c7ff}.region-badge.mixed{background:#3a3630;color:#c9b99d}

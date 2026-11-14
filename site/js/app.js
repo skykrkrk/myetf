@@ -48,11 +48,8 @@ function getRegion(fund) {
 
 function renderStats() {
   const monthly = funds.filter((fund) => fund.is_monthly);
-  const valid = monthly.filter((fund) => fund.annual_yield != null);
-  const average = valid.length ? valid.reduce((sum, fund) => sum + Number(fund.annual_yield), 0) / valid.length : null;
   $("totalCount").textContent = number(funds.length);
   $("monthlyCount").textContent = number(monthly.length);
-  $("avgYield").textContent = average == null ? "—" : `${average.toFixed(2)}%`;
 }
 
 function renderSelect() {
@@ -111,7 +108,7 @@ function renderTable() {
       <td>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</td>
       <td class="yield-value">${fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`}</td>
       <td>${safe(latest?.ex_date || "자료 없음")}</td>
-      <td><span class="timing-badge ${timing}">${timing === "mid" ? "월중" : timing === "end" ? "월말" : "시점 미확인"}</span><span class="type-badge">${safe(getCategory(fund))}</span></td>
+      <td><span class="timing-badge ${timing}">${timing === "mid" ? "월중" : timing === "end" ? "월말" : "시점 미확인"}</span><span class="type-badge">${safe(getCategory(fund))}</span><span class="region-badge ${getRegion(fund) === "국내" ? "domestic" : getRegion(fund) === "해외" ? "overseas" : "mixed"}">${safe(getRegion(fund) === "혼합/미분류" ? "혼합·미분류" : getRegion(fund))}</span></td>
     </tr>`;
   }).join("");
   tbody.querySelectorAll(".fund-row").forEach((row) => {
