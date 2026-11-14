@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#101319">
   <meta name="description" content="국내 상장 월배당 ETF의 분배금, 분배율과 배당 이력을 한눈에 비교하세요.">
-  <title>월배당 ETF 트래커</title>
+  <title>국내 상장 월배당 ETF</title>
   <link rel="stylesheet" href="./css/style.css?v=6">
 </head>
 <body>
   <header class="topbar">
-    <a class="logo" href="./"><span class="logo-icon">월</span><span>월배당 ETF 트래커<small>MONTHLY DIVIDEND TRACKER</small></span></a>
+    <a class="logo" href="./"><span class="logo-icon">ETF</span><span>국내 상장 월배당 ETF<small>KOREA LISTED ETF TRACKER</small></span></a>
     <div class="top-info"><span class="live-dot"></span><span id="updatedAt">데이터를 불러오는 중</span></div>
   </header>
 
@@ -50,17 +50,7 @@
       <div id="emptyData" class="empty-state" hidden><span>◷</span><strong>아직 표시할 데이터가 없어요</strong><p>가격과 분배금 데이터가 준비되면 ETF 목록이 여기에 표시됩니다.</p></div>
     </section>
 
-    <section class="panel extras">
-      <button class="accordion" type="button" aria-expanded="false" aria-controls="macroContent"><span><b>01</b><span><strong>시장 지표 함께 보기</strong><small>ETF 비교에 참고할 데이터와 기준</small></span></span><em>＋</em></button>
-      <div class="accordion-content" id="macroContent" hidden><p>기준금리와 시장 지표는 ETF 분배금과 별도로 확인해야 합니다. 현재 이 사이트는 ETF 가격 및 분배 이력 데이터를 기준으로 비교합니다.</p></div>
-      <button class="accordion" type="button" aria-expanded="false" aria-controls="newContent"><span><b>02</b><span><strong>신규 상장 ETF</strong><small>최근 분배 이력이 짧은 종목 알아보기</small></span></span><em>＋</em></button>
-      <div class="accordion-content" id="newContent" hidden><p>상장 초기 ETF는 12개월 분배금 이력이 충분하지 않을 수 있어 연 분배율 비교에 유의하세요.</p></div>
-      <button class="accordion" type="button" aria-expanded="false" aria-controls="noticeContent"><span><b>03</b><span><strong>데이터 안내</strong><small>수집 시점과 계산 기준</small></span></span><em>＋</em></button>
-      <div class="accordion-content" id="noticeContent" hidden><p>분배율은 최근 12개월 분배금 합계를 현재 가격으로 나눈 값입니다. 분배금은 확정 수익이 아니며 변동될 수 있습니다.</p></div>
-    </section>
-
-    <aside class="retirement-card"><div><span class="retirement-icon">↗</span><strong>월별 현금흐름 계획이 필요하신가요?</strong><p>예상 분배금을 바탕으로 나만의 월급 달력을 만들어 보세요.</p></div><a href="#calculator">분배금 계산하기 <span>→</span></a></aside>
-    <footer><strong>월배당 ETF 트래커</strong><span id="dataSource">자료: ETF 가격 및 분배 이력 데이터</span><span>본 페이지는 정보 제공을 목적으로 하며 투자 권유가 아닙니다.</span></footer>
+    <footer><strong>국내 상장 월배당 ETF</strong><span id="dataSource">자료: ETF 가격 및 분배 이력 데이터</span><span>본 페이지는 정보 제공을 목적으로 하며 투자 권유가 아닙니다.</span></footer>
   </main>
   <dialog id="fundDialog" class="fund-dialog"><form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form><div id="fundDetails"></div></dialog>
   <script type="module" src="./js/app.js?v=6"></script>
