@@ -336,6 +336,14 @@ ETF_CHECK_TAX_URLS = (
 )
 
 
+def normalize_tax_month(value):
+    """ETF CHECK 날짜(예: 2026/04/30)를 이벤트 월 키(2026-04)로 바꿉니다."""
+    match = re.search(r"(20\d{2})\D?(\d{1,2})", str(value))
+    if not match:
+        return ""
+    return f"{int(match.group(1)):04d}-{int(match.group(2)):02d}"
+
+
 def fetch_etfcheck_tax_records():
     """ETF CHECK 과표 JSON에서 종목별 월 분배금·과표 자료를 가져옵니다."""
     session = requests.Session()
@@ -352,13 +360,13 @@ def fetch_etfcheck_tax_records():
             amount = node.get("amount", node.get("distribution"))
             tax = node.get("tax_base", node.get("tax", node.get("taxable_amount")))
             if code and month is not None and amount is not None and tax is not None:
-                records.setdefault(code, []).append((str(month)[:7].replace(".", "-"), amount, tax))
+                records.setdefault(code, []).append((normalize_tax_month(month), amount, tax))
             for key, value in node.items():
                 child_symbol = str(key).zfill(6) if str(key).isdigit() and len(str(key)) <= 6 else code
                 walk(value, child_symbol)
         elif isinstance(node, list):
             if symbol and len(node) >= 3 and not isinstance(node[0], (list, dict)):
-                month = str(node[0])[:7].replace(".", "-")
+                month = normalize_tax_month(node[0])
                 records.setdefault(symbol, []).append((month, node[1], node[2]))
             else:
                 for item in node:
@@ -371,6 +379,7 @@ def fetch_etfcheck_tax_records():
             walk(response.json())
         except Exception as exc:
             logging.warning("ETF CHECK 과표 자료 조회 실패 %s: %s", url, exc)
+    logging.info("ETF CHECK 과표 레코드 파싱 완료: %d개 종목, %d건", len(records), sum(map(len, records.values())))
     return records
 
 
