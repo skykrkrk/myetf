@@ -30,6 +30,7 @@ function getCategory(fund) {
   if (/커버드콜|타겟커버드콜|프리미엄/.test(name)) return "커버드콜";
   if (/리츠|부동산/.test(name)) return "리츠";
   if (/채권|국고채|회사채|단기채/.test(name)) return "채권";
+  if (/국내/.test(name)) return "국내";
   return "기타";
 }
 

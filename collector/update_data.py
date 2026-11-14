@@ -75,6 +75,21 @@ def classify_category(name):
     ]):
         return "채권"
 
+    if any(x in name for x in [
+        " 200",
+        " 코스",
+        " 반도체",
+        " 고배당주",
+        " 주주환원",
+        " SK하이닉스",
+        " 단기",
+        " 증권",
+        " 현대차",
+        " 금융",
+        " K고배당"
+    ]):
+        return "국내"
+
     return "기타"
 
 
