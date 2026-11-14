@@ -81,6 +81,12 @@ def classify_category(name):
 def classify_region(name):
     """ETF 명칭의 시장 단서를 바탕으로 투자 지역을 분류합니다."""
     name = str(name).upper()
+    domestic_overrides = [
+        "TIGER 배당커버드콜액티브",
+        "KODEX 반도체타겟위클리커버드콜"
+    ]
+    if any(term in name for term in domestic_overrides):
+        return "국내"
     domestic_terms = [
         "국내", "코리아", "코스피", "코스닥", "코스", "KOSPI", "KOSDAQ", "KRX", " 200",
         "삼성전자", "SK하이닉스", "현대차", "고배당주", "주주환원", "국고채",

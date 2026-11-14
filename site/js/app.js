@@ -36,6 +36,7 @@ function getCategory(fund) {
 function getRegion(fund) {
   if (["국내", "해외", "혼합/미분류"].includes(fund.region)) return fund.region;
   const name = fund.name || "";
+  if (["TIGER 배당커버드콜액티브", "KODEX 반도체타겟위클리커버드콜"].some((term) => name.includes(term))) return "국내";
   const domestic = ["국내", "코리아", "코스피", "코스닥", "코스", "KOSPI", "KOSDAQ", "KRX", " 200", "삼성전자", "SK하이닉스", "현대차", "고배당주", "주주환원", "국고채", "통안채", "금융", "증권", "K고배당"];
   const overseas = ["미국", "S&P", "NASDAQ", "나스닥", "다우", "글로벌", "월드", "차이나", "중국", "일본", "인도", "유럽", "독일", "베트남", "인도네시아", "브라질", "홍콩", "항셍", "니케이", "필라델피아", "해외", "선진국", "신흥국", "대만", "프랑스", "영국", "호주", "캐나다", "멕시코", "미국채"];
   const hasDomestic = domestic.some((term) => name.toUpperCase().includes(term.toUpperCase()));
