@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101319">
   <meta name="description" content="국내 상장 월배당 ETF의 분배금, 분배율과 배당 이력을 한눈에 비교하세요.">
   <title>국내 상장 월배당 ETF</title>
-  <link rel="stylesheet" href="./css/style.css?v=16">
+  <link rel="stylesheet" href="./css/style.css?v=17">
 </head>
 <body>
   <header class="topbar">
@@ -27,25 +27,28 @@
         <div class="market-card-heading"><div><span>KOSPI Fear &amp; Greed</span><a href="https://kospi.feargreedchart.com/api/?action=kospi" target="_blank" rel="noopener noreferrer">데이터 출처 ↗</a></div><small id="kospiFearUpdated">지표를 불러오는 중</small></div>
         <div id="kospiFearGauge" class="fear-gauge"><span class="metric-loading">지표를 불러오는 중…</span></div>
       </article>
+    </section>
+
+    <section class="market-bottom-row" aria-label="금리 전망 및 분배금 계산">
       <article class="market-card fedwatch-card">
         <div class="market-card-heading"><div><span>CME FedWatch</span><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool" target="_blank" rel="noopener noreferrer">전체 도구 보기 ↗</a></div><small>연방기금금리 선물 기반 확률</small></div>
         <div id="fedwatchChart" class="fedwatch-chart"><span class="metric-loading">CME futures data loading…</span></div>
       </article>
-    </section>
 
-    <section class="panel calculator" id="calculator">
-      <div class="section-heading"><div><p class="eyebrow">INCOME ESTIMATOR</p><h2>내 예상 분배금 계산</h2></div><span class="tag">간편 계산</span></div>
-      <div class="calculator-grid">
-        <div class="field"><label for="calcEtf">ETF 선택</label><select id="calcEtf"><option value="">ETF를 선택하세요</option></select></div>
-        <div class="field"><label for="investment">투자 금액</label><div class="input-suffix"><input id="investment" type="number" value="10000000" min="0" step="100000"><span>원</span></div></div>
-      </div>
-      <div class="calc-results">
-        <div><span>매수 가능 수량</span><strong id="shares">—</strong></div>
-        <div><span>월 예상 분배금</span><strong class="accent" id="monthlyIncome">—</strong></div>
-        <div><span>연 예상 분배금</span><strong id="annualIncome">—</strong></div>
-        <div><span>분배율(최근 1년)</span><strong id="calcYield">—</strong></div>
-      </div>
-      <p class="disclaimer">최근 1년 회차별 분배율 합계 기준의 단순 추정치입니다. 세금·수수료와 향후 분배금 및 가격 변동은 반영하지 않습니다.</p>
+      <section class="panel calculator" id="calculator">
+        <div class="section-heading"><div><p class="eyebrow">INCOME ESTIMATOR</p><h2>내 예상 분배금 계산</h2></div><span class="tag">간편 계산</span></div>
+        <div class="calculator-grid">
+          <div class="field"><label for="calcEtf">ETF 선택</label><select id="calcEtf"><option value="">ETF를 선택하세요</option></select></div>
+          <div class="field"><label for="investment">투자 금액</label><div class="input-suffix"><input id="investment" type="number" value="10000000" min="0" step="100000"><span>원</span></div></div>
+        </div>
+        <div class="calc-results">
+          <div><span>매수 가능 수량</span><strong id="shares">—</strong></div>
+          <div><span>월 예상 분배금</span><strong class="accent" id="monthlyIncome">—</strong></div>
+          <div><span>연 예상 분배금</span><strong id="annualIncome">—</strong></div>
+          <div><span>분배율(최근 1년)</span><strong id="calcYield">—</strong></div>
+        </div>
+        <p class="disclaimer">최근 1년 회차별 분배율 합계 기준의 단순 추정치입니다. 세금·수수료와 향후 분배금 및 가격 변동은 반영하지 않습니다.</p>
+      </section>
     </section>
 
     <section class="panel database">
