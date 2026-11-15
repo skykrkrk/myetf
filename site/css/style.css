@@ -16,11 +16,11 @@ body{color:var(--ink)}.topbar{background:#141820;border-color:var(--line)}.hero{
 
 /* Sortable table headers */
 .filters{grid-template-columns:2fr 1fr 1fr 1fr}
-th{padding:0}
-.sort-button{display:flex;align-items:center;justify-content:flex-end;gap:7px;width:100%;min-height:42px;padding:12px 13px;border:0;background:transparent;color:inherit;font:inherit;text-align:inherit;white-space:nowrap;cursor:pointer}
+th{padding:0;background:transparent}
+.sort-button{appearance:none;-webkit-appearance:none;display:flex;align-items:center;justify-content:flex-end;gap:7px;width:100%;min-height:42px;padding:12px 13px;border:0;border-radius:0;box-shadow:none;background:transparent;color:inherit;font:inherit;text-align:inherit;white-space:nowrap;cursor:pointer}
 th:first-child .sort-button{justify-content:flex-start}
 .sort-button:hover{color:#eef3fa}
 .sort-button:focus-visible{outline:2px solid #ff9a76;outline-offset:-3px;border-radius:5px}
-.sort-arrow{color:#7e8999;font-size:12px;font-weight:800;line-height:1;transition:color .15s,transform .15s}
+.sort-arrow{color:#7e8999;font-size:9px;font-weight:800;line-height:1;transition:color .15s,transform .15s}
 .sort-button.is-active .sort-arrow{color:#ff9a76}
 @media(max-width:760px){.filters{grid-template-columns:1fr 1fr}}

@@ -149,7 +149,7 @@ function updateSortIndicators() {
     if (th) th.setAttribute("aria-sort", active ? (sortState.direction === "asc" ? "ascending" : "descending") : "none");
     button.classList.toggle("is-active", active);
     const arrow = button.querySelector(".sort-arrow");
-    if (arrow) arrow.textContent = active && sortState.direction === "desc" ? "↓" : "↑";
+    if (arrow) arrow.textContent = active && sortState.direction === "desc" ? "▼" : "▲";
     button.setAttribute("aria-label", `${button.querySelector("span")?.textContent || "열"}, ${active ? (sortState.direction === "asc" ? "오름차순" : "내림차순") : "오름차순으로 정렬"}`);
   });
 }
