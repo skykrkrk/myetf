@@ -43,16 +43,23 @@ th:first-child .sort-button{justify-content:flex-start}
 .market-card-heading>small{color:var(--muted);font-size:9px;text-align:right;white-space:nowrap}
 .fear-gauge{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:235px}
 .fear-gauge svg{display:block;width:min(100%,330px);height:auto;overflow:visible}
-.gauge-segment{fill:none;stroke:#3b424e;stroke-width:27;stroke-linecap:butt}
-.gauge-segment.is-active{stroke:var(--segment-color);stroke-width:29}
+.gauge-segment{fill:none;stroke:var(--segment-color);stroke-width:27;stroke-linecap:butt;opacity:.38}
+.gauge-segment.is-active{opacity:1;stroke-width:29}
 .gauge-tick{stroke:#8791a0;stroke-width:1.5;stroke-linecap:round}
-.gauge-label{fill:#aeb7c5;font-size:8px;font-weight:650;text-anchor:middle;dominant-baseline:middle}
 .gauge-end-label{fill:#909aaa;font-size:10px}
 .gauge-needle{stroke:#f4f6f9;stroke-width:4;stroke-linecap:round}
 .gauge-hub{fill:#ff9a76;stroke:#1a2029;stroke-width:2}
 .fear-value{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-top:-19px;z-index:1}
 .fear-value strong{font-size:28px;letter-spacing:-.7px}
 .fear-value span{color:var(--muted);font-size:11px}
+.fear-deltas{display:flex;justify-content:center;gap:18px;width:100%;margin-top:10px}
+.fear-deltas div{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:48px}
+.fear-deltas span{color:var(--muted);font-size:10px}
+.fear-deltas b{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.fear-deltas b.up{color:#8eb98b}
+.fear-deltas b.down{color:#f27962}
+.fear-deltas b.flat{color:var(--muted)}
+.fear-gauge .metric-unavailable a{display:inline-block;margin-top:8px;color:var(--orange);text-decoration:none}
 .metric-loading,.metric-unavailable{color:var(--muted);font-size:11px;text-align:center;line-height:1.7}
 .fedwatch-fallback{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 12px;text-align:center;color:var(--muted)}
 .fedwatch-icon{display:grid;place-items:center;width:48px;height:48px;border:1px solid #3b424e;border-radius:14px;color:var(--orange);font-size:24px;font-weight:800}

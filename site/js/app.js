@@ -54,9 +54,30 @@ function renderStats() {
   $("monthlyCount").textContent = number(monthly.length);
 }
 
-function renderFearGauge(score, rating) {
+const FEAR_RATINGS = {
+  "extreme fear": "극단적 공포",
+  fear: "공포",
+  neutral: "중립",
+  greed: "탐욕",
+  "extreme greed": "극단적 탐욕",
+};
+
+function fearRating(rating) {
+  const key = String(rating || "").trim().toLowerCase();
+  return FEAR_RATINGS[key] || key;
+}
+
+function fearDelta(current, previous, label) {
+  if (!Number.isFinite(Number(previous))) return "";
+  const delta = Number(current) - Number(previous);
+  const tone = delta > 0.05 ? "up" : delta < -0.05 ? "down" : "flat";
+  const text = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}`;
+  return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
+}
+
+function renderFearGauge(data) {
   const gauge = $("fearGauge");
-  const value = Math.max(0, Math.min(100, Number(score)));
+  const value = Math.max(0, Math.min(100, Number(data.score)));
   const centerX = 150;
   const centerY = 150;
   const radius = 112;
@@ -69,7 +90,6 @@ function renderFearGauge(score, rating) {
     const to = point(end, distance);
     return `M ${from.x.toFixed(1)} ${from.y.toFixed(1)} A ${distance} ${distance} 0 0 1 ${to.x.toFixed(1)} ${to.y.toFixed(1)}`;
   };
-  const labels = ["극단적 공포", "공포", "중립", "탐욕", "극단적 탐욕"];
   const colors = ["#f27962", "#ed9c69", "#b8a27b", "#8eb98b", "#68b88e"];
   const activeIndex = Math.min(4, Math.floor(value / 20));
   const angle = 180 - value * 1.8;
@@ -80,35 +100,38 @@ function renderFearGauge(score, rating) {
     const inner = point(tickAngle, index % 5 === 0 ? 86 : 89);
     return `<line x1="${inner.x.toFixed(1)}" y1="${inner.y.toFixed(1)}" x2="${outer.x.toFixed(1)}" y2="${outer.y.toFixed(1)}" class="gauge-tick"/>`;
   }).join("");
-  const arcs = labels.map((label, index) => {
+  const arcs = colors.map((color, index) => {
     const start = 180 - index * 36 - 2;
     const end = 180 - (index + 1) * 36 + 2;
-    const labelPoint = point(180 - (index + 0.5) * 36, 70);
-    return `<path d="${arc(start, end)}" class="gauge-segment${index === activeIndex ? " is-active" : ""}" style="--segment-color:${colors[index]}"/><text x="${labelPoint.x.toFixed(1)}" y="${labelPoint.y.toFixed(1)}" class="gauge-label">${label}</text>`;
+    return `<path d="${arc(start, end)}" class="gauge-segment${index === activeIndex ? " is-active" : ""}" style="--segment-color:${color}"/>`;
   }).join("");
-  const ratingText = String(rating || "").replace(/\b\w/g, (char) => char.toUpperCase());
+  const ratingText = fearRating(data.rating);
+  const deltas = [
+    fearDelta(value, data.previous_close, "전일"),
+    fearDelta(value, data.previous_1_week, "1주"),
+    fearDelta(value, data.previous_1_month, "1개월"),
+  ].join("");
   gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="CNN 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
     ${arcs}${ticks}<line x1="150" y1="150" x2="${needle.x.toFixed(1)}" y2="${needle.y.toFixed(1)}" class="gauge-needle"/><circle cx="150" cy="150" r="6" class="gauge-hub"/>
     <text x="38" y="166" class="gauge-end-label" text-anchor="middle">0</text><text x="262" y="166" class="gauge-end-label" text-anchor="middle">100</text>
-  </svg><div class="fear-value"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>`;
+  </svg><div class="fear-value"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
 }
 
 async function loadFearAndGreed() {
   try {
-    const response = await fetch("https://production.dataviz.cnn.io/index/fearandgreed/graphdata", { cache: "no-store" });
-    if (!response.ok) throw new Error("CNN 지수 응답 오류");
+    const response = await fetch("./data/feargreed.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("CNN 지수 자료를 불러오지 못했습니다.");
     const data = await response.json();
-    const current = data.fear_and_greed;
-    if (!current || !Number.isFinite(Number(current.score))) throw new Error("CNN 지수 데이터 형식 오류");
-    renderFearGauge(current.score, current.rating);
-    const updated = current.timestamp ? new Date(current.timestamp) : null;
+    if (!data.available || !Number.isFinite(Number(data.score))) throw new Error(data.error || "현재 표시할 CNN 지수가 없습니다.");
+    renderFearGauge(data);
+    const updated = data.timestamp ? new Date(data.timestamp) : null;
     $("fearUpdated").textContent = updated && !Number.isNaN(updated.valueOf())
       ? `업데이트 ${new Intl.DateTimeFormat("ko-KR", { timeZone: "America/New_York", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(updated)} ET`
-      : "CNN 최신 지수";
+      : "CNN 일간 지수";
   } catch (error) {
     console.warn("CNN Fear & Greed 지수를 불러오지 못했습니다.", error);
-    $("fearGauge").innerHTML = '<span class="metric-unavailable">지수를 불러오지 못했습니다.<br>CNN 사이트에서 확인해 주세요.</span>';
-    $("fearUpdated").textContent = "연결 대기 중";
+    $("fearGauge").innerHTML = '<span class="metric-unavailable">지수를 불러오지 못했습니다.<br><a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener noreferrer">CNN 사이트에서 확인 ↗</a></span>';
+    $("fearUpdated").textContent = "자료 대기 중";
   }
 }
 
