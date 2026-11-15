@@ -563,7 +563,7 @@ def fetch_krx_etf_market_caps(date):
 
 
 def enrich_distribution_yields(symbol, events):
-    """Calculate distribution yield from next-day close and event amount."""
+    """Use the day after ex-date and that date's ETF close to calculate yield."""
     candidates = []
     for event in events:
         try:
@@ -581,15 +581,37 @@ def enrich_distribution_yields(symbol, events):
 
     start = min(day for _, day in candidates) - timedelta(days=7)
     end = max(day for _, day in candidates) + timedelta(days=1)
+    closes = {}
+    close_source = ""
+
     try:
         prices = krx_stock.get_etf_ohlcv_by_date(
             start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), symbol
         )
-        if prices is None or prices.empty or "\uC885\uAC00" not in prices.columns:
-            return 0
-        closes = {pd.Timestamp(day).date(): safe_number(value) for day, value in prices["\uC885\uAC00"].items()}
+        if prices is not None and not prices.empty and "\uC885\uAC00" in prices.columns:
+            closes = {
+                pd.Timestamp(day).date(): safe_number(value)
+                for day, value in prices["\uC885\uAC00"].items()
+            }
+            close_source = "KRX ETF individual historical closing price"
     except Exception as exc:
         logging.warning("KRX ETF historical-close request failed for %s: %s", symbol, exc)
+
+    if not closes:
+        try:
+            prices = fdr.DataReader(
+                symbol, start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
+            )
+            if prices is not None and not prices.empty and "Close" in prices.columns:
+                closes = {
+                    pd.Timestamp(day).date(): safe_number(value)
+                    for day, value in prices["Close"].items()
+                }
+                close_source = "FinanceDataReader / Naver Finance ETF historical close (fallback)"
+        except Exception as exc:
+            logging.warning("ETF fallback historical-close request failed for %s: %s", symbol, exc)
+
+    if not closes:
         return 0
 
     enriched = 0
@@ -606,7 +628,7 @@ def enrich_distribution_yields(symbol, events):
         event["record_date_close"] = int(close)
         event["record_date_close_date"] = close_day.strftime("%Y-%m-%d")
         event["distribution_yield"] = round(amount / close * 100, 4)
-        event["distribution_yield_source"] = "KRX ETF individual historical closing price"
+        event["distribution_yield_source"] = close_source
         enriched += 1
     return enriched
 
@@ -840,7 +862,7 @@ def main():
             "listing": "FinanceDataReader / Naver Finance",
             "price": "FinanceDataReader / Naver Finance ETF listing",
             "market_cap": "KRX ETF all-items quote (market cap in KRW 100M; date " + (krx_market_cap_date or "fallback") + ")",
-            "distribution_yield": "Distribution per unit / KRX closing price on the day after ex-date",
+            "distribution_yield": "Distribution per unit / KRX historical close; FinanceDataReader/Naver fallback",
             "dividend": "Yahoo Finance distribution amount / KRX close for yield",
             "distribution_details": "ETF CHECK monthly taxable base; KODEX official distribution history as fallback"
         },
