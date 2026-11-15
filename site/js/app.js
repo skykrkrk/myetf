@@ -352,7 +352,7 @@ async function loadData() {
     if (!response.ok) throw new Error("ETF 데이터 파일을 불러오지 못했습니다.");
     const data = await response.json();
     funds = Array.isArray(data.funds) ? data.funds : [];
-    $("updatedAt").textContent = data.updated_at ? `마지막 업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
+    $("updatedAt").textContent = data.updated_at ? `업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
     if (data.source?.listing || data.source?.dividend || data.source?.distribution_details || data.source?.market_cap || data.source?.distribution_yield) {
       $("dataSource").textContent = `\uC790\uB8CC: ${[data.source.listing, data.source.dividend, data.source.distribution_details, data.source.market_cap, data.source.distribution_yield].filter(Boolean).join(" \u00B7 ")}`;
     }
