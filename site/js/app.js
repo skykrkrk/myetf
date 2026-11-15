@@ -83,6 +83,7 @@ function renderTable() {
     if (sort === "name") return (a.name || "").localeCompare(b.name || "", "ko");
     if (sort === "price") return (b.price || 0) - (a.price || 0);
     if (sort === "dividend") return (b.dividend_12m || 0) - (a.dividend_12m || 0);
+    if (sort === "recent-yield") return (latestEvent(b)?.distribution_yield ?? 0) - (latestEvent(a)?.distribution_yield ?? 0);
     return (b.distribution_yield_12m ?? 0) - (a.distribution_yield_12m ?? 0);
   });
   $("resultCount").textContent = `${number(visibleFunds.length)}개 종목`;
