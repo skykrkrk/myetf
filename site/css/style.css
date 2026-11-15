@@ -67,7 +67,7 @@ th:first-child .sort-button{justify-content:flex-start}
 .fedwatch-fallback p{max-width:300px;margin:0;font-size:11px;line-height:1.7}
 .fedwatch-fallback a{display:inline-flex;margin-top:4px;padding:10px 13px;border:1px solid #654538;border-radius:9px;background:#332622;color:#ff9a76;font-size:11px;font-weight:700;text-decoration:none}
 .fedwatch-fallback a:hover{background:#493129}
-@media(max-width:1050px){.market-cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.fedwatch-card{grid-column:1/-1;min-height:340px}}
+@media(max-width:1400px){.market-cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.fedwatch-card{grid-column:1/-1;min-height:340px}}
 @media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr);gap:10px}.combined-stat-card{min-height:175px}.market-card{min-height:290px}.fedwatch-card{grid-column:auto;min-height:330px}.combined-count{min-width:0}.count-caption{margin-top:6px}}
 
 /* Market sentiment and summary cards */
@@ -80,7 +80,7 @@ th:first-child .sort-button{justify-content:flex-start}
 .market-bottom-row .panel{margin-bottom:0}
 .market-bottom-row .market-card{min-height:300px}
 .fedwatch-card .fedwatch-fallback{flex-direction:row;flex-wrap:wrap;justify-content:center;padding:12px}
-@media(max-width:1050px){.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1400px){.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr)}.combined-stat-card{min-height:175px}.market-card{min-height:385px}.market-bottom-row{grid-template-columns:minmax(0,1fr);gap:10px}.market-bottom-row .market-card{min-height:250px}}
 
 /* FedWatch-style probability bars */
