@@ -742,6 +742,9 @@ def main():
     tax_records = fetch_etfcheck_tax_records()
     logging.info("ETF CHECK 월별 과표 자료: %d개 종목", len(tax_records))
 
+    krx_market_caps, krx_market_cap_date = fetch_krx_etf_market_caps(TODAY)
+    logging.info("KRX ETF market-cap snapshot: %d symbols (%s)", len(krx_market_caps), krx_market_cap_date or "fallback")
+
     rows = listing.to_dict("records")
 
     results = []
