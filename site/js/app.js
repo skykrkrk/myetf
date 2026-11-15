@@ -54,6 +54,64 @@ function renderStats() {
   $("monthlyCount").textContent = number(monthly.length);
 }
 
+function renderFearGauge(score, rating) {
+  const gauge = $("fearGauge");
+  const value = Math.max(0, Math.min(100, Number(score)));
+  const centerX = 150;
+  const centerY = 150;
+  const radius = 112;
+  const point = (angle, distance) => {
+    const radians = angle * Math.PI / 180;
+    return { x: centerX + Math.cos(radians) * distance, y: centerY - Math.sin(radians) * distance };
+  };
+  const arc = (start, end, distance = radius) => {
+    const from = point(start, distance);
+    const to = point(end, distance);
+    return `M ${from.x.toFixed(1)} ${from.y.toFixed(1)} A ${distance} ${distance} 0 0 1 ${to.x.toFixed(1)} ${to.y.toFixed(1)}`;
+  };
+  const labels = ["극단적 공포", "공포", "중립", "탐욕", "극단적 탐욕"];
+  const colors = ["#f27962", "#ed9c69", "#b8a27b", "#8eb98b", "#68b88e"];
+  const activeIndex = Math.min(4, Math.floor(value / 20));
+  const angle = 180 - value * 1.8;
+  const needle = point(angle, 82);
+  const ticks = Array.from({ length: 21 }, (_, index) => {
+    const tickAngle = 180 - index * 9;
+    const outer = point(tickAngle, 94);
+    const inner = point(tickAngle, index % 5 === 0 ? 86 : 89);
+    return `<line x1="${inner.x.toFixed(1)}" y1="${inner.y.toFixed(1)}" x2="${outer.x.toFixed(1)}" y2="${outer.y.toFixed(1)}" class="gauge-tick"/>`;
+  }).join("");
+  const arcs = labels.map((label, index) => {
+    const start = 180 - index * 36 - 2;
+    const end = 180 - (index + 1) * 36 + 2;
+    const labelPoint = point(180 - (index + 0.5) * 36, 70);
+    return `<path d="${arc(start, end)}" class="gauge-segment${index === activeIndex ? " is-active" : ""}" style="--segment-color:${colors[index]}"/><text x="${labelPoint.x.toFixed(1)}" y="${labelPoint.y.toFixed(1)}" class="gauge-label">${label}</text>`;
+  }).join("");
+  const ratingText = String(rating || "").replace(/\b\w/g, (char) => char.toUpperCase());
+  gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="CNN 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
+    ${arcs}${ticks}<line x1="150" y1="150" x2="${needle.x.toFixed(1)}" y2="${needle.y.toFixed(1)}" class="gauge-needle"/><circle cx="150" cy="150" r="6" class="gauge-hub"/>
+    <text x="38" y="166" class="gauge-end-label" text-anchor="middle">0</text><text x="262" y="166" class="gauge-end-label" text-anchor="middle">100</text>
+  </svg><div class="fear-value"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>`;
+}
+
+async function loadFearAndGreed() {
+  try {
+    const response = await fetch("https://production.dataviz.cnn.io/index/fearandgreed/graphdata", { cache: "no-store" });
+    if (!response.ok) throw new Error("CNN 지수 응답 오류");
+    const data = await response.json();
+    const current = data.fear_and_greed;
+    if (!current || !Number.isFinite(Number(current.score))) throw new Error("CNN 지수 데이터 형식 오류");
+    renderFearGauge(current.score, current.rating);
+    const updated = current.timestamp ? new Date(current.timestamp) : null;
+    $("fearUpdated").textContent = updated && !Number.isNaN(updated.valueOf())
+      ? `업데이트 ${new Intl.DateTimeFormat("ko-KR", { timeZone: "America/New_York", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(updated)} ET`
+      : "CNN 최신 지수";
+  } catch (error) {
+    console.warn("CNN Fear & Greed 지수를 불러오지 못했습니다.", error);
+    $("fearGauge").innerHTML = '<span class="metric-unavailable">지수를 불러오지 못했습니다.<br>CNN 사이트에서 확인해 주세요.</span>';
+    $("fearUpdated").textContent = "연결 대기 중";
+  }
+}
+
 function renderSelect() {
   const select = $("calcEtf");
   select.innerHTML = '<option value="">ETF를 선택하세요</option>';
@@ -280,3 +338,4 @@ document.querySelectorAll(".accordion").forEach((button) => button.addEventListe
 }));
 
 loadData();
+loadFearAndGreed();
