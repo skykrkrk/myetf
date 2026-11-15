@@ -75,8 +75,8 @@ function fearDelta(current, previous, label) {
   return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
 }
 
-function renderFearGauge(data) {
-  const gauge = $("fearGauge");
+function renderFearGauge(data, gaugeId = "fearGauge", indexName = "CNN") {
+  const gauge = $(gaugeId);
   const value = Math.max(0, Math.min(100, Number(data.score)));
   const centerX = 150;
   const centerY = 150;
@@ -111,7 +111,7 @@ function renderFearGauge(data) {
     fearDelta(value, data.previous_1_week, "1주"),
     fearDelta(value, data.previous_1_month, "1개월"),
   ].join("");
-  gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="CNN 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
+  gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="${safe(indexName)} 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
     ${arcs}${ticks}<line x1="150" y1="150" x2="${needle.x.toFixed(1)}" y2="${needle.y.toFixed(1)}" class="gauge-needle"/><circle cx="150" cy="150" r="6" class="gauge-hub"/>
     <text x="38" y="166" class="gauge-end-label" text-anchor="middle">0</text><text x="262" y="166" class="gauge-end-label" text-anchor="middle">100</text>
   </svg><div class="fear-value"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
@@ -132,6 +132,24 @@ async function loadFearAndGreed() {
     console.warn("CNN Fear & Greed 지수를 불러오지 못했습니다.", error);
     $("fearGauge").innerHTML = '<span class="metric-unavailable">지수를 불러오지 못했습니다.<br><a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener noreferrer">CNN 사이트에서 확인 ↗</a></span>';
     $("fearUpdated").textContent = "자료 대기 중";
+  }
+}
+
+async function loadKospiFearAndGreed() {
+  try {
+    const response = await fetch("./data/kfeargreed.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("KOSPI 지수 자료를 불러오지 못했습니다.");
+    const data = await response.json();
+    if (!data.available || !Number.isFinite(Number(data.score))) throw new Error(data.error || "현재 표시할 KOSPI 지수가 없습니다.");
+    renderFearGauge(data, "kospiFearGauge", "KOSPI");
+    const updated = data.updated ? new Date(`${data.updated}T00:00:00+09:00`) : null;
+    $("kospiFearUpdated").textContent = updated && !Number.isNaN(updated.valueOf())
+      ? `업데이트 ${new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", month: "numeric", day: "numeric" }).format(updated)}`
+      : "국내 시장 심리 지표";
+  } catch (error) {
+    console.warn("KOSPI Fear & Greed 지수를 불러오지 못했습니다.", error);
+    $("kospiFearGauge").innerHTML = '<span class="metric-unavailable">지수를 불러오지 못했습니다.<br><a href="https://kospi.feargreedchart.com/api/?action=kospi" target="_blank" rel="noopener noreferrer">데이터 출처에서 확인 ↗</a></span>';
+    $("kospiFearUpdated").textContent = "자료 대기 중";
   }
 }
 
@@ -386,4 +404,5 @@ document.querySelectorAll(".accordion").forEach((button) => button.addEventListe
 
 loadData();
 loadFearAndGreed();
+loadKospiFearAndGreed();
 loadFedWatch();

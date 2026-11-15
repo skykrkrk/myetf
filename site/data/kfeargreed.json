@@ -1,11 +1,11 @@
 {
   "available": true,
-  "score": 38.6,
-  "rating": "fear",
-  "timestamp": "2026-11-13T23:59:56+00:00",
-  "previous_close": 39.8,
-  "previous_1_week": 24.4,
-  "previous_1_month": 45.6,
+  "score": 22.0,
+  "rating": "Fear",
+  "updated": "2026-11-13",
+  "previous_close": 22.0,
+  "previous_1_week": 12.0,
+  "previous_1_month": 26.0,
   "source": "KOSPI Fear & Greed Index",
-  "generated_at": "2026-11-15T06:58+00:00"
+  "generated_at": "2026-11-15T19:46+09:00"
 }
