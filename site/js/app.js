@@ -9,6 +9,7 @@ const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
 
 let funds = [];
 let visibleFunds = [];
+let sortState = { key: "recentYield", direction: "desc" };
 
 function latestEvent(fund) {
   return [...(fund.events || [])].sort((a, b) => String(b.ex_date).localeCompare(String(a.ex_date)))[0];
@@ -71,7 +72,6 @@ function renderTable() {
   const timing = $("timing").value;
   const category = $("category").value;
   const region = $("region").value;
-  const sort = $("sort").value;
   visibleFunds = funds.filter((fund) => {
     const matchesText = `${fund.name || ""} ${fund.symbol || ""}`.toLocaleLowerCase("ko").includes(keyword);
     return fund.is_monthly && matchesText &&
@@ -79,13 +79,33 @@ function renderTable() {
       (category === "all" || getCategory(fund) === category) &&
       (region === "all" || getRegion(fund) === region);
   });
+  const getSortValue = (fund) => {
+    const latest = latestEvent(fund);
+    switch (sortState.key) {
+      case "name": return fund.name || "";
+      case "amount": return latest?.amount;
+      case "taxBase": return getTaxBase(latest);
+      case "taxRate": return getTaxBase(latest) != null && Number(latest?.amount) > 0
+        ? Number(getTaxBase(latest)) / Number(latest.amount) * 100 : null;
+      case "recentYield": return latest?.distribution_yield;
+      case "annualYield": return fund.distribution_yield_12m;
+      case "marketCap": return fund.market_cap;
+      case "exDate": return latest?.ex_date;
+      case "type": return `${getTiming(fund)} ${getCategory(fund)} ${getRegion(fund)}`;
+      default: return null;
+    }
+  };
   visibleFunds.sort((a, b) => {
-    if (sort === "name") return (a.name || "").localeCompare(b.name || "", "ko");
-    if (sort === "price") return (b.price || 0) - (a.price || 0);
-    if (sort === "dividend") return (b.dividend_12m || 0) - (a.dividend_12m || 0);
-    if (sort === "recent-yield") return (latestEvent(b)?.distribution_yield ?? 0) - (latestEvent(a)?.distribution_yield ?? 0);
-    return (b.distribution_yield_12m ?? 0) - (a.distribution_yield_12m ?? 0);
+    const left = getSortValue(a);
+    const right = getSortValue(b);
+    if (left == null) return right == null ? 0 : 1;
+    if (right == null) return -1;
+    const comparison = typeof left === "string" || typeof right === "string"
+      ? String(left).localeCompare(String(right), "ko", { numeric: true })
+      : Number(left) - Number(right);
+    return sortState.direction === "asc" ? comparison : -comparison;
   });
+  updateSortIndicators();
   $("resultCount").textContent = `${number(visibleFunds.length)}개 종목`;
   const emptyData = $("emptyData");
   if (emptyData) emptyData.hidden = funds.length > 0;
@@ -119,6 +139,18 @@ function renderTable() {
     row.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") { event.preventDefault(); showDetails(row.dataset.symbol); }
     });
+  });
+}
+
+function updateSortIndicators() {
+  document.querySelectorAll(".sort-button").forEach((button) => {
+    const active = button.dataset.sort === sortState.key;
+    const th = button.closest("th");
+    if (th) th.setAttribute("aria-sort", active ? (sortState.direction === "asc" ? "ascending" : "descending") : "none");
+    button.classList.toggle("is-active", active);
+    const arrow = button.querySelector(".sort-arrow");
+    if (arrow) arrow.textContent = active && sortState.direction === "desc" ? "↓" : "↑";
+    button.setAttribute("aria-label", `${button.querySelector("span")?.textContent || "열"}, ${active ? (sortState.direction === "asc" ? "오름차순" : "내림차순") : "오름차순으로 정렬"}`);
   });
 }
 
@@ -226,7 +258,17 @@ $("search").addEventListener("input", renderTable);
 $("timing").addEventListener("change", renderTable);
 $("category").addEventListener("change", renderTable);
 $("region").addEventListener("change", renderTable);
-$("sort").addEventListener("change", renderTable);
+document.querySelectorAll(".sort-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const key = button.dataset.sort;
+    if (sortState.key === key) {
+      sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
+    } else {
+      sortState = { key, direction: "asc" };
+    }
+    renderTable();
+  });
+});
 $("calcEtf").addEventListener("change", calculate);
 $("investment").addEventListener("input", calculate);
 $("downloadCsv").addEventListener("click", downloadCSV);
