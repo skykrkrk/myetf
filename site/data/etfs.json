@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15 17:45:18",
+  "updated_at": "2026-11-15 19:47:56",
   "price_date": "2026-11-15",
   "price_date_note": "가격 조회일 기준. 실제 마지막 거래일과 차이가 있을 수 있음.",
   "source": {
@@ -12,7 +12,7 @@
   },
   "total_count": 1188,
   "monthly_count": 188,
-  "dividend_available_count": 965,
+  "dividend_available_count": 964,
   "classification_rule": "최근 12개월 분배월이 8개월 이상이거나, 상장 1년 미만이며 최근 3개 분배월 간격이 월 단위인 ETF",
   "funds": [
     {
@@ -11076,170 +11076,21 @@
       "name": "HANARO 200",
       "price": 83540,
       "market_cap": 3342.0,
-      "dividend_12m": 950.0,
-      "annual_yield": 0.9888,
-      "distribution_yield_12m": 0.9888,
-      "yield_event_count_12m": 4,
-      "yield_event_count_attempted_12m": 4,
-      "monthly_dividend_avg": 79.1667,
+      "dividend_12m": null,
+      "annual_yield": null,
+      "distribution_yield_12m": null,
+      "yield_event_count_12m": 0,
+      "yield_event_count_attempted_12m": 0,
+      "monthly_dividend_avg": null,
       "is_monthly": false,
       "category": "기타",
       "region": "국내",
-      "dividend_status": "available",
-      "event_count_12m": 4,
-      "dividend_months_12m": 4,
+      "dividend_status": "unavailable",
+      "event_count_12m": 0,
+      "dividend_months_12m": 0,
       "official_distribution_event_count": 0,
       "tax_base_event_count": 0,
-      "events": [
-        {
-          "ex_date": "2018-10-30",
-          "amount": 80.0
-        },
-        {
-          "ex_date": "2019-01-30",
-          "amount": 70.0
-        },
-        {
-          "ex_date": "2019-04-29",
-          "amount": 490.0
-        },
-        {
-          "ex_date": "2019-07-30",
-          "amount": 70.0
-        },
-        {
-          "ex_date": "2019-10-30",
-          "amount": 88.0
-        },
-        {
-          "ex_date": "2020-01-30",
-          "amount": 100.0
-        },
-        {
-          "ex_date": "2020-04-28",
-          "amount": 370.0
-        },
-        {
-          "ex_date": "2020-07-30",
-          "amount": 55.0
-        },
-        {
-          "ex_date": "2020-10-29",
-          "amount": 70.0
-        },
-        {
-          "ex_date": "2021-01-28",
-          "amount": 80.0
-        },
-        {
-          "ex_date": "2021-04-29",
-          "amount": 650.0
-        },
-        {
-          "ex_date": "2021-07-29",
-          "amount": 60.0
-        },
-        {
-          "ex_date": "2021-10-28",
-          "amount": 90.0
-        },
-        {
-          "ex_date": "2022-01-27",
-          "amount": 50.0
-        },
-        {
-          "ex_date": "2022-04-28",
-          "amount": 480.0
-        },
-        {
-          "ex_date": "2022-10-28",
-          "amount": 115.0
-        },
-        {
-          "ex_date": "2023-01-30",
-          "amount": 85.0
-        },
-        {
-          "ex_date": "2023-04-27",
-          "amount": 450.0
-        },
-        {
-          "ex_date": "2023-07-28",
-          "amount": 85.0
-        },
-        {
-          "ex_date": "2023-10-30",
-          "amount": 110.0
-        },
-        {
-          "ex_date": "2024-01-30",
-          "amount": 100.0
-        },
-        {
-          "ex_date": "2024-04-29",
-          "amount": 430.0
-        },
-        {
-          "ex_date": "2024-07-30",
-          "amount": 135.0
-        },
-        {
-          "ex_date": "2024-10-30",
-          "amount": 125.0
-        },
-        {
-          "ex_date": "2025-01-24",
-          "amount": 110.0
-        },
-        {
-          "ex_date": "2025-04-29",
-          "amount": 450.0
-        },
-        {
-          "ex_date": "2025-07-30",
-          "amount": 125.0
-        },
-        {
-          "ex_date": "2025-10-30",
-          "amount": 110.0
-        },
-        {
-          "ex_date": "2026-01-29",
-          "amount": 100.0,
-          "calculated_record_date": "2026-01-30",
-          "record_date_close": 76834,
-          "record_date_close_date": "2026-01-30",
-          "distribution_yield": 0.1302,
-          "distribution_yield_source": "FinanceDataReader / Naver Finance ETF historical close (fallback)"
-        },
-        {
-          "ex_date": "2026-04-29",
-          "amount": 500.0,
-          "calculated_record_date": "2026-04-30",
-          "record_date_close": 100001,
-          "record_date_close_date": "2026-04-30",
-          "distribution_yield": 0.5,
-          "distribution_yield_source": "FinanceDataReader / Naver Finance ETF historical close (fallback)"
-        },
-        {
-          "ex_date": "2026-07-30",
-          "amount": 180.0,
-          "calculated_record_date": "2026-07-31",
-          "record_date_close": 104429,
-          "record_date_close_date": "2026-07-31",
-          "distribution_yield": 0.1724,
-          "distribution_yield_source": "FinanceDataReader / Naver Finance ETF historical close (fallback)"
-        },
-        {
-          "ex_date": "2026-10-29",
-          "amount": 170.0,
-          "calculated_record_date": "2026-10-30",
-          "record_date_close": 91310,
-          "record_date_close_date": "2026-10-30",
-          "distribution_yield": 0.1862,
-          "distribution_yield_source": "FinanceDataReader / Naver Finance ETF historical close (fallback)"
-        }
-      ]
+      "events": []
     },
     {
       "symbol": "407310",
