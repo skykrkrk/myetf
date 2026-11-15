@@ -15,6 +15,7 @@ import pandas as pd
 import FinanceDataReader as fdr
 import requests
 import yfinance as yf
+from pykrx import stock as krx_stock
 
 
 # =====================================
@@ -544,16 +545,83 @@ def fetch_dividends(symbol):
 # ETF 데이터 계산
 # =====================================
 
-def process_fund(row, tax_records):
+def fetch_krx_etf_market_caps(date):
+    """Fetch ETF market capitalization from the KRX all-items quote."""
+    for offset in range(0, 8):
+        query_date = date - timedelta(days=offset)
+        try:
+            frame = krx_stock.get_etf_ohlcv_by_ticker(query_date.strftime("%Y%m%d"))
+            if frame is None or frame.empty or "\uC2DC\uAC00\uCD1D\uC561" not in frame.columns:
+                continue
+            return {
+                str(symbol).zfill(6): round(safe_number(row["\uC2DC\uAC00\uCD1D\uC561"]) / 100_000_000, 2)
+                for symbol, row in frame.iterrows()
+            }, query_date.strftime("%Y-%m-%d")
+        except Exception as exc:
+            logging.warning("KRX ETF market-cap request failed (%s): %s", query_date, exc)
+    return {}, None
+
+
+def enrich_distribution_yields(symbol, events):
+    """Calculate distribution yield from next-day close and event amount."""
+    candidates = []
+    for event in events:
+        try:
+            ex_day = datetime.strptime(event["ex_date"], "%Y-%m-%d").date()
+        except (KeyError, TypeError, ValueError):
+            continue
+        if ex_day > TODAY or ex_day < TODAY - timedelta(days=370):
+            continue
+        record_day = ex_day + timedelta(days=1)
+        event["calculated_record_date"] = record_day.strftime("%Y-%m-%d")
+        candidates.append((event, record_day))
+
+    if not candidates:
+        return 0
+
+    start = min(day for _, day in candidates) - timedelta(days=7)
+    end = max(day for _, day in candidates) + timedelta(days=1)
+    try:
+        prices = krx_stock.get_etf_ohlcv_by_date(
+            start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), symbol
+        )
+        if prices is None or prices.empty or "\uC885\uAC00" not in prices.columns:
+            return 0
+        closes = {pd.Timestamp(day).date(): safe_number(value) for day, value in prices["\uC885\uAC00"].items()}
+    except Exception as exc:
+        logging.warning("KRX ETF historical-close request failed for %s: %s", symbol, exc)
+        return 0
+
+    enriched = 0
+    for event, record_day in candidates:
+        # On non-trading days, use the latest available close on or before the target date.
+        available_days = [day for day in closes if day <= record_day]
+        if not available_days:
+            continue
+        close_day = max(available_days)
+        close = closes[close_day]
+        amount = safe_number(event.get("amount"))
+        if close <= 0 or amount <= 0:
+            continue
+        event["record_date_close"] = int(close)
+        event["record_date_close_date"] = close_day.strftime("%Y-%m-%d")
+        event["distribution_yield"] = round(amount / close * 100, 4)
+        event["distribution_yield_source"] = "KRX ETF individual historical closing price"
+        enriched += 1
+    return enriched
+
+
+def process_fund(row, tax_records, krx_market_caps):
 
     symbol = str(row["Symbol"]).zfill(6)
     name = str(row["Name"])
 
     price = safe_number(row["Price"])
 
-    market_cap = safe_number(
-        row.get("MarCap", 0)
-    )
+    market_cap = krx_market_caps.get(symbol)
+    if market_cap is None:
+        # Fall back to the listing-provided market cap if KRX is unavailable.
+        market_cap = safe_number(row.get("MarCap", 0))
 
     dividend_data = fetch_dividends(symbol)
 
@@ -579,6 +647,17 @@ def process_fund(row, tax_records):
         for event in recent_events
     )
 
+    yield_event_count = enrich_distribution_yields(symbol, events)
+    recent_yield_events = [
+        event for event in recent_events
+        if event.get("distribution_yield") is not None
+    ]
+    distribution_yield_12m = None
+    if recent_events and len(recent_yield_events) == len(recent_events):
+        distribution_yield_12m = round(
+            sum(event["distribution_yield"] for event in recent_yield_events), 4
+        )
+
     dividend_months = len({
         event["ex_date"][:7]
         for event in recent_events
@@ -601,20 +680,14 @@ def process_fund(row, tax_records):
         official_event_count = enrich_kodex_events(symbol, missing_tax_events)
         tax_event_count += official_event_count
 
-    annual_yield = None
-
-    if price > 0 and dividend_status == "available":
-        annual_yield = round(
-            dividend_12m / price * 100,
-            4
-        )
+    annual_yield = distribution_yield_12m
 
     return {
         "symbol": symbol,
         "name": name,
         "price": int(price),
 
-        "market_cap": int(market_cap),
+        "market_cap": round(market_cap, 2),
 
         "dividend_12m": (
             round(dividend_12m, 4)
@@ -623,6 +696,9 @@ def process_fund(row, tax_records):
         ),
 
         "annual_yield": annual_yield,
+        "distribution_yield_12m": distribution_yield_12m,
+        "yield_event_count_12m": len(recent_yield_events),
+        "yield_event_count_attempted_12m": len(recent_events),
 
         "monthly_dividend_avg": (
             round(dividend_12m / 12, 4)
@@ -679,7 +755,8 @@ def main():
             executor.submit(
                 process_fund,
                 row,
-                tax_records
+                tax_records,
+                krx_market_caps
             ): row["Symbol"]
             for row in rows
         }
@@ -758,8 +835,10 @@ def main():
 
         "source": {
             "listing": "FinanceDataReader / Naver Finance",
-            "price": "Naver Finance ETF listing",
-            "dividend": "Yahoo Finance",
+            "price": "FinanceDataReader / Naver Finance ETF listing",
+            "market_cap": "KRX ETF all-items quote (market cap in KRW 100M; date " + (krx_market_cap_date or "fallback") + ")",
+            "distribution_yield": "Distribution per unit / KRX closing price on the day after ex-date",
+            "dividend": "Yahoo Finance distribution amount / KRX close for yield",
             "distribution_details": "ETF CHECK monthly taxable base; KODEX official distribution history as fallback"
         },
 

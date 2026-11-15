@@ -83,7 +83,7 @@ function renderTable() {
     if (sort === "name") return (a.name || "").localeCompare(b.name || "", "ko");
     if (sort === "price") return (b.price || 0) - (a.price || 0);
     if (sort === "dividend") return (b.dividend_12m || 0) - (a.dividend_12m || 0);
-    return (b.annual_yield || 0) - (a.annual_yield || 0);
+    return (b.distribution_yield_12m ?? 0) - (a.distribution_yield_12m ?? 0);
   });
   $("resultCount").textContent = `${number(visibleFunds.length)}개 종목`;
   const emptyData = $("emptyData");
@@ -91,7 +91,7 @@ function renderTable() {
   const tbody = getTableBody();
   if (!tbody) throw new Error("ETF 목록 표를 찾을 수 없습니다. 페이지를 새로고침해 주세요.");
   if (!visibleFunds.length) {
-    tbody.innerHTML = `<tr><td colspan="8" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="9" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
     return;
   }
   tbody.innerHTML = visibleFunds.map((fund) => {
@@ -105,9 +105,10 @@ function renderTable() {
       <td><span class="fund-name">${safe(fund.name)}</span><span class="fund-code">${safe(fund.symbol)}</span></td>
       <td>${latest ? money(latest.amount) : "—"}</td>
       <td>${taxable == null ? "자료 없음" : money(taxable)}</td>
-      <td>${taxableRate == null ? "—" : `${taxableRate}%`}</td>
-      <td>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</td>
-      <td class="yield-value">${fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`}</td>
+      <td>${taxableRate == null ? "\u2014" : `${taxableRate}%`}</td>
+      <td>${latest?.distribution_yield == null ? "\u2014" : `${Number(latest.distribution_yield).toFixed(2)}%`}</td>
+      <td class="yield-value">${(fund.distribution_yield_12m) == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</td>
+      <td>${fund.market_cap == null ? "\u2014" : `${number(fund.market_cap)}\uC5B5\uC6D0`}</td>
       <td>${safe(latest?.ex_date || "자료 없음")}</td>
       <td><span class="timing-badge ${timing}">${timing === "mid" ? "월중" : timing === "end" ? "월말" : "시점 미확인"}</span><span class="type-badge">${safe(getCategory(fund))}</span><span class="region-badge ${getRegion(fund) === "국내" ? "domestic" : getRegion(fund) === "해외" ? "overseas" : "mixed"}">${safe(getRegion(fund) === "혼합/미분류" ? "혼합·미분류" : getRegion(fund))}</span></td>
     </tr>`;
@@ -138,16 +139,18 @@ function showDetails(symbol) {
     <h2>${safe(fund.name)}</h2><p class="dialog-meta">${safe(fund.symbol)} · ${safe(getCategory(fund))}</p>
     <a class="tradingview-link" href="${tradingViewUrl}" target="_blank" rel="noopener noreferrer">Trading View에서 보기 <span aria-hidden="true">↗</span></a>
     <div class="detail-grid">
-      <div class="detail-metric"><span>현재 가격</span><strong>${money(fund.price)}</strong></div>
-      <div class="detail-metric"><span>12개월 분배금</span><strong>${fund.dividend_12m == null ? "—" : money(fund.dividend_12m)}</strong></div>
-      <div class="detail-metric"><span>연 분배율</span><strong>${fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`}</strong></div>
-      <div class="detail-metric"><span>분배 월 수</span><strong>${number(fund.dividend_months_12m || 0)}개월</strong></div>
+      <div class="detail-metric"><span>\uD604\uC7AC \uAC00\uACA9</span><strong>${money(fund.price)}</strong></div>
+      <div class="detail-metric"><span>12\uAC1C\uC6D4 \uBD84\uBC30\uAE08</span><strong>${fund.dividend_12m == null ? "\u2014" : money(fund.dividend_12m)}</strong></div>
+      <div class="detail-metric"><span>\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)</span><strong>${(fund.distribution_yield_12m) == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</strong></div>
+      <div class="detail-metric"><span>\uC2DC\uAC00\uCD1D\uC561</span><strong>${fund.market_cap == null ? "\u2014" : `${number(fund.market_cap)}\uC5B5\uC6D0`}</strong></div>
+      <div class="detail-metric"><span>\uBD84\uBC30 \uC6D4 \uC218</span><strong>${number(fund.dividend_months_12m || 0)}\uAC1C\uC6D4</strong></div>
     </div>
     <h3 class="history-title">최근 분배 내역</h3>
     <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
       const taxBase = getTaxBase(event);
-      const taxRate = taxBase != null && Number(event.amount) > 0 ? `${(Number(taxBase) / Number(event.amount) * 100).toFixed(1)}%` : "자료 없음";
-      return `<div class="history-item"><span>${safe(event.ex_date)}<small>배당락일</small></span><span>${money(event.amount)}<small>분배금</small></span><span>${taxBase == null ? "자료 없음" : money(taxBase)}<small>과표</small></span><span>${taxRate}<small>과표율</small></span></div>`;
+      const taxRate = taxBase != null && Number(event.amount) > 0 ? `${(Number(taxBase) / Number(event.amount) * 100).toFixed(1)}%` : "\uC790\uB8CC \uC5C6\uC74C";
+      const yieldText = event.distribution_yield == null ? "\uC790\uB8CC \uC5C6\uC74C" : `${Number(event.distribution_yield).toFixed(2)}%`;
+      return `<div class="history-item"><span>${safe(event.ex_date)}<small>\uBC30\uB2F9\uB77D\uC77C</small></span><span>${money(event.amount)}<small>\uBD84\uBC30\uAE08</small></span><span>${taxBase == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(taxBase)}<small>\uACFC\uD45C</small></span><span>${taxRate}<small>\uACFC\uD45C\uC728</small></span><span>${yieldText}<small>\uBD84\uBC30\uC728</small></span></div>`;
     }).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
@@ -164,17 +167,18 @@ function calculate() {
   $("shares").textContent = `${number(shares)}주`;
   $("monthlyIncome").textContent = money(annualIncome / 12);
   $("annualIncome").textContent = money(annualIncome);
-  $("calcYield").textContent = fund.annual_yield == null ? "—" : `${Number(fund.annual_yield).toFixed(2)}%`;
+  const yield12m = fund.distribution_yield_12m;
+  $("calcYield").textContent = yield12m == null ? "\u2014" : `${Number(yield12m).toFixed(2)}%`;
 }
 
 function downloadCSV() {
-  const headers = ["종목코드", "종목명", "가격(원)", "최근 분배금(원)", "과표(원)", "과표율(%)", "최근 12개월 분배금(원)", "연 분배율(%)", "배당락일", "유형"];
+  const headers = ["\uC885\uBAA9\uCF54\uB4DC", "\uC885\uBAA9\uBA85", "\uAC00\uACA9(\uC6D0)", "\uCD5C\uADFC \uBD84\uBC30\uAE08(\uC6D0)", "\uACFC\uD45C(\uC6D0)", "\uACFC\uD45C\uC728(%)", "\uCD5C\uADFC \uBD84\uBC30\uC728(%)", "\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)(%)", "\uC2DC\uAC00\uCD1D\uC561(\uC5B5\uC6D0)", "\uBC30\uB2F9\uB77D\uC77C", "\uC720\uD615"];
   const rows = visibleFunds.map((fund) => {
     const event = latestEvent(fund);
     const taxBase = getTaxBase(event) ?? "";
     const taxRate = taxBase !== "" && Number(event?.amount) > 0 ? (Number(taxBase) / Number(event.amount) * 100).toFixed(1) : "";
     const timing = getTiming(fund);
-    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, fund.dividend_12m ?? "", fund.annual_yield ?? "", event?.ex_date ?? "", `${timing === "mid" ? "월중" : timing === "end" ? "월말" : "미확인"} · ${getCategory(fund)}`];
+    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, event?.distribution_yield ?? "", fund.distribution_yield_12m ?? "", fund.market_cap ?? "", event?.ex_date ?? "", `${timing === "mid" ? "\uC6D4\uC911" : timing === "end" ? "\uC6D4\uB9D0" : "\uBBF8\uD655\uC778"} \u00B7 ${getCategory(fund)} \u00B7 ${getRegion(fund)}`];
   });
   const csv = "\uFEFF" + [headers, ...rows].map((row) => row.map((value) => `"${String(value ?? "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
@@ -193,8 +197,8 @@ async function loadData() {
     funds = Array.isArray(data.funds) ? data.funds : [];
     $("updatedAt").textContent = data.updated_at ? `마지막 업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
     $("priceDate").textContent = data.price_date || "—";
-    if (data.source?.listing || data.source?.dividend || data.source?.distribution_details) {
-      $("dataSource").textContent = `자료: ${[data.source.listing, data.source.dividend, data.source.distribution_details].filter(Boolean).join(" · ")}`;
+    if (data.source?.listing || data.source?.dividend || data.source?.distribution_details || data.source?.market_cap || data.source?.distribution_yield) {
+      $("dataSource").textContent = `\uC790\uB8CC: ${[data.source.listing, data.source.dividend, data.source.distribution_details, data.source.market_cap, data.source.distribution_yield].filter(Boolean).join(" \u00B7 ")}`;
     }
     renderStats();
     renderSelect();
@@ -206,7 +210,7 @@ async function loadData() {
     if (updatedAt) updatedAt.textContent = "데이터를 불러오지 못했습니다";
     const tbody = getTableBody();
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="8" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="9" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
     } else {
       const main = document.querySelector("main") || document.body;
       const message = document.createElement("p");
