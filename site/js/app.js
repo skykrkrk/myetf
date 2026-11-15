@@ -69,9 +69,17 @@ function fearRating(rating) {
 
 function fearDelta(current, previous, label) {
   if (!Number.isFinite(Number(previous))) return "";
-  const delta = Number(previous) - Number(current);
-  const tone = delta > 0.05 ? "up" : delta < -0.05 ? "down" : "flat";
-  const text = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}`;
+  //delta
+  //const delta = Number(previous) - Number(current);
+  //const tone = delta > 0.05 ? "up" : delta < -0.05 ? "down" : "flat";
+  //const text = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}`;
+  //no delta
+  let tone = "egreed";
+  if (Number(previous) < 25) tone = "efear";
+  else if (Number(previous) < 45) tone = "fear";
+  else if (Number(previous) < 55) tone = "neutral";
+  else if (Number(previous) < 75) tone = "greed";
+  const text = `${Number(previous).toFixed(0)}`;
   return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
 }
 

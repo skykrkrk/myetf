@@ -60,6 +60,11 @@ th:first-child .sort-button{justify-content:flex-start}
 .fear-deltas b.up{color:#8eb98b}
 .fear-deltas b.down{color:#f27962}
 .fear-deltas b.flat{color:var(--muted)}
+.fear-deltas b.efear{color:#f27962}
+.fear-deltas b.fear{color:#ed9c69}
+.fear-deltas b.neutral{color:#b8a27b}
+.fear-deltas b.greed{color:#8eb98b}
+.fear-deltas b.egreed{color:#68b88e}
 .fear-gauge .metric-unavailable a{display:inline-block;margin-top:8px;color:var(--orange);text-decoration:none}
 .metric-loading,.metric-unavailable{color:var(--muted);font-size:11px;text-align:center;line-height:1.7}
 .fedwatch-fallback{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 12px;text-align:center;color:var(--muted)}
