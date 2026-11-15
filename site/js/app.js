@@ -287,7 +287,6 @@ async function loadData() {
     const data = await response.json();
     funds = Array.isArray(data.funds) ? data.funds : [];
     $("updatedAt").textContent = data.updated_at ? `마지막 업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
-    $("priceDate").textContent = data.price_date || "—";
     if (data.source?.listing || data.source?.dividend || data.source?.distribution_details || data.source?.market_cap || data.source?.distribution_yield) {
       $("dataSource").textContent = `\uC790\uB8CC: ${[data.source.listing, data.source.dividend, data.source.distribution_details, data.source.market_cap, data.source.distribution_yield].filter(Boolean).join(" \u00B7 ")}`;
     }

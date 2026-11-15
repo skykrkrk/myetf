@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101319">
   <meta name="description" content="국내 상장 월배당 ETF의 분배금, 분배율과 배당 이력을 한눈에 비교하세요.">
   <title>국내 상장 월배당 ETF</title>
-  <link rel="stylesheet" href="./css/style.css?v=13">
+  <link rel="stylesheet" href="./css/style.css?v=14">
 </head>
 <body>
   <header class="topbar">
@@ -18,13 +18,19 @@
     <section class="market-cards" aria-label="ETF 및 시장 지표">
       <article class="stat-card combined-stat-card">
         <div class="combined-count"><span>월배당 ETF</span><strong id="monthlyCount">—</strong></div>
-        <span class="count-divider" aria-hidden="true">/</span>
         <div class="combined-count"><span>전체 ETF</span><strong id="totalCount">—</strong></div>
-        <small class="count-caption">최근 12개월 분배 이력 기준 · 가격 기준일 <time id="priceDate">—</time></small>
       </article>
       <article class="market-card fear-card">
         <div class="market-card-heading"><div><span>CNN Fear &amp; Greed</span><a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank" rel="noopener noreferrer">CNN에서 보기 ↗</a></div><small id="fearUpdated">지표를 불러오는 중</small></div>
         <div id="fearGauge" class="fear-gauge"><span class="metric-loading">지표를 불러오는 중…</span></div>
+      </article>
+      <article class="market-card kospi-fear-card">
+        <div class="market-card-heading"><div><span>KOSPI Fear &amp; Greed</span></div><small>국내 시장 심리 지표</small></div>
+        <iframe class="fear-embed" src="https://kospi.feargreedchart.com/widget" width="320" height="320" style="border:none;border-radius:16px;" loading="lazy" title="KOSPI Fear and Greed"></iframe>
+      </article>
+      <article class="market-card usa-fear-card">
+        <div class="market-card-heading"><div><span>USA Fear &amp; Greed</span></div><small>미국 시장 심리 지표</small></div>
+        <iframe class="fear-embed" src="https://www.psx-fear-greed.com/embed" width="320" height="320" title="USA Fear and Greed" loading="lazy" style="border:0;border-radius:8px;"></iframe>
       </article>
       <article class="market-card fedwatch-card">
         <div class="market-card-heading"><div><span>CME FedWatch</span><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool" target="_blank" rel="noopener noreferrer">전체 도구 보기 ↗</a></div><small>연방기금금리 선물 기반 확률</small></div>
@@ -67,6 +73,6 @@
     <footer><strong>국내 상장 월배당 ETF</strong><span id="dataSource">자료: ETF 가격 및 분배 이력 데이터</span><span>본 페이지는 정보 제공을 목적으로 하며 투자 권유가 아닙니다.</span></footer>
   </main>
   <dialog id="fundDialog" class="fund-dialog"><form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form><div id="fundDetails"></div></dialog>
-  <script type="module" src="./js/app.js?v=15"></script>
+  <script type="module" src="./js/app.js?v=16"></script>
 </body>
 </html>
