@@ -112,6 +112,31 @@ async function loadFearAndGreed() {
   }
 }
 
+async function loadFedWatch() {
+  const chart = $("fedwatchChart");
+  if (!chart) return;
+  try {
+    const response = await fetch("./data/fedwatch.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("CME 확률 자료를 불러오지 못했습니다.");
+    const data = await response.json();
+    if (!data.available || !Array.isArray(data.probabilities) || !data.probabilities.length) {
+      throw new Error(data.error || "현재 표시할 회의별 확률이 없습니다.");
+    }
+    const maximum = Math.max(...data.probabilities.map((item) => Number(item.probability)));
+    const bars = data.probabilities.map((item) => `
+      <div class="fedwatch-outcome ${safe(item.type)}">
+        <div class="fedwatch-bar-label"><strong>${safe(item.range)}</strong><b>${Number(item.probability).toFixed(1)}%</b></div>
+        <div class="fedwatch-bar-track"><span style="width:${Math.max(0, Math.min(100, Number(item.probability)))}%;${Number(item.probability) === maximum ? "" : "opacity:.72"}"></span></div>
+      </div>`).join("");
+    const currentRange = data.current_range.map((rate) => Number(rate).toFixed(2)).join("–");
+    const asOf = new Intl.DateTimeFormat("ko-KR", { timeZone: "America/Chicago", month: "numeric", day: "numeric" }).format(new Date(`${data.trade_date}T12:00:00Z`));
+    chart.innerHTML = `<div class="fedwatch-summary"><div><span>다음 FOMC 회의</span><strong>${safe(data.meeting_date)}</strong></div><div><span>현재 기준금리</span><strong>${currentRange}%</strong></div><div><span>선물 결제일</span><strong>${safe(asOf)}</strong></div></div><div class="fedwatch-bars">${bars}</div><p class="fedwatch-note">CME 30일 연방기금금리 선물 결제가격으로 추정한 확률입니다. CME 유료 FedWatch API의 실시간 수치와 다를 수 있습니다.</p>`;
+  } catch (error) {
+    console.warn("CME FedWatch 자료를 불러오지 못했습니다.", error);
+    chart.innerHTML = `<span class="metric-unavailable">${safe(error.message)}<br><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool" target="_blank" rel="noopener noreferrer">CME FedWatch에서 확인 ↗</a></span>`;
+  }
+}
+
 function renderSelect() {
   const select = $("calcEtf");
   select.innerHTML = '<option value="">ETF를 선택하세요</option>';
@@ -338,3 +363,4 @@ document.querySelectorAll(".accordion").forEach((button) => button.addEventListe
 
 loadData();
 loadFearAndGreed();
+loadFedWatch();
