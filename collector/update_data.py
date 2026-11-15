@@ -585,31 +585,17 @@ def enrich_distribution_yields(symbol, events):
     close_source = ""
 
     try:
-        prices = krx_stock.get_etf_ohlcv_by_date(
-            start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), symbol
+        prices = fdr.DataReader(
+            symbol, start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
         )
-        if prices is not None and not prices.empty and "\uC885\uAC00" in prices.columns:
+        if prices is not None and not prices.empty and "Close" in prices.columns:
             closes = {
                 pd.Timestamp(day).date(): safe_number(value)
-                for day, value in prices["\uC885\uAC00"].items()
+                for day, value in prices["Close"].items()
             }
-            close_source = "KRX ETF individual historical closing price"
+            close_source = "FinanceDataReader / Naver Finance ETF historical close"
     except Exception as exc:
-        logging.warning("KRX ETF historical-close request failed for %s: %s", symbol, exc)
-
-    if not closes:
-        try:
-            prices = fdr.DataReader(
-                symbol, start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
-            )
-            if prices is not None and not prices.empty and "Close" in prices.columns:
-                closes = {
-                    pd.Timestamp(day).date(): safe_number(value)
-                    for day, value in prices["Close"].items()
-                }
-                close_source = "FinanceDataReader / Naver Finance ETF historical close (fallback)"
-        except Exception as exc:
-            logging.warning("ETF fallback historical-close request failed for %s: %s", symbol, exc)
+        logging.warning("ETF historical-close request failed for %s: %s", symbol, exc)
 
     if not closes:
         return 0
@@ -862,8 +848,8 @@ def main():
             "listing": "FinanceDataReader / Naver Finance",
             "price": "FinanceDataReader / Naver Finance ETF listing",
             "market_cap": "KRX ETF all-items quote (market cap in KRW 100M; date " + (krx_market_cap_date or "fallback") + ")",
-            "distribution_yield": "Distribution per unit / KRX historical close; FinanceDataReader/Naver fallback",
-            "dividend": "Yahoo Finance distribution amount / KRX close for yield",
+            "distribution_yield": "Distribution per unit / FinanceDataReader / Naver Finance historical close",
+            "dividend": "Yahoo Finance distribution amount / FinanceDataReader / Naver Finance close for yield",
             "distribution_details": "ETF CHECK monthly taxable base; KODEX official distribution history as fallback"
         },
 
