@@ -1,16 +1,17 @@
-"""Build a compact next-meeting probability chart from CME's public ZQ settlements.
+"""Build a compact next-meeting probability chart from public ZQ futures prices.
 
 The subscribed CME FedWatch REST API requires an API ID/OAuth token. For this
-static Pages site, use CME's public 30-Day Federal Funds futures settlement
-endpoint and CME's published monthly-average pricing methodology instead.
-This is an independent, settlement-based estimate and is not the licensed
-real-time FedWatch API output.
+static Pages site, use Yahoo Finance's daily 30-Day Federal Funds futures
+prices and the contract's monthly-average pricing methodology instead. This
+is an independent estimate, not the licensed real-time FedWatch API output
+or an official CME settlement.
 """
 
 import csv
 import json
 import logging
-from datetime import date, datetime, timedelta
+import math
+from datetime import date, datetime, timedelta, timezone
 from io import StringIO
 from pathlib import Path
 
@@ -19,11 +20,8 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "site" / "data" / "fedwatch.json"
-CME_URL = "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/305/FUT"
+YAHOO_CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
 FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv"
-MONTHS = {name: number for number, name in enumerate(
-    ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"), 1
-)}
 MONTH_CODES = "FGHJKMNQUVXZ"
 MEETINGS = [
     date(2026, 12, 9), date(2027, 1, 27), date(2027, 3, 17),
@@ -33,39 +31,60 @@ MEETINGS = [
 ]
 
 
-def fetch_settlements(trade_day):
+def fetch_contract_prices(contract, end_day):
+    year, month = contract
+    symbol = f"ZQ{MONTH_CODES[month - 1]}{year % 100:02d}.CBT"
+    start_day = end_day - timedelta(days=14)
     response = requests.get(
-        CME_URL,
-        params={"tradeDate": trade_day.strftime("%m/%d/%Y")},
-        headers={"User-Agent": "Mozilla/5.0"}, timeout=25,
+        YAHOO_CHART_URL.format(symbol=symbol),
+        params={
+            "period1": int(datetime.combine(start_day, datetime.min.time(), timezone.utc).timestamp()),
+            "period2": int(datetime.combine(end_day + timedelta(days=1), datetime.min.time(), timezone.utc).timestamp()),
+            "interval": "1d",
+        },
+        headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"},
+        timeout=25,
     )
     response.raise_for_status()
     payload = response.json()
-    if payload.get("empty") or not payload.get("settlements"):
-        return None
-    rows = {}
-    for item in payload["settlements"]:
-        month = str(item.get("month", "")).upper()
-        if month == "TOTAL":
+    chart = payload.get("chart") or {}
+    if chart.get("error"):
+        raise RuntimeError(f"Yahoo Finance returned an error for {symbol}: {chart['error']}")
+    results = chart.get("result") or []
+    if not results:
+        raise RuntimeError(f"Yahoo Finance returned no price history for {symbol}")
+    result = results[0]
+    timestamps = result.get("timestamp") or []
+    quotes = (result.get("indicators", {}).get("quote") or [{}])[0]
+    closes = quotes.get("close") or []
+    prices = {}
+    for timestamp, raw_close in zip(timestamps, closes):
+        if raw_close is None:
             continue
-        try:
-            settle = float(item["settle"])
-            mon, year = month.split()
-            rows[(2000 + int(year), MONTHS[mon])] = settle
-        except (KeyError, TypeError, ValueError):
+        close = float(raw_close)
+        if not math.isfinite(close):
             continue
-    return rows or None
+        trade_day = datetime.fromtimestamp(int(timestamp), timezone.utc).date()
+        if trade_day <= end_day:
+            prices[trade_day] = close
+    if not prices:
+        raise RuntimeError(f"Yahoo Finance returned no usable prices for {symbol}")
+    return prices
 
 
-def latest_settlements():
-    day = date.today()
-    for _ in range(10):
-        if day.weekday() < 5:
-            rows = fetch_settlements(day)
-            if rows:
-                return day, rows
-        day -= timedelta(days=1)
-    raise RuntimeError("CME did not return recent Fed Funds futures settlements")
+def latest_contract_prices(contracts, end_day):
+    prices_by_contract = {
+        contract: fetch_contract_prices(contract, end_day)
+        for contract in contracts
+    }
+    common_days = set.intersection(*(set(prices) for prices in prices_by_contract.values()))
+    if not common_days:
+        raise RuntimeError("Yahoo Finance has no common recent date for the required ZQ contracts")
+    trade_day = max(common_days)
+    return trade_day, {
+        contract: prices[trade_day]
+        for contract, prices in prices_by_contract.items()
+    }
 
 
 def latest_fred_value(series_id):
@@ -89,31 +108,30 @@ def month_add(year, month, offset):
 
 
 def build_data():
-    trade_day, settlements = latest_settlements()
     now = date.today()
     meeting = next((item for item in MEETINGS if item >= now), None)
     if meeting is None:
         raise RuntimeError("No future FOMC meeting in the configured schedule")
 
     current_range = [latest_fred_value("DFEDTARL"), latest_fred_value("DFEDTARU")]
-    # CME ZQ prices 100 minus the average effective rate for the delivery
+    # ZQ prices 100 minus the average effective rate for the delivery
     # month. The nearest preceding month without an FOMC meeting anchors the
     # rate entering the next meeting month.
     meeting_months = {(item.year, item.month) for item in MEETINGS}
     anchor = None
     for offset in range(-1, -7, -1):
         year, month = month_add(meeting.year, meeting.month, offset)
-        if (year, month) not in meeting_months and (year, month) in settlements:
+        if (year, month) not in meeting_months:
             anchor = (year, month)
             break
     if anchor is None:
-        raise RuntimeError("No preceding non-meeting CME contract is available as an anchor")
-    meeting_settle = settlements.get((meeting.year, meeting.month))
-    if meeting_settle is None:
-        raise RuntimeError(f"CME has no settlement for {meeting:%b %Y}")
+        raise RuntimeError("No preceding non-meeting ZQ contract is available as an anchor")
+    trade_day, prices = latest_contract_prices(
+        (anchor, (meeting.year, meeting.month)), now
+    )
 
-    start_rate = 100.0 - settlements[anchor]
-    average_rate = 100.0 - meeting_settle
+    start_rate = 100.0 - prices[anchor]
+    average_rate = 100.0 - prices[(meeting.year, meeting.month)]
     days = (date(meeting.year + (meeting.month == 12), meeting.month % 12 + 1, 1) - timedelta(days=1)).day
     after_days = days - meeting.day
     if after_days <= 0:
@@ -138,7 +156,7 @@ def build_data():
         })
     return {
         "available": True,
-        "source": "CME 30-Day Federal Funds Futures settlement (product 305), methodology-based estimate",
+        "source": "Yahoo Finance daily 30-Day Federal Funds futures prices, methodology-based estimate",
         "trade_date": trade_day.isoformat(),
         "meeting_date": meeting.isoformat(),
         "current_range": current_range,
@@ -150,9 +168,17 @@ def build_data():
 def main():
     try:
         data = build_data()
-        logging.info("Built CME settlement-based FedWatch estimate for %s (trade date %s)", data["meeting_date"], data["trade_date"])
+        logging.info("Built ZQ futures-based FedWatch estimate for %s (trade date %s)", data["meeting_date"], data["trade_date"])
     except Exception as exc:
-        logging.exception("Unable to build FedWatch chart data")
+        logging.exception("Unable to build FedWatch chart data from Yahoo Finance")
+        if OUTPUT.exists():
+            try:
+                previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                previous = {}
+            if previous.get("available"):
+                logging.warning("Keeping the previous FedWatch snapshot")
+                return
         data = {"available": False, "error": str(exc), "generated_at": datetime.now().astimezone().isoformat(timespec="minutes")}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

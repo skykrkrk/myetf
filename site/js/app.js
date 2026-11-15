@@ -69,7 +69,7 @@ function fearRating(rating) {
 
 function fearDelta(current, previous, label) {
   if (!Number.isFinite(Number(previous))) return "";
-  const delta = Number(current) - Number(previous);
+  const delta = Number(previous) - Number(current);
   const tone = delta > 0.05 ? "up" : delta < -0.05 ? "down" : "flat";
   const text = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}`;
   return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
@@ -171,7 +171,7 @@ async function loadFedWatch() {
       </div>`).join("");
     const currentRange = data.current_range.map((rate) => Number(rate).toFixed(2)).join("–");
     const asOf = new Intl.DateTimeFormat("ko-KR", { timeZone: "America/Chicago", month: "numeric", day: "numeric" }).format(new Date(`${data.trade_date}T12:00:00Z`));
-    chart.innerHTML = `<div class="fedwatch-summary"><div><span>다음 FOMC 회의</span><strong>${safe(data.meeting_date)}</strong></div><div><span>현재 기준금리</span><strong>${currentRange}%</strong></div><div><span>선물 결제일</span><strong>${safe(asOf)}</strong></div></div><div class="fedwatch-bars">${bars}</div><p class="fedwatch-note">CME 30일 연방기금금리 선물 결제가격으로 추정한 확률입니다. CME 유료 FedWatch API의 실시간 수치와 다를 수 있습니다.</p>`;
+    chart.innerHTML = `<div class="fedwatch-summary"><div><span>다음 FOMC 회의</span><strong>${safe(data.meeting_date)}</strong></div><div><span>현재 기준금리</span><strong>${currentRange}%</strong></div><div><span>선물 가격 기준일</span><strong>${safe(asOf)}</strong></div></div><div class="fedwatch-bars">${bars}</div><p class="fedwatch-note">Yahoo Finance의 30일 연방기금금리 선물 종가로 추정한 확률입니다. 공식 CME 결제값이나 CME FedWatch 실시간 수치와 다를 수 있습니다.</p>`;
   } catch (error) {
     console.warn("CME FedWatch 자료를 불러오지 못했습니다.", error);
     chart.innerHTML = `<span class="metric-unavailable">${safe(error.message)}<br><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool" target="_blank" rel="noopener noreferrer">CME FedWatch에서 확인 ↗</a></span>`;
