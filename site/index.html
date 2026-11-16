@@ -23,6 +23,28 @@
         <div class="market-card-heading"><div><span>KOSPI Fear &amp; Greed</span><a href="https://kospi.feargreedchart.com/api/?action=kospi" target="_blank" rel="noopener noreferrer">데이터 출처 ↗</a></div><small id="kospiFearUpdated">지표를 불러오는 중</small></div>
         <div id="kospiFearGauge" class="fear-gauge"><span class="metric-loading">지표를 불러오는 중…</span></div>
       </article>
+      <article>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://tradingview.com" async>
+          {
+            "symbols": [
+              { "proName": "KRX:KOSPI", "title": "코스피" },
+              { "proName": "KRX:KOSDAQ", "title": "코스닥" },
+              { "proName": "KRX:005930", "title": "삼성전자" },
+              { "proName": "KRX:000660", "title": "SK하이닉스" },
+              { "proName": "KRX:035420", "title": "NAVER" },
+              { "proName": "FX_IDC:USDKRW", "title": "원/달러 환율" }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "light",
+            "locale": "kr"
+          }
+          </script>
+        </div>
+      </article>
     </section>
 
     <section class="market-bottom-row" aria-label="금리 전망 및 분배금 계산">
