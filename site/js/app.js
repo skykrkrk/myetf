@@ -67,18 +67,13 @@ function fearRating(rating) {
   return FEAR_RATINGS[key] || key;
 }
 
+function fearSegmentIndex(score) {
+  return Math.min(4, Math.floor(Math.max(0, Math.min(100, Number(score))) / 20));
+}
+
 function fearDelta(current, previous, label) {
   if (!Number.isFinite(Number(previous))) return "";
-  //delta
-  //const delta = Number(previous) - Number(current);
-  //const tone = delta > 0.05 ? "up" : delta < -0.05 ? "down" : "flat";
-  //const text = `${delta > 0 ? "+" : ""}${delta.toFixed(1)}`;
-  //no delta
-  let tone = "egreed";
-  if (Number(previous) < 25) tone = "efear";
-  else if (Number(previous) < 45) tone = "fear";
-  else if (Number(previous) < 55) tone = "neutral";
-  else if (Number(previous) < 75) tone = "greed";
+  const tone = ["efear", "fear", "neutral", "greed", "egreed"][fearSegmentIndex(previous)];
   const text = `${Number(previous).toFixed(0)}`;
   return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
 }
@@ -99,7 +94,7 @@ function renderFearGauge(data, gaugeId = "fearGauge", indexName = "CNN") {
     return `M ${from.x.toFixed(1)} ${from.y.toFixed(1)} A ${distance} ${distance} 0 0 1 ${to.x.toFixed(1)} ${to.y.toFixed(1)}`;
   };
   const colors = ["#f27962", "#ed9c69", "#b8a27b", "#8eb98b", "#68b88e"];
-  const activeIndex = Math.min(4, Math.floor(value / 20));
+  const activeIndex = fearSegmentIndex(value);
   const angle = 180 - value * 1.8;
   const needle = point(angle, 82);
   const ticks = Array.from({ length: 21 }, (_, index) => {
@@ -122,7 +117,7 @@ function renderFearGauge(data, gaugeId = "fearGauge", indexName = "CNN") {
   gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="${safe(indexName)} 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
     ${arcs}${ticks}<line x1="150" y1="150" x2="${needle.x.toFixed(1)}" y2="${needle.y.toFixed(1)}" class="gauge-needle"/><circle cx="150" cy="150" r="6" class="gauge-hub"/>
     <text x="38" y="166" class="gauge-end-label" text-anchor="middle">0</text><text x="262" y="166" class="gauge-end-label" text-anchor="middle">100</text>
-  </svg><div class="fear-value"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
+  </svg><div class="fear-value" style="--sentiment-color:${colors[activeIndex]}"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
 }
 
 async function loadFearAndGreed() {
