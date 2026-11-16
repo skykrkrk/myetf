@@ -27,14 +27,7 @@ th:first-child .sort-button{justify-content:flex-start}
 
 /* Combined ETF totals and live market indicators */
 .market-cards{display:grid;grid-template-columns:minmax(200px,.78fr) minmax(290px,1.08fr) minmax(420px,1.6fr);gap:14px;margin-bottom:18px;align-items:stretch}
-.combined-stat-card,.market-card{min-width:0;min-height:310px;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink)}
-.combined-stat-card{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;padding:24px 20px}
-.combined-count{min-width:90px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.combined-count>span{display:block;color:var(--muted);font-size:12px;white-space:nowrap}
-.combined-count-values{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-top:10px;white-space:nowrap}
-.combined-count-values strong{margin:0;font-size:clamp(25px,2.3vw,36px);letter-spacing:-1px}
-.count-divider{color:#778293;font-size:22px;font-weight:300}
-.count-caption{display:block;width:100%;margin-top:12px;color:var(--muted);font-size:10px;text-align:center;white-space:nowrap}
+.market-card{min-width:0;min-height:310px;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink)}
 .market-card{overflow:hidden;padding:18px 19px;display:flex;flex-direction:column}
 .market-card-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;min-height:34px}
 .market-card-heading>div{display:flex;flex-direction:column;gap:3px}
@@ -73,12 +66,10 @@ th:first-child .sort-button{justify-content:flex-start}
 .fedwatch-fallback a{display:inline-flex;margin-top:4px;padding:10px 13px;border:1px solid #654538;border-radius:9px;background:#332622;color:#ff9a76;font-size:11px;font-weight:700;text-decoration:none}
 .fedwatch-fallback a:hover{background:#493129}
 @media(max-width:1400px){.market-cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.fedwatch-card{grid-column:1/-1;min-height:340px}}
-@media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr);gap:10px}.combined-stat-card{min-height:175px}.market-card{min-height:290px}.fedwatch-card{grid-column:auto;min-height:330px}.combined-count{min-width:0}.count-caption{margin-top:6px}}
+@media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr);gap:10px}.market-card{min-height:290px}.fedwatch-card{grid-column:auto;min-height:330px}}
 
 /* Market sentiment and summary cards */
-.market-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
-.combined-stat-card{grid-column:auto;min-height:385px;padding:17px 24px}
-.combined-count{min-width:0}
+.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 .market-card{min-height:385px}
 .market-bottom-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;margin-bottom:16px}
 .market-bottom-row .fedwatch-card{grid-column:auto}
@@ -86,10 +77,9 @@ th:first-child .sort-button{justify-content:flex-start}
 .market-bottom-row .market-card{min-height:300px}
 .fedwatch-card .fedwatch-fallback{flex-direction:row;flex-wrap:wrap;justify-content:center;padding:12px}
 @media(max-width:1400px){.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr)}.combined-stat-card{min-height:175px}.market-card{min-height:385px}.market-bottom-row{grid-template-columns:minmax(0,1fr);gap:10px}.market-bottom-row .market-card{min-height:250px}}
+@media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr)}.market-card{min-height:385px}.market-bottom-row{grid-template-columns:minmax(0,1fr);gap:10px}.market-bottom-row .market-card{min-height:250px}}
 
 /* ETF comparison summary */
-.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 .database-summary{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin-top:11px;color:var(--muted);font-size:11px}
 .database-summary strong{color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
 .database-summary i{color:#778293;font-style:normal}

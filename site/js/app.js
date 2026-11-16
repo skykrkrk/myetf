@@ -74,7 +74,7 @@ function fearSegmentIndex(score) {
 function fearDelta(current, previous, label) {
   if (!Number.isFinite(Number(previous))) return "";
   const tone = ["efear", "fear", "neutral", "greed", "egreed"][fearSegmentIndex(previous)];
-  const text = `${Number(previous).toFixed(0)}`;
+  const text = `${Math.round(Number(previous))}`;
   return `<div><span>${label}</span><b class="${tone}">${text}</b></div>`;
 }
 
@@ -109,15 +109,16 @@ function renderFearGauge(data, gaugeId = "fearGauge", indexName = "CNN") {
     return `<path d="${arc(start, end)}" class="gauge-segment${index === activeIndex ? " is-active" : ""}" style="--segment-color:${color}"/>`;
   }).join("");
   const ratingText = fearRating(data.rating);
+  const displayScore = Math.round(value);
   const deltas = [
     fearDelta(value, data.previous_close, "전일"),
     fearDelta(value, data.previous_1_week, "1주"),
     fearDelta(value, data.previous_1_month, "1개월"),
   ].join("");
-  gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="${safe(indexName)} 공포와 탐욕 지수 ${value.toFixed(1)}/100, ${safe(ratingText)}">
+  gauge.innerHTML = `<svg viewBox="0 0 300 174" role="img" aria-label="${safe(indexName)} 공포와 탐욕 지수 ${displayScore}/100, ${safe(ratingText)}">
     ${arcs}${ticks}<line x1="150" y1="150" x2="${needle.x.toFixed(1)}" y2="${needle.y.toFixed(1)}" class="gauge-needle"/><circle cx="150" cy="150" r="6" class="gauge-hub"/>
     <text x="38" y="166" class="gauge-end-label" text-anchor="middle">0</text><text x="262" y="166" class="gauge-end-label" text-anchor="middle">100</text>
-  </svg><div class="fear-value" style="--sentiment-color:${colors[activeIndex]}"><strong>${value.toFixed(1)}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
+  </svg><div class="fear-value" style="--sentiment-color:${colors[activeIndex]}"><strong>${displayScore}</strong><span>${safe(ratingText || "최신 지수")}</span></div>${deltas ? `<div class="fear-deltas">${deltas}</div>` : ""}`;
 }
 
 async function loadFearAndGreed() {
