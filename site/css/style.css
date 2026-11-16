@@ -71,10 +71,6 @@ th:first-child .sort-button{justify-content:flex-start}
 /* Market sentiment and summary cards */
 .market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 .market-card{min-height:385px}
-.kospi-card-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;flex:1;min-height:0}
-.kospi-card-content .fear-gauge{min-width:0}
-.tradingview-widget-container,.tradingview-widget-container__widget{width:100%;min-width:0}
-.tradingview-widget-container{display:flex;align-items:center;overflow:hidden}
 .market-bottom-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;margin-bottom:16px}
 .market-bottom-row .fedwatch-card{grid-column:auto}
 .market-bottom-row .panel{margin-bottom:0}
@@ -82,7 +78,6 @@ th:first-child .sort-button{justify-content:flex-start}
 .fedwatch-card .fedwatch-fallback{flex-direction:row;flex-wrap:wrap;justify-content:center;padding:12px}
 @media(max-width:1400px){.market-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.market-cards{grid-template-columns:minmax(0,1fr)}.market-card{min-height:385px}.market-bottom-row{grid-template-columns:minmax(0,1fr);gap:10px}.market-bottom-row .market-card{min-height:250px}}
-@media(max-width:900px){.kospi-card-content{grid-template-columns:minmax(0,1fr)}.tradingview-widget-container{min-height:50px}}
 
 /* ETF comparison summary */
 .database-summary{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin-top:11px;color:var(--muted);font-size:11px}
@@ -111,3 +106,9 @@ th:first-child .sort-button{justify-content:flex-start}
 .fedwatch-note{margin:0;line-height:1.6}
 .fedwatch-chart .metric-unavailable a{display:inline-block;margin-top:8px;color:var(--orange);text-decoration:none}
 @media(max-width:700px){.fedwatch-summary{gap:14px 22px}.fedwatch-bars{grid-template-columns:1fr}.fedwatch-bar-track{height:20px}}
+
+/* Header ticker tape */
+.topbar{height:auto;min-height:84px;gap:24px}
+.topbar-ticker{flex:1;min-width:0;max-width:900px}
+.topbar-ticker tv-ticker-tape{display:block;width:100%!important;max-width:900px}
+@media(max-width:760px){.topbar{height:auto;min-height:62px;padding:12px 17px;flex-wrap:wrap;gap:10px}.topbar-ticker{flex-basis:100%;max-width:none}}
