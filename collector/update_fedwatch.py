@@ -16,6 +16,8 @@ from io import StringIO
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +25,19 @@ OUTPUT = ROOT / "site" / "data" / "fedwatch.json"
 YAHOO_CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
 FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 MONTH_CODES = "FGHJKMNQUVXZ"
+SESSION = requests.Session()
+SESSION.mount(
+    "https://",
+    HTTPAdapter(max_retries=Retry(
+        total=3,
+        connect=3,
+        read=3,
+        status=3,
+        backoff_factor=0.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset({"GET"}),
+    )),
+)
 MEETINGS = [
     date(2026, 12, 9), date(2027, 1, 27), date(2027, 3, 17),
     date(2027, 4, 28), date(2027, 6, 9), date(2027, 7, 28),
@@ -35,7 +50,7 @@ def fetch_contract_prices(contract, end_day):
     year, month = contract
     symbol = f"ZQ{MONTH_CODES[month - 1]}{year % 100:02d}.CBT"
     start_day = end_day - timedelta(days=14)
-    response = requests.get(
+    response = SESSION.get(
         YAHOO_CHART_URL.format(symbol=symbol),
         params={
             "period1": int(datetime.combine(start_day, datetime.min.time(), timezone.utc).timestamp()),
@@ -88,7 +103,7 @@ def latest_contract_prices(contracts, end_day):
 
 
 def latest_fred_value(series_id):
-    response = requests.get(
+    response = SESSION.get(
         FRED_URL,
         params={"id": series_id, "cosd": (date.today() - timedelta(days=35)).isoformat(), "coed": date.today().isoformat()},
         headers={"User-Agent": "Mozilla/5.0"}, timeout=25,
@@ -102,6 +117,28 @@ def latest_fred_value(series_id):
     raise RuntimeError(f"FRED has no recent {series_id} value")
 
 
+def previous_current_range():
+    if not OUTPUT.exists():
+        return None
+    try:
+        previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        logging.warning("Unable to read the previous FedWatch snapshot: %s", exc)
+        return None
+    if not isinstance(previous, dict):
+        return None
+    values = previous.get("current_range")
+    if not previous.get("available") or not isinstance(values, list) or len(values) != 2:
+        return None
+    try:
+        current_range = [float(value) for value in values]
+    except (TypeError, ValueError):
+        return None
+    if not all(math.isfinite(value) for value in current_range):
+        return None
+    return current_range, previous.get("current_range_fetched_at") or previous.get("generated_at")
+
+
 def month_add(year, month, offset):
     value = year * 12 + month - 1 + offset
     return value // 12, value % 12 + 1
@@ -113,7 +150,17 @@ def build_data():
     if meeting is None:
         raise RuntimeError("No future FOMC meeting in the configured schedule")
 
-    current_range = [latest_fred_value("DFEDTARL"), latest_fred_value("DFEDTARU")]
+    try:
+        current_range = [latest_fred_value("DFEDTARL"), latest_fred_value("DFEDTARU")]
+        current_range_fetched_at = datetime.now().astimezone().isoformat(timespec="minutes")
+        current_range_stale = False
+    except (requests.RequestException, RuntimeError) as exc:
+        previous_range = previous_current_range()
+        if previous_range is None:
+            raise
+        current_range, current_range_fetched_at = previous_range
+        current_range_stale = True
+        logging.warning("Using the previous target-rate range because FRED is unavailable: %s", exc)
     # ZQ prices 100 minus the average effective rate for the delivery
     # month. The nearest preceding month without an FOMC meeting anchors the
     # rate entering the next meeting month.
@@ -160,6 +207,8 @@ def build_data():
         "trade_date": trade_day.isoformat(),
         "meeting_date": meeting.isoformat(),
         "current_range": current_range,
+        "current_range_fetched_at": current_range_fetched_at,
+        "current_range_stale": current_range_stale,
         "probabilities": outcomes,
         "generated_at": datetime.now().astimezone().isoformat(timespec="minutes"),
     }
