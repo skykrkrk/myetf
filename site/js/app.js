@@ -289,11 +289,14 @@ function showDetails(symbol) {
     <a class="tradingview-link" href="${tradingViewUrl}" target="_blank" rel="noopener noreferrer">Trading View에서 보기 <span aria-hidden="true">↗</span></a>
     <div class="detail-grid">
       <div class="detail-metric"><span>\uD604\uC7AC \uAC00\uACA9</span><strong>${money(fund.price)}</strong></div>
-      <div class="detail-metric"><span>12\uAC1C\uC6D4 \uBD84\uBC30\uAE08</span><strong>${fund.dividend_12m == null ? "\u2014" : money(fund.dividend_12m)}</strong></div>
-      <div class="detail-metric"><span>\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)</span><strong>${(fund.distribution_yield_12m) == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</strong></div>
       <div class="detail-metric"><span>\uC2DC\uAC00\uCD1D\uC561</span><strong>${fund.market_cap == null ? "\u2014" : `${number(fund.market_cap)}\uC5B5\uC6D0`}</strong></div>
-      <div class="detail-metric"><span>\uBD84\uBC30 \uC6D4 \uC218</span><strong>${number(fund.dividend_months_12m || 0)}\uAC1C\uC6D4</strong></div>
-      <section class="detail-investment" aria-label="1억원 투자 예상 분배금">
+      <section class="detail-summary-card" aria-label="분배 정보">
+        <h3>분배 정보</h3>
+        <div><span>12\uAC1C\uC6D4 \uBD84\uBC30\uAE08</span><strong>${fund.dividend_12m == null ? "\u2014" : money(fund.dividend_12m)}</strong></div>
+        <div><span>\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)</span><strong>${fund.distribution_yield_12m == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</strong></div>
+        <div><span>\uBD84\uBC30 \uC6D4 \uC218</span><strong>${number(fund.dividend_months_12m || 0)}\uAC1C\uC6D4</strong></div>
+      </section>
+      <section class="detail-summary-card" aria-label="1억원 투자 예상 분배금">
         <h3>1억원 투자 시</h3>
         <div><span>매수 가능 수량</span><strong>${estimate ? `${number(estimate.shares)}주` : "—"}</strong></div>
         <div><span>월 예상 분배금</span><strong>${estimate ? money(estimate.annualIncome / 12) : "—"}</strong></div>

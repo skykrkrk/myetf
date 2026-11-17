@@ -10,7 +10,7 @@ body{color:var(--ink)}.topbar{background:#141820;border-color:var(--line)}.hero{
 
 .history-item{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 14px;align-items:center}.history-item span{min-width:0}.history-item span:last-child{font-weight:700}@media(max-width:520px){.history-item{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 12px}}
 
-.detail-investment{padding:12px;background:#202631;border-radius:9px}.detail-investment h3{margin:0 0 7px;font-size:12px}.detail-investment>div{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:5px 0;border-top:1px solid #353d49}.detail-investment span{color:var(--muted);font-size:10px}.detail-investment strong{font-size:12px;text-align:right}
+.detail-summary-card{padding:12px;background:#202631;border-radius:9px}.detail-summary-card h3{margin:0 0 7px;font-size:12px}.detail-summary-card>div{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:5px 0;border-top:1px solid #353d49}.detail-summary-card span{color:var(--muted);font-size:10px}.detail-summary-card strong{font-size:12px;text-align:right}
 
 .tradingview-link{display:inline-flex;align-items:center;gap:5px;margin-top:10px;color:#ff9a76;text-decoration:none;font-size:11px;font-weight:700}.tradingview-link:hover{text-decoration:underline}.tradingview-link span{color:var(--orange)}
 
