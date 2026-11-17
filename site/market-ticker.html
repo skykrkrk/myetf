@@ -23,11 +23,11 @@
     scrollbar-width: none;
   }
   .ticker::-webkit-scrollbar { display: none; }
-  .ticker-track { display: flex; gap: 10px; min-width: max-content; }
+  .ticker-track { display: flex; gap: 20px; min-width: max-content; }
 
-  .item { display: grid; grid-template-columns: auto auto; column-gap: 12px; align-items: end; }
+  .item { display: block; grid-template-columns: auto auto; column-gap: 10px; align-items: end; }
   .item .name  { grid-column: 1 / -1; color: var(--name); font-weight: 600; font-size: 11px; line-height: 1.2; white-space: nowrap; }
-  .item .price { grid-column: 1; color: var(--text); font-weight: 600; font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .item .price { grid-column: 1; color: var(--text); font-weight: 600; font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
   .item .chg   { grid-column: 1; font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .item .spark { grid-column: 2; grid-row: 2 / span 2; align-self: center; width: 76px; height: 34px; }
   .up   { color: var(--up); }
@@ -70,16 +70,16 @@ const CONFIG = {
   // 기본 표시 종목. 순서/종목은 여기서 바꾸면 됨.
 //    { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 },
   items: [
-    { name: "Nasdaq 100    ", symbol: "NDX.INDX",   yahoo: "^NDX",  demo: 27400 },
-    { name: "Nasdaq Futures", symbol: "NQ=F", yahoo: "NQ=F", demo: 27400 },
-    { name: "S&P 500       ", symbol: "GSPC.INDX",  yahoo: "^GSPC", demo: 7440  },
-    { name: "S&P Futures   ", symbol: "ES=F", yahoo: "ES=F", demo: 7440  },
-    { name: "VIX           ", symbol: "^VIX", yahoo: "^VIX", demo: 22.9 },
-    { name: "Bitcoin       ", symbol: "BTC-USD", yahoo: "BTC-USD", demo: 7440  },
-    { name: "SPYM          ", symbol: "SPYM", yahoo: "SYPM", naver: "SPYM.K", demo: 7440  },
-    { name: "QQQM          ", symbol: "QQQM", yahoo: "QQQM", naver: "QQQM.O", demo: 7440  },
-    { name: "KOSPI         ", symbol: "^KS11", yahoo: "^KS11", naver: "KOSPI", demo: 5000 },
-    { name: "KOSDAQ        ", symbol: "^KQ11", yahoo: "^KQ11", naver: "KOSDAQ", demo: 600 },
+    { name: "Nasdaq 100",     yahoo: "^NDX",  demo: 27400 },
+    { name: "Nasdaq Futures", yahoo: "NQ=F", demo: 27400 },
+    { name: "S&P 500",        yahoo: "^GSPC", demo: 7440  },
+    { name: "S&P Futures",    yahoo: "ES=F", demo: 7440  },
+    { name: "VIX",            yahoo: "^VIX", demo: 22.9 },
+    { name: "Bitcoin",        yahoo: "BTC-USD", demo: 7440  },
+    { name: "SPYM",           yahoo: "SPYM", demo: 7440  },
+    { name: "QQQM",           yahoo: "QQQM", demo: 7440  },
+    { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", demo: 5000 },
+    { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", demo: 600 },
   ]
 };
 
