@@ -22,7 +22,7 @@ export default {
 
     const upstream = await fetch(u.toString(), {
       headers: { "User-Agent": "Mozilla/5.0 (compatible; ticker-proxy)" },
-      cf: { cacheTtl: 30, cacheEverything: true }   // 30초 캐시: 상대 서버에 부담을 줄임
+      cf: { cacheTtl: 5, cacheEverything: true }   // 30초 캐시: 상대 서버에 부담을 줄임
     });
 
     const headers = new Headers(upstream.headers);
