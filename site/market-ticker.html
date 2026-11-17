@@ -57,7 +57,7 @@ const CONFIG = {
   // "custom": 내 서버/프록시가 주는 JSON 사용 (실서비스 권장)
   // "free"  : API 키/라이선스 없이 네이버(KOSPI 200) + 야후(나스닥100, S&P500) 비공식 공개 엔드포인트 사용
   provider: "free",
-  refreshSeconds: 60,
+  refreshSeconds: 5,
 
   eodhd:  { apiKey: "YOUR_API_KEY", interval: "5m" },
   custom: { endpoint: "/api/quotes" },   // GET {endpoint}?symbols=A,B,C
@@ -71,7 +71,10 @@ const CONFIG = {
   items: [
     { name: "Nasdaq 100", symbol: "NDX.INDX",   yahoo: "^NDX",  demo: 27400 },
     { name: "S&P 500",    symbol: "GSPC.INDX",  yahoo: "^GSPC", demo: 7440  },
-    { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 }
+    { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 },
+    { name: "Nasdaq Futures", symbol: "NQ=F", yahoo: "NQ=F", demo: 27400 },
+    { name: "S&P Futures",    symbol: "ES=F", yahoo: "ES=F", demo: 7440  },
+    { name: "BTC",    symbol: "BTC-USD", yahoo: "BTC-USD", demo: 7440  },
   ]
 };
 
