@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 18:01:36",
+  "updated_at": "2026-11-17 18:21:25",
   "price_date": "2026-11-17",
   "price_date_note": "가격 조회일 기준. 실제 마지막 거래일과 차이가 있을 수 있음.",
   "source": {
@@ -13749,7 +13749,7 @@
     {
       "symbol": "0191W0",
       "name": "HANARO 중기종합채권(A-이상)액티브",
-      "price": 101910,
+      "price": 101950,
       "market_cap": 931.0,
       "dividend_12m": null,
       "annual_yield": null,
