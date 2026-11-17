@@ -182,19 +182,6 @@ async function loadFedWatch() {
   }
 }
 
-function renderSelect() {
-  const select = $("calcEtf");
-  select.innerHTML = '<option value="">ETF를 선택하세요</option>';
-  funds.filter((fund) => fund.price > 0 && fund.dividend_12m != null)
-    .sort((a, b) => (a.name || "").localeCompare(b.name || "", "ko"))
-    .forEach((fund) => {
-      const option = document.createElement("option");
-      option.value = fund.symbol;
-      option.textContent = `${fund.name} (${fund.symbol})`;
-      select.appendChild(option);
-    });
-}
-
 function renderTable() {
   const keyword = $("search").value.trim().toLocaleLowerCase("ko");
   const timing = $("timing").value;
@@ -296,6 +283,7 @@ function showDetails(symbol) {
   if (!fund) return;
   const events = [...(fund.events || [])].sort((a, b) => String(b.ex_date).localeCompare(String(a.ex_date)));
   const tradingViewUrl = `https://kr.tradingview.com/symbols/KRX-${encodeURIComponent(fund.symbol)}/`;
+  const estimate = estimateDistribution(fund, 100000000);
   $("fundDetails").innerHTML = `
     <h2>${safe(fund.name)}</h2><p class="dialog-meta">${safe(fund.symbol)} · ${safe(getCategory(fund))}</p>
     <a class="tradingview-link" href="${tradingViewUrl}" target="_blank" rel="noopener noreferrer">Trading View에서 보기 <span aria-hidden="true">↗</span></a>
@@ -305,6 +293,12 @@ function showDetails(symbol) {
       <div class="detail-metric"><span>\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)</span><strong>${(fund.distribution_yield_12m) == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</strong></div>
       <div class="detail-metric"><span>\uC2DC\uAC00\uCD1D\uC561</span><strong>${fund.market_cap == null ? "\u2014" : `${number(fund.market_cap)}\uC5B5\uC6D0`}</strong></div>
       <div class="detail-metric"><span>\uBD84\uBC30 \uC6D4 \uC218</span><strong>${number(fund.dividend_months_12m || 0)}\uAC1C\uC6D4</strong></div>
+      <section class="detail-investment" aria-label="1억원 투자 예상 분배금">
+        <h3>1억원 투자 시</h3>
+        <div><span>매수 가능 수량</span><strong>${estimate ? `${number(estimate.shares)}주` : "—"}</strong></div>
+        <div><span>월 예상 분배금</span><strong>${estimate ? money(estimate.annualIncome / 12) : "—"}</strong></div>
+        <div><span>연 예상 분배금</span><strong>${estimate ? money(estimate.annualIncome) : "—"}</strong></div>
+      </section>
     </div>
     <h3 class="history-title">최근 분배 내역</h3>
     <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
@@ -316,20 +310,11 @@ function showDetails(symbol) {
   $("fundDialog").showModal();
 }
 
-function calculate() {
-  const fund = funds.find((item) => item.symbol === $("calcEtf").value);
-  const investment = Math.max(0, Number($("investment").value) || 0);
-  if (!fund || !fund.price || fund.dividend_12m == null) {
-    ["shares", "monthlyIncome", "annualIncome", "calcYield"].forEach((id) => { $(id).textContent = "—"; });
-    return;
-  }
-  const shares = Math.floor(investment / fund.price);
-  const annualIncome = shares * Number(fund.dividend_12m);
-  $("shares").textContent = `${number(shares)}주`;
-  $("monthlyIncome").textContent = money(annualIncome / 12);
-  $("annualIncome").textContent = money(annualIncome);
-  const yield12m = fund.distribution_yield_12m;
-  $("calcYield").textContent = yield12m == null ? "\u2014" : `${Number(yield12m).toFixed(2)}%`;
+function estimateDistribution(fund, investment) {
+  if (!fund || !Number.isFinite(Number(fund.price)) || Number(fund.price) <= 0 ||
+      fund.dividend_12m == null || !Number.isFinite(Number(fund.dividend_12m))) return null;
+  const shares = Math.floor(investment / Number(fund.price));
+  return { shares, annualIncome: shares * Number(fund.dividend_12m) };
 }
 
 function downloadCSV() {
@@ -361,9 +346,7 @@ async function loadData() {
       $("dataSource").textContent = `\uC790\uB8CC: ${[data.source.listing, data.source.dividend, data.source.distribution_details, data.source.market_cap, data.source.distribution_yield].filter(Boolean).join(" \u00B7 ")}`;
     }
     renderStats();
-    renderSelect();
     renderTable();
-    calculate();
   } catch (error) {
     console.error(error);
     const updatedAt = $("updatedAt");
@@ -396,8 +379,6 @@ document.querySelectorAll(".sort-button").forEach((button) => {
     renderTable();
   });
 });
-$("calcEtf").addEventListener("change", calculate);
-$("investment").addEventListener("input", calculate);
 $("downloadCsv").addEventListener("click", downloadCSV);
 document.querySelectorAll(".accordion").forEach((button) => button.addEventListener("click", () => {
   const expanded = button.getAttribute("aria-expanded") === "true";
