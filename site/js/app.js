@@ -383,6 +383,14 @@ document.querySelectorAll(".sort-button").forEach((button) => {
   });
 });
 $("downloadCsv").addEventListener("click", downloadCSV);
+$("fundDialog").addEventListener("click", (event) => {
+  const dialog = $("fundDialog");
+  const bounds = dialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) {
+    dialog.close();
+  }
+});
 document.querySelectorAll(".accordion").forEach((button) => button.addEventListener("click", () => {
   const expanded = button.getAttribute("aria-expanded") === "true";
   button.setAttribute("aria-expanded", String(!expanded));
