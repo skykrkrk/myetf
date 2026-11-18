@@ -3,8 +3,8 @@ name: Update ETF Data and Deploy
 
 on:
   schedule:
-    # 한국시간 매일 오전 8시 30분, 오후 8시 30분
-    - cron: "30 23,11 * * *"
+    # 한국시간 매일 오전 9시 1분, 오후 11시 1분에 실행
+    - cron: "1 0,14 * * *"
 
   workflow_dispatch:
 
@@ -47,12 +47,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Collect ETF data only on the 1st and 15th of each month
       - name: Collect ETF data
+        if: github.event.schedule == "* * 1,15 * *" && github.event_name != "push"
         run: |
           python collector/update_data.py
-          python collector/update_fedwatch.py
+
+      # Collect Korea Fear & Greed data every day at 9 AM KST (0 UTC)
+      - name: Collect Fear & Greed data
+        if: github.event.schedule == "* 0 * * *" && github.event_name != "push"
+        run: |
           python collector/update_feargreed.py
+
+      # Collect US time Fear and Greed and FedWatch data every day at 11 PM KST (14 UTC)
+      - name: Collect FedWatch data
+        if: github.event.schedule == "* 14 * * *" && github.event_name != "push"
+        run: |
           python collector/update_kfeargreed.py
+          python collector/update_fedwatch.py
 
       - name: Commit updated data
         run: |
