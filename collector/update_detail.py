@@ -27,7 +27,6 @@ NOW = datetime.now(KST)
 TODAY = NOW.date()
 MAX_WORKERS = 4
 SOURCE_TIMEOUT = 20
-NET_ASSET_UNIT_KRW = 100_000_000
 SEIBRO_LOCAL = threading.local()
 
 logging.basicConfig(
@@ -58,10 +57,10 @@ def convert_ticker_to_isin(ticker):
 
 def create_seibro_session():
     host = "seibro.or.kr"
-    page_url = (
-        f"https://{host}/websquare/control.jsp"
-        "?w2xPath=/IPORTAL/user/fund/BIP_CNTS05011V.xml&menuNo=155"
-    )
+    page_urls = [
+        f"https://{host}/websquare/control.jsp?w2xPath=/IPORTAL/user/fund/BIP_CNTS05011V.xml&menuNo=155",
+        f"https://{host}/websquare/control.jsp?w2xPath=/IPORTAL/user/etf/BIP_CNTS06030V.xml&menuNo=179",
+    ]
     session = requests.Session()
     session.headers.update({
         "User-Agent": (
@@ -69,29 +68,18 @@ def create_seibro_session():
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/120.0.0.0 Safari/537.36"
         ),
-        "Referer": page_url,
+        "Referer": page_urls[0],
         "Origin": f"https://{host}",
     })
-    response = session.get(page_url, timeout=SOURCE_TIMEOUT)
-    response.raise_for_status()
+    for page_url in page_urls:
+        response = session.get(page_url, timeout=SOURCE_TIMEOUT)
+        response.raise_for_status()
     return session
 
 
-def fetch_seibro_records(session, isin, start_date, end_date):
+def post_seibro_xml(session, xml_payload, referer):
     host = "seibro.or.kr"
     api_url = f"https://{host}/websquare/engine/proworks/callServletService.jsp"
-    xml_payload = f"""<?xml version="1.0" encoding="UTF-8"?>
-<reqParam action="fundCompstInfoStdprcDtramtPList" task="ksd.safe.bip.cnts.Fund.process.FundCompstInfoPTask">
-    <MENU_NO value="155"/>
-    <CMM_BTN_ABBR_NM value="total_search,openall,print,hwp,word,pdf,searchIcon,seach,favorites float_left,more2,more2,search02,search03,"/>
-    <W2XPATH value="/IPORTAL/user/fund/BIP_CNTS05011V.xml"/>
-    <ISIN value="{isin}"/>
-    <IC_START value="{start_date}"/>
-    <IC_END value="{end_date}"/>
-    <FUND_ISIN value="{isin}"/>
-    <PAGE_ON_CNT value="300"/>
-    <PAGE_NUM value="1"/>
-</reqParam>"""
     response = session.post(
         api_url,
         data=xml_payload.encode("utf-8"),
@@ -99,6 +87,7 @@ def fetch_seibro_records(session, isin, start_date, end_date):
             "Content-Type": "application/xml; charset=UTF-8",
             "Accept": "application/xml",
             "X-Requested-With": "XMLHttpRequest",
+            "Referer": referer,
         },
         timeout=SOURCE_TIMEOUT,
     )
@@ -116,6 +105,51 @@ def fetch_seibro_records(session, isin, start_date, end_date):
     return rows
 
 
+def fetch_seibro_records(session, isin, start_date, end_date):
+    host = "seibro.or.kr"
+    referer = (
+        f"https://{host}/websquare/control.jsp"
+        "?w2xPath=/IPORTAL/user/fund/BIP_CNTS05011V.xml&menuNo=155"
+    )
+    xml_payload = f"""<?xml version="1.0" encoding="UTF-8"?>
+<reqParam action="fundCompstInfoStdprcDtramtPList" task="ksd.safe.bip.cnts.Fund.process.FundCompstInfoPTask">
+    <MENU_NO value="155"/>
+    <CMM_BTN_ABBR_NM value="total_search,openall,print,hwp,word,pdf,searchIcon,seach,favorites float_left,more2,more2,search02,search03,"/>
+    <W2XPATH value="/IPORTAL/user/fund/BIP_CNTS05011V.xml"/>
+    <ISIN value="{isin}"/>
+    <IC_START value="{start_date}"/>
+    <IC_END value="{end_date}"/>
+    <FUND_ISIN value="{isin}"/>
+    <PAGE_ON_CNT value="300"/>
+    <PAGE_NUM value="1"/>
+</reqParam>"""
+    return post_seibro_xml(session, xml_payload, referer)
+
+
+def fetch_seibro_payment_records(session, isin, start_date, end_date):
+    host = "seibro.or.kr"
+    referer = (
+        f"https://{host}/websquare/control.jsp"
+        "?w2xPath=/IPORTAL/user/etf/BIP_CNTS06030V.xml&menuNo=179"
+    )
+    xml_payload = f"""<reqParam action="exerInfoDtramtPayStatPlist" task="ksd.safe.bip.cnts.etf.process.EtfExerInfoPTask">
+    <MENU_NO value="179"/>
+    <CMM_BTN_ABBR_NM value="total_search,openall,print,hwp,word,pdf,searchIcon,searchIcon,seach,searchIcon,seach,"/>
+    <W2XPATH value="/IPORTAL/user/etf/BIP_CNTS06030V.xml"/>
+    <etf_sort_level_cd value="0"/>
+    <etf_big_sort_cd value=""/>
+    <START_PAGE value="1"/>
+    <END_PAGE value="30"/>
+    <etf_sort_cd value=""/>
+    <isin value="{isin}"/>
+    <mngco_custno value=""/>
+    <RGT_RSN_DTAIL_SORT_CD value=""/>
+    <fromRGT_STD_DT value="{start_date}"/>
+    <toRGT_STD_DT value="{end_date}"/>
+</reqParam>"""
+    return post_seibro_xml(session, xml_payload, referer)
+
+
 def parse_number(value):
     if value is None:
         return None
@@ -126,66 +160,76 @@ def parse_number(value):
     return parsed if math.isfinite(parsed) else None
 
 
-def build_distribution_events(records):
-    dated_records = []
-    for record in records:
+def build_distribution_events(price_records, payment_records):
+    prices_by_date = {}
+    for record in price_records:
         try:
-            record_date = datetime.strptime(
+            price_date = datetime.strptime(
                 record.get("ANYTM_REPTG_DT", ""),
                 "%Y%m%d"
             ).date()
         except (TypeError, ValueError):
             continue
-        dated_records.append((record_date, record))
+        prices_by_date[price_date] = record
 
-    dated_records.sort(key=lambda item: item[0])
+    price_dates = sorted(prices_by_date)
     events = []
-    previous_tax_standard = None
+    for payment in payment_records:
+        try:
+            payment_date = datetime.strptime(
+                payment.get("RGT_STD_DT", ""),
+                "%Y%m%d"
+            ).date()
+        except (TypeError, ValueError):
+            continue
 
-    for record_date, record in dated_records:
-        current_tax_standard = parse_number(record.get("TAXSTD"))
-        total_distribution = parse_number(record.get("TOT_DIV_PAY_AMT"))
-        nav = parse_number(record.get("NAV_AMT"))
-        net_assets = parse_number(record.get("FUND_NETASST_TOTAMT"))
+        ex_dates = [price_date for price_date in price_dates if price_date < payment_date]
+        if not ex_dates:
+            logging.warning(
+                "분배락일 과표기준가를 찾지 못했습니다: %s",
+                payment.get("RGT_STD_DT", "")
+            )
+            continue
 
-        if total_distribution is not None and total_distribution > 0:
-            amount = None
-            if nav is not None and nav > 0 and net_assets is not None and net_assets > 0:
-                units = net_assets * NET_ASSET_UNIT_KRW / nav
-                if units > 0:
-                    amount = total_distribution / units
+        ex_date = ex_dates[-1]
+        ex_day_price = prices_by_date[ex_date]
+        ex_day_tax_standard = parse_number(ex_day_price.get("TAXSTD"))
+        settlement_tax_standard = parse_number(payment.get("TAXSTD"))
+        amount = parse_number(payment.get("ESTM_STDPRC"))
 
-            tax_base = None
-            tax_rate = None
-            if (
-                previous_tax_standard is not None
-                and previous_tax_standard > 0
-                and current_tax_standard is not None
-                and amount is not None
-            ):
-                taxable_difference = max(
-                    0,
-                    previous_tax_standard - current_tax_standard
-                )
-                tax_base = round(min(taxable_difference, amount), 4)
-                tax_rate = round(tax_base / previous_tax_standard * 100, 4)
+        tax_base = None
+        tax_rate = None
+        if (
+            ex_day_tax_standard is not None
+            and ex_day_tax_standard > 0
+            and settlement_tax_standard is not None
+            and amount is not None
+        ):
+            taxable_difference = max(
+                0,
+                settlement_tax_standard - ex_day_tax_standard
+            )
+            tax_base = round(min(taxable_difference, amount), 4)
+            tax_rate = round(tax_base / ex_day_tax_standard * 100, 4)
 
-            events.append({
-                "ex_date": record_date.strftime("%Y-%m-%d"),
-                "amount": round(amount, 4) if amount is not None else None,
-                "tax_base": tax_base,
-                "tax_rate": tax_rate,
-                "distribution_yield": (
-                    round(amount / nav * 100, 4)
-                    if amount is not None and nav is not None and nav > 0
-                    else None
-                ),
-            })
+        payment_day_price = prices_by_date.get(payment_date, ex_day_price)
+        nav = parse_number(payment_day_price.get("NAV_AMT"))
+        events.append({
+            "ex_date": ex_date.strftime("%Y-%m-%d"),
+            "distribution_record_date": payment_date.strftime("%Y-%m-%d"),
+            "amount": round(amount, 4) if amount is not None else None,
+            "ex_date_tax_standard_price": ex_day_tax_standard,
+            "settlement_tax_standard_price": settlement_tax_standard,
+            "tax_base": tax_base,
+            "tax_rate": tax_rate,
+            "distribution_yield": (
+                round(amount / nav * 100, 4)
+                if amount is not None and nav is not None and nav > 0
+                else None
+            ),
+        })
 
-        if current_tax_standard is not None:
-            previous_tax_standard = current_tax_standard
-
-    return events
+    return sorted(events, key=lambda event: event["ex_date"])
 
 
 def has_new_monthly_distribution_pattern(events):
@@ -211,10 +255,10 @@ def has_new_monthly_distribution_pattern(events):
     return all(24 <= gap <= 40 for gap in gaps)
 
 
-def build_fund(row, records):
+def build_fund(row, price_records, payment_records):
     symbol = str(row["Symbol"]).zfill(6)
     name = str(row["Name"])
-    events = build_distribution_events(records)
+    events = build_distribution_events(price_records, payment_records)
     one_year_ago = TODAY - timedelta(days=365)
     recent_events = [
         event for event in events
@@ -272,7 +316,14 @@ def fetch_fund_detail(row, start_date, end_date):
         SEIBRO_LOCAL.session = session
     symbol = str(row["Symbol"]).zfill(6)
     try:
-        records = fetch_seibro_records(
+        price_records = fetch_seibro_records(
+            session,
+            convert_ticker_to_isin(symbol),
+            start_date,
+            end_date,
+        )
+        time.sleep(0.25)
+        payment_records = fetch_seibro_payment_records(
             session,
             convert_ticker_to_isin(symbol),
             start_date,
@@ -280,7 +331,7 @@ def fetch_fund_detail(row, start_date, end_date):
         )
     finally:
         time.sleep(0.25)
-    return build_fund(row, records)
+    return build_fund(row, price_records, payment_records)
 
 
 def main():
@@ -323,9 +374,9 @@ def main():
         "updated_at": NOW.strftime("%Y-%m-%d %H:%M:%S"),
         "source": {
             "distribution_details": (
-                "SEIBro fund standard price and distribution trend "
-                "(per-unit distribution estimated from total payout / "
-                "net assets and NAV)"
+                "SEIBro ETF payment status for distribution amount and "
+                "settlement tax standard price; daily standard-price history "
+                "for ex-date tax standard price"
             ),
         },
         "total_count": len(results),

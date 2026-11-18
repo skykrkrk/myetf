@@ -68,7 +68,7 @@ jobs:
 
       # Collect US time Fear and Greed and FedWatch data every day at 11 PM KST (14 UTC)
       - name: Collect FedWatch data
-        if: github.event.schedule == '1 14 * * *'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 14 * * *'
         run: |
           python collector/update_kfeargreed.py
           python collector/update_fedwatch.py
