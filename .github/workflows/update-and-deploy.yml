@@ -56,7 +56,7 @@ jobs:
           python collector/update_data.py
 
       - name: Collect ETF details from Seibro
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '2 0 1,15 * *'
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.schedule == '2 0 1,15 * *'
         run: |
           python collector/update_detail.py
 
