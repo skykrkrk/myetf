@@ -1,11 +1,11 @@
 {
   "available": true,
-  "score": 25.2,
-  "rating": "fear",
-  "timestamp": "2026-11-18T01:00:00+00:00",
+  "score": 24.6,
+  "rating": "extreme fear",
+  "timestamp": "2026-11-18T22:35:29+00:00",
   "previous_close": 25.2,
   "previous_1_week": 35.9,
   "previous_1_month": 18.2,
   "source": "CNN Fear & Greed Index",
-  "generated_at": "2026-11-18T06:33+00:00"
+  "generated_at": "2026-11-18T22:56+00:00"
 }
