@@ -19,6 +19,16 @@ function getTaxBase(event) {
   return event?.tax_base ?? event?.tax_base_amount ?? event?.taxable_amount ?? event?.taxable_base ?? null;
 }
 
+function getTaxRate(event) {
+  if (event?.tax_rate != null && Number.isFinite(Number(event.tax_rate))) {
+    return Number(event.tax_rate);
+  }
+  const taxBase = getTaxBase(event);
+  return taxBase != null && Number(event?.amount) > 0
+    ? Number(taxBase) / Number(event.amount) * 100
+    : null;
+}
+
 function getTiming(fund) {
   const day = Number(latestEvent(fund)?.ex_date?.slice(-2));
   if (!day) return "unknown";
@@ -204,8 +214,7 @@ function renderTable() {
       case "name": return fund.name || "";
       case "amount": return latest?.amount;
       case "taxBase": return getTaxBase(latest);
-      case "taxRate": return getTaxBase(latest) != null && Number(latest?.amount) > 0
-        ? Number(getTaxBase(latest)) / Number(latest.amount) * 100 : null;
+      case "taxRate": return getTaxRate(latest);
       case "recentYield": return latest?.distribution_yield;
       case "annualYield": return fund.distribution_yield_12m;
       case "marketCap": return fund.market_cap;
@@ -238,12 +247,11 @@ function renderTable() {
     const latest = latestEvent(fund);
     const timing = getTiming(fund);
     const taxable = getTaxBase(latest);
-    const taxableRate = taxable != null && Number(latest?.amount) > 0
-      ? (Number(taxable) / Number(latest.amount) * 100).toFixed(1)
-      : null;
+    const taxRate = getTaxRate(latest);
+    const taxableRate = taxRate == null ? null : taxRate.toFixed(1);
     return `<tr class="fund-row" data-symbol="${safe(fund.symbol)}" tabindex="0" aria-label="${safe(fund.name)} 상세 보기">
       <td><span class="fund-name">${safe(fund.name)}</span><span class="fund-code">${safe(fund.symbol)}</span></td>
-      <td>${latest ? money(latest.amount) : "—"}</td>
+      <td>${latest?.amount == null ? "—" : money(latest.amount)}</td>
       <td>${taxable == null ? "자료 없음" : money(taxable)}</td>
       <td>${taxableRate == null ? "\u2014" : `${taxableRate}%`}</td>
       <td>${latest?.distribution_yield == null ? "\u2014" : `${Number(latest.distribution_yield).toFixed(2)}%`}</td>
@@ -310,9 +318,9 @@ function showDetails(symbol) {
     <h3 class="history-title">최근 분배 내역</h3>
     <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
       const taxBase = getTaxBase(event);
-      const taxRate = taxBase != null && Number(event.amount) > 0 ? `${(Number(taxBase) / Number(event.amount) * 100).toFixed(1)}%` : "\uC790\uB8CC \uC5C6\uC74C";
+      const taxRate = getTaxRate(event);
       const yieldText = event.distribution_yield == null ? "\uC790\uB8CC \uC5C6\uC74C" : `${Number(event.distribution_yield).toFixed(2)}%`;
-      return `<div class="history-item"><span>${safe(event.ex_date)}<small>\uBC30\uB2F9\uB77D\uC77C</small></span><span>${money(event.amount)}<small>\uBD84\uBC30\uAE08</small></span><span>${taxBase == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(taxBase)}<small>\uACFC\uD45C</small></span><span>${taxRate}<small>\uACFC\uD45C\uC728</small></span><span>${yieldText}<small>\uBD84\uBC30\uC728</small></span></div>`;
+      return `<div class="history-item"><span>${safe(event.ex_date)}<small>\uBC30\uB2F9\uB77D\uC77C</small></span><span>${event.amount == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(event.amount)}<small>\uBD84\uBC30\uAE08</small></span><span>${taxBase == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(taxBase)}<small>\uACFC\uD45C</small></span><span>${taxRate == null ? "\uC790\uB8CC \uC5C6\uC74C" : `${taxRate.toFixed(1)}%`}<small>\uACFC\uD45C\uC728</small></span><span>${yieldText}<small>\uBD84\uBC30\uC728</small></span></div>`;
     }).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
@@ -329,9 +337,9 @@ function downloadCSV() {
   const rows = visibleFunds.map((fund) => {
     const event = latestEvent(fund);
     const taxBase = getTaxBase(event) ?? "";
-    const taxRate = taxBase !== "" && Number(event?.amount) > 0 ? (Number(taxBase) / Number(event.amount) * 100).toFixed(1) : "";
+    const taxRate = getTaxRate(event);
     const timing = getTiming(fund);
-    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate, event?.distribution_yield ?? "", fund.distribution_yield_12m ?? "", fund.market_cap ?? "", event?.ex_date ?? "", `${timing === "mid" ? "\uC6D4\uC911" : timing === "end" ? "\uC6D4\uB9D0" : "\uBBF8\uD655\uC778"} \u00B7 ${getCategory(fund)} \u00B7 ${getRegion(fund)}`];
+    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate == null ? "" : taxRate.toFixed(1), event?.distribution_yield ?? "", fund.distribution_yield_12m ?? "", fund.market_cap ?? "", event?.ex_date ?? "", `${timing === "mid" ? "\uC6D4\uC911" : timing === "end" ? "\uC6D4\uB9D0" : "\uBBF8\uD655\uC778"} \u00B7 ${getCategory(fund)} \u00B7 ${getRegion(fund)}`];
   });
   const csv = "\uFEFF" + [headers, ...rows].map((row) => row.map((value) => `"${String(value ?? "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
@@ -344,14 +352,33 @@ function downloadCSV() {
 
 async function loadData() {
   try {
-    const response = await fetch("./data/etfs.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("ETF 데이터 파일을 불러오지 못했습니다.");
-    const data = await response.json();
-    funds = Array.isArray(data.funds) ? data.funds : [];
-    $("updatedAt").textContent = data.updated_at ? `업데이트 ${data.updated_at}` : "데이터 업데이트 대기 중";
-    if (data.source?.listing || data.source?.dividend || data.source?.distribution_details || data.source?.market_cap || data.source?.distribution_yield) {
-      $("dataSource").textContent = `\uC790\uB8CC: ${[data.source.listing, data.source.dividend, data.source.distribution_details, data.source.market_cap, data.source.distribution_yield].filter(Boolean).join(" \u00B7 ")}`;
+    const [priceResponse, detailResponse] = await Promise.all([
+      fetch("./data/etf-price.json", { cache: "no-store" }),
+      fetch("./data/etf-detail.json", { cache: "no-store" })
+    ]);
+    if (!priceResponse.ok || !detailResponse.ok) {
+      throw new Error("ETF 가격 또는 상세 데이터 파일을 불러오지 못했습니다.");
     }
+    const [priceData, detailData] = await Promise.all([
+      priceResponse.json(),
+      detailResponse.json()
+    ]);
+    const detailsBySymbol = new Map(
+      (Array.isArray(detailData.funds) ? detailData.funds : [])
+        .map((fund) => [fund.symbol, fund])
+    );
+    funds = (Array.isArray(priceData.funds) ? priceData.funds : []).map((price) => ({
+      ...(detailsBySymbol.get(price.symbol) || {}),
+      ...price,
+      events: detailsBySymbol.get(price.symbol)?.events || []
+    }));
+    $("updatedAt").textContent = `가격 ${priceData.updated_at || "대기 중"} · 상세 ${detailData.updated_at || "대기 중"}`;
+    const sources = [
+      priceData.source?.listing,
+      priceData.source?.market_cap,
+      detailData.source?.distribution_details
+    ].filter(Boolean);
+    if (sources.length) $("dataSource").textContent = `자료: ${sources.join(" · ")}`;
     renderStats();
     renderTable();
   } catch (error) {
