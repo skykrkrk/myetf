@@ -49,7 +49,7 @@ jobs:
 
       # Collect ETF data only on the 1st and 15th of each month at 9 AM KST (0 UTC)
       - name: Collect ETF data
-        if: github.event.schedule == '* 0 1,15 * *' && github.event_name != 'push'
+        if: github.event.schedule == '* 14 * * *' && github.event_name != 'push'
         run: |
           python collector/update_data.py
 
