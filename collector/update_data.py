@@ -1,11 +1,9 @@
 import json
 import logging
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
-
-from pykrx import stock as krx_stock
 
 from etf_common import fetch_etf_listing, safe_number
 
@@ -22,46 +20,16 @@ logging.basicConfig(
 )
 
 
-def fetch_krx_etf_market_caps(date):
-    """Fetch ETF market capitalization from the KRX all-items quote."""
-    for offset in range(0, 8):
-        query_date = date - timedelta(days=offset)
-        try:
-            frame = krx_stock.get_etf_ohlcv_by_ticker(query_date.strftime("%Y%m%d"))
-            if frame is None or frame.empty or "시가총액" not in frame.columns:
-                continue
-            return {
-                str(symbol).zfill(6): round(
-                    safe_number(row["시가총액"]) / 100_000_000,
-                    2
-                )
-                for symbol, row in frame.iterrows()
-            }, query_date.strftime("%Y-%m-%d")
-        except Exception as exc:
-            logging.warning(
-                "KRX ETF market-cap request failed (%s): %s",
-                query_date,
-                exc
-            )
-    return {}, None
-
-
 def main():
     logging.info("ETF 가격 데이터 수집 시작")
     listing = fetch_etf_listing()
-    krx_market_caps, krx_market_cap_date = fetch_krx_etf_market_caps(TODAY)
-    logging.info(
-        "KRX ETF market-cap snapshot: %d symbols (%s)",
-        len(krx_market_caps),
-        krx_market_cap_date or "fallback"
-    )
+    if "MarCap" not in listing.columns:
+        raise RuntimeError("ETF 목록에 시가총액 컬럼 MarCap이 없습니다.")
 
     results = []
     for row in listing.to_dict("records"):
         symbol = str(row["Symbol"]).zfill(6)
-        market_cap = krx_market_caps.get(symbol)
-        if market_cap is None:
-            market_cap = safe_number(row.get("MarCap", 0))
+        market_cap = safe_number(row.get("MarCap", 0))
         price = safe_number(row["Price"])
         if price <= 0:
             continue
@@ -83,11 +51,7 @@ def main():
         "source": {
             "listing": "FinanceDataReader / Naver Finance",
             "price": "FinanceDataReader / Naver Finance ETF listing",
-            "market_cap": (
-                "KRX ETF all-items quote (market cap in KRW 100M; date "
-                + (krx_market_cap_date or "fallback")
-                + ")"
-            ),
+            "market_cap": "FinanceDataReader / Naver Finance ETF listing (KRW 100M)",
         },
         "total_count": len(results),
         "funds": results,
