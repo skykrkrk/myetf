@@ -1,7 +1,7 @@
 {
   "available": true,
   "source": "Yahoo Finance daily 30-Day Federal Funds futures prices, methodology-based estimate",
-  "trade_date": "2026-11-17",
+  "trade_date": "2026-11-18",
   "meeting_date": "2026-12-09",
   "current_range": [
     3.75,
@@ -23,5 +23,5 @@
       "type": "hike"
     }
   ],
-  "generated_at": "2026-11-17T20:04+00:00"
+  "generated_at": "2026-11-18T04:45+00:00"
 }
