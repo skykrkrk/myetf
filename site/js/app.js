@@ -105,10 +105,8 @@ function renderFearGauge(data, gaugeId = "fearGauge", indexName = "CNN") {
   }).join("");
   const angles = [ 0, 45, 81, 99, 135, 180 ];
   const arcs = colors.map((color, index) => {
-    const start = 180 - angles[index] - 2;
-    const end = 180 - angles[index + 1] + 2;
-//    const start = 180 - index * 36 - 2;
-//    const end = 180 - (index + 1) * 36 + 2;
+    const start = 180 - angles[index] - 1;
+    const end = 180 - angles[index + 1] + 1;
     return `<path d="${arc(start, end)}" class="gauge-segment${index === activeIndex ? " is-active" : ""}" style="--segment-color:${color}"/>`;
   }).join("");
   const ratingText = fearRating(data.rating);
