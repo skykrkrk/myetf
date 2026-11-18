@@ -56,13 +56,13 @@ jobs:
           python collector/update_data.py
 
       - name: Collect ETF details from Seibro
-        if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event.schedule == '2 0 1,15 * *'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '2 0 1,15 * *'
         run: |
           python collector/update_detail.py
 
       # Collect Korea Fear & Greed data every day at 9 AM KST (0 UTC)
       - name: Collect Fear & Greed data
-        if: github.event.schedule == '1 0 * * *'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 0 * * *'
         run: |
           python collector/update_feargreed.py
 
@@ -78,7 +78,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A site/data/etfs.json site/data/etf-price.json site/data/etf-detail.json site/data/fedwatch.json site/data/feargreed.json site/data/kfeargreed.json
+          git add -A site/data/etf-price.json site/data/etf-detail.json site/data/fedwatch.json site/data/feargreed.json site/data/kfeargreed.json
 
           if ! git diff --cached --quiet; then
             git commit -m "Update daily ETF dividend data"
