@@ -198,7 +198,6 @@ def build_distribution_events(price_records, payment_records):
         amount = parse_number(payment.get("ESTM_STDPRC"))
 
         tax_base = None
-        tax_rate = None
         if (
             ex_day_tax_standard is not None
             and ex_day_tax_standard > 0
@@ -210,7 +209,6 @@ def build_distribution_events(price_records, payment_records):
                 settlement_tax_standard - ex_day_tax_standard
             )
             tax_base = round(min(taxable_difference, amount), 4)
-            tax_rate = round(tax_base / ex_day_tax_standard * 100, 4)
 
         payment_day_price = prices_by_date.get(payment_date, ex_day_price)
         nav = parse_number(payment_day_price.get("NAV_AMT"))
@@ -221,7 +219,6 @@ def build_distribution_events(price_records, payment_records):
             "ex_date_tax_standard_price": ex_day_tax_standard,
             "settlement_tax_standard_price": settlement_tax_standard,
             "tax_base": tax_base,
-            "tax_rate": tax_rate,
             "distribution_yield": (
                 round(amount / nav * 100, 4)
                 if amount is not None and nav is not None and nav > 0

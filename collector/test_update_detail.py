@@ -45,7 +45,6 @@ class SeibroDetailTests(unittest.TestCase):
         self.assertEqual(event["ex_date_tax_standard_price"], 9913.05)
         self.assertEqual(event["settlement_tax_standard_price"], 9928.05)
         self.assertEqual(event["tax_base"], 15.0)
-        self.assertEqual(event["tax_rate"], 0.1513)
 
     def test_caps_tax_base_at_distribution_amount(self):
         event = build_distribution_events(
@@ -62,7 +61,6 @@ class SeibroDetailTests(unittest.TestCase):
         )[0]
 
         self.assertEqual(event["tax_base"], 0)
-        self.assertEqual(event["tax_rate"], 0)
 
 
 if __name__ == "__main__":

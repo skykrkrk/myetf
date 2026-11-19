@@ -19,16 +19,6 @@ function getTaxBase(event) {
   return event?.tax_base ?? event?.tax_base_amount ?? event?.taxable_amount ?? event?.taxable_base ?? null;
 }
 
-function getTaxRate(event) {
-  if (event?.tax_rate != null && Number.isFinite(Number(event.tax_rate))) {
-    return Number(event.tax_rate);
-  }
-  const taxBase = getTaxBase(event);
-  return taxBase != null && Number(event?.amount) > 0
-    ? Number(taxBase) / Number(event.amount) * 100
-    : null;
-}
-
 function getTiming(fund) {
   const day = Number(latestEvent(fund)?.ex_date?.slice(-2));
   if (!day) return "unknown";
@@ -214,7 +204,6 @@ function renderTable() {
       case "name": return fund.name || "";
       case "amount": return latest?.amount;
       case "taxBase": return getTaxBase(latest);
-      case "taxRate": return getTaxRate(latest);
       case "recentYield": return latest?.distribution_yield;
       case "annualYield": return fund.distribution_yield_12m;
       case "marketCap": return fund.market_cap;
@@ -240,20 +229,17 @@ function renderTable() {
   const tbody = getTableBody();
   if (!tbody) throw new Error("ETF 목록 표를 찾을 수 없습니다. 페이지를 새로고침해 주세요.");
   if (!visibleFunds.length) {
-    tbody.innerHTML = `<tr><td colspan="9" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8" class="empty">${funds.length ? "검색 조건에 맞는 월배당 ETF가 없습니다." : "아직 ETF 데이터가 없습니다."}</td></tr>`;
     return;
   }
   tbody.innerHTML = visibleFunds.map((fund) => {
     const latest = latestEvent(fund);
     const timing = getTiming(fund);
     const taxable = getTaxBase(latest);
-    const taxRate = getTaxRate(latest);
-    const taxableRate = taxRate == null ? null : taxRate.toFixed(1);
     return `<tr class="fund-row" data-symbol="${safe(fund.symbol)}" tabindex="0" aria-label="${safe(fund.name)} 상세 보기">
       <td><span class="fund-name">${safe(fund.name)}</span><span class="fund-code">${safe(fund.symbol)}</span></td>
       <td>${latest?.amount == null ? "—" : money(latest.amount)}</td>
       <td>${taxable == null ? "자료 없음" : money(taxable)}</td>
-      <td>${taxableRate == null ? "\u2014" : `${taxableRate}%`}</td>
       <td>${latest?.distribution_yield == null ? "\u2014" : `${Number(latest.distribution_yield).toFixed(2)}%`}</td>
       <td class="yield-value">${(fund.distribution_yield_12m) == null ? "\u2014" : `${Number(fund.distribution_yield_12m).toFixed(2)}%`}</td>
       <td>${fund.market_cap == null ? "\u2014" : `${number(fund.market_cap)}\uC5B5\uC6D0`}</td>
@@ -318,9 +304,8 @@ function showDetails(symbol) {
     <h3 class="history-title">최근 분배 내역</h3>
     <div class="history-list">${events.length ? events.slice(0, 18).map((event) => {
       const taxBase = getTaxBase(event);
-      const taxRate = getTaxRate(event);
       const yieldText = event.distribution_yield == null ? "\uC790\uB8CC \uC5C6\uC74C" : `${Number(event.distribution_yield).toFixed(2)}%`;
-      return `<div class="history-item"><span>${safe(event.ex_date)}<small>\uBC30\uB2F9\uB77D\uC77C</small></span><span>${event.amount == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(event.amount)}<small>\uBD84\uBC30\uAE08</small></span><span>${taxBase == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(taxBase)}<small>\uACFC\uD45C</small></span><span>${taxRate == null ? "\uC790\uB8CC \uC5C6\uC74C" : `${taxRate.toFixed(1)}%`}<small>\uACFC\uD45C\uC728</small></span><span>${yieldText}<small>\uBD84\uBC30\uC728</small></span></div>`;
+      return `<div class="history-item"><span>${safe(event.ex_date)}<small>\uBC30\uB2F9\uB77D\uC77C</small></span><span>${event.amount == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(event.amount)}<small>\uBD84\uBC30\uAE08</small></span><span>${taxBase == null ? "\uC790\uB8CC \uC5C6\uC74C" : money(taxBase)}<small>\uACFC\uD45C\uC561</small></span><span>${yieldText}<small>\uBD84\uBC30\uC728</small></span></div>`;
     }).join("") : '<p class="history-empty">확인할 수 있는 분배 이력이 없습니다.</p>'}</div>`;
   $("fundDialog").showModal();
 }
@@ -333,13 +318,12 @@ function estimateDistribution(fund, investment) {
 }
 
 function downloadCSV() {
-  const headers = ["\uC885\uBAA9\uCF54\uB4DC", "\uC885\uBAA9\uBA85", "\uAC00\uACA9(\uC6D0)", "\uCD5C\uADFC \uBD84\uBC30\uAE08(\uC6D0)", "\uACFC\uD45C(\uC6D0)", "\uACFC\uD45C\uC728(%)", "\uCD5C\uADFC \uBD84\uBC30\uC728(%)", "\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)(%)", "\uC2DC\uAC00\uCD1D\uC561(\uC5B5\uC6D0)", "\uBC30\uB2F9\uB77D\uC77C", "\uC720\uD615"];
+  const headers = ["\uC885\uBAA9\uCF54\uB4DC", "\uC885\uBAA9\uBA85", "\uAC00\uACA9(\uC6D0)", "\uCD5C\uADFC \uBD84\uBC30\uAE08(\uC6D0)", "\uACFC\uD45C\uC561(\uC6D0)", "\uCD5C\uADFC \uBD84\uBC30\uC728(%)", "\uBD84\uBC30\uC728(\uCD5C\uADFC 1\uB144)(%)", "\uC2DC\uAC00\uCD1D\uC561(\uC5B5\uC6D0)", "\uBC30\uB2F9\uB77D\uC77C", "\uC720\uD615"];
   const rows = visibleFunds.map((fund) => {
     const event = latestEvent(fund);
     const taxBase = getTaxBase(event) ?? "";
-    const taxRate = getTaxRate(event);
     const timing = getTiming(fund);
-    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, taxRate == null ? "" : taxRate.toFixed(1), event?.distribution_yield ?? "", fund.distribution_yield_12m ?? "", fund.market_cap ?? "", event?.ex_date ?? "", `${timing === "mid" ? "\uC6D4\uC911" : timing === "end" ? "\uC6D4\uB9D0" : "\uBBF8\uD655\uC778"} \u00B7 ${getCategory(fund)} \u00B7 ${getRegion(fund)}`];
+    return [fund.symbol, fund.name, fund.price, event?.amount ?? "", taxBase, event?.distribution_yield ?? "", fund.distribution_yield_12m ?? "", fund.market_cap ?? "", event?.ex_date ?? "", `${timing === "mid" ? "\uC6D4\uC911" : timing === "end" ? "\uC6D4\uB9D0" : "\uBBF8\uD655\uC778"} \u00B7 ${getCategory(fund)} \u00B7 ${getRegion(fund)}`];
   });
   const csv = "\uFEFF" + [headers, ...rows].map((row) => row.map((value) => `"${String(value ?? "").replace(/"/g, '""')}"`).join(",")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
@@ -387,7 +371,7 @@ async function loadData() {
     if (updatedAt) updatedAt.textContent = "데이터를 불러오지 못했습니다";
     const tbody = getTableBody();
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="9" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="8" class="empty">데이터를 표시하지 못했습니다: ${safe(error.message)}. 페이지를 새로고침해 주세요.</td></tr>`;
     } else {
       const main = document.querySelector("main") || document.body;
       const message = document.createElement("p");
