@@ -23,14 +23,16 @@
     scrollbar-width: none;
   }
   .ticker::-webkit-scrollbar { display: none; }
-  .ticker-track { display: flex; flex-wrap: wrap; gap: 20px; }
+  .ticker-track { display: flex; flex-wrap: wrap; gap: 8px; }
   .line-break { flex: 0 0 100%; height: 0; }
 
-  .item { display: grid; grid-template-columns: auto auto; column-gap: 10px; align-items: end; }
+  .item { display: grid; grid-template-columns: auto; column-gap: 0px; align-items: end; }
+  .item.has-chart { grid-template-columns: 100px 76px; }
   .item .name  { grid-column: 1 / -1; color: var(--name); font-weight: 600; font-size: 11px; line-height: 1.2; white-space: nowrap; }
   .item .price { grid-column: 1; color: var(--text); font-weight: 600; font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
   .item .chg   { grid-column: 1; font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .item .spark { grid-column: 2; grid-row: 2 / span 2; align-self: center; width: 76px; height: 34px; }
+  .item.has-chart .chg { max-width: 100px; overflow: hidden; text-overflow: ellipsis; }
+  .item .spark { grid-column: 2; grid-row: 2 / span 2; align-self: center; width: 54px; height: 24px; }
   .up   { color: var(--up); }
   .down { color: var(--down); }
   .na   { color: var(--muted); }
@@ -76,13 +78,21 @@ const CONFIG = {
     { name: "Nasdaq Futures", yahoo: "NQ=F", chart: true, demo: 27400 },
     { name: "S&P 500",        yahoo: "^GSPC", chart: true, demo: 7440 },
     { name: "S&P Futures",    yahoo: "ES=F", chart: true, demo: 7440  },
+    { name: "---" },
     { name: "VIX",            yahoo: "^VIX", chart: true, demo: 22.9  },
-    { name: "BTC",            yahoo: "BTC-USD", chart: true, demo: 67440 },
+    { name: "Bitcoin USD",    yahoo: "BTC-USD", chart: true, demo: 67440 },
+    { name: "Crude Oil",      yahoo: "CL=F", chart: true, demo: 80.00 },
+    { name: "10-Yr Bond",     yahoo: "^TNX", chart: true, demo: 5.00 },
+    { name: "---" },
+    { name: "NVDA",           yahoo: "NVDA", chart: true, demo: 200   },
     { name: "SCHD",           yahoo: "SCHD", chart: true, demo: 86.5  },
     { name: "SPYM",           yahoo: "SPYM", chart: true, demo: 86.5  },
     { name: "QQQM",           yahoo: "QQQM", chart: true, demo: 270   },
-    { name: "KOSPI",          naver: "KOSPI", chart: false, demo: 5000 },
-    { name: "KOSDAQ",         naver: "KOSDAQ", chart: false, demo: 600 },
+    { name: "---" },
+    { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", chart: true, demo: 5000 },
+    { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", chart: true, demo: 600 },
+    { name: "삼성전자",        yahoo: "005930.KS", chart: true, demo: 600 },
+    { name: "SK하이닉스",      yahoo: "000660.KS", chart: true, demo: 600 },
   ]
 };
 
@@ -180,7 +190,7 @@ const fmt = (n, d = 2) => n.toLocaleString("en-US", { minimumFractionDigits: d, 
 const sign = n => (n > 0 ? "+" : n < 0 ? "-" : "");
 
 function sparkline(series, prev, up, id) {
-  const W = 76, H = 34, pad = 2;
+  const W = 56, H = 24, pad = 2;
   if (!series || series.length < 2) return "";
   const lo = Math.min(...series, prev), hi = Math.max(...series, prev);
   const span = hi - lo || 1;
@@ -205,14 +215,15 @@ function sparkline(series, prev, up, id) {
 
 function renderItem(item, q, idx) {
   if (item.name === "---") return '<div class="line-break" aria-hidden="true"></div>';
+  const itemClass = item.chart ? "item has-chart" : "item";
   if (!q) {
-    return `<div class="item"><div class="name">${item.name}</div><div class="price na">—</div><div class="chg na">데이터 없음</div></div>`;
+    return `<div class="${itemClass}"><div class="name">${item.name}</div><div class="price na">—</div><div class="chg na">데이터 없음</div></div>`;
   }
   const change = q.price - q.prevClose;
   const pct = q.prevClose ? (change / q.prevClose) * 100 : 0;
   const cls = change >= 0 ? "up" : "down";
   return `
-  <div class="item">
+  <div class="${itemClass}">
     <div class="name">${item.name}</div>
     <div class="price">${fmt(q.price)}</div>
     <div class="chg ${cls}">${sign(change)}${fmt(Math.abs(change))} ${sign(pct)}${fmt(Math.abs(pct))}%</div>
