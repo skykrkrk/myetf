@@ -11,7141 +11,5951 @@
   "funds": [
     {
       "symbol": "451060",
-      "name": "1Q 200액티브",
       "price": 25165,
       "market_cap": 3284.0
     },
     {
       "symbol": "0184E0",
-      "name": "1Q 200채권혼합50액티브",
       "price": 9450,
       "market_cap": 293.0
     },
     {
       "symbol": "491610",
-      "name": "1Q CD금리액티브(합성)",
       "price": 103025,
       "market_cap": 1501.0
     },
     {
       "symbol": "0182R0",
-      "name": "1Q K반도체TOP2+",
       "price": 7035,
       "market_cap": 2487.0
     },
     {
       "symbol": "0182S0",
-      "name": "1Q K반도체TOP2채권혼합50",
       "price": 10565,
       "market_cap": 1992.0
     },
     {
       "symbol": "0103T0",
-      "name": "1Q K소버린AI",
       "price": 7690,
       "market_cap": 235.0
     },
     {
       "symbol": "0198D0",
-      "name": "1Q SK하이닉스선물단일종목레버리지",
       "price": 3540,
       "market_cap": 86.0
     },
     {
       "symbol": "463290",
-      "name": "1Q 단기금융채액티브",
       "price": 106690,
       "market_cap": 1213.0
     },
     {
       "symbol": "0131W0",
-      "name": "1Q 단기특수은행채액티브",
       "price": 100310,
       "market_cap": 1365.0
     },
     {
       "symbol": "479080",
-      "name": "1Q 머니마켓액티브",
       "price": 52650,
       "market_cap": 8498.0
     },
     {
       "symbol": "0258B0",
-      "name": "1Q 미국AI테크플랫폼TOP10",
       "price": 9250,
       "market_cap": 139.0
     },
     {
       "symbol": "0026S0",
-      "name": "1Q 미국S&P500",
       "price": 11890,
       "market_cap": 3317.0
     },
     {
       "symbol": "0052S0",
-      "name": "1Q 미국S&P500미국채혼합50액티브",
       "price": 10885,
       "market_cap": 3135.0
     },
     {
       "symbol": "0069M0",
-      "name": "1Q 미국나스닥100",
       "price": 11975,
       "market_cap": 1928.0
     },
     {
       "symbol": "0111P0",
-      "name": "1Q 미국나스닥100미국채혼합50액티브",
       "price": 9970,
       "market_cap": 2961.0
     },
     {
       "symbol": "0083S0",
-      "name": "1Q 미국메디컬AI",
       "price": 9795,
       "market_cap": 255.0
     },
     {
       "symbol": "0004G0",
-      "name": "1Q 미국배당TOP30",
       "price": 8835,
       "market_cap": 141.0
     },
     {
       "symbol": "0131V0",
-      "name": "1Q 미국우주항공테크",
       "price": 9090,
       "market_cap": 2932.0
     },
     {
       "symbol": "0198B0",
-      "name": "1Q 삼성전자선물단일종목레버리지",
       "price": 5825,
       "market_cap": 74.0
     },
     {
       "symbol": "0094X0",
-      "name": "1Q 샤오미밸류체인액티브",
       "price": 6240,
       "market_cap": 56.0
     },
     {
       "symbol": "0256C0",
-      "name": "1Q 엔비디아고정미국AI반도체",
       "price": 8560,
       "market_cap": 137.0
     },
     {
       "symbol": "0224X0",
-      "name": "1Q 엔비디아알파벳미국채혼합50",
       "price": 8435,
       "market_cap": 261.0
     },
     {
       "symbol": "0172V0",
-      "name": "1Q 은액티브",
       "price": 5780,
       "market_cap": 445.0
     },
     {
       "symbol": "0017Y0",
-      "name": "1Q 종합채권(AA-이상)액티브",
       "price": 94605,
       "market_cap": 848.0
     },
     {
       "symbol": "0052T0",
-      "name": "1Q 중단기회사채(A-이상)액티브",
       "price": 49230,
       "market_cap": 1020.0
     },
     {
       "symbol": "495330",
-      "name": "1Q 코리아밸류업",
       "price": 24005,
       "market_cap": 1032.0
     },
     {
       "symbol": "0186S0",
-      "name": "1Q 코스닥150채권혼합50액티브",
       "price": 7410,
       "market_cap": 441.0
     },
     {
       "symbol": "492500",
-      "name": "1Q 현대차그룹채권(A+이상)&국고통안",
       "price": 49915,
       "market_cap": 560.0
     },
     {
       "symbol": "0206G0",
-      "name": "1Q 현대차기아채권혼합50",
       "price": 6810,
       "market_cap": 211.0
     },
     {
       "symbol": "473440",
-      "name": "ACE 11월만기자동연장회사채AA-이상액티브",
       "price": 10925,
       "market_cap": 950.0
     },
     {
       "symbol": "105190",
-      "name": "ACE 200",
       "price": 79575,
       "market_cap": 13568.0
     },
     {
       "symbol": "332500",
-      "name": "ACE 200TR",
       "price": 53450,
       "market_cap": 1122.0
     },
     {
       "symbol": "0254W0",
-      "name": "ACE 29-11 회사채(AA-이상)액티브",
       "price": 10090,
       "market_cap": 353.0
     },
     {
       "symbol": "475260",
-      "name": "ACE 2월만기자동연장회사채AA-이상액티브",
       "price": 10820,
       "market_cap": 488.0
     },
     {
       "symbol": "385600",
-      "name": "ACE 2차전지&친환경차액티브",
       "price": 9280,
       "market_cap": 139.0
     },
     {
       "symbol": "475270",
-      "name": "ACE 5월만기자동연장회사채AA-이상액티브",
       "price": 10800,
       "market_cap": 200.0
     },
     {
       "symbol": "475280",
-      "name": "ACE 8월만기자동연장회사채AA-이상액티브",
       "price": 10810,
       "market_cap": 816.0
     },
     {
       "symbol": "469150",
-      "name": "ACE AI반도체TOP3+",
       "price": 41400,
       "market_cap": 8094.0
     },
     {
       "symbol": "0079X0",
-      "name": "ACE BYD밸류체인액티브",
       "price": 7550,
       "market_cap": 26.0
     },
     {
       "symbol": "385590",
-      "name": "ACE ESG액티브",
       "price": 17700,
       "market_cap": 407.0
     },
     {
       "symbol": "226380",
-      "name": "ACE Fn성장소비주도주",
       "price": 5320,
       "market_cap": 37.0
     },
     {
       "symbol": "475050",
-      "name": "ACE KPOP포커스",
       "price": 7550,
       "market_cap": 1099.0
     },
     {
       "symbol": "411060",
-      "name": "ACE KRX금현물",
       "price": 22540,
       "market_cap": 33787.0
     },
     {
       "symbol": "0221Z0",
-      "name": "ACE K바이오코스닥액티브",
       "price": 7505,
       "market_cap": 60.0
     },
     {
       "symbol": "0210A0",
-      "name": "ACE K반도체TOP2+",
       "price": 5010,
       "market_cap": 3016.0
     },
     {
       "symbol": "0216Z0",
-      "name": "ACE K방산TOP5+",
       "price": 5805,
       "market_cap": 64.0
     },
     {
       "symbol": "0172Y0",
-      "name": "ACE K수출핵심TOP10산업액티브",
       "price": 6820,
       "market_cap": 55.0
     },
     {
       "symbol": "0177X0",
-      "name": "ACE K휴머노이드로봇산업TOP2+",
       "price": 7795,
       "market_cap": 861.0
     },
     {
       "symbol": "291130",
-      "name": "ACE MSCI멕시코(합성)",
       "price": 17425,
       "market_cap": 105.0
     },
     {
       "symbol": "256440",
-      "name": "ACE MSCI인도네시아(합성)",
       "price": 4315,
       "market_cap": 285.0
     },
     {
       "symbol": "0194T0",
-      "name": "ACE SK하이닉스단일종목레버리지",
       "price": 3415,
       "market_cap": 194.0
     },
     {
       "symbol": "0139P0",
-      "name": "ACE 고배당주",
       "price": 11525,
       "market_cap": 421.0
     },
     {
       "symbol": "0199C0",
-      "name": "ACE 고배당주Plus커버드콜액티브",
       "price": 7345,
       "market_cap": 1127.0
     },
     {
       "symbol": "225130",
-      "name": "ACE 골드선물 레버리지(합성 H)",
       "price": 35035,
       "market_cap": 175.0
     },
     {
       "symbol": "483340",
-      "name": "ACE 구글밸류체인액티브",
       "price": 16595,
       "market_cap": 1917.0
     },
     {
       "symbol": "365780",
-      "name": "ACE 국고채10년",
       "price": 85535,
       "market_cap": 5821.0
     },
     {
       "symbol": "114460",
-      "name": "ACE 국고채3년",
       "price": 101475,
       "market_cap": 152.0
     },
     {
       "symbol": "494340",
-      "name": "ACE 글로벌AI맞춤형반도체",
       "price": 14390,
       "market_cap": 209.0
     },
     {
       "symbol": "0259R0",
-      "name": "ACE 글로벌메모리반도체TOP3채권혼합액티브",
       "price": 9085,
       "market_cap": 182.0
     },
     {
       "symbol": "446770",
-      "name": "ACE 글로벌반도체TOP4 Plus",
       "price": 58945,
       "market_cap": 11818.0
     },
     {
       "symbol": "435040",
-      "name": "ACE 글로벌브랜드TOP10",
       "price": 18470,
       "market_cap": 83.0
     },
     {
       "symbol": "497510",
-      "name": "ACE 글로벌빅파마",
       "price": 13540,
       "market_cap": 95.0
     },
     {
       "symbol": "460960",
-      "name": "ACE 글로벌인컴TOP10",
       "price": 9895,
       "market_cap": 782.0
     },
     {
       "symbol": "414270",
-      "name": "ACE 글로벌자율주행액티브",
       "price": 9585,
       "market_cap": 206.0
     },
     {
       "symbol": "440640",
-      "name": "ACE 단기채권알파액티브",
       "price": 113555,
       "market_cap": 594.0
     },
     {
       "symbol": "190620",
-      "name": "ACE 단기통안채",
       "price": 102680,
       "market_cap": 3295.0
     },
     {
       "symbol": "494330",
-      "name": "ACE 라이프자산주주가치액티브",
       "price": 27910,
       "market_cap": 1619.0
     },
     {
       "symbol": "265690",
-      "name": "ACE 러시아MSCI(합성)",
       "price": 8535,
       "market_cap": 158.0
     },
     {
       "symbol": "152500",
-      "name": "ACE 레버리지",
       "price": 22500,
       "market_cap": 203.0
     },
     {
       "symbol": "0153P0",
-      "name": "ACE 리츠부동산인프라액티브",
       "price": 8870,
       "market_cap": 120.0
     },
     {
       "symbol": "483330",
-      "name": "ACE 마이크로소프트밸류체인액티브",
       "price": 13260,
       "market_cap": 139.0
     },
     {
       "symbol": "487340",
-      "name": "ACE 머니마켓액티브",
       "price": 106705,
       "market_cap": 13445.0
     },
     {
       "symbol": "0085P0",
-      "name": "ACE 미국10년국채액티브",
       "price": 9285,
       "market_cap": 1931.0
     },
     {
       "symbol": "0085N0",
-      "name": "ACE 미국10년국채액티브(H)",
       "price": 9540,
       "market_cap": 420.0
     },
     {
       "symbol": "452250",
-      "name": "ACE 미국30년국채선물레버리지(합성 H)",
       "price": 4435,
       "market_cap": 279.0
     },
     {
       "symbol": "476760",
-      "name": "ACE 미국30년국채액티브",
       "price": 8380,
       "market_cap": 4500.0
     },
     {
       "symbol": "453850",
-      "name": "ACE 미국30년국채액티브(H)",
       "price": 6965,
       "market_cap": 14278.0
     },
     {
       "symbol": "476750",
-      "name": "ACE 미국30년국채엔화노출액티브(H)",
       "price": 6920,
       "market_cap": 588.0
     },
     {
       "symbol": "480030",
-      "name": "ACE 미국500데일리타겟커버드콜(합성)",
       "price": 8605,
       "market_cap": 1489.0
     },
     {
       "symbol": "0118Z0",
-      "name": "ACE 미국AI테크핵심산업액티브",
       "price": 6900,
       "market_cap": 407.0
     },
     {
       "symbol": "0252V0",
-      "name": "ACE 미국CPU반도체TOP3+",
       "price": 8165,
       "market_cap": 65.0
     },
     {
       "symbol": "360200",
-      "name": "ACE 미국S&P500",
       "price": 24575,
       "market_cap": 37821.0
     },
     {
       "symbol": "438080",
-      "name": "ACE 미국S&P500미국채혼합50액티브",
       "price": 13330,
       "market_cap": 12210.0
     },
     {
       "symbol": "0155M0",
-      "name": "ACE 미국SMR원자력TOP10",
       "price": 4220,
       "market_cap": 192.0
     },
     {
       "symbol": "309230",
-      "name": "ACE 미국WideMoat동일가중",
       "price": 30205,
       "market_cap": 1087.0
     },
     {
       "symbol": "367380",
-      "name": "ACE 미국나스닥100",
       "price": 27520,
       "market_cap": 32529.0
     },
     {
       "symbol": "438100",
-      "name": "ACE 미국나스닥100미국채혼합50액티브",
       "price": 14145,
       "market_cap": 9025.0
     },
     {
       "symbol": "456880",
-      "name": "ACE 미국달러SOFR금리(합성)",
       "price": 11820,
       "market_cap": 3260.0
     },
     {
       "symbol": "440650",
-      "name": "ACE 미국달러단기채권액티브",
       "price": 11250,
       "market_cap": 428.0
     },
     {
       "symbol": "0127M0",
-      "name": "ACE 미국대형가치주액티브",
       "price": 11745,
       "market_cap": 1404.0
     },
     {
       "symbol": "0127P0",
-      "name": "ACE 미국대형성장주액티브",
       "price": 9170,
       "market_cap": 5773.0
     },
     {
       "symbol": "480040",
-      "name": "ACE 미국반도체데일리타겟커버드콜(합성)",
       "price": 10590,
       "market_cap": 1705.0
     },
     {
       "symbol": "402970",
-      "name": "ACE 미국배당다우존스",
       "price": 15110,
       "market_cap": 10063.0
     },
     {
       "symbol": "0046Y0",
-      "name": "ACE 미국배당퀄리티",
       "price": 11700,
       "market_cap": 503.0
     },
     {
       "symbol": "0049M0",
-      "name": "ACE 미국배당퀄리티+커버드콜액티브",
       "price": 10275,
       "market_cap": 688.0
     },
     {
       "symbol": "0049K0",
-      "name": "ACE 미국배당퀄리티채권혼합50",
       "price": 10720,
       "market_cap": 268.0
     },
     {
       "symbol": "181480",
-      "name": "ACE 미국부동산리츠(합성 H)",
       "price": 82350,
       "market_cap": 99.0
     },
     {
       "symbol": "480020",
-      "name": "ACE 미국빅테크7+데일리타겟커버드콜(합성)",
       "price": 8585,
       "market_cap": 1743.0
     },
     {
       "symbol": "465580",
-      "name": "ACE 미국빅테크TOP7 Plus",
       "price": 22030,
       "market_cap": 12172.0
     },
     {
       "symbol": "465610",
-      "name": "ACE 미국빅테크TOP7 Plus레버리지(합성)",
       "price": 34345,
       "market_cap": 824.0
     },
     {
       "symbol": "0180V0",
-      "name": "ACE 미국우주테크액티브",
       "price": 6585,
       "market_cap": 1231.0
     },
     {
       "symbol": "473590",
-      "name": "ACE 미국주식베스트셀러",
       "price": 15940,
       "market_cap": 359.0
     },
     {
       "symbol": "0008E0",
-      "name": "ACE 미국중심중소형제조업",
       "price": 10350,
       "market_cap": 72.0
     },
     {
       "symbol": "391600",
-      "name": "ACE 미국친환경그린테마",
       "price": 8920,
       "market_cap": 40.0
     },
     {
       "symbol": "455660",
-      "name": "ACE 미국하이일드액티브(H)",
       "price": 9090,
       "market_cap": 618.0
     },
     {
       "symbol": "0228G0",
-      "name": "ACE 반도체Plus전략산업",
       "price": 6720,
       "market_cap": 1583.0
     },
     {
       "symbol": "245710",
-      "name": "ACE 베트남VN30(합성)",
       "price": 26100,
       "market_cap": 3367.0
     },
     {
       "symbol": "131890",
-      "name": "ACE 삼성그룹동일가중",
       "price": 36275,
       "market_cap": 145.0
     },
     {
       "symbol": "108450",
-      "name": "ACE 삼성그룹섹터가중",
       "price": 32830,
       "market_cap": 657.0
     },
     {
       "symbol": "0233A0",
-      "name": "ACE 삼성전자SK하이닉스플러스채권혼합50",
       "price": 8720,
       "market_cap": 445.0
     },
     {
       "symbol": "0194M0",
-      "name": "ACE 삼성전자단일종목레버리지",
       "price": 5660,
       "market_cap": 212.0
     },
     {
       "symbol": "316300",
-      "name": "ACE 싱가포르리츠",
       "price": 11480,
       "market_cap": 57.0
     },
     {
       "symbol": "277540",
-      "name": "ACE 아시아TOP50",
       "price": 25985,
       "market_cap": 208.0
     },
     {
       "symbol": "483320",
-      "name": "ACE 엔비디아밸류체인액티브",
       "price": 17160,
       "market_cap": 1991.0
     },
     {
       "symbol": "448540",
-      "name": "ACE 엔비디아채권혼합",
       "price": 24045,
       "market_cap": 1900.0
     },
     {
       "symbol": "0099L0",
-      "name": "ACE 우량회사채(AA-이상)액티브",
       "price": 100885,
       "market_cap": 1806.0
     },
     {
       "symbol": "433500",
-      "name": "ACE 원자력TOP10",
       "price": 34255,
       "market_cap": 1302.0
     },
     {
       "symbol": "0102X0",
-      "name": "ACE 유럽방산TOP10",
       "price": 7835,
       "market_cap": 47.0
     },
     {
       "symbol": "487920",
-      "name": "ACE 인도시장대표BIG5그룹액티브",
       "price": 7795,
       "market_cap": 78.0
     },
     {
       "symbol": "487910",
-      "name": "ACE 인도컨슈머파워액티브",
       "price": 8140,
       "market_cap": 98.0
     },
     {
       "symbol": "145670",
-      "name": "ACE 인버스",
       "price": 1696,
       "market_cap": 31.0
     },
     {
       "symbol": "497520",
-      "name": "ACE 일라이릴리밸류체인",
       "price": 14180,
       "market_cap": 85.0
     },
     {
       "symbol": "238720",
-      "name": "ACE 일본Nikkei225(H)",
       "price": 43175,
       "market_cap": 389.0
     },
     {
       "symbol": "196030",
-      "name": "ACE 일본TOPIX레버리지(H)",
       "price": 78700,
       "market_cap": 394.0
     },
     {
       "symbol": "205720",
-      "name": "ACE 일본TOPIX인버스(합성 H)",
       "price": 1520,
       "market_cap": 46.0
     },
     {
       "symbol": "469160",
-      "name": "ACE 일본반도체",
       "price": 18485,
       "market_cap": 157.0
     },
     {
       "symbol": "356540",
-      "name": "ACE 종합채권(AA-이상)액티브",
       "price": 104205,
       "market_cap": 11034.0
     },
     {
       "symbol": "447430",
-      "name": "ACE 주주환원가치주액티브",
       "price": 15155,
       "market_cap": 424.0
     },
     {
       "symbol": "416090",
-      "name": "ACE 중국과창판STAR50",
       "price": 9325,
       "market_cap": 149.0
     },
     {
       "symbol": "168580",
-      "name": "ACE 중국본토CSI300",
       "price": 29200,
       "market_cap": 894.0
     },
     {
       "symbol": "219900",
-      "name": "ACE 중국본토CSI300레버리지(합성)",
       "price": 2900,
       "market_cap": 44.0
     },
     {
       "symbol": "272910",
-      "name": "ACE 중장기국공채액티브",
       "price": 107910,
       "market_cap": 773.0
     },
     {
       "symbol": "0087F0",
-      "name": "ACE 차이나AI빅테크TOP2+액티브",
       "price": 9730,
       "market_cap": 44.0
     },
     {
       "symbol": "371870",
-      "name": "ACE 차이나항셍테크",
       "price": 5295,
       "market_cap": 85.0
     },
     {
       "symbol": "0209Z0",
-      "name": "ACE 코리아AI전력TOP10",
       "price": 4280,
       "market_cap": 154.0
     },
     {
       "symbol": "380340",
-      "name": "ACE 코리아AI테크핵심산업",
       "price": 20860,
       "market_cap": 250.0
     },
     {
       "symbol": "496120",
-      "name": "ACE 코리아밸류업",
       "price": 24990,
       "market_cap": 187.0
     },
     {
       "symbol": "354500",
-      "name": "ACE 코스닥150",
       "price": 10950,
       "market_cap": 1237.0
     },
     {
       "symbol": "305050",
-      "name": "ACE 코스피",
       "price": 52770,
       "market_cap": 396.0
     },
     {
       "symbol": "457480",
-      "name": "ACE 테슬라밸류체인액티브",
       "price": 16165,
       "market_cap": 6579.0
     },
     {
       "symbol": "469170",
-      "name": "ACE 포스코그룹포커스",
       "price": 5315,
       "market_cap": 1036.0
     },
     {
       "symbol": "0193M0",
-      "name": "BNK 27-12 특수채(AAA이상)액티브",
       "price": 50715,
       "market_cap": 1072.0
     },
     {
       "symbol": "466810",
-      "name": "BNK 2차전지양극재",
       "price": 4655,
       "market_cap": 72.0
     },
     {
       "symbol": "457930",
-      "name": "BNK 미래전략기술액티브",
       "price": 21710,
       "market_cap": 65.0
     },
     {
       "symbol": "0218K0",
-      "name": "BNK 스마트카",
       "price": 8005,
       "market_cap": 52.0
     },
     {
       "symbol": "487750",
-      "name": "BNK 온디바이스AI",
       "price": 24605,
       "market_cap": 98.0
     },
     {
       "symbol": "445690",
-      "name": "BNK 주주가치액티브",
       "price": 24060,
       "market_cap": 144.0
     },
     {
       "symbol": "0120J0",
-      "name": "BNK 카카오그룹포커스",
       "price": 7620,
       "market_cap": 91.0
     },
     {
       "symbol": "486240",
-      "name": "DAISHIN AI반도체&인프라액티브",
       "price": 21060,
       "market_cap": 653.0
     },
     {
       "symbol": "434960",
-      "name": "DAISHIN K200",
       "price": 79805,
       "market_cap": 359.0
     },
     {
       "symbol": "0189Z0",
-      "name": "DAISHIN 금융&지주고배당",
       "price": 9105,
       "market_cap": 91.0
     },
     {
       "symbol": "0174J0",
-      "name": "DAISHIN 오피스리츠플러스",
       "price": 8090,
       "market_cap": 40.0
     },
     {
       "symbol": "0243M0",
-      "name": "DS AI반도체액티브",
       "price": 6520,
       "market_cap": 117.0
     },
     {
       "symbol": "0220B0",
-      "name": "DS 코스닥액티브",
       "price": 8705,
       "market_cap": 866.0
     },
     {
       "symbol": "0098Z0",
-      "name": "FOCUS 200",
       "price": 68075,
       "market_cap": 511.0
     },
     {
       "symbol": "0176P0",
-      "name": "FOCUS AI반도체위클리고정커버드콜",
       "price": 9320,
       "market_cap": 51.0
     },
     {
       "symbol": "448570",
-      "name": "FOCUS AI코리아액티브",
       "price": 22670,
       "market_cap": 283.0
     },
     {
       "symbol": "285690",
-      "name": "FOCUS ESG리더스",
       "price": 17230,
       "market_cap": 60.0
     },
     {
       "symbol": "0226D0",
-      "name": "FOCUS 금융반도체지주채권혼합50액티브",
       "price": 8575,
       "market_cap": 69.0
     },
     {
       "symbol": "0255D0",
-      "name": "FOCUS 스페이스X밸류체인",
       "price": 9560,
       "market_cap": 76.0
     },
     {
       "symbol": "0073X0",
-      "name": "FOCUS 알리바바미국채커버드콜혼합",
       "price": 7755,
       "market_cap": 43.0
     },
     {
       "symbol": "293180",
-      "name": "HANARO 200",
       "price": 79760,
       "market_cap": 3270.0
     },
     {
       "symbol": "407310",
-      "name": "HANARO 200 TOP10",
       "price": 11720,
       "market_cap": 135.0
     },
     {
       "symbol": "332930",
-      "name": "HANARO 200TR",
       "price": 104355,
       "market_cap": 1304.0
     },
     {
       "symbol": "304780",
-      "name": "HANARO 200선물레버리지",
       "price": 61490,
       "market_cap": 277.0
     },
     {
       "symbol": "306520",
-      "name": "HANARO 200선물인버스",
       "price": 3175,
       "market_cap": 19.0
     },
     {
       "symbol": "0123S0",
-      "name": "HANARO 26-12 은행채(AA+이상)액티브",
       "price": 10250,
       "market_cap": 636.0
     },
     {
       "symbol": "0091M0",
-      "name": "HANARO 27-06 회사채(AA-이상)액티브",
       "price": 10140,
       "market_cap": 1305.0
     },
     {
       "symbol": "448490",
-      "name": "HANARO 32-10 국고채액티브",
       "price": 54785,
       "market_cap": 112.0
     },
     {
       "symbol": "454320",
-      "name": "HANARO CAPEX설비투자iSelect",
       "price": 26955,
       "market_cap": 580.0
     },
     {
       "symbol": "395290",
-      "name": "HANARO Fn K-POP&미디어",
       "price": 5330,
       "market_cap": 336.0
     },
     {
       "symbol": "395280",
-      "name": "HANARO Fn K-게임",
       "price": 3075,
       "market_cap": 69.0
     },
     {
       "symbol": "368190",
-      "name": "HANARO Fn K-뉴딜디지털플러스",
       "price": 6810,
       "market_cap": 211.0
     },
     {
       "symbol": "402460",
-      "name": "HANARO Fn K-메타버스MZ",
       "price": 12235,
       "market_cap": 61.0
     },
     {
       "symbol": "395270",
-      "name": "HANARO Fn K-반도체",
       "price": 38355,
       "market_cap": 23339.0
     },
     {
       "symbol": "438900",
-      "name": "HANARO Fn K-푸드",
       "price": 10590,
       "market_cap": 132.0
     },
     {
       "symbol": "367740",
-      "name": "HANARO Fn5G산업",
       "price": 34120,
       "market_cap": 188.0
     },
     {
       "symbol": "407300",
-      "name": "HANARO Fn골프테마",
       "price": 8005,
       "market_cap": 44.0
     },
     {
       "symbol": "381560",
-      "name": "HANARO Fn전기&수소차",
       "price": 13070,
       "market_cap": 131.0
     },
     {
       "symbol": "441540",
-      "name": "HANARO Fn조선해운",
       "price": 19600,
       "market_cap": 519.0
     },
     {
       "symbol": "381570",
-      "name": "HANARO Fn친환경에너지",
       "price": 7705,
       "market_cap": 65.0
     },
     {
       "symbol": "479850",
-      "name": "HANARO K-뷰티",
       "price": 14670,
       "market_cap": 183.0
     },
     {
       "symbol": "453060",
-      "name": "HANARO KOFR금리액티브(합성)",
       "price": 112130,
       "market_cap": 123.0
     },
     {
       "symbol": "304760",
-      "name": "HANARO KRX300",
       "price": 34490,
       "market_cap": 138.0
     },
     {
       "symbol": "322410",
-      "name": "HANARO K고배당",
       "price": 20460,
       "market_cap": 358.0
     },
     {
       "symbol": "0155N0",
-      "name": "HANARO K휴머노이드테마TOP10",
       "price": 6295,
       "market_cap": 264.0
     },
     {
       "symbol": "332940",
-      "name": "HANARO MSCI Korea TR",
       "price": 35085,
       "market_cap": 807.0
     },
     {
       "symbol": "322400",
-      "name": "HANARO e커머스",
       "price": 8575,
       "market_cap": 279.0
     },
     {
       "symbol": "473640",
-      "name": "HANARO 글로벌금채굴기업",
       "price": 27285,
       "market_cap": 546.0
     },
     {
       "symbol": "354350",
-      "name": "HANARO 글로벌럭셔리S&P(합성)",
       "price": 18105,
       "market_cap": 94.0
     },
     {
       "symbol": "461340",
-      "name": "HANARO 글로벌생성형AI액티브",
       "price": 35095,
       "market_cap": 368.0
     },
     {
       "symbol": "401590",
-      "name": "HANARO 글로벌탄소배출권선물ICE(합성)",
       "price": 11035,
       "market_cap": 56.0
     },
     {
       "symbol": "314700",
-      "name": "HANARO 농업융복합산업",
       "price": 9305,
       "market_cap": 51.0
     },
     {
       "symbol": "486830",
-      "name": "HANARO 머니마켓액티브",
       "price": 53680,
       "market_cap": 2058.0
     },
     {
       "symbol": "0215T0",
-      "name": "HANARO 미국AI광통신TOP10",
       "price": 5650,
       "market_cap": 51.0
     },
     {
       "symbol": "0181B0",
-      "name": "HANARO 미국AI메모리반도체TOP4+",
       "price": 6290,
       "market_cap": 726.0
     },
     {
       "symbol": "432840",
-      "name": "HANARO 미국S&P500",
       "price": 18260,
       "market_cap": 146.0
     },
     {
       "symbol": "0219Z0",
-      "name": "HANARO 미국S&P500액티브",
       "price": 9370,
       "market_cap": 122.0
     },
     {
       "symbol": "0227L0",
-      "name": "HANARO 미국에이전틱AI TOP2+",
       "price": 9045,
       "market_cap": 104.0
     },
     {
       "symbol": "498050",
-      "name": "HANARO 바이오코리아액티브",
       "price": 8425,
       "market_cap": 80.0
     },
     {
       "symbol": "476260",
-      "name": "HANARO 반도체핵심공정주도주",
       "price": 8770,
       "market_cap": 324.0
     },
     {
       "symbol": "0256E0",
-      "name": "HANARO 삼성전기고정AI핵심기판",
       "price": 8370,
       "market_cap": 138.0
     },
     {
       "symbol": "434730",
-      "name": "HANARO 원자력iSelect",
       "price": 34410,
       "market_cap": 3871.0
     },
     {
       "symbol": "0082F0",
-      "name": "HANARO 유럽방산",
       "price": 8870,
       "market_cap": 62.0
     },
     {
       "symbol": "491820",
-      "name": "HANARO 전력설비투자",
       "price": 25825,
       "market_cap": 904.0
     },
     {
       "symbol": "461500",
-      "name": "HANARO 종합채권(AA-이상)액티브",
       "price": 108090,
       "market_cap": 1254.0
     },
     {
       "symbol": "0191W0",
-      "name": "HANARO 중기종합채권(A-이상)액티브",
       "price": 101950,
       "market_cap": 932.0
     },
     {
       "symbol": "0111J0",
-      "name": "HANARO 증권고배당TOP3플러스",
       "price": 9100,
       "market_cap": 396.0
     },
     {
       "symbol": "495750",
-      "name": "HANARO 코리아밸류업",
       "price": 24110,
       "market_cap": 591.0
     },
     {
       "symbol": "304770",
-      "name": "HANARO 코스닥150",
       "price": 10815,
       "market_cap": 154.0
     },
     {
       "symbol": "306530",
-      "name": "HANARO 코스닥150선물레버리지",
       "price": 3885,
       "market_cap": 22.0
     },
     {
       "symbol": "375760",
-      "name": "HANARO 탄소효율그린뉴딜",
       "price": 17920,
       "market_cap": 161.0
     },
     {
       "symbol": "491700",
-      "name": "HK 200",
       "price": 80105,
       "market_cap": 280.0
     },
     {
       "symbol": "0000Y0",
-      "name": "HK 26-12 회사채(AA-이상)액티브",
       "price": 102525,
       "market_cap": 1241.0
     },
     {
       "symbol": "215620",
-      "name": "HK S&P코리아로우볼",
       "price": 15485,
       "market_cap": 84.0
     },
     {
       "symbol": "0113P0",
-      "name": "HK 머니마켓액티브",
       "price": 103155,
       "market_cap": 514.0
     },
     {
       "symbol": "391670",
-      "name": "HK 베스트일레븐액티브",
       "price": 20140,
       "market_cap": 121.0
     },
     {
       "symbol": "472920",
-      "name": "HK 종합채권(AA-이상)액티브",
       "price": 101035,
       "market_cap": 2404.0
     },
     {
       "symbol": "472840",
-      "name": "IBK 200",
       "price": 78890,
       "market_cap": 296.0
     },
     {
       "symbol": "0005G0",
-      "name": "IBK K-AI반도체코어테크",
       "price": 36015,
       "market_cap": 1243.0
     },
     {
       "symbol": "0178H0",
-      "name": "IBK 미국AI TOP10국채혼합50",
       "price": 9180,
       "market_cap": 431.0
     },
     {
       "symbol": "0135Y0",
-      "name": "IBK 중기종합채권(AA-이상)액티브",
       "price": 101555,
       "market_cap": 1023.0
     },
     {
       "symbol": "0221V0",
-      "name": "IBK 초단기채권액티브",
       "price": 101225,
       "market_cap": 1524.0
     },
     {
       "symbol": "0191S0",
-      "name": "IBK 코스닥150",
       "price": 10860,
       "market_cap": 80.0
     },
     {
       "symbol": "0208N0",
-      "name": "IBK 코스피액티브",
       "price": 5375,
       "market_cap": 91.0
     },
     {
       "symbol": "0238C0",
-      "name": "IBK 한미대표기업TOP2+채권혼합50액티브",
       "price": 8620,
       "market_cap": 194.0
     },
     {
       "symbol": "0260F0",
-      "name": "IBK 현대차로보틱스채권혼합50",
       "price": 9800,
       "market_cap": 225.0
     },
     {
       "symbol": "483570",
-      "name": "KCGI 미국S&P500 TOP10",
       "price": 14155,
       "market_cap": 226.0
     },
     {
       "symbol": "069660",
-      "name": "KIWOOM 200",
       "price": 79010,
       "market_cap": 5531.0
     },
     {
       "symbol": "294400",
-      "name": "KIWOOM 200TR",
       "price": 104380,
       "market_cap": 12839.0
     },
     {
       "symbol": "253250",
-      "name": "KIWOOM 200선물레버리지",
       "price": 49620,
       "market_cap": 144.0
     },
     {
       "symbol": "253240",
-      "name": "KIWOOM 200선물인버스",
       "price": 1723,
       "market_cap": 19.0
     },
     {
       "symbol": "253230",
-      "name": "KIWOOM 200선물인버스2X",
       "price": 124,
       "market_cap": 31.0
     },
     {
       "symbol": "458210",
-      "name": "KIWOOM CD금리액티브(합성)",
       "price": 111350,
       "market_cap": 1997.0
     },
     {
       "symbol": "100910",
-      "name": "KIWOOM KRX100",
       "price": 12420,
       "market_cap": 298.0
     },
     {
       "symbol": "0194R0",
-      "name": "KIWOOM SK하이닉스선물단일종목레버리지",
       "price": 3320,
       "market_cap": 43.0
     },
     {
       "symbol": "435530",
-      "name": "KIWOOM TDF2030액티브 적격",
       "price": 14540,
       "market_cap": 73.0
     },
     {
       "symbol": "435540",
-      "name": "KIWOOM TDF2040액티브 적격",
       "price": 16010,
       "market_cap": 80.0
     },
     {
       "symbol": "435550",
-      "name": "KIWOOM TDF2050액티브 적격",
       "price": 16345,
       "market_cap": 114.0
     },
     {
       "symbol": "148070",
-      "name": "KIWOOM 국고채10년",
       "price": 108445,
       "market_cap": 3830.0
     },
     {
       "symbol": "167860",
-      "name": "KIWOOM 국고채10년레버리지",
       "price": 98730,
       "market_cap": 296.0
     },
     {
       "symbol": "471460",
-      "name": "KIWOOM 국고채30년액티브",
       "price": 49825,
       "market_cap": 229.0
     },
     {
       "symbol": "114470",
-      "name": "KIWOOM 국고채3년",
       "price": 108925,
       "market_cap": 523.0
     },
     {
       "symbol": "473490",
-      "name": "KIWOOM 글로벌AI반도체",
       "price": 25910,
       "market_cap": 363.0
     },
     {
       "symbol": "0247S0",
-      "name": "KIWOOM 글로벌MLCC&AI기판TOP4+",
       "price": 5385,
       "market_cap": 207.0
     },
     {
       "symbol": "489860",
-      "name": "KIWOOM 글로벌전력GRID인프라",
       "price": 12515,
       "market_cap": 113.0
     },
     {
       "symbol": "130730",
-      "name": "KIWOOM 단기자금",
       "price": 103720,
       "market_cap": 685.0
     },
     {
       "symbol": "419890",
-      "name": "KIWOOM 단기채권ESG액티브",
       "price": 108420,
       "market_cap": 640.0
     },
     {
       "symbol": "411860",
-      "name": "KIWOOM 독일DAX",
       "price": 15560,
       "market_cap": 47.0
     },
     {
       "symbol": "476450",
-      "name": "KIWOOM 머니마켓액티브",
       "price": 53190,
       "market_cap": 2395.0
     },
     {
       "symbol": "430500",
-      "name": "KIWOOM 물가채KIS",
       "price": 117205,
       "market_cap": 117.0
     },
     {
       "symbol": "0190M0",
-      "name": "KIWOOM 미국AI테크하이베타",
       "price": 5375,
       "market_cap": 140.0
     },
     {
       "symbol": "0224D0",
-      "name": "KIWOOM 미국CPU반도체TOP4+",
       "price": 7690,
       "market_cap": 65.0
     },
     {
       "symbol": "449770",
-      "name": "KIWOOM 미국S&P500",
       "price": 19435,
       "market_cap": 739.0
     },
     {
       "symbol": "0127V0",
-      "name": "KIWOOM 미국S&P500 TOP10&배당다우비중전환",
       "price": 9900,
       "market_cap": 124.0
     },
     {
       "symbol": "0137W0",
-      "name": "KIWOOM 미국S&P500&GOLD",
       "price": 9505,
       "market_cap": 247.0
     },
     {
       "symbol": "0127T0",
-      "name": "KIWOOM 미국S&P500&배당다우존스비중전환",
       "price": 10450,
       "market_cap": 125.0
     },
     {
       "symbol": "449780",
-      "name": "KIWOOM 미국S&P500(H)",
       "price": 17775,
       "market_cap": 320.0
     },
     {
       "symbol": "0137V0",
-      "name": "KIWOOM 미국S&P500모멘텀",
       "price": 9550,
       "market_cap": 931.0
     },
     {
       "symbol": "0107F0",
-      "name": "KIWOOM 미국고배당&AI테크",
       "price": 10240,
       "market_cap": 256.0
     },
     {
       "symbol": "453080",
-      "name": "KIWOOM 미국나스닥100(H)",
       "price": 20955,
       "market_cap": 838.0
     },
     {
       "symbol": "460270",
-      "name": "KIWOOM 미국달러SOFR금리액티브(합성)",
       "price": 12250,
       "market_cap": 99.0
     },
     {
       "symbol": "138230",
-      "name": "KIWOOM 미국달러선물",
       "price": 15725,
       "market_cap": 228.0
     },
     {
       "symbol": "225800",
-      "name": "KIWOOM 미국달러선물레버리지",
       "price": 14070,
       "market_cap": 72.0
     },
     {
       "symbol": "139660",
-      "name": "KIWOOM 미국달러선물인버스",
       "price": 8720,
       "market_cap": 67.0
     },
     {
       "symbol": "230480",
-      "name": "KIWOOM 미국달러선물인버스2X",
       "price": 4945,
       "market_cap": 90.0
     },
     {
       "symbol": "0084E0",
-      "name": "KIWOOM 미국대형주500월간목표헤지액티브",
       "price": 9400,
       "market_cap": 183.0
     },
     {
       "symbol": "373790",
-      "name": "KIWOOM 미국방어배당성장나스닥",
       "price": 15730,
       "market_cap": 44.0
     },
     {
       "symbol": "483030",
-      "name": "KIWOOM 미국블록버스터바이오테크의약품+",
       "price": 12010,
       "market_cap": 54.0
     },
     {
       "symbol": "459790",
-      "name": "KIWOOM 미국성장기업30액티브",
       "price": 17135,
       "market_cap": 248.0
     },
     {
       "symbol": "0174R0",
-      "name": "KIWOOM 미국성장다우존스",
       "price": 10225,
       "market_cap": 87.0
     },
     {
       "symbol": "498270",
-      "name": "KIWOOM 미국양자컴퓨팅",
       "price": 10825,
       "market_cap": 1645.0
     },
     {
       "symbol": "0207Z0",
-      "name": "KIWOOM 미국우주데이터센터인프라",
       "price": 5570,
       "market_cap": 114.0
     },
     {
       "symbol": "0216K0",
-      "name": "KIWOOM 미국우주테크TOP2채권혼합50",
       "price": 8235,
       "market_cap": 82.0
     },
     {
       "symbol": "474800",
-      "name": "KIWOOM 미국원유에너지기업",
       "price": 15105,
       "market_cap": 317.0
     },
     {
       "symbol": "0084D0",
-      "name": "KIWOOM 미국테크100월간목표헤지액티브",
       "price": 10595,
       "market_cap": 85.0
     },
     {
       "symbol": "104520",
-      "name": "KIWOOM 블루칩",
       "price": 12140,
       "market_cap": 121.0
     },
     {
       "symbol": "0234N0",
-      "name": "KIWOOM 삼성SK그룹TOP4+",
       "price": 7170,
       "market_cap": 577.0
     },
     {
       "symbol": "0183V0",
-      "name": "KIWOOM 삼성전자&SK하이닉스채권혼합50",
       "price": 9665,
       "market_cap": 2436.0
     },
     {
       "symbol": "0194N0",
-      "name": "KIWOOM 삼성전자선물단일종목레버리지",
       "price": 5680,
       "market_cap": 43.0
     },
     {
       "symbol": "0015E0",
-      "name": "KIWOOM 엔비디아미국30년국채혼합액티브(H)",
       "price": 9600,
       "market_cap": 48.0
     },
     {
       "symbol": "483020",
-      "name": "KIWOOM 의료AI",
       "price": 9350,
       "market_cap": 61.0
     },
     {
       "symbol": "200250",
-      "name": "KIWOOM 인도Nifty50(합성)",
       "price": 22060,
       "market_cap": 1743.0
     },
     {
       "symbol": "454780",
-      "name": "KIWOOM 종합채권(AA-이상)액티브",
       "price": 102710,
       "market_cap": 3409.0
     },
     {
       "symbol": "104530",
-      "name": "KIWOOM 코리아고배당",
       "price": 15240,
       "market_cap": 312.0
     },
     {
       "symbol": "496090",
-      "name": "KIWOOM 코리아밸류업",
       "price": 24100,
       "market_cap": 795.0
     },
     {
       "symbol": "469790",
-      "name": "KIWOOM 코리아테크TOP10",
       "price": 31035,
       "market_cap": 217.0
     },
     {
       "symbol": "316670",
-      "name": "KIWOOM 코스닥150",
       "price": 5395,
       "market_cap": 408.0
     },
     {
       "symbol": "291630",
-      "name": "KIWOOM 코스닥150선물레버리지",
       "price": 1938,
       "market_cap": 41.0
     },
     {
       "symbol": "291620",
-      "name": "KIWOOM 코스닥150선물인버스",
       "price": 5305,
       "market_cap": 20.0
     },
     {
       "symbol": "0198A0",
-      "name": "KIWOOM 코스닥150커버드콜액티브",
       "price": 6045,
       "market_cap": 1040.0
     },
     {
       "symbol": "153270",
-      "name": "KIWOOM 코스피100",
       "price": 60535,
       "market_cap": 218.0
     },
     {
       "symbol": "122260",
-      "name": "KIWOOM 통안채1년",
       "price": 104970,
       "market_cap": 325.0
     },
     {
       "symbol": "0015F0",
-      "name": "KIWOOM 팔란티어미국30년국채혼합액티브(H)",
       "price": 10120,
       "market_cap": 111.0
     },
     {
       "symbol": "0097L0",
-      "name": "KIWOOM 한국고배당&미국AI테크",
       "price": 10980,
       "market_cap": 214.0
     },
     {
       "symbol": "0220A0",
-      "name": "KIWOOM 현대차그룹TOP3채권혼합50",
       "price": 7910,
       "market_cap": 95.0
     },
     {
       "symbol": "069500",
-      "name": "KODEX 200",
       "price": 79400,
       "market_cap": 203026.0
     },
     {
       "symbol": "226980",
-      "name": "KODEX 200 중소형",
       "price": 18050,
       "market_cap": 162.0
     },
     {
       "symbol": "337160",
-      "name": "KODEX 200ESG",
       "price": 35590,
       "market_cap": 1246.0
     },
     {
       "symbol": "363580",
-      "name": "KODEX 200IT TR",
       "price": 38010,
       "market_cap": 1577.0
     },
     {
       "symbol": "278530",
-      "name": "KODEX 200TR",
       "price": 28815,
       "market_cap": 57572.0
     },
     {
       "symbol": "337150",
-      "name": "KODEX 200exTOP",
       "price": 19520,
       "market_cap": 117.0
     },
     {
       "symbol": "223190",
-      "name": "KODEX 200가치저변동",
       "price": 22435,
       "market_cap": 224.0
     },
     {
       "symbol": "252650",
-      "name": "KODEX 200동일가중",
       "price": 15450,
       "market_cap": 93.0
     },
     {
       "symbol": "360140",
-      "name": "KODEX 200롱코스닥150숏선물",
       "price": 21085,
       "market_cap": 464.0
     },
     {
       "symbol": "284430",
-      "name": "KODEX 200미국채혼합50",
       "price": 17465,
       "market_cap": 16515.0
     },
     {
       "symbol": "252670",
-      "name": "KODEX 200선물인버스2X",
       "price": 122,
       "market_cap": 8787.0
     },
     {
       "symbol": "494890",
-      "name": "KODEX 200액티브",
       "price": 22755,
       "market_cap": 7077.0
     },
     {
       "symbol": "0219E0",
-      "name": "KODEX 200커버드콜액티브",
       "price": 5875,
       "market_cap": 10105.0
     },
     {
       "symbol": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
       "price": 14445,
       "market_cap": 48940.0
     },
     {
       "symbol": "0117L0",
-      "name": "KODEX 26-12 금융채(AA-이상)액티브",
       "price": 10225,
       "market_cap": 6466.0
     },
     {
       "symbol": "473290",
-      "name": "KODEX 26-12 회사채(AA-이상)액티브",
       "price": 10955,
       "market_cap": 1872.0
     },
     {
       "symbol": "0254C0",
-      "name": "KODEX 27-12 금융채(AA-이상)액티브",
       "price": 100425,
       "market_cap": 3748.0
     },
     {
       "symbol": "0007F0",
-      "name": "KODEX 27-12 회사채(AA-이상)액티브",
       "price": 10270,
       "market_cap": 8402.0
     },
     {
       "symbol": "0119H0",
-      "name": "KODEX 28-12 회사채(AA-이상)액티브",
       "price": 10045,
       "market_cap": 4851.0
     },
     {
       "symbol": "305720",
-      "name": "KODEX 2차전지산업",
       "price": 12000,
       "market_cap": 15288.0
     },
     {
       "symbol": "462330",
-      "name": "KODEX 2차전지산업레버리지",
       "price": 636,
       "market_cap": 5620.0
     },
     {
       "symbol": "461950",
-      "name": "KODEX 2차전지핵심소재10",
       "price": 4010,
       "market_cap": 1524.0
     },
     {
       "symbol": "457690",
-      "name": "KODEX 33-06 국고채액티브",
       "price": 10765,
       "market_cap": 174.0
     },
     {
       "symbol": "271060",
-      "name": "KODEX 3대농산물선물(H)",
       "price": 7820,
       "market_cap": 213.0
     },
     {
       "symbol": "457700",
-      "name": "KODEX 53-09 국고채액티브",
       "price": 10030,
       "market_cap": 132.0
     },
     {
       "symbol": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
       "price": 26900,
       "market_cap": 27626.0
     },
     {
       "symbol": "471990",
-      "name": "KODEX AI반도체핵심장비",
       "price": 18675,
       "market_cap": 4426.0
     },
     {
       "symbol": "487240",
-      "name": "KODEX AI전력핵심설비",
       "price": 21460,
       "market_cap": 19443.0
     },
     {
       "symbol": "481050",
-      "name": "KODEX CD1년금리플러스액티브(합성)",
       "price": 1023655,
       "market_cap": 26319.0
     },
     {
       "symbol": "459580",
-      "name": "KODEX CD금리액티브(합성)",
       "price": 1075155,
       "market_cap": 64363.0
     },
     {
       "symbol": "439860",
-      "name": "KODEX ESG종합채권(A-이상)액티브",
       "price": 115190,
       "market_cap": 4128.0
     },
     {
       "symbol": "266370",
-      "name": "KODEX IT",
       "price": 48190,
       "market_cap": 723.0
     },
     {
       "symbol": "368680",
-      "name": "KODEX K-뉴딜디지털플러스",
       "price": 6860,
       "market_cap": 55.0
     },
     {
       "symbol": "423160",
-      "name": "KODEX KOFR금리액티브(합성)",
       "price": 110840,
       "market_cap": 34916.0
     },
     {
       "symbol": "292190",
-      "name": "KODEX KRX300",
       "price": 34990,
       "market_cap": 525.0
     },
     {
       "symbol": "306950",
-      "name": "KODEX KRX300레버리지",
       "price": 38545,
       "market_cap": 308.0
     },
     {
       "symbol": "229720",
-      "name": "KODEX KTOP30",
       "price": 27625,
       "market_cap": 138.0
     },
     {
       "symbol": "266360",
-      "name": "KODEX K콘텐츠",
       "price": 8905,
       "market_cap": 338.0
     },
     {
       "symbol": "291890",
-      "name": "KODEX MSCI EM선물(H)",
       "price": 10860,
       "market_cap": 54.0
     },
     {
       "symbol": "289040",
-      "name": "KODEX MSCI KOREA ESG유니버설",
       "price": 24910,
       "market_cap": 149.0
     },
     {
       "symbol": "156080",
-      "name": "KODEX MSCI Korea",
       "price": 37780,
       "market_cap": 227.0
     },
     {
       "symbol": "278540",
-      "name": "KODEX MSCI Korea TR",
       "price": 28120,
       "market_cap": 17266.0
     },
     {
       "symbol": "251350",
-      "name": "KODEX MSCI선진국",
       "price": 35950,
       "market_cap": 4638.0
     },
     {
       "symbol": "269420",
-      "name": "KODEX S&P글로벌인프라(합성)",
       "price": 21605,
       "market_cap": 223.0
     },
     {
       "symbol": "0193T0",
-      "name": "KODEX SK하이닉스단일종목레버리지",
       "price": 3970,
       "market_cap": 9058.0
     },
     {
       "symbol": "433970",
-      "name": "KODEX TDF2030액티브 적격",
       "price": 13295,
       "market_cap": 924.0
     },
     {
       "symbol": "433980",
-      "name": "KODEX TDF2040액티브 적격",
       "price": 14780,
       "market_cap": 1877.0
     },
     {
       "symbol": "434060",
-      "name": "KODEX TDF2050액티브 적격",
       "price": 15230,
       "market_cap": 5833.0
     },
     {
       "symbol": "0082V0",
-      "name": "KODEX TDF2060액티브 적격",
       "price": 10170,
       "market_cap": 1749.0
     },
     {
       "symbol": "329650",
-      "name": "KODEX TRF3070",
       "price": 13915,
       "market_cap": 2226.0
     },
     {
       "symbol": "329660",
-      "name": "KODEX TRF5050",
       "price": 17210,
       "market_cap": 809.0
     },
     {
       "symbol": "329670",
-      "name": "KODEX TRF7030",
       "price": 20720,
       "market_cap": 829.0
     },
     {
       "symbol": "395170",
-      "name": "KODEX Top10동일가중",
       "price": 11845,
       "market_cap": 237.0
     },
     {
       "symbol": "315930",
-      "name": "KODEX Top5PlusTR",
       "price": 61000,
       "market_cap": 7290.0
     },
     {
       "symbol": "261220",
-      "name": "KODEX WTI원유선물(H)",
       "price": 24945,
       "market_cap": 418.0
     },
     {
       "symbol": "271050",
-      "name": "KODEX WTI원유선물인버스(H)",
       "price": 1831,
       "market_cap": 2079.0
     },
     {
       "symbol": "468370",
-      "name": "KODEX iShares미국인플레이션국채액티브",
       "price": 10085,
       "market_cap": 168.0
     },
     {
       "symbol": "468630",
-      "name": "KODEX iShares미국투자등급회사채액티브",
       "price": 10195,
       "market_cap": 307.0
     },
     {
       "symbol": "468380",
-      "name": "KODEX iShares미국하이일드액티브",
       "price": 10185,
       "market_cap": 897.0
     },
     {
       "symbol": "275290",
-      "name": "KODEX 가치주",
       "price": 25855,
       "market_cap": 233.0
     },
     {
       "symbol": "117700",
-      "name": "KODEX 건설",
       "price": 5635,
       "market_cap": 1786.0
     },
     {
       "symbol": "300950",
-      "name": "KODEX 게임산업",
       "price": 4755,
       "market_cap": 200.0
     },
     {
       "symbol": "266390",
-      "name": "KODEX 경기소비재",
       "price": 14620,
       "market_cap": 88.0
     },
     {
       "symbol": "279530",
-      "name": "KODEX 고배당주",
       "price": 15745,
       "market_cap": 3795.0
     },
     {
       "symbol": "132030",
-      "name": "KODEX 골드선물(H)",
       "price": 21085,
       "market_cap": 3005.0
     },
     {
       "symbol": "280940",
-      "name": "KODEX 골드선물인버스(H)",
       "price": 3980,
       "market_cap": 28.0
     },
     {
       "symbol": "138910",
-      "name": "KODEX 구리선물(H)",
       "price": 8785,
       "market_cap": 255.0
     },
     {
       "symbol": "471230",
-      "name": "KODEX 국고채10년액티브",
       "price": 107640,
       "market_cap": 5046.0
     },
     {
       "symbol": "439870",
-      "name": "KODEX 국고채30년액티브",
       "price": 96100,
       "market_cap": 2803.0
     },
     {
       "symbol": "114260",
-      "name": "KODEX 국고채3년",
       "price": 62630,
       "market_cap": 4742.0
     },
     {
       "symbol": "152380",
-      "name": "KODEX 국채선물10년",
       "price": 67435,
       "market_cap": 214.0
     },
     {
       "symbol": "176950",
-      "name": "KODEX 국채선물10년인버스",
       "price": 58665,
       "market_cap": 662.0
     },
     {
       "symbol": "292770",
-      "name": "KODEX 국채선물3년인버스",
       "price": 57625,
       "market_cap": 719.0
     },
     {
       "symbol": "276990",
-      "name": "KODEX 글로벌로봇(합성)",
       "price": 20940,
       "market_cap": 371.0
     },
     {
       "symbol": "476070",
-      "name": "KODEX 글로벌비만치료제TOP2 Plus",
       "price": 10975,
       "market_cap": 280.0
     },
     {
       "symbol": "0064K0",
-      "name": "KODEX 금액티브",
       "price": 10515,
       "market_cap": 1380.0
     },
     {
       "symbol": "0089D0",
-      "name": "KODEX 금융고배당TOP10",
       "price": 11785,
       "market_cap": 2192.0
     },
     {
       "symbol": "498410",
-      "name": "KODEX 금융고배당TOP10타겟위클리커버드콜",
       "price": 10325,
       "market_cap": 8270.0
     },
     {
       "symbol": "0162M0",
-      "name": "KODEX 금융채1~2년(AA-이상)PLUS액티브",
       "price": 10160,
       "market_cap": 3783.0
     },
     {
       "symbol": "102960",
-      "name": "KODEX 기계장비",
       "price": 8755,
       "market_cap": 88.0
     },
     {
       "symbol": "404260",
-      "name": "KODEX 기후변화솔루션",
       "price": 17555,
       "market_cap": 140.0
     },
     {
       "symbol": "273140",
-      "name": "KODEX 단기변동금리부채권액티브",
       "price": 114625,
       "market_cap": 2787.0
     },
     {
       "symbol": "153130",
-      "name": "KODEX 단기채권",
       "price": 113240,
       "market_cap": 9362.0
     },
     {
       "symbol": "214980",
-      "name": "KODEX 단기채권PLUS",
       "price": 114560,
       "market_cap": 19480.0
     },
     {
       "symbol": "487950",
-      "name": "KODEX 대만테크고배당다우존스",
       "price": 10650,
       "market_cap": 160.0
     },
     {
       "symbol": "122630",
-      "name": "KODEX 레버리지",
       "price": 54400,
       "market_cap": 37400.0
     },
     {
       "symbol": "445290",
-      "name": "KODEX 로봇액티브",
       "price": 24875,
       "market_cap": 8694.0
     },
     {
       "symbol": "488770",
-      "name": "KODEX 머니마켓액티브",
       "price": 106205,
       "market_cap": 127942.0
     },
     {
       "symbol": "337120",
-      "name": "KODEX 멀티팩터",
       "price": 25505,
       "market_cap": 153.0
     },
     {
       "symbol": "401470",
-      "name": "KODEX 메타버스액티브",
       "price": 8840,
       "market_cap": 491.0
     },
     {
       "symbol": "244620",
-      "name": "KODEX 모멘텀Plus",
       "price": 15145,
       "market_cap": 106.0
     },
     {
       "symbol": "275280",
-      "name": "KODEX 모멘텀주",
       "price": 30225,
       "market_cap": 272.0
     },
     {
       "symbol": "308620",
-      "name": "KODEX 미국10년국채선물",
       "price": 10960,
       "market_cap": 1030.0
     },
     {
       "symbol": "0091C0",
-      "name": "KODEX 미국10년국채액티브(H)",
       "price": 9315,
       "market_cap": 2051.0
     },
     {
       "symbol": "484790",
-      "name": "KODEX 미국30년국채액티브(H)",
       "price": 7965,
       "market_cap": 5811.0
     },
     {
       "symbol": "304660",
-      "name": "KODEX 미국30년국채울트라선물(H)",
       "price": 7100,
       "market_cap": 1200.0
     },
     {
       "symbol": "304670",
-      "name": "KODEX 미국30년국채울트라선물인버스(H)",
       "price": 12710,
       "market_cap": 76.0
     },
     {
       "symbol": "481060",
-      "name": "KODEX 미국30년국채타겟커버드콜(합성 H)",
       "price": 7095,
       "market_cap": 6911.0
     },
     {
       "symbol": "0173Y0",
-      "name": "KODEX 미국AI광통신네트워크",
       "price": 7350,
       "market_cap": 2694.0
     },
     {
       "symbol": "0238F0",
-      "name": "KODEX 미국AI메모리TOP2플러스",
       "price": 6415,
       "market_cap": 276.0
     },
     {
       "symbol": "0151S0",
-      "name": "KODEX 미국AI반도체TOP3플러스",
       "price": 10940,
       "market_cap": 1493.0
     },
     {
       "symbol": "0041D0",
-      "name": "KODEX 미국AI소프트웨어TOP10",
       "price": 11165,
       "market_cap": 458.0
     },
     {
       "symbol": "0241D0",
-      "name": "KODEX 미국AI에이전트액티브",
       "price": 7400,
       "market_cap": 333.0
     },
     {
       "symbol": "487230",
-      "name": "KODEX 미국AI전력핵심인프라",
       "price": 14255,
       "market_cap": 10157.0
     },
     {
       "symbol": "485540",
-      "name": "KODEX 미국AI테크TOP10",
       "price": 13095,
       "market_cap": 2671.0
     },
     {
       "symbol": "483280",
-      "name": "KODEX 미국AI테크TOP10타겟커버드콜",
       "price": 9850,
       "market_cap": 3842.0
     },
     {
       "symbol": "0225V0",
-      "name": "KODEX 미국CPU반도체TOP10",
       "price": 7855,
       "market_cap": 302.0
     },
     {
       "symbol": "428560",
-      "name": "KODEX 미국ETF산업Top10 Indxx",
       "price": 17005,
       "market_cap": 128.0
     },
     {
       "symbol": "379800",
-      "name": "KODEX 미국S&P500",
       "price": 22030,
       "market_cap": 102307.0
     },
     {
       "symbol": "449180",
-      "name": "KODEX 미국S&P500(H)",
       "price": 16375,
       "market_cap": 10693.0
     },
     {
       "symbol": "453660",
-      "name": "KODEX 미국S&P500경기소비재",
       "price": 16895,
       "market_cap": 118.0
     },
     {
       "symbol": "453650",
-      "name": "KODEX 미국S&P500금융",
       "price": 18570,
       "market_cap": 464.0
     },
     {
       "symbol": "0005A0",
-      "name": "KODEX 미국S&P500데일리커버드콜OTM",
       "price": 8430,
       "market_cap": 1914.0
     },
     {
       "symbol": "276970",
-      "name": "KODEX 미국S&P500배당귀족커버드콜(합성 H)",
       "price": 8190,
       "market_cap": 385.0
     },
     {
       "symbol": "0026E0",
-      "name": "KODEX 미국S&P500버퍼3월액티브",
       "price": 11175,
       "market_cap": 207.0
     },
     {
       "symbol": "0068M0",
-      "name": "KODEX 미국S&P500버퍼6월액티브",
       "price": 11040,
       "market_cap": 99.0
     },
     {
       "symbol": "0089C0",
-      "name": "KODEX 미국S&P500변동성확대시커버드콜",
       "price": 10375,
       "market_cap": 244.0
     },
     {
       "symbol": "200030",
-      "name": "KODEX 미국S&P500산업재(합성)",
       "price": 37820,
       "market_cap": 426.0
     },
     {
       "symbol": "219480",
-      "name": "KODEX 미국S&P500선물(H)",
       "price": 31615,
       "market_cap": 1407.0
     },
     {
       "symbol": "0041E0",
-      "name": "KODEX 미국S&P500액티브",
       "price": 14015,
       "market_cap": 1275.0
     },
     {
       "symbol": "218420",
-      "name": "KODEX 미국S&P500에너지(합성)",
       "price": 19580,
       "market_cap": 481.0
     },
     {
       "symbol": "463640",
-      "name": "KODEX 미국S&P500유틸리티",
       "price": 13470,
       "market_cap": 108.0
     },
     {
       "symbol": "463690",
-      "name": "KODEX 미국S&P500커뮤니케이션",
       "price": 16215,
       "market_cap": 81.0
     },
     {
       "symbol": "463680",
-      "name": "KODEX 미국S&P500테크놀로지",
       "price": 18990,
       "market_cap": 1092.0
     },
     {
       "symbol": "453630",
-      "name": "KODEX 미국S&P500필수소비재",
       "price": 12855,
       "market_cap": 154.0
     },
     {
       "symbol": "453640",
-      "name": "KODEX 미국S&P500헬스케어",
       "price": 14870,
       "market_cap": 706.0
     },
     {
       "symbol": "185680",
-      "name": "KODEX 미국S&P바이오(합성)",
       "price": 41390,
       "market_cap": 220.0
     },
     {
       "symbol": "0028X0",
-      "name": "KODEX 미국금융테크액티브",
       "price": 11235,
       "market_cap": 129.0
     },
     {
       "symbol": "379810",
-      "name": "KODEX 미국나스닥100",
       "price": 23895,
       "market_cap": 92115.0
     },
     {
       "symbol": "449190",
-      "name": "KODEX 미국나스닥100(H)",
       "price": 20350,
       "market_cap": 5342.0
     },
     {
       "symbol": "494300",
-      "name": "KODEX 미국나스닥100데일리커버드콜OTM",
       "price": 7770,
       "market_cap": 9495.0
     },
     {
       "symbol": "409820",
-      "name": "KODEX 미국나스닥100레버리지(합성 H)",
       "price": 16420,
       "market_cap": 2102.0
     },
     {
       "symbol": "0261H0",
-      "name": "KODEX 미국나스닥100미국채혼합50",
       "price": 9850,
       "market_cap": 1507.0
     },
     {
       "symbol": "304940",
-      "name": "KODEX 미국나스닥100선물(H)",
       "price": 29715,
       "market_cap": 1010.0
     },
     {
       "symbol": "409810",
-      "name": "KODEX 미국나스닥100선물인버스(H)",
       "price": 6010,
       "market_cap": 144.0
     },
     {
       "symbol": "411420",
-      "name": "KODEX 미국나스닥AI테크액티브",
       "price": 22030,
       "market_cap": 1024.0
     },
     {
       "symbol": "455030",
-      "name": "KODEX 미국달러SOFR금리액티브(합성)",
       "price": 11425,
       "market_cap": 5295.0
     },
     {
       "symbol": "261240",
-      "name": "KODEX 미국달러선물",
       "price": 13860,
       "market_cap": 596.0
     },
     {
       "symbol": "261250",
-      "name": "KODEX 미국달러선물레버리지",
       "price": 14900,
       "market_cap": 270.0
     },
     {
       "symbol": "261270",
-      "name": "KODEX 미국달러선물인버스",
       "price": 8410,
       "market_cap": 566.0
     },
     {
       "symbol": "261260",
-      "name": "KODEX 미국달러선물인버스2X",
       "price": 5705,
       "market_cap": 1883.0
     },
     {
       "symbol": "0144M0",
-      "name": "KODEX 미국드론UAM TOP10",
       "price": 4805,
       "market_cap": 139.0
     },
     {
       "symbol": "280930",
-      "name": "KODEX 미국러셀2000(H)",
       "price": 15220,
       "market_cap": 198.0
     },
     {
       "symbol": "0048J0",
-      "name": "KODEX 미국머니마켓액티브",
       "price": 13280,
       "market_cap": 10444.0
     },
     {
       "symbol": "390390",
-      "name": "KODEX 미국반도체",
       "price": 42340,
       "market_cap": 10289.0
     },
     {
       "symbol": "489250",
-      "name": "KODEX 미국배당다우존스",
       "price": 12780,
       "market_cap": 6288.0
     },
     {
       "symbol": "0254S0",
-      "name": "KODEX 미국배당다우존스액티브",
       "price": 10205,
       "market_cap": 990.0
     },
     {
       "symbol": "483290",
-      "name": "KODEX 미국배당다우존스타겟커버드콜",
       "price": 10135,
       "market_cap": 1774.0
     },
     {
       "symbol": "441640",
-      "name": "KODEX 미국배당커버드콜액티브",
       "price": 11555,
       "market_cap": 16506.0
     },
     {
       "symbol": "352560",
-      "name": "KODEX 미국부동산리츠(H)",
       "price": 11935,
       "market_cap": 477.0
     },
     {
       "symbol": "314250",
-      "name": "KODEX 미국빅테크10(H)",
       "price": 55845,
       "market_cap": 5864.0
     },
     {
       "symbol": "473460",
-      "name": "KODEX 미국서학개미",
       "price": 19340,
       "market_cap": 1431.0
     },
     {
       "symbol": "0144L0",
-      "name": "KODEX 미국성장커버드콜액티브",
       "price": 8470,
       "market_cap": 3092.0
     },
     {
       "symbol": "390400",
-      "name": "KODEX 미국스마트모빌리티S&P",
       "price": 5595,
       "market_cap": 45.0
     },
     {
       "symbol": "0167Z0",
-      "name": "KODEX 미국우주항공",
       "price": 5740,
       "market_cap": 2724.0
     },
     {
       "symbol": "0132H0",
-      "name": "KODEX 미국원자력SMR",
       "price": 4935,
       "market_cap": 306.0
     },
     {
       "symbol": "437080",
-      "name": "KODEX 미국종합채권ESG액티브(H)",
       "price": 94560,
       "market_cap": 2079.0
     },
     {
       "symbol": "419420",
-      "name": "KODEX 미국클린에너지나스닥",
       "price": 7215,
       "market_cap": 79.0
     },
     {
       "symbol": "491090",
-      "name": "KODEX 미국테크TOP3플러스",
       "price": 15560,
       "market_cap": 226.0
     },
     {
       "symbol": "0038A0",
-      "name": "KODEX 미국휴머노이드로봇",
       "price": 12795,
       "market_cap": 2335.0
     },
     {
       "symbol": "244580",
-      "name": "KODEX 바이오",
       "price": 6925,
       "market_cap": 1861.0
     },
     {
       "symbol": "091160",
-      "name": "KODEX 반도체",
       "price": 89755,
       "market_cap": 38482.0
     },
     {
       "symbol": "494310",
-      "name": "KODEX 반도체레버리지",
       "price": 33500,
       "market_cap": 5846.0
     },
     {
       "symbol": "0190G0",
-      "name": "KODEX 반도체타겟위클리커버드콜",
       "price": 6220,
       "market_cap": 1113.0
     },
     {
       "symbol": "0080G0",
-      "name": "KODEX 방산TOP10",
       "price": 6330,
       "market_cap": 2203.0
     },
     {
       "symbol": "0100K0",
-      "name": "KODEX 방산TOP10레버리지",
       "price": 2170,
       "market_cap": 191.0
     },
     {
       "symbol": "325020",
-      "name": "KODEX 배당가치",
       "price": 24915,
       "market_cap": 747.0
     },
     {
       "symbol": "244670",
-      "name": "KODEX 밸류Plus",
       "price": 10175,
       "market_cap": 61.0
     },
     {
       "symbol": "140700",
-      "name": "KODEX 보험",
       "price": 17375,
       "market_cap": 469.0
     },
     {
       "symbol": "102780",
-      "name": "KODEX 삼성그룹",
       "price": 20180,
       "market_cap": 24922.0
     },
     {
       "symbol": "213610",
-      "name": "KODEX 삼성그룹밸류",
       "price": 19090,
       "market_cap": 2272.0
     },
     {
       "symbol": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
       "price": 12070,
       "market_cap": 13036.0
     },
     {
       "symbol": "0193W0",
-      "name": "KODEX 삼성전자단일종목레버리지",
       "price": 6195,
       "market_cap": 7459.0
     },
     {
       "symbol": "448330",
-      "name": "KODEX 삼성전자채권혼합",
       "price": 16035,
       "market_cap": 11914.0
     },
     {
       "symbol": "325010",
-      "name": "KODEX 성장주",
       "price": 30970,
       "market_cap": 960.0
     },
     {
       "symbol": "385510",
-      "name": "KODEX 신재생에너지액티브",
       "price": 28665,
       "market_cap": 2508.0
     },
     {
       "symbol": "446690",
-      "name": "KODEX 아시아AI반도체exChina액티브",
       "price": 37915,
       "market_cap": 190.0
     },
     {
       "symbol": "437070",
-      "name": "KODEX 아시아달러채권ESG플러스액티브",
       "price": 55705,
       "market_cap": 193.0
     },
     {
       "symbol": "117460",
-      "name": "KODEX 에너지화학",
       "price": 10220,
       "market_cap": 258.0
     },
     {
       "symbol": "275300",
-      "name": "KODEX 우량주",
       "price": 22015,
       "market_cap": 374.0
     },
     {
       "symbol": "140710",
-      "name": "KODEX 운송",
       "price": 6735,
       "market_cap": 135.0
     },
     {
       "symbol": "0098F0",
-      "name": "KODEX 원자력SMR",
       "price": 9600,
       "market_cap": 1651.0
     },
     {
       "symbol": "395150",
-      "name": "KODEX 웹툰&드라마",
       "price": 1696,
       "market_cap": 83.0
     },
     {
       "symbol": "456250",
-      "name": "KODEX 유럽명품TOP10 STOXX",
       "price": 7460,
       "market_cap": 86.0
     },
     {
       "symbol": "400570",
-      "name": "KODEX 유럽탄소배출권선물ICE(H)",
       "price": 11870,
       "market_cap": 120.0
     },
     {
       "symbol": "144600",
-      "name": "KODEX 은선물(H)",
       "price": 7395,
       "market_cap": 5339.0
     },
     {
       "symbol": "091170",
-      "name": "KODEX 은행",
       "price": 14670,
       "market_cap": 2597.0
     },
     {
       "symbol": "453810",
-      "name": "KODEX 인도Nifty50",
       "price": 12060,
       "market_cap": 3443.0
     },
     {
       "symbol": "453820",
-      "name": "KODEX 인도Nifty50레버리지(합성)",
       "price": 11985,
       "market_cap": 156.0
     },
     {
       "symbol": "0000H0",
-      "name": "KODEX 인도Nifty미드캡100",
       "price": 9900,
       "market_cap": 114.0
     },
     {
       "symbol": "477730",
-      "name": "KODEX 인도타타그룹",
       "price": 7355,
       "market_cap": 217.0
     },
     {
       "symbol": "114800",
-      "name": "KODEX 인버스",
       "price": 1329,
       "market_cap": 8145.0
     },
     {
       "symbol": "101280",
-      "name": "KODEX 일본TOPIX100",
       "price": 27345,
       "market_cap": 448.0
     },
     {
       "symbol": "352540",
-      "name": "KODEX 일본부동산리츠(H)",
       "price": 10540,
       "market_cap": 358.0
     },
     {
       "symbol": "091180",
-      "name": "KODEX 자동차",
       "price": 21750,
       "market_cap": 2980.0
     },
     {
       "symbol": "385520",
-      "name": "KODEX 자율주행액티브",
       "price": 12505,
       "market_cap": 256.0
     },
     {
       "symbol": "363570",
-      "name": "KODEX 장기종합채권(AA-이상)액티브",
       "price": 91315,
       "market_cap": 1908.0
     },
     {
       "symbol": "0209D0",
-      "name": "KODEX 전고체배터리ESS TOP2플러스",
       "price": 7085,
       "market_cap": 2749.0
     },
     {
       "symbol": "0115D0",
-      "name": "KODEX 조선TOP10",
       "price": 4695,
       "market_cap": 1265.0
     },
     {
       "symbol": "273130",
-      "name": "KODEX 종합채권(AA-이상)액티브",
       "price": 113040,
       "market_cap": 32130.0
     },
     {
       "symbol": "0153K0",
-      "name": "KODEX 주주환원고배당주",
       "price": 10880,
       "market_cap": 2263.0
     },
     {
       "symbol": "102970",
-      "name": "KODEX 증권",
       "price": 13400,
       "market_cap": 4770.0
     },
     {
       "symbol": "419430",
-      "name": "KODEX 차이나2차전지MSCI(합성)",
       "price": 6500,
       "market_cap": 182.0
     },
     {
       "symbol": "169950",
-      "name": "KODEX 차이나A50",
       "price": 21150,
       "market_cap": 169.0
     },
     {
       "symbol": "0162L0",
-      "name": "KODEX 차이나AI반도체TOP10",
       "price": 8090,
       "market_cap": 635.0
     },
     {
       "symbol": "428510",
-      "name": "KODEX 차이나AI테크액티브",
       "price": 15620,
       "market_cap": 266.0
     },
     {
       "symbol": "283580",
-      "name": "KODEX 차이나CSI300",
       "price": 12770,
       "market_cap": 2043.0
     },
     {
       "symbol": "099140",
-      "name": "KODEX 차이나H",
       "price": 18905,
       "market_cap": 293.0
     },
     {
       "symbol": "204450",
-      "name": "KODEX 차이나H레버리지(H)",
       "price": 1982,
       "market_cap": 188.0
     },
     {
       "symbol": "415340",
-      "name": "KODEX 차이나과창판STAR50(합성)",
       "price": 10305,
       "market_cap": 213.0
     },
     {
       "symbol": "256750",
-      "name": "KODEX 차이나심천ChiNext(합성)",
       "price": 9945,
       "market_cap": 304.0
     },
     {
       "symbol": "0065G0",
-      "name": "KODEX 차이나테크TOP10",
       "price": 7325,
       "market_cap": 132.0
     },
     {
       "symbol": "372330",
-      "name": "KODEX 차이나항셍테크",
       "price": 5410,
       "market_cap": 874.0
     },
     {
       "symbol": "0048K0",
-      "name": "KODEX 차이나휴머노이드로봇",
       "price": 6850,
       "market_cap": 1171.0
     },
     {
       "symbol": "117680",
-      "name": "KODEX 철강",
       "price": 9565,
       "market_cap": 208.0
     },
     {
       "symbol": "279540",
-      "name": "KODEX 최소변동성",
       "price": 16920,
       "market_cap": 102.0
     },
     {
       "symbol": "445150",
-      "name": "KODEX 친환경조선해운액티브",
       "price": 20865,
       "market_cap": 344.0
     },
     {
       "symbol": "0231Z0",
-      "name": "KODEX 코리아TDF2065액티브 적격",
       "price": 8070,
       "market_cap": 145.0
     },
     {
       "symbol": "211900",
-      "name": "KODEX 코리아배당성장",
       "price": 24495,
       "market_cap": 796.0
     },
     {
       "symbol": "237370",
-      "name": "KODEX 코리아배당성장채권혼합",
       "price": 15035,
       "market_cap": 1564.0
     },
     {
       "symbol": "495850",
-      "name": "KODEX 코리아밸류업",
       "price": 24100,
       "market_cap": 5880.0
     },
     {
       "symbol": "0115E0",
-      "name": "KODEX 코리아소버린AI",
       "price": 11485,
       "market_cap": 477.0
     },
     {
       "symbol": "373490",
-      "name": "KODEX 코리아혁신성장액티브",
       "price": 18850,
       "market_cap": 104.0
     },
     {
       "symbol": "229200",
-      "name": "KODEX 코스닥150",
       "price": 10825,
       "market_cap": 39841.0
     },
     {
       "symbol": "233740",
-      "name": "KODEX 코스닥150레버리지",
       "price": 3845,
       "market_cap": 27088.0
     },
     {
       "symbol": "360150",
-      "name": "KODEX 코스닥150롱코스피200숏선물",
       "price": 3265,
       "market_cap": 134.0
     },
     {
       "symbol": "251340",
-      "name": "KODEX 코스닥150선물인버스",
       "price": 2980,
       "market_cap": 1588.0
     },
     {
       "symbol": "461450",
-      "name": "KODEX 코스닥글로벌",
       "price": 11380,
       "market_cap": 159.0
     },
     {
       "symbol": "226490",
-      "name": "KODEX 코스피",
       "price": 52360,
       "market_cap": 10655.0
     },
     {
       "symbol": "237350",
-      "name": "KODEX 코스피100",
       "price": 63400,
       "market_cap": 7259.0
     },
     {
       "symbol": "359210",
-      "name": "KODEX 코스피TR",
       "price": 26385,
       "market_cap": 633.0
     },
     {
       "symbol": "337140",
-      "name": "KODEX 코스피대형주",
       "price": 26550,
       "market_cap": 531.0
     },
     {
       "symbol": "138920",
-      "name": "KODEX 콩선물(H)",
       "price": 11985,
       "market_cap": 60.0
     },
     {
       "symbol": "375770",
-      "name": "KODEX 탄소효율그린뉴딜",
       "price": 18385,
       "market_cap": 331.0
     },
     {
       "symbol": "459560",
-      "name": "KODEX 테슬라밸류체인FactSet",
       "price": 19605,
       "market_cap": 304.0
     },
     {
       "symbol": "475080",
-      "name": "KODEX 테슬라커버드콜채권혼합액티브",
       "price": 7785,
       "market_cap": 2775.0
     },
     {
       "symbol": "266410",
-      "name": "KODEX 필수소비재",
       "price": 8650,
       "market_cap": 104.0
     },
     {
       "symbol": "298770",
-      "name": "KODEX 한국대만IT프리미어",
       "price": 59950,
       "market_cap": 617.0
     },
     {
       "symbol": "476800",
-      "name": "KODEX 한국부동산리츠인프라",
       "price": 3830,
       "market_cap": 4590.0
     },
     {
       "symbol": "450190",
-      "name": "KODEX 한중반도체(합성)",
       "price": 35470,
       "market_cap": 213.0
     },
     {
       "symbol": "450180",
-      "name": "KODEX 한중전기차(합성)",
       "price": 8355,
       "market_cap": 54.0
     },
     {
       "symbol": "266420",
-      "name": "KODEX 헬스케어",
       "price": 14530,
       "market_cap": 610.0
     },
     {
       "symbol": "364690",
-      "name": "KODEX 혁신기술테마액티브",
       "price": 27275,
       "market_cap": 164.0
     },
     {
       "symbol": "0204D0",
-      "name": "KODEX 현대차로보틱스밸류체인TOP3플러스",
       "price": 4740,
       "market_cap": 1628.0
     },
     {
       "symbol": "487130",
-      "name": "KoAct AI인프라액티브",
       "price": 20380,
       "market_cap": 275.0
     },
     {
       "symbol": "0074K0",
-      "name": "KoAct K수출핵심기업TOP30액티브",
       "price": 11805,
       "market_cap": 850.0
     },
     {
       "symbol": "0222D0",
-      "name": "KoAct 고배당액티브",
       "price": 8885,
       "market_cap": 675.0
     },
     {
       "symbol": "0219B0",
-      "name": "KoAct 광통신&위성네트워크액티브",
       "price": 9000,
       "market_cap": 90.0
     },
     {
       "symbol": "471040",
-      "name": "KoAct 글로벌AI&로봇액티브",
       "price": 20350,
       "market_cap": 1781.0
     },
     {
       "symbol": "0174B0",
-      "name": "KoAct 글로벌AI메모리반도체액티브",
       "price": 9750,
       "market_cap": 673.0
     },
     {
       "symbol": "0132D0",
-      "name": "KoAct 글로벌K컬처밸류체인액티브",
       "price": 8160,
       "market_cap": 45.0
     },
     {
       "symbol": "0020H0",
-      "name": "KoAct 글로벌양자컴퓨팅액티브",
       "price": 14240,
       "market_cap": 306.0
     },
     {
       "symbol": "475070",
-      "name": "KoAct 글로벌친환경전력인프라액티브",
       "price": 22540,
       "market_cap": 248.0
     },
     {
       "symbol": "0015B0",
-      "name": "KoAct 미국나스닥성장기업액티브",
       "price": 13655,
       "market_cap": 4854.0
     },
     {
       "symbol": "0104H0",
-      "name": "KoAct 미국나스닥채권혼합50액티브",
       "price": 10275,
       "market_cap": 1228.0
     },
     {
       "symbol": "0186L0",
-      "name": "KoAct 미국로봇피지컬AI액티브",
       "price": 7150,
       "market_cap": 164.0
     },
     {
       "symbol": "0113G0",
-      "name": "KoAct 미국바이오헬스케어액티브",
       "price": 10975,
       "market_cap": 99.0
     },
     {
       "symbol": "497780",
-      "name": "KoAct 미국천연가스인프라액티브",
       "price": 9550,
       "market_cap": 177.0
     },
     {
       "symbol": "490330",
-      "name": "KoAct 미국치매&뇌질환치료제액티브",
       "price": 12905,
       "market_cap": 45.0
     },
     {
       "symbol": "462900",
-      "name": "KoAct 바이오헬스케어액티브",
       "price": 10665,
       "market_cap": 2858.0
     },
     {
       "symbol": "482030",
-      "name": "KoAct 반도체&2차전지핵심소재액티브",
       "price": 7000,
       "market_cap": 74.0
     },
     {
       "symbol": "476850",
-      "name": "KoAct 배당성장액티브",
       "price": 16230,
       "market_cap": 868.0
     },
     {
       "symbol": "0051A0",
-      "name": "KoAct 브로드컴밸류체인액티브",
       "price": 18100,
       "market_cap": 118.0
     },
     {
       "symbol": "0150K0",
-      "name": "KoAct 수소전력ESS인프라액티브",
       "price": 8385,
       "market_cap": 231.0
     },
     {
       "symbol": "0154H0",
-      "name": "KoAct 차이나바이오헬스케어액티브",
       "price": 7570,
       "market_cap": 38.0
     },
     {
       "symbol": "0252P0",
-      "name": "KoAct 코리아TOP5플러스채권혼합50액티브",
       "price": 9400,
       "market_cap": 89.0
     },
     {
       "symbol": "495230",
-      "name": "KoAct 코리아밸류업액티브",
       "price": 23290,
       "market_cap": 1770.0
     },
     {
       "symbol": "0163Y0",
-      "name": "KoAct 코스닥액티브",
       "price": 7385,
       "market_cap": 3763.0
     },
     {
       "symbol": "0193G0",
-      "name": "KoAct 코스피액티브",
       "price": 5990,
       "market_cap": 1018.0
     },
     {
       "symbol": "0093D0",
-      "name": "KoAct 팔란티어밸류체인액티브",
       "price": 13475,
       "market_cap": 148.0
     },
     {
       "symbol": "0232A0",
-      "name": "MIDAS 머니마켓액티브",
       "price": 100910,
       "market_cap": 5762.0
     },
     {
       "symbol": "0214M0",
-      "name": "MIDAS 바이오헬스케어액티브",
       "price": 8280,
       "market_cap": 70.0
     },
     {
       "symbol": "488290",
-      "name": "MIDAS 일본테크액티브",
       "price": 29670,
       "market_cap": 104.0
     },
     {
       "symbol": "0258N0",
-      "name": "MIDAS 중기채권(AA-이상)액티브",
       "price": 100065,
       "market_cap": 1051.0
     },
     {
       "symbol": "438740",
-      "name": "MIDAS 중소형액티브",
       "price": 26065,
       "market_cap": 78.0
     },
     {
       "symbol": "0191B0",
-      "name": "MIDAS 코스닥액티브",
       "price": 22500,
       "market_cap": 45.0
     },
     {
       "symbol": "403790",
-      "name": "MIDAS 코스피액티브",
       "price": 43215,
       "market_cap": 1264.0
     },
     {
       "symbol": "152100",
-      "name": "PLUS 200",
       "price": 80180,
       "market_cap": 11386.0
     },
     {
       "symbol": "491220",
-      "name": "PLUS 200TR",
       "price": 94515,
       "market_cap": 425.0
     },
     {
       "symbol": "253150",
-      "name": "PLUS 200선물레버리지",
       "price": 100495,
       "market_cap": 251.0
     },
     {
       "symbol": "253160",
-      "name": "PLUS 200선물인버스2X",
       "price": 249,
       "market_cap": 19.0
     },
     {
       "symbol": "0203D0",
-      "name": "PLUS 200위클리커버드콜채권혼합",
       "price": 7690,
       "market_cap": 100.0
     },
     {
       "symbol": "0210E0",
-      "name": "PLUS 200커버드콜액티브",
       "price": 5135,
       "market_cap": 673.0
     },
     {
       "symbol": "0239Z0",
-      "name": "PLUS AI반도체소부장액티브",
       "price": 8070,
       "market_cap": 504.0
     },
     {
       "symbol": "395750",
-      "name": "PLUS ESG가치주액티브",
       "price": 15075,
       "market_cap": 60.0
     },
     {
       "symbol": "395760",
-      "name": "PLUS ESG성장주액티브",
       "price": 15750,
       "market_cap": 87.0
     },
     {
       "symbol": "453010",
-      "name": "PLUS KOFR금리",
       "price": 110545,
       "market_cap": 148.0
     },
     {
       "symbol": "429740",
-      "name": "PLUS K리츠",
       "price": 5420,
       "market_cap": 49.0
     },
     {
       "symbol": "449450",
-      "name": "PLUS K방산",
       "price": 31045,
       "market_cap": 6013.0
     },
     {
       "symbol": "0104G0",
-      "name": "PLUS K방산레버리지",
       "price": 1926,
       "market_cap": 50.0
     },
     {
       "symbol": "0090B0",
-      "name": "PLUS K방산소부장",
       "price": 5275,
       "market_cap": 108.0
     },
     {
       "symbol": "0166S0",
-      "name": "PLUS K제조업핵심기업액티브",
       "price": 7585,
       "market_cap": 349.0
     },
     {
       "symbol": "269530",
-      "name": "PLUS S&P글로벌인프라",
       "price": 19425,
       "market_cap": 117.0
     },
     {
       "symbol": "0226A0",
-      "name": "PLUS SK하이닉스샌디스크채권혼합50",
       "price": 8435,
       "market_cap": 396.0
     },
     {
       "symbol": "433880",
-      "name": "PLUS TDF2060액티브 적격",
       "price": 16845,
       "market_cap": 623.0
     },
     {
       "symbol": "251590",
-      "name": "PLUS 고배당저변동50",
       "price": 16545,
       "market_cap": 116.0
     },
     {
       "symbol": "161510",
-      "name": "PLUS 고배당주",
       "price": 21780,
       "market_cap": 21556.0
     },
     {
       "symbol": "0018C0",
-      "name": "PLUS 고배당주위클리고정커버드콜",
       "price": 9100,
       "market_cap": 728.0
     },
     {
       "symbol": "489030",
-      "name": "PLUS 고배당주위클리커버드콜",
       "price": 5645,
       "market_cap": 2727.0
     },
     {
       "symbol": "251600",
-      "name": "PLUS 고배당주채권혼합",
       "price": 14395,
       "market_cap": 5600.0
     },
     {
       "symbol": "461460",
-      "name": "PLUS 국고채10년액티브",
       "price": 53190,
       "market_cap": 1091.0
     },
     {
       "symbol": "451600",
-      "name": "PLUS 국고채30년액티브",
       "price": 92445,
       "market_cap": 212.0
     },
     {
       "symbol": "491230",
-      "name": "PLUS 국공채머니마켓액티브",
       "price": 52885,
       "market_cap": 1189.0
     },
     {
       "symbol": "289670",
-      "name": "PLUS 국채선물10년",
       "price": 54255,
       "market_cap": 69.0
     },
     {
       "symbol": "298340",
-      "name": "PLUS 국채선물3년",
       "price": 57285,
       "market_cap": 786.0
     },
     {
       "symbol": "442580",
-      "name": "PLUS 글로벌HBM반도체",
       "price": 69945,
       "market_cap": 11296.0
     },
     {
       "symbol": "189400",
-      "name": "PLUS 글로벌MSCI(합성 H)",
       "price": 23990,
       "market_cap": 72.0
     },
     {
       "symbol": "496770",
-      "name": "PLUS 글로벌방산",
       "price": 15315,
       "market_cap": 268.0
     },
     {
       "symbol": "419650",
-      "name": "PLUS 글로벌수소&차세대연료전지",
       "price": 3475,
       "market_cap": 118.0
     },
     {
       "symbol": "0007G0",
-      "name": "PLUS 글로벌원자력밸류체인",
       "price": 9930,
       "market_cap": 343.0
     },
     {
       "symbol": "0166T0",
-      "name": "PLUS 글로벌저작권핵심기업액티브",
       "price": 9340,
       "market_cap": 61.0
     },
     {
       "symbol": "0035T0",
-      "name": "PLUS 글로벌휴머노이드로봇액티브",
       "price": 15870,
       "market_cap": 754.0
     },
     {
       "symbol": "415920",
-      "name": "PLUS 글로벌희토류&전략자원생산기업",
       "price": 4225,
       "market_cap": 207.0
     },
     {
       "symbol": "0138Y0",
-      "name": "PLUS 금채권혼합",
       "price": 9020,
       "market_cap": 988.0
     },
     {
       "symbol": "278620",
-      "name": "PLUS 단기채권액티브",
       "price": 120130,
       "market_cap": 684.0
     },
     {
       "symbol": "477050",
-      "name": "PLUS 머니마켓액티브",
       "price": 53935,
       "market_cap": 6479.0
     },
     {
       "symbol": "0050E0",
-      "name": "PLUS 미국AI에이전트",
       "price": 7880,
       "market_cap": 35.0
     },
     {
       "symbol": "429760",
-      "name": "PLUS 미국S&P500",
       "price": 18070,
       "market_cap": 958.0
     },
     {
       "symbol": "269540",
-      "name": "PLUS 미국S&P500(H)",
       "price": 28700,
       "market_cap": 832.0
     },
     {
       "symbol": "0057H0",
-      "name": "PLUS 미국S&P500미국채혼합50액티브",
       "price": 11000,
       "market_cap": 1353.0
     },
     {
       "symbol": "494410",
-      "name": "PLUS 미국S&P500성장주",
       "price": 12770,
       "market_cap": 332.0
     },
     {
       "symbol": "0153X0",
-      "name": "PLUS 미국고배당주액티브",
       "price": 10685,
       "market_cap": 187.0
     },
     {
       "symbol": "0089B0",
-      "name": "PLUS 미국나스닥100미국채혼합50",
       "price": 10410,
       "market_cap": 323.0
     },
     {
       "symbol": "287180",
-      "name": "PLUS 미국나스닥테크",
       "price": 45800,
       "market_cap": 412.0
     },
     {
       "symbol": "213630",
-      "name": "PLUS 미국다우존스고배당주(합성 H)",
       "price": 20850,
       "market_cap": 192.0
     },
     {
       "symbol": "332610",
-      "name": "PLUS 미국단기회사채(AAA~A)",
       "price": 120845,
       "market_cap": 116.0
     },
     {
       "symbol": "456200",
-      "name": "PLUS 미국달러SOFR금리액티브(합성)",
       "price": 58315,
       "market_cap": 64.0
     },
     {
       "symbol": "0078V0",
-      "name": "PLUS 미국로보택시",
       "price": 7250,
       "market_cap": 36.0
     },
     {
       "symbol": "494420",
-      "name": "PLUS 미국배당증가성장주데일리커버드콜",
       "price": 8550,
       "market_cap": 162.0
     },
     {
       "symbol": "0023B0",
-      "name": "PLUS 미국양자컴퓨팅TOP10",
       "price": 10865,
       "market_cap": 239.0
     },
     {
       "symbol": "332620",
-      "name": "PLUS 미국장기우량회사채",
       "price": 82835,
       "market_cap": 155.0
     },
     {
       "symbol": "464470",
-      "name": "PLUS 미국채30년액티브",
       "price": 44910,
       "market_cap": 384.0
     },
     {
       "symbol": "461900",
-      "name": "PLUS 미국테크TOP10",
       "price": 20265,
       "market_cap": 162.0
     },
     {
       "symbol": "461910",
-      "name": "PLUS 미국테크TOP10레버리지(합성)",
       "price": 28975,
       "market_cap": 145.0
     },
     {
       "symbol": "0193K0",
-      "name": "PLUS 삼성전자단일종목레버리지",
       "price": 6275,
       "market_cap": 71.0
     },
     {
       "symbol": "0193L0",
-      "name": "PLUS 삼성전자선물단일종목인버스2X",
       "price": 12955,
       "market_cap": 202.0
     },
     {
       "symbol": "195970",
-      "name": "PLUS 선진국MSCI(합성 H)",
       "price": 15415,
       "market_cap": 225.0
     },
     {
       "symbol": "238670",
-      "name": "PLUS 스마트베타Quality채권혼합",
       "price": 12920,
       "market_cap": 52.0
     },
     {
       "symbol": "195980",
-      "name": "PLUS 신흥국MSCI(합성 H)",
       "price": 13350,
       "market_cap": 820.0
     },
     {
       "symbol": "256450",
-      "name": "PLUS 심천차이넥스트(합성)",
       "price": 9710,
       "market_cap": 49.0
     },
     {
       "symbol": "447660",
-      "name": "PLUS 애플채권혼합",
       "price": 14070,
       "market_cap": 225.0
     },
     {
       "symbol": "239660",
-      "name": "PLUS 우량회사채50",
       "price": 122760,
       "market_cap": 221.0
     },
     {
       "symbol": "421320",
-      "name": "PLUS 우주항공",
       "price": 20355,
       "market_cap": 1700.0
     },
     {
       "symbol": "0184N0",
-      "name": "PLUS 은채권혼합",
       "price": 7405,
       "market_cap": 81.0
     },
     {
       "symbol": "464920",
-      "name": "PLUS 일본반도체소부장",
       "price": 19040,
       "market_cap": 238.0
     },
     {
       "symbol": "489000",
-      "name": "PLUS 일본엔화초단기국채(합성)",
       "price": 8875,
       "market_cap": 195.0
     },
     {
       "symbol": "0098N0",
-      "name": "PLUS 자사주매입고배당주",
       "price": 11820,
       "market_cap": 727.0
     },
     {
       "symbol": "451000",
-      "name": "PLUS 종합채권(AA-이상)액티브",
       "price": 110445,
       "market_cap": 5765.0
     },
     {
       "symbol": "280920",
-      "name": "PLUS 주도업종",
       "price": 16510,
       "market_cap": 83.0
     },
     {
       "symbol": "0184L0",
-      "name": "PLUS 중기종합채권(A-이상)액티브",
       "price": 101630,
       "market_cap": 1435.0
     },
     {
       "symbol": "266550",
-      "name": "PLUS 중형주저변동50",
       "price": 16345,
       "market_cap": 41.0
     },
     {
       "symbol": "0047N0",
-      "name": "PLUS 차이나AI테크TOP10",
       "price": 7000,
       "market_cap": 49.0
     },
     {
       "symbol": "0128D0",
-      "name": "PLUS 차이나항셍테크위클리타겟커버드콜",
       "price": 5300,
       "market_cap": 37.0
     },
     {
       "symbol": "0239Y0",
-      "name": "PLUS 코리아HBM반도체",
       "price": 6820,
       "market_cap": 102.0
     },
     {
       "symbol": "495040",
-      "name": "PLUS 코리아밸류업",
       "price": 23855,
       "market_cap": 644.0
     },
     {
       "symbol": "301400",
-      "name": "PLUS 코스닥150",
       "price": 10920,
       "market_cap": 71.0
     },
     {
       "symbol": "0166N0",
-      "name": "PLUS 코스닥150액티브",
       "price": 6125,
       "market_cap": 196.0
     },
     {
       "symbol": "227830",
-      "name": "PLUS 코스피",
       "price": 52420,
       "market_cap": 131.0
     },
     {
       "symbol": "122090",
-      "name": "PLUS 코스피50",
       "price": 58450,
       "market_cap": 1263.0
     },
     {
       "symbol": "328370",
-      "name": "PLUS 코스피TR",
       "price": 28560,
       "market_cap": 928.0
     },
     {
       "symbol": "457990",
-      "name": "PLUS 태양광&ESS",
       "price": 25725,
       "market_cap": 1569.0
     },
     {
       "symbol": "0132K0",
-      "name": "PLUS 테슬라위클리커버드콜채권혼합",
       "price": 7675,
       "market_cap": 1055.0
     },
     {
       "symbol": "0000J0",
-      "name": "PLUS 한화그룹주",
       "price": 17435,
       "market_cap": 724.0
     },
     {
       "symbol": "148020",
-      "name": "RISE 200",
       "price": 79600,
       "market_cap": 33671.0
     },
     {
       "symbol": "361580",
-      "name": "RISE 200TR",
       "price": 45225,
       "market_cap": 3573.0
     },
     {
       "symbol": "290080",
-      "name": "RISE 200고배당커버드콜ATM",
       "price": 7150,
       "market_cap": 114.0
     },
     {
       "symbol": "284980",
-      "name": "RISE 200금융",
       "price": 19435,
       "market_cap": 159.0
     },
     {
       "symbol": "252400",
-      "name": "RISE 200선물레버리지",
       "price": 50450,
       "market_cap": 303.0
     },
     {
       "symbol": "252410",
-      "name": "RISE 200선물인버스",
       "price": 1727,
       "market_cap": 36.0
     },
     {
       "symbol": "252420",
-      "name": "RISE 200선물인버스2X",
       "price": 129,
       "market_cap": 68.0
     },
     {
       "symbol": "475720",
-      "name": "RISE 200위클리커버드콜",
       "price": 9235,
       "market_cap": 6778.0
     },
     {
       "symbol": "183700",
-      "name": "RISE 200채권혼합50",
       "price": 85630,
       "market_cap": 360.0
     },
     {
       "symbol": "0122W0",
-      "name": "RISE 26-11 회사채(AA-이상)액티브",
       "price": 51325,
       "market_cap": 298.0
     },
     {
       "symbol": "0269M0",
-      "name": "RISE 27-11 회사채(AA-이상)액티브",
       "price": 50000,
       "market_cap": 1200.0
     },
     {
       "symbol": "465330",
-      "name": "RISE 2차전지TOP10",
       "price": 9145,
       "market_cap": 567.0
     },
     {
       "symbol": "465350",
-      "name": "RISE 2차전지TOP10인버스(합성)",
       "price": 18755,
       "market_cap": 375.0
     },
     {
       "symbol": "422420",
-      "name": "RISE 2차전지액티브",
       "price": 5180,
       "market_cap": 1990.0
     },
     {
       "symbol": "105780",
-      "name": "RISE 5대그룹주",
       "price": 11980,
       "market_cap": 240.0
     },
     {
       "symbol": "469070",
-      "name": "RISE AI&로봇",
       "price": 8845,
       "market_cap": 2998.0
     },
     {
       "symbol": "0093A0",
-      "name": "RISE AI반도체TOP10",
       "price": 23590,
       "market_cap": 1309.0
     },
     {
       "symbol": "0101N0",
-      "name": "RISE AI전력인프라",
       "price": 13715,
       "market_cap": 4307.0
     },
     {
       "symbol": "427120",
-      "name": "RISE AI플랫폼",
       "price": 4700,
       "market_cap": 31.0
     },
     {
       "symbol": "477080",
-      "name": "RISE CD금리액티브(합성)",
       "price": 108190,
       "market_cap": 16150.0
     },
     {
       "symbol": "290130",
-      "name": "RISE ESG사회책임투자",
       "price": 33990,
       "market_cap": 4810.0
     },
     {
       "symbol": "326240",
-      "name": "RISE IT플러스",
       "price": 32015,
       "market_cap": 781.0
     },
     {
       "symbol": "385560",
-      "name": "RISE KIS국고채30년Enhanced",
       "price": 57200,
       "market_cap": 4214.0
     },
     {
       "symbol": "479520",
-      "name": "RISE KOFR금리액티브(합성)",
       "price": 107050,
       "market_cap": 10006.0
     },
     {
       "symbol": "270800",
-      "name": "RISE KQ고배당",
       "price": 13895,
       "market_cap": 76.0
     },
     {
       "symbol": "292050",
-      "name": "RISE KRX300",
       "price": 35875,
       "market_cap": 126.0
     },
     {
       "symbol": "388280",
-      "name": "RISE K엔터&여행레저",
       "price": 6780,
       "market_cap": 214.0
     },
     {
       "symbol": "0192L0",
-      "name": "RISE SK하이닉스단일종목레버리지",
       "price": 3510,
       "market_cap": 149.0
     },
     {
       "symbol": "442550",
-      "name": "RISE TDF2030액티브 적격",
       "price": 14115,
       "market_cap": 226.0
     },
     {
       "symbol": "442560",
-      "name": "RISE TDF2040액티브 적격",
       "price": 15260,
       "market_cap": 557.0
     },
     {
       "symbol": "442570",
-      "name": "RISE TDF2050액티브 적격",
       "price": 15930,
       "market_cap": 3329.0
     },
     {
       "symbol": "234310",
-      "name": "RISE V&S셀렉트밸류",
       "price": 21975,
       "market_cap": 110.0
     },
     {
       "symbol": "241390",
-      "name": "RISE V&S셀렉트밸류채권혼합",
       "price": 14360,
       "market_cap": 316.0
     },
     {
       "symbol": "300640",
-      "name": "RISE 게임테마",
       "price": 5680,
       "market_cap": 182.0
     },
     {
       "symbol": "266160",
-      "name": "RISE 고배당",
       "price": 25625,
       "market_cap": 1602.0
     },
     {
       "symbol": "481430",
-      "name": "RISE 국고채10년액티브",
       "price": 101735,
       "market_cap": 525.0
     },
     {
       "symbol": "114100",
-      "name": "RISE 국고채3년",
       "price": 107450,
       "market_cap": 947.0
     },
     {
       "symbol": "282000",
-      "name": "RISE 국고채3년선물인버스",
       "price": 114425,
       "market_cap": 216.0
     },
     {
       "symbol": "451670",
-      "name": "RISE 국채30년레버리지(합성)",
       "price": 14760,
       "market_cap": 74.0
     },
     {
       "symbol": "295000",
-      "name": "RISE 국채선물10년",
       "price": 53325,
       "market_cap": 53.0
     },
     {
       "symbol": "295020",
-      "name": "RISE 국채선물10년인버스",
       "price": 58890,
       "market_cap": 622.0
     },
     {
       "symbol": "432600",
-      "name": "RISE 국채선물3년",
       "price": 56005,
       "market_cap": 56.0
     },
     {
       "symbol": "0233N0",
-      "name": "RISE 글로벌AI낸드메모리반도체",
       "price": 6575,
       "market_cap": 99.0
     },
     {
       "symbol": "0114X0",
-      "name": "RISE 글로벌게임테크TOP3Plus",
       "price": 7820,
       "market_cap": 51.0
     },
     {
       "symbol": "437370",
-      "name": "RISE 글로벌농업경제",
       "price": 10025,
       "market_cap": 70.0
     },
     {
       "symbol": "375270",
-      "name": "RISE 글로벌데이터센터리츠(합성)",
       "price": 11575,
       "market_cap": 75.0
     },
     {
       "symbol": "475380",
-      "name": "RISE 글로벌리얼티인컴",
       "price": 9710,
       "market_cap": 257.0
     },
     {
       "symbol": "476310",
-      "name": "RISE 글로벌비만산업TOP2+",
       "price": 10025,
       "market_cap": 55.0
     },
     {
       "symbol": "417450",
-      "name": "RISE 글로벌수소경제",
       "price": 11720,
       "market_cap": 94.0
     },
     {
       "symbol": "442320",
-      "name": "RISE 글로벌원자력",
       "price": 25355,
       "market_cap": 1549.0
     },
     {
       "symbol": "461490",
-      "name": "RISE 글로벌자산배분액티브",
       "price": 14210,
       "market_cap": 2650.0
     },
     {
       "symbol": "459750",
-      "name": "RISE 글로벌주식분산액티브",
       "price": 16130,
       "market_cap": 274.0
     },
     {
       "symbol": "399580",
-      "name": "RISE 글로벌클린에너지",
       "price": 7610,
       "market_cap": 84.0
     },
     {
       "symbol": "276650",
-      "name": "RISE 글로벌테크놀로지(합성 H)",
       "price": 40150,
       "market_cap": 301.0
     },
     {
       "symbol": "336160",
-      "name": "RISE 금융채액티브",
       "price": 100950,
       "market_cap": 485.0
     },
     {
       "symbol": "326230",
-      "name": "RISE 내수주플러스",
       "price": 9795,
       "market_cap": 55.0
     },
     {
       "symbol": "367760",
-      "name": "RISE 네트워크인프라",
       "price": 39560,
       "market_cap": 4371.0
     },
     {
       "symbol": "272560",
-      "name": "RISE 단기국공채액티브",
       "price": 115690,
       "market_cap": 1774.0
     },
     {
       "symbol": "385550",
-      "name": "RISE 단기채권알파액티브",
       "price": 115020,
       "market_cap": 4535.0
     },
     {
       "symbol": "196230",
-      "name": "RISE 단기통안채",
       "price": 117615,
       "market_cap": 2539.0
     },
     {
       "symbol": "0061Z0",
-      "name": "RISE 단기특수은행채액티브",
       "price": 51350,
       "market_cap": 6301.0
     },
     {
       "symbol": "315960",
-      "name": "RISE 대형고배당10TR",
       "price": 58870,
       "market_cap": 3827.0
     },
     {
       "symbol": "0138D0",
-      "name": "RISE 동학개미",
       "price": 8315,
       "market_cap": 46.0
     },
     {
       "symbol": "455890",
-      "name": "RISE 머니마켓액티브",
       "price": 55895,
       "market_cap": 35785.0
     },
     {
       "symbol": "401170",
-      "name": "RISE 메타버스",
       "price": 9205,
       "market_cap": 350.0
     },
     {
       "symbol": "481340",
-      "name": "RISE 미국30년국채액티브",
       "price": 8005,
       "market_cap": 296.0
     },
     {
       "symbol": "472870",
-      "name": "RISE 미국30년국채엔화노출(합성 H)",
       "price": 6405,
       "market_cap": 1553.0
     },
     {
       "symbol": "472830",
-      "name": "RISE 미국30년국채커버드콜(합성)",
       "price": 7385,
       "market_cap": 410.0
     },
     {
       "symbol": "485690",
-      "name": "RISE 미국AI밸류체인TOP3Plus",
       "price": 17105,
       "market_cap": 641.0
     },
     {
       "symbol": "490590",
-      "name": "RISE 미국AI밸류체인데일리고정커버드콜",
       "price": 10740,
       "market_cap": 6229.0
     },
     {
       "symbol": "0176E0",
-      "name": "RISE 미국AI전력인프라액티브",
       "price": 7610,
       "market_cap": 525.0
     },
     {
       "symbol": "0127R0",
-      "name": "RISE 미국AI클라우드인프라",
       "price": 9850,
       "market_cap": 138.0
     },
     {
       "symbol": "495940",
-      "name": "RISE 미국AI테크액티브",
       "price": 14945,
       "market_cap": 418.0
     },
     {
       "symbol": "379780",
-      "name": "RISE 미국S&P500",
       "price": 21240,
       "market_cap": 14826.0
     },
     {
       "symbol": "453330",
-      "name": "RISE 미국S&P500(H)",
       "price": 17350,
       "market_cap": 815.0
     },
     {
       "symbol": "0138T0",
-      "name": "RISE 미국S&P500데일리고정커버드콜",
       "price": 8565,
       "market_cap": 300.0
     },
     {
       "symbol": "0005C0",
-      "name": "RISE 미국S&P500엔화노출(합성 H)",
       "price": 10280,
       "market_cap": 67.0
     },
     {
       "symbol": "460660",
-      "name": "RISE 미국S&P배당킹",
       "price": 11770,
       "market_cap": 182.0
     },
     {
       "symbol": "219390",
-      "name": "RISE 미국S&P원유생산기업(합성 H)",
       "price": 7580,
       "market_cap": 152.0
     },
     {
       "symbol": "0115C0",
-      "name": "RISE 미국고배당다우존스TOP10",
       "price": 11020,
       "market_cap": 292.0
     },
     {
       "symbol": "354240",
-      "name": "RISE 미국고정배당우선증권",
       "price": 9395,
       "market_cap": 103.0
     },
     {
       "symbol": "368590",
-      "name": "RISE 미국나스닥100",
       "price": 26670,
       "market_cap": 14482.0
     },
     {
       "symbol": "437350",
-      "name": "RISE 미국단기투자등급회사채액티브",
       "price": 11720,
       "market_cap": 258.0
     },
     {
       "symbol": "455960",
-      "name": "RISE 미국달러SOFR금리액티브(합성)",
       "price": 11780,
       "market_cap": 644.0
     },
     {
       "symbol": "469530",
-      "name": "RISE 미국달러선물인버스",
       "price": 9740,
       "market_cap": 62.0
     },
     {
       "symbol": "469060",
-      "name": "RISE 미국반도체NYSE",
       "price": 27535,
       "market_cap": 620.0
     },
     {
       "symbol": "469050",
-      "name": "RISE 미국반도체NYSE(H)",
       "price": 25785,
       "market_cap": 284.0
     },
     {
       "symbol": "491630",
-      "name": "RISE 미국반도체인버스(합성 H)",
       "price": 5975,
       "market_cap": 34.0
     },
     {
       "symbol": "490600",
-      "name": "RISE 미국배당100데일리고정커버드콜",
       "price": 8725,
       "market_cap": 1601.0
     },
     {
       "symbol": "0018Z0",
-      "name": "RISE 미국양자컴퓨팅",
       "price": 13585,
       "market_cap": 143.0
     },
     {
       "symbol": "0218J0",
-      "name": "RISE 미국우주&로봇TOP2미국채혼합50",
       "price": 8930,
       "market_cap": 429.0
     },
     {
       "symbol": "0227K0",
-      "name": "RISE 미국우주위성통신",
       "price": 7170,
       "market_cap": 72.0
     },
     {
       "symbol": "0013P0",
-      "name": "RISE 미국은행TOP10",
       "price": 10750,
       "market_cap": 118.0
     },
     {
       "symbol": "267440",
-      "name": "RISE 미국장기국채선물(H)",
       "price": 7785,
       "market_cap": 47.0
     },
     {
       "symbol": "267490",
-      "name": "RISE 미국장기국채선물레버리지(합성 H)",
       "price": 4750,
       "market_cap": 33.0
     },
     {
       "symbol": "267450",
-      "name": "RISE 미국장기국채선물인버스(H)",
       "price": 11160,
       "market_cap": 56.0
     },
     {
       "symbol": "0036Z0",
-      "name": "RISE 미국천연가스밸류체인",
       "price": 12035,
       "market_cap": 66.0
     },
     {
       "symbol": "0269N0",
-      "name": "RISE 미국초대형주TOP10",
       "price": 9700,
       "market_cap": 194.0
     },
     {
       "symbol": "491620",
-      "name": "RISE 미국테크100데일리고정커버드콜",
       "price": 9120,
       "market_cap": 5349.0
     },
     {
       "symbol": "0036R0",
-      "name": "RISE 미국휴머노이드로봇",
       "price": 17270,
       "market_cap": 950.0
     },
     {
       "symbol": "0000Z0",
-      "name": "RISE 바이오TOP10액티브",
       "price": 7095,
       "market_cap": 408.0
     },
     {
       "symbol": "0254H0",
-      "name": "RISE 반도체소부장액티브",
       "price": 6480,
       "market_cap": 130.0
     },
     {
       "symbol": "446700",
-      "name": "RISE 배터리 리사이클링",
       "price": 8115,
       "market_cap": 86.0
     },
     {
       "symbol": "475350",
-      "name": "RISE 버크셔포트폴리오TOP10",
       "price": 14610,
       "market_cap": 760.0
     },
     {
       "symbol": "388420",
-      "name": "RISE 비메모리반도체액티브",
       "price": 18790,
       "market_cap": 1627.0
     },
     {
       "symbol": "0240J0",
-      "name": "RISE 삼성SK그룹",
       "price": 7610,
       "market_cap": 186.0
     },
     {
       "symbol": "448630",
-      "name": "RISE 삼성그룹Top3채권혼합",
       "price": 14385,
       "market_cap": 3093.0
     },
     {
       "symbol": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
       "price": 11430,
       "market_cap": 34964.0
     },
     {
       "symbol": "0192M0",
-      "name": "RISE 삼성전자단일종목레버리지",
       "price": 5765,
       "market_cap": 143.0
     },
     {
       "symbol": "367770",
-      "name": "RISE 수소경제테마",
       "price": 14865,
       "market_cap": 751.0
     },
     {
       "symbol": "140570",
-      "name": "RISE 수출주",
       "price": 20180,
       "market_cap": 81.0
     },
     {
       "symbol": "0093B0",
-      "name": "RISE 엔비디아고정테크100",
       "price": 10900,
       "market_cap": 87.0
     },
     {
       "symbol": "140580",
-      "name": "RISE 우량업종대표주",
       "price": 21230,
       "market_cap": 106.0
     },
     {
       "symbol": "379790",
-      "name": "RISE 유로스탁스50(H)",
       "price": 16925,
       "market_cap": 203.0
     },
     {
       "symbol": "498610",
-      "name": "RISE 인도디지털성장",
       "price": 8115,
       "market_cap": 49.0
     },
     {
       "symbol": "488480",
-      "name": "RISE 일본섹터TOP4Plus",
       "price": 11010,
       "market_cap": 61.0
     },
     {
       "symbol": "385540",
-      "name": "RISE 종합채권(A-이상)액티브",
       "price": 106065,
       "market_cap": 22089.0
     },
     {
       "symbol": "183710",
-      "name": "RISE 주식혼합",
       "price": 75295,
       "market_cap": 151.0
     },
     {
       "symbol": "310080",
-      "name": "RISE 중국MSCI China(H)",
       "price": 8290,
       "market_cap": 95.0
     },
     {
       "symbol": "463300",
-      "name": "RISE 중국본토CSI300",
       "price": 11105,
       "market_cap": 178.0
     },
     {
       "symbol": "174360",
-      "name": "RISE 중국본토대형주CSI100",
       "price": 19490,
       "market_cap": 273.0
     },
     {
       "symbol": "136340",
-      "name": "RISE 중기우량회사채",
       "price": 104985,
       "market_cap": 3160.0
     },
     {
       "symbol": "281990",
-      "name": "RISE 중소형고배당",
       "price": 16210,
       "market_cap": 81.0
     },
     {
       "symbol": "272570",
-      "name": "RISE 중장기국공채액티브",
       "price": 109930,
       "market_cap": 53.0
     },
     {
       "symbol": "0164G0",
-      "name": "RISE 차이나AI반도체TOP4Plus",
       "price": 8270,
       "market_cap": 174.0
     },
     {
       "symbol": "250730",
-      "name": "RISE 차이나HSCEI(H)",
       "price": 9230,
       "market_cap": 157.0
     },
     {
       "symbol": "291680",
-      "name": "RISE 차이나H선물인버스(H)",
       "price": 8275,
       "market_cap": 41.0
     },
     {
       "symbol": "0094L0",
-      "name": "RISE 차이나테크TOP10위클리타겟커버드콜",
       "price": 5975,
       "market_cap": 84.0
     },
     {
       "symbol": "371150",
-      "name": "RISE 차이나항셍테크",
       "price": 5275,
       "market_cap": 69.0
     },
     {
       "symbol": "498860",
-      "name": "RISE 코리아금융고배당",
       "price": 13780,
       "market_cap": 276.0
     },
     {
       "symbol": "495050",
-      "name": "RISE 코리아밸류업",
       "price": 24320,
       "market_cap": 7101.0
     },
     {
       "symbol": "0094M0",
-      "name": "RISE 코리아밸류업위클리고정커버드콜",
       "price": 12490,
       "market_cap": 4852.0
     },
     {
       "symbol": "0151P0",
-      "name": "RISE 코리아전략산업액티브",
       "price": 9420,
       "market_cap": 904.0
     },
     {
       "symbol": "270810",
-      "name": "RISE 코스닥150",
       "price": 10780,
       "market_cap": 2518.0
     },
     {
       "symbol": "278240",
-      "name": "RISE 코스닥150선물레버리지",
       "price": 4310,
       "market_cap": 325.0
     },
     {
       "symbol": "275750",
-      "name": "RISE 코스닥150선물인버스",
       "price": 3010,
       "market_cap": 29.0
     },
     {
       "symbol": "0223A0",
-      "name": "RISE 코스닥커버드콜액티브",
       "price": 7230,
       "market_cap": 289.0
     },
     {
       "symbol": "302450",
-      "name": "RISE 코스피",
       "price": 52270,
       "market_cap": 2587.0
     },
     {
       "symbol": "0047P0",
-      "name": "RISE 테슬라고정테크100",
       "price": 13450,
       "market_cap": 208.0
     },
     {
       "symbol": "0013R0",
-      "name": "RISE 테슬라미국채타겟커버드콜혼합(합성)",
       "price": 7385,
       "market_cap": 266.0
     },
     {
       "symbol": "449580",
-      "name": "RISE 테슬라애플아마존채권혼합",
       "price": 16370,
       "market_cap": 180.0
     },
     {
       "symbol": "334690",
-      "name": "RISE 팔라듐선물(H)",
       "price": 4250,
       "market_cap": 30.0
     },
     {
       "symbol": "334700",
-      "name": "RISE 팔라듐선물인버스(H)",
       "price": 4360,
       "market_cap": 28.0
     },
     {
       "symbol": "0047R0",
-      "name": "RISE 팔란티어고정테크100",
       "price": 13530,
       "market_cap": 223.0
     },
     {
       "symbol": "253280",
-      "name": "RISE 헬스케어",
       "price": 11050,
       "market_cap": 66.0
     },
     {
       "symbol": "253290",
-      "name": "RISE 헬스케어채권혼합",
       "price": 11335,
       "market_cap": 204.0
     },
     {
       "symbol": "0190C0",
-      "name": "RISE 현대차고정피지컬AI",
       "price": 6045,
       "market_cap": 3545.0
     },
     {
       "symbol": "411540",
-      "name": "SOL 200 Top10",
       "price": 11930,
       "market_cap": 143.0
     },
     {
       "symbol": "295040",
-      "name": "SOL 200TR",
       "price": 29840,
       "market_cap": 7609.0
     },
     {
       "symbol": "0262Y0",
-      "name": "SOL 200커버드콜액티브",
       "price": 9210,
       "market_cap": 451.0
     },
     {
       "symbol": "0167B0",
-      "name": "SOL 200타겟위클리커버드콜",
       "price": 8440,
       "market_cap": 4946.0
     },
     {
       "symbol": "488980",
-      "name": "SOL 26-12 회사채(AA-이상)액티브",
       "price": 52490,
       "market_cap": 2112.0
     },
     {
       "symbol": "0092C0",
-      "name": "SOL 27-12 회사채(AA-이상)액티브",
       "price": 50680,
       "market_cap": 2196.0
     },
     {
       "symbol": "455860",
-      "name": "SOL 2차전지소부장Fn",
       "price": 3670,
       "market_cap": 916.0
     },
     {
       "symbol": "0167A0",
-      "name": "SOL AI반도체TOP2플러스",
       "price": 12040,
       "market_cap": 37493.0
     },
     {
       "symbol": "455850",
-      "name": "SOL AI반도체소부장",
       "price": 18335,
       "market_cap": 9388.0
     },
     {
       "symbol": "497880",
-      "name": "SOL CD금리&머니마켓액티브",
       "price": 50130,
       "market_cap": 3199.0
     },
     {
       "symbol": "363510",
-      "name": "SOL KIS단기통안채",
       "price": 112790,
       "market_cap": 129.0
     },
     {
       "symbol": "292500",
-      "name": "SOL KRX300",
       "price": 35720,
       "market_cap": 179.0
     },
     {
       "symbol": "404650",
-      "name": "SOL KRX기후변화솔루션",
       "price": 17550,
       "market_cap": 105.0
     },
     {
       "symbol": "490480",
-      "name": "SOL K방산",
       "price": 17215,
       "market_cap": 448.0
     },
     {
       "symbol": "0197W0",
-      "name": "SOL SK하이닉스단일종목레버리지",
       "price": 3320,
       "market_cap": 190.0
     },
     {
       "symbol": "0197X0",
-      "name": "SOL SK하이닉스선물단일종목인버스2X",
       "price": 10625,
       "market_cap": 821.0
     },
     {
       "symbol": "438570",
-      "name": "SOL 국고채10년",
       "price": 101815,
       "market_cap": 1182.0
     },
     {
       "symbol": "474390",
-      "name": "SOL 국고채30년액티브",
       "price": 44485,
       "market_cap": 51.0
     },
     {
       "symbol": "438560",
-      "name": "SOL 국고채3년",
       "price": 101805,
       "market_cap": 1101.0
     },
     {
       "symbol": "0066W0",
-      "name": "SOL 국제금",
       "price": 10665,
       "market_cap": 800.0
     },
     {
       "symbol": "0022T0",
-      "name": "SOL 국제금커버드콜액티브",
       "price": 10910,
       "market_cap": 622.0
     },
     {
       "symbol": "423170",
-      "name": "SOL 글로벌AI반도체탑픽액티브",
       "price": 43030,
       "market_cap": 1885.0
     },
     {
       "symbol": "0246X0",
-      "name": "SOL 글로벌DRAM반도체플러스",
       "price": 6550,
       "market_cap": 655.0
     },
     {
       "symbol": "400590",
-      "name": "SOL 글로벌탄소배출권선물ICE(합성)",
       "price": 13870,
       "market_cap": 69.0
     },
     {
       "symbol": "484880",
-      "name": "SOL 금융지주플러스고배당",
       "price": 19650,
       "market_cap": 3095.0
     },
     {
       "symbol": "484890",
-      "name": "SOL 머니마켓액티브",
       "price": 52905,
       "market_cap": 573.0
     },
     {
       "symbol": "461600",
-      "name": "SOL 미국30년국채액티브(H)",
       "price": 8120,
       "market_cap": 215.0
     },
     {
       "symbol": "473330",
-      "name": "SOL 미국30년국채커버드콜(합성)",
       "price": 7500,
       "market_cap": 2749.0
     },
     {
       "symbol": "494210",
-      "name": "SOL 미국500타겟데일리커버드콜액티브",
       "price": 9725,
       "market_cap": 78.0
     },
     {
       "symbol": "479620",
-      "name": "SOL 미국AI반도체칩메이커",
       "price": 20035,
       "market_cap": 671.0
     },
     {
       "symbol": "481180",
-      "name": "SOL 미국AI소프트웨어",
       "price": 13770,
       "market_cap": 1088.0
     },
     {
       "symbol": "486450",
-      "name": "SOL 미국AI전력인프라",
       "price": 15230,
       "market_cap": 1698.0
     },
     {
       "symbol": "433330",
-      "name": "SOL 미국S&P500",
       "price": 20315,
       "market_cap": 2864.0
     },
     {
       "symbol": "399110",
-      "name": "SOL 미국S&P500ESG",
       "price": 18680,
       "market_cap": 1083.0
     },
     {
       "symbol": "0080X0",
-      "name": "SOL 미국S&P500미국채혼합50",
       "price": 10240,
       "market_cap": 737.0
     },
     {
       "symbol": "499150",
-      "name": "SOL 미국S&P500엔화노출(H)",
       "price": 9940,
       "market_cap": 40.0
     },
     {
       "symbol": "447620",
-      "name": "SOL 미국TOP5채권혼합50",
       "price": 15010,
       "market_cap": 1246.0
     },
     {
       "symbol": "476030",
-      "name": "SOL 미국나스닥100",
       "price": 15160,
       "market_cap": 1258.0
     },
     {
       "symbol": "0118S0",
-      "name": "SOL 미국넥스트테크TOP10액티브",
       "price": 7685,
       "market_cap": 354.0
     },
     {
       "symbol": "446720",
-      "name": "SOL 미국배당다우존스",
       "price": 13605,
       "market_cap": 10680.0
     },
     {
       "symbol": "452360",
-      "name": "SOL 미국배당다우존스(H)",
       "price": 13725,
       "market_cap": 2320.0
     },
     {
       "symbol": "493420",
-      "name": "SOL 미국배당다우존스2호",
       "price": 12605,
       "market_cap": 277.0
     },
     {
       "symbol": "490490",
-      "name": "SOL 미국배당미국채혼합50",
       "price": 10715,
       "market_cap": 4757.0
     },
     {
       "symbol": "0023A0",
-      "name": "SOL 미국양자컴퓨팅TOP10",
       "price": 15630,
       "market_cap": 2907.0
     },
     {
       "symbol": "0181L0",
-      "name": "SOL 미국우주항공TOP10",
       "price": 5550,
       "market_cap": 488.0
     },
     {
       "symbol": "0051G0",
-      "name": "SOL 미국원자력SMR",
       "price": 9205,
       "market_cap": 1128.0
     },
     {
       "symbol": "481190",
-      "name": "SOL 미국테크TOP10",
       "price": 15025,
       "market_cap": 2607.0
     },
     {
       "symbol": "475300",
-      "name": "SOL 반도체전공정",
       "price": 15235,
       "market_cap": 2392.0
     },
     {
       "symbol": "475310",
-      "name": "SOL 반도체후공정",
       "price": 19710,
       "market_cap": 1399.0
     },
     {
       "symbol": "0152E0",
-      "name": "SOL 배당성향탑픽액티브",
       "price": 9150,
       "market_cap": 210.0
     },
     {
       "symbol": "0207G0",
-      "name": "SOL 우주항공밸류체인",
       "price": 5650,
       "market_cap": 438.0
     },
     {
       "symbol": "400580",
-      "name": "SOL 유럽탄소배출권선물S&P(H)",
       "price": 12220,
       "market_cap": 61.0
     },
     {
       "symbol": "464610",
-      "name": "SOL 의료기기소부장Fn",
       "price": 5940,
       "market_cap": 86.0
     },
     {
       "symbol": "466930",
-      "name": "SOL 자동차TOP3플러스",
       "price": 18060,
       "market_cap": 1327.0
     },
     {
       "symbol": "464600",
-      "name": "SOL 자동차소부장Fn",
       "price": 17370,
       "market_cap": 156.0
     },
     {
       "symbol": "0005D0",
-      "name": "SOL 전고체배터리&실리콘음극재",
       "price": 12975,
       "market_cap": 1518.0
     },
     {
       "symbol": "466920",
-      "name": "SOL 조선TOP3플러스",
       "price": 17395,
       "market_cap": 8689.0
     },
     {
       "symbol": "0080Y0",
-      "name": "SOL 조선TOP3플러스레버리지",
       "price": 3210,
       "market_cap": 478.0
     },
     {
       "symbol": "0141S0",
-      "name": "SOL 조선기자재",
       "price": 5610,
       "market_cap": 365.0
     },
     {
       "symbol": "436140",
-      "name": "SOL 종합채권(AA-이상)액티브",
       "price": 109390,
       "market_cap": 11732.0
     },
     {
       "symbol": "0141T0",
-      "name": "SOL 중기종합채권(AA-이상)액티브",
       "price": 50915,
       "market_cap": 449.0
     },
     {
       "symbol": "0016X0",
-      "name": "SOL 중단기회사채(A-이상)액티브",
       "price": 52030,
       "market_cap": 3820.0
     },
     {
       "symbol": "220130",
-      "name": "SOL 차이나강소기업CSI500(합성 H)",
       "price": 5605,
       "market_cap": 45.0
     },
     {
       "symbol": "0131A0",
-      "name": "SOL 차이나소비트렌드",
       "price": 6915,
       "market_cap": 24.0
     },
     {
       "symbol": "415760",
-      "name": "SOL 차이나육성산업액티브(합성)",
       "price": 9595,
       "market_cap": 130.0
     },
     {
       "symbol": "413220",
-      "name": "SOL 차이나태양광CSI(합성)",
       "price": 3510,
       "market_cap": 42.0
     },
     {
       "symbol": "469830",
-      "name": "SOL 초단기채권액티브",
       "price": 54815,
       "market_cap": 11681.0
     },
     {
       "symbol": "0105E0",
-      "name": "SOL 코리아고배당",
       "price": 11085,
       "market_cap": 4833.0
     },
     {
       "symbol": "444200",
-      "name": "SOL 코리아메가테크액티브",
       "price": 31880,
       "market_cap": 3507.0
     },
     {
       "symbol": "495550",
-      "name": "SOL 코리아밸류업TR",
       "price": 24835,
       "market_cap": 1391.0
     },
     {
       "symbol": "450910",
-      "name": "SOL 코스닥150",
       "price": 10565,
       "market_cap": 294.0
     },
     {
       "symbol": "0192T0",
-      "name": "SOL 코스닥TOP10",
       "price": 5115,
       "market_cap": 238.0
     },
     {
       "symbol": "0192S0",
-      "name": "SOL 코스피200채권혼합50",
       "price": 8190,
       "market_cap": 213.0
     },
     {
       "symbol": "0040X0",
-      "name": "SOL 팔란티어미국채커버드콜혼합",
       "price": 8495,
       "market_cap": 1563.0
     },
     {
       "symbol": "0040Y0",
-      "name": "SOL 팔란티어커버드콜OTM채권혼합",
       "price": 7410,
       "market_cap": 3468.0
     },
     {
       "symbol": "0105D0",
-      "name": "SOL 한국AI소프트웨어",
       "price": 8500,
       "market_cap": 157.0
     },
     {
       "symbol": "0092B0",
-      "name": "SOL 한국원자력SMR",
       "price": 9760,
       "market_cap": 786.0
     },
     {
       "symbol": "429980",
-      "name": "SOL 한국형글로벌전기차&2차전지액티브",
       "price": 13700,
       "market_cap": 69.0
     },
     {
       "symbol": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
       "price": 13555,
       "market_cap": 685.0
     },
     {
       "symbol": "0139F0",
-      "name": "TIGER 12월자동연장금융채(AA-이상)액티브",
       "price": 102845,
       "market_cap": 11074.0
     },
     {
       "symbol": "102110",
-      "name": "TIGER 200",
       "price": 79195,
       "market_cap": 81294.0
     },
     {
       "symbol": "139260",
-      "name": "TIGER 200 IT",
       "price": 93785,
       "market_cap": 16337.0
     },
     {
       "symbol": "139220",
-      "name": "TIGER 200 건설",
       "price": 6480,
       "market_cap": 1118.0
     },
     {
       "symbol": "139290",
-      "name": "TIGER 200 경기소비재",
       "price": 21705,
       "market_cap": 56.0
     },
     {
       "symbol": "139270",
-      "name": "TIGER 200 금융",
       "price": 14690,
       "market_cap": 250.0
     },
     {
       "symbol": "227550",
-      "name": "TIGER 200 산업재",
       "price": 9170,
       "market_cap": 28.0
     },
     {
       "symbol": "227560",
-      "name": "TIGER 200 생활소비재",
       "price": 11250,
       "market_cap": 27.0
     },
     {
       "symbol": "139250",
-      "name": "TIGER 200 에너지화학",
       "price": 13330,
       "market_cap": 168.0
     },
     {
       "symbol": "139230",
-      "name": "TIGER 200 중공업",
       "price": 7610,
       "market_cap": 1435.0
     },
     {
       "symbol": "139240",
-      "name": "TIGER 200 철강소재",
       "price": 8415,
       "market_cap": 59.0
     },
     {
       "symbol": "227540",
-      "name": "TIGER 200 헬스케어",
       "price": 19195,
       "market_cap": 292.0
     },
     {
       "symbol": "243880",
-      "name": "TIGER 200IT레버리지",
       "price": 138150,
       "market_cap": 1865.0
     },
     {
       "symbol": "310960",
-      "name": "TIGER 200TR",
       "price": 46430,
       "market_cap": 2647.0
     },
     {
       "symbol": "252000",
-      "name": "TIGER 200동일가중",
       "price": 16170,
       "market_cap": 65.0
     },
     {
       "symbol": "267770",
-      "name": "TIGER 200선물레버리지",
       "price": 41605,
       "market_cap": 1040.0
     },
     {
       "symbol": "252710",
-      "name": "TIGER 200선물인버스2X",
       "price": 132,
       "market_cap": 385.0
     },
     {
       "symbol": "243890",
-      "name": "TIGER 200에너지화학레버리지",
       "price": 4435,
       "market_cap": 27.0
     },
     {
       "symbol": "315270",
-      "name": "TIGER 200커뮤니케이션서비스",
       "price": 17470,
       "market_cap": 38.0
     },
     {
       "symbol": "289480",
-      "name": "TIGER 200커버드콜",
       "price": 10415,
       "market_cap": 250.0
     },
     {
       "symbol": "166400",
-      "name": "TIGER 200커버드콜OTM",
       "price": 18910,
       "market_cap": 95.0
     },
     {
       "symbol": "0262B0",
-      "name": "TIGER 200커버드콜액티브",
       "price": 8915,
       "market_cap": 5090.0
     },
     {
       "symbol": "0104N0",
-      "name": "TIGER 200타겟위클리커버드콜",
       "price": 15115,
       "market_cap": 1602.0
     },
     {
       "symbol": "480260",
-      "name": "TIGER 27-04회사채(A+이상)액티브",
       "price": 54200,
       "market_cap": 3855.0
     },
     {
       "symbol": "0094K0",
-      "name": "TIGER 28-04 회사채(A+이상)액티브",
       "price": 100705,
       "market_cap": 3038.0
     },
     {
       "symbol": "364980",
-      "name": "TIGER 2차전지TOP10",
       "price": 8335,
       "market_cap": 6018.0
     },
     {
       "symbol": "412570",
-      "name": "TIGER 2차전지TOP10레버리지",
       "price": 753,
       "market_cap": 1305.0
     },
     {
       "symbol": "462010",
-      "name": "TIGER 2차전지소재Fn",
       "price": 3965,
       "market_cap": 4447.0
     },
     {
       "symbol": "305540",
-      "name": "TIGER 2차전지테마",
       "price": 15045,
       "market_cap": 7590.0
     },
     {
       "symbol": "471760",
-      "name": "TIGER AI반도체핵심공정",
       "price": 9275,
       "market_cap": 1818.0
     },
     {
       "symbol": "365040",
-      "name": "TIGER AI코리아그로스액티브",
       "price": 26805,
       "market_cap": 563.0
     },
     {
       "symbol": "364960",
-      "name": "TIGER BBIG",
       "price": 5555,
       "market_cap": 639.0
     },
     {
       "symbol": "412560",
-      "name": "TIGER BBIG레버리지",
       "price": 1248,
       "market_cap": 9.0
     },
     {
       "symbol": "475630",
-      "name": "TIGER CD1년금리액티브(합성)",
       "price": 1083965,
       "market_cap": 13005.0
     },
     {
       "symbol": "357870",
-      "name": "TIGER CD금리투자KIS(합성)",
       "price": 58395,
       "market_cap": 38130.0
     },
     {
       "symbol": "499660",
-      "name": "TIGER CD금리플러스액티브(합성)",
       "price": 1001990,
       "market_cap": 4418.0
     },
     {
       "symbol": "400970",
-      "name": "TIGER Fn메타버스",
       "price": 6390,
       "market_cap": 316.0
     },
     {
       "symbol": "377990",
-      "name": "TIGER Fn신재생에너지",
       "price": 15270,
       "market_cap": 764.0
     },
     {
       "symbol": "417630",
-      "name": "TIGER KEDI혁신기업ESG30",
       "price": 14515,
       "market_cap": 152.0
     },
     {
       "symbol": "449170",
-      "name": "TIGER KOFR금리액티브(합성)",
       "price": 112475,
       "market_cap": 22989.0
     },
     {
       "symbol": "292160",
-      "name": "TIGER KRX300",
       "price": 35300,
       "market_cap": 177.0
     },
     {
       "symbol": "0072R0",
-      "name": "TIGER KRX금현물",
       "price": 10760,
       "market_cap": 10088.0
     },
     {
       "symbol": "404540",
-      "name": "TIGER KRX기후변화솔루션",
       "price": 17500,
       "market_cap": 61.0
     },
     {
       "symbol": "228820",
-      "name": "TIGER KTOP30",
       "price": 13815,
       "market_cap": 138.0
     },
     {
       "symbol": "300610",
-      "name": "TIGER K게임",
       "price": 4850,
       "market_cap": 109.0
     },
     {
       "symbol": "463250",
-      "name": "TIGER K방산&우주",
       "price": 20885,
       "market_cap": 3195.0
     },
     {
       "symbol": "138530",
-      "name": "TIGER LG그룹플러스",
       "price": 10015,
       "market_cap": 609.0
     },
     {
       "symbol": "445910",
-      "name": "TIGER MKF배당귀족",
       "price": 19305,
       "market_cap": 164.0
     },
     {
       "symbol": "289260",
-      "name": "TIGER MSCI KOREA ESG리더스",
       "price": 21125,
       "market_cap": 114.0
     },
     {
       "symbol": "289250",
-      "name": "TIGER MSCI KOREA ESG유니버설",
       "price": 25720,
       "market_cap": 139.0
     },
     {
       "symbol": "310970",
-      "name": "TIGER MSCI Korea TR",
       "price": 35270,
       "market_cap": 32766.0
     },
     {
       "symbol": "269370",
-      "name": "TIGER S&P글로벌인프라(합성)",
       "price": 16640,
       "market_cap": 116.0
     },
     {
       "symbol": "248270",
-      "name": "TIGER S&P글로벌헬스케어(합성)",
       "price": 27660,
       "market_cap": 321.0
     },
     {
       "symbol": "0195S0",
-      "name": "TIGER SK하이닉스단일종목레버리지",
       "price": 3375,
       "market_cap": 5614.0
     },
     {
       "symbol": "0025N0",
-      "name": "TIGER TDF2045 적격",
       "price": 11255,
       "market_cap": 7479.0
     },
     {
       "symbol": "453950",
-      "name": "TIGER TSMC파운드리밸류체인",
       "price": 25790,
       "market_cap": 516.0
     },
     {
       "symbol": "364990",
-      "name": "TIGER 게임TOP10",
       "price": 4125,
       "market_cap": 182.0
     },
     {
       "symbol": "139280",
-      "name": "TIGER 경기방어",
       "price": 11960,
       "market_cap": 376.0
     },
     {
       "symbol": "237440",
-      "name": "TIGER 경기방어채권혼합",
       "price": 10140,
       "market_cap": 101.0
     },
     {
       "symbol": "319640",
-      "name": "TIGER 골드선물(H)",
       "price": 22000,
       "market_cap": 781.0
     },
     {
       "symbol": "0190Y0",
-      "name": "TIGER 구글밸류체인",
       "price": 6695,
       "market_cap": 542.0
     },
     {
       "symbol": "160580",
-      "name": "TIGER 구리실물",
       "price": 14210,
       "market_cap": 1290.0
     },
     {
       "symbol": "451530",
-      "name": "TIGER 국고채30년스트립액티브",
       "price": 41370,
       "market_cap": 1127.0
     },
     {
       "symbol": "114820",
-      "name": "TIGER 국채3년",
       "price": 106495,
       "market_cap": 1121.0
     },
     {
       "symbol": "275980",
-      "name": "TIGER 글로벌4차산업혁신기술(합성 H)",
       "price": 21545,
       "market_cap": 530.0
     },
     {
       "symbol": "464310",
-      "name": "TIGER 글로벌AI&로보틱스 INDXX",
       "price": 11140,
       "market_cap": 869.0
     },
     {
       "symbol": "418670",
-      "name": "TIGER 글로벌AI사이버보안",
       "price": 17615,
       "market_cap": 817.0
     },
     {
       "symbol": "466950",
-      "name": "TIGER 글로벌AI액티브",
       "price": 23060,
       "market_cap": 4328.0
     },
     {
       "symbol": "491010",
-      "name": "TIGER 글로벌AI전력인프라액티브",
       "price": 17685,
       "market_cap": 4172.0
     },
     {
       "symbol": "412770",
-      "name": "TIGER 글로벌AI플랫폼액티브",
       "price": 9785,
       "market_cap": 551.0
     },
     {
       "symbol": "0255E0",
-      "name": "TIGER 글로벌MLCC&기판",
       "price": 6600,
       "market_cap": 719.0
     },
     {
       "symbol": "394670",
-      "name": "TIGER 글로벌리튬&2차전지SOLACTIVE(합성)",
       "price": 8245,
       "market_cap": 1197.0
     },
     {
       "symbol": "440340",
-      "name": "TIGER 글로벌멀티에셋TIF액티브",
       "price": 11195,
       "market_cap": 252.0
     },
     {
       "symbol": "476690",
-      "name": "TIGER 글로벌비만치료제TOP2Plus",
       "price": 10710,
       "market_cap": 311.0
     },
     {
       "symbol": "480310",
-      "name": "TIGER 글로벌온디바이스AI",
       "price": 17005,
       "market_cap": 451.0
     },
     {
       "symbol": "387270",
-      "name": "TIGER 글로벌이노베이션액티브",
       "price": 20100,
       "market_cap": 221.0
     },
     {
       "symbol": "276000",
-      "name": "TIGER 글로벌자원생산기업(합성 H)",
       "price": 19395,
       "market_cap": 175.0
     },
     {
       "symbol": "394660",
-      "name": "TIGER 글로벌자율주행&전기차SOLACTIVE",
       "price": 12065,
       "market_cap": 791.0
     },
     {
       "symbol": "371450",
-      "name": "TIGER 글로벌클라우드컴퓨팅INDXX",
       "price": 11875,
       "market_cap": 171.0
     },
     {
       "symbol": "464930",
-      "name": "TIGER 글로벌혁신블루칩TOP10",
       "price": 19090,
       "market_cap": 945.0
     },
     {
       "symbol": "139320",
-      "name": "TIGER 금은선물(H)",
       "price": 15310,
       "market_cap": 337.0
     },
     {
       "symbol": "0168K0",
-      "name": "TIGER 기술이전바이오액티브",
       "price": 4720,
       "market_cap": 957.0
     },
     {
       "symbol": "137610",
-      "name": "TIGER 농산물선물Enhanced(H)",
       "price": 5205,
       "market_cap": 115.0
     },
     {
       "symbol": "182490",
-      "name": "TIGER 단기선진하이일드(합성 H)",
       "price": 13605,
       "market_cap": 82.0
     },
     {
       "symbol": "272580",
-      "name": "TIGER 단기채권액티브",
       "price": 57470,
       "market_cap": 7770.0
     },
     {
       "symbol": "157450",
-      "name": "TIGER 단기통안채",
       "price": 113225,
       "market_cap": 13045.0
     },
     {
       "symbol": "105010",
-      "name": "TIGER 라틴35",
       "price": 5405,
       "market_cap": 76.0
     },
     {
       "symbol": "123320",
-      "name": "TIGER 레버리지",
       "price": 54955,
       "market_cap": 1594.0
     },
     {
       "symbol": "174350",
-      "name": "TIGER 로우볼",
       "price": 19685,
       "market_cap": 142.0
     },
     {
       "symbol": "329200",
-      "name": "TIGER 리츠부동산인프라",
       "price": 3760,
       "market_cap": 15066.0
     },
     {
       "symbol": "0086C0",
-      "name": "TIGER 리츠부동산인프라10채권혼합액티브",
       "price": 9490,
       "market_cap": 166.0
     },
     {
       "symbol": "0086B0",
-      "name": "TIGER 리츠부동산인프라TOP10액티브",
       "price": 8810,
       "market_cap": 392.0
     },
     {
       "symbol": "341850",
-      "name": "TIGER 리츠부동산인프라채권",
       "price": 4340,
       "market_cap": 87.0
     },
     {
       "symbol": "0043B0",
-      "name": "TIGER 머니마켓액티브",
       "price": 104355,
       "market_cap": 41971.0
     },
     {
       "symbol": "147970",
-      "name": "TIGER 모멘텀",
       "price": 57155,
       "market_cap": 206.0
     },
     {
       "symbol": "458250",
-      "name": "TIGER 미국30년국채스트립액티브(합성 H)",
       "price": 33280,
       "market_cap": 3498.0
     },
     {
       "symbol": "476550",
-      "name": "TIGER 미국30년국채커버드콜액티브(H)",
       "price": 6470,
       "market_cap": 7292.0
     },
     {
       "symbol": "0142D0",
-      "name": "TIGER 미국AI데이터센터TOP4Plus",
       "price": 6200,
       "market_cap": 632.0
     },
     {
       "symbol": "491830",
-      "name": "TIGER 미국AI반도체팹리스",
       "price": 17280,
       "market_cap": 320.0
     },
     {
       "symbol": "490090",
-      "name": "TIGER 미국AI빅테크10",
       "price": 14010,
       "market_cap": 1870.0
     },
     {
       "symbol": "493810",
-      "name": "TIGER 미국AI빅테크10타겟데일리커버드콜",
       "price": 9640,
       "market_cap": 2068.0
     },
     {
       "symbol": "0102A0",
-      "name": "TIGER 미국AI소프트웨어TOP4Plus",
       "price": 6800,
       "market_cap": 541.0
     },
     {
       "symbol": "0123G0",
-      "name": "TIGER 미국AI전력SMR",
       "price": 4235,
       "market_cap": 894.0
     },
     {
       "symbol": "182480",
-      "name": "TIGER 미국MSCI리츠(합성 H)",
       "price": 13270,
       "market_cap": 1028.0
     },
     {
       "symbol": "360750",
-      "name": "TIGER 미국S&P500",
       "price": 24305,
       "market_cap": 203542.0
     },
     {
       "symbol": "448290",
-      "name": "TIGER 미국S&P500(H)",
       "price": 16955,
       "market_cap": 5383.0
     },
     {
       "symbol": "488500",
-      "name": "TIGER 미국S&P500동일가중",
       "price": 12110,
       "market_cap": 1108.0
     },
     {
       "symbol": "225040",
-      "name": "TIGER 미국S&P500레버리지(합성 H)",
       "price": 60920,
       "market_cap": 536.0
     },
     {
       "symbol": "0238P0",
-      "name": "TIGER 미국S&P500미국채혼합50",
       "price": 9665,
       "market_cap": 565.0
     },
     {
       "symbol": "429000",
-      "name": "TIGER 미국S&P500배당귀족",
       "price": 13425,
       "market_cap": 1994.0
     },
     {
       "symbol": "143850",
-      "name": "TIGER 미국S&P500선물(H)",
       "price": 73560,
       "market_cap": 864.0
     },
     {
       "symbol": "225030",
-      "name": "TIGER 미국S&P500선물인버스(H)",
       "price": 2375,
       "market_cap": 51.0
     },
     {
       "symbol": "482730",
-      "name": "TIGER 미국S&P500타겟데일리커버드콜",
       "price": 10595,
       "market_cap": 6701.0
     },
     {
       "symbol": "133690",
-      "name": "TIGER 미국나스닥100",
       "price": 160075,
       "market_cap": 110356.0
     },
     {
       "symbol": "448300",
-      "name": "TIGER 미국나스닥100(H)",
       "price": 20985,
       "market_cap": 3914.0
     },
     {
       "symbol": "418660",
-      "name": "TIGER 미국나스닥100레버리지(합성)",
       "price": 30940,
       "market_cap": 6637.0
     },
     {
       "symbol": "435420",
-      "name": "TIGER 미국나스닥100채권혼합50",
       "price": 13375,
       "market_cap": 5116.0
     },
     {
       "symbol": "441680",
-      "name": "TIGER 미국나스닥100커버드콜(합성)",
       "price": 9750,
       "market_cap": 2550.0
     },
     {
       "symbol": "486290",
-      "name": "TIGER 미국나스닥100타겟데일리커버드콜",
       "price": 9070,
       "market_cap": 24543.0
     },
     {
       "symbol": "429010",
-      "name": "TIGER 미국나스닥넥스트100",
       "price": 17595,
       "market_cap": 88.0
     },
     {
       "symbol": "203780",
-      "name": "TIGER 미국나스닥바이오",
       "price": 33970,
       "market_cap": 1033.0
     },
     {
       "symbol": "245340",
-      "name": "TIGER 미국다우존스30",
       "price": 32870,
       "market_cap": 1354.0
     },
     {
       "symbol": "456610",
-      "name": "TIGER 미국달러SOFR금리액티브(합성)",
       "price": 58300,
       "market_cap": 7479.0
     },
     {
       "symbol": "329750",
-      "name": "TIGER 미국달러단기채권액티브",
       "price": 12660,
       "market_cap": 7359.0
     },
     {
       "symbol": "261110",
-      "name": "TIGER 미국달러선물레버리지",
       "price": 14975,
       "market_cap": 75.0
     },
     {
       "symbol": "261120",
-      "name": "TIGER 미국달러선물인버스2X",
       "price": 5690,
       "market_cap": 228.0
     },
     {
       "symbol": "494840",
-      "name": "TIGER 미국방산TOP10",
       "price": 11935,
       "market_cap": 394.0
     },
     {
       "symbol": "458730",
-      "name": "TIGER 미국배당다우존스",
       "price": 14860,
       "market_cap": 45851.0
     },
     {
       "symbol": "0008S0",
-      "name": "TIGER 미국배당다우존스타겟데일리커버드콜",
       "price": 9640,
       "market_cap": 3143.0
     },
     {
       "symbol": "458750",
-      "name": "TIGER 미국배당다우존스타겟커버드콜1호",
       "price": 12810,
       "market_cap": 692.0
     },
     {
       "symbol": "458760",
-      "name": "TIGER 미국배당다우존스타겟커버드콜2호",
       "price": 10835,
       "market_cap": 6848.0
     },
     {
       "symbol": "0015K0",
-      "name": "TIGER 미국소비트렌드액티브",
       "price": 6850,
       "market_cap": 49.0
     },
     {
       "symbol": "0183J0",
-      "name": "TIGER 미국우주테크",
       "price": 5960,
       "market_cap": 8955.0
     },
     {
       "symbol": "305080",
-      "name": "TIGER 미국채10년선물",
       "price": 11645,
       "market_cap": 2504.0
     },
     {
       "symbol": "0046A0",
-      "name": "TIGER 미국초단기(3개월이하)국채",
       "price": 9240,
       "market_cap": 4035.0
     },
     {
       "symbol": "465670",
-      "name": "TIGER 미국캐시카우100",
       "price": 16445,
       "market_cap": 197.0
     },
     {
       "symbol": "0223R0",
-      "name": "TIGER 미국테크NYSE100액티브",
       "price": 7280,
       "market_cap": 210.0
     },
     {
       "symbol": "381170",
-      "name": "TIGER 미국테크TOP10 INDXX",
       "price": 27615,
       "market_cap": 34408.0
     },
     {
       "symbol": "472160",
-      "name": "TIGER 미국테크TOP10 INDXX(H)",
       "price": 17395,
       "market_cap": 1731.0
     },
     {
       "symbol": "472170",
-      "name": "TIGER 미국테크TOP10채권혼합",
       "price": 13310,
       "market_cap": 3274.0
     },
     {
       "symbol": "474220",
-      "name": "TIGER 미국테크TOP10타겟커버드콜",
       "price": 13235,
       "market_cap": 3712.0
     },
     {
       "symbol": "458260",
-      "name": "TIGER 미국투자등급회사채액티브(H)",
       "price": 44895,
       "market_cap": 2024.0
     },
     {
       "symbol": "497570",
-      "name": "TIGER 미국필라델피아AI반도체나스닥",
       "price": 17375,
       "market_cap": 7671.0
     },
     {
       "symbol": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
       "price": 33965,
       "market_cap": 47245.0
     },
     {
       "symbol": "423920",
-      "name": "TIGER 미국필라델피아반도체레버리지(합성)",
       "price": 48145,
       "market_cap": 3447.0
     },
     {
       "symbol": "228810",
-      "name": "TIGER 미디어컨텐츠",
       "price": 3155,
       "market_cap": 752.0
     },
     {
       "symbol": "364970",
-      "name": "TIGER 바이오TOP10",
       "price": 6295,
       "market_cap": 2339.0
     },
     {
       "symbol": "091230",
-      "name": "TIGER 반도체",
       "price": 94600,
       "market_cap": 9271.0
     },
     {
       "symbol": "396500",
-      "name": "TIGER 반도체TOP10",
       "price": 25530,
       "market_cap": 65970.0
     },
     {
       "symbol": "488080",
-      "name": "TIGER 반도체TOP10레버리지",
       "price": 15055,
       "market_cap": 4050.0
     },
     {
       "symbol": "0177R0",
-      "name": "TIGER 반도체TOP10커버드콜액티브",
       "price": 7390,
       "market_cap": 5772.0
     },
     {
       "symbol": "211560",
-      "name": "TIGER 배당성장",
       "price": 30605,
       "market_cap": 606.0
     },
     {
       "symbol": "472150",
-      "name": "TIGER 배당커버드콜액티브",
       "price": 14275,
       "market_cap": 22954.0
     },
     {
       "symbol": "138520",
-      "name": "TIGER 삼성그룹",
       "price": 29820,
       "market_cap": 1133.0
     },
     {
       "symbol": "0233J0",
-      "name": "TIGER 삼성전자SK하이닉스미국채혼합50",
       "price": 8735,
       "market_cap": 1747.0
     },
     {
       "symbol": "0195R0",
-      "name": "TIGER 삼성전자단일종목레버리지",
       "price": 5620,
       "market_cap": 4278.0
     },
     {
       "symbol": "157490",
-      "name": "TIGER 소프트웨어",
       "price": 7415,
       "market_cap": 666.0
     },
     {
       "symbol": "0000D0",
-      "name": "TIGER 엔비디아미국채커버드콜밸런스(합성)",
       "price": 7665,
       "market_cap": 487.0
     },
     {
       "symbol": "228800",
-      "name": "TIGER 여행레저",
       "price": 2555,
       "market_cap": 637.0
     },
     {
       "symbol": "227570",
-      "name": "TIGER 우량가치",
       "price": 18740,
       "market_cap": 51.0
     },
     {
       "symbol": "438330",
-      "name": "TIGER 우량회사채액티브",
       "price": 117030,
       "market_cap": 4859.0
     },
     {
       "symbol": "261140",
-      "name": "TIGER 우선주",
       "price": 18575,
       "market_cap": 215.0
     },
     {
       "symbol": "130680",
-      "name": "TIGER 원유선물Enhanced(H)",
       "price": 7320,
       "market_cap": 135.0
     },
     {
       "symbol": "217770",
-      "name": "TIGER 원유선물인버스(H)",
       "price": 1153,
       "market_cap": 319.0
     },
     {
       "symbol": "195930",
-      "name": "TIGER 유로스탁스50(합성 H)",
       "price": 22670,
       "market_cap": 363.0
     },
     {
       "symbol": "225050",
-      "name": "TIGER 유로스탁스레버리지(합성 H)",
       "price": 15345,
       "market_cap": 69.0
     },
     {
       "symbol": "245350",
-      "name": "TIGER 유로스탁스배당30",
       "price": 18070,
       "market_cap": 253.0
     },
     {
       "symbol": "0189B0",
-      "name": "TIGER 은액티브",
       "price": 5510,
       "market_cap": 303.0
     },
     {
       "symbol": "091220",
-      "name": "TIGER 은행",
       "price": 15350,
       "market_cap": 166.0
     },
     {
       "symbol": "466940",
-      "name": "TIGER 은행고배당플러스TOP10",
       "price": 23580,
       "market_cap": 9408.0
     },
     {
       "symbol": "307510",
-      "name": "TIGER 의료기기",
       "price": 10180,
       "market_cap": 46.0
     },
     {
       "symbol": "225060",
-      "name": "TIGER 이머징마켓MSCI레버리지(합성 H)",
       "price": 12200,
       "market_cap": 129.0
     },
     {
       "symbol": "453870",
-      "name": "TIGER 인도니프티50",
       "price": 11755,
       "market_cap": 2927.0
     },
     {
       "symbol": "236350",
-      "name": "TIGER 인도니프티50레버리지(합성)",
       "price": 28665,
       "market_cap": 155.0
     },
     {
       "symbol": "479730",
-      "name": "TIGER 인도빌리언컨슈머",
       "price": 9850,
       "market_cap": 561.0
     },
     {
       "symbol": "123310",
-      "name": "TIGER 인버스",
       "price": 1477,
       "market_cap": 513.0
     },
     {
       "symbol": "365000",
-      "name": "TIGER 인터넷TOP10",
       "price": 3150,
       "market_cap": 318.0
     },
     {
       "symbol": "195920",
-      "name": "TIGER 일본TOPIX(합성 H)",
       "price": 33075,
       "market_cap": 165.0
     },
     {
       "symbol": "241180",
-      "name": "TIGER 일본니케이225",
       "price": 29990,
       "market_cap": 3149.0
     },
     {
       "symbol": "465660",
-      "name": "TIGER 일본반도체FACTSET",
       "price": 17040,
       "market_cap": 358.0
     },
     {
       "symbol": "292560",
-      "name": "TIGER 일본엔선물",
       "price": 7735,
       "market_cap": 472.0
     },
     {
       "symbol": "494670",
-      "name": "TIGER 조선TOP10",
       "price": 13805,
       "market_cap": 3368.0
     },
     {
       "symbol": "451540",
-      "name": "TIGER 종합채권(AA-이상)액티브",
       "price": 54485,
       "market_cap": 10550.0
     },
     {
       "symbol": "150460",
-      "name": "TIGER 중국소비테마",
       "price": 6710,
       "market_cap": 483.0
     },
     {
       "symbol": "0192Z0",
-      "name": "TIGER 중기종합채권(A-이상)액티브",
       "price": 101995,
       "market_cap": 1452.0
     },
     {
       "symbol": "302190",
-      "name": "TIGER 중장기국채",
       "price": 51370,
       "market_cap": 2024.0
     },
     {
       "symbol": "157500",
-      "name": "TIGER 증권",
       "price": 8930,
       "market_cap": 1425.0
     },
     {
       "symbol": "307520",
-      "name": "TIGER 지주회사",
       "price": 18035,
       "market_cap": 2074.0
     },
     {
       "symbol": "0067Y0",
-      "name": "TIGER 차이나AI소프트웨어",
       "price": 7370,
       "market_cap": 70.0
     },
     {
       "symbol": "192090",
-      "name": "TIGER 차이나CSI300",
       "price": 10540,
       "market_cap": 1065.0
     },
     {
       "symbol": "204480",
-      "name": "TIGER 차이나CSI300레버리지(합성)",
       "price": 16755,
       "market_cap": 382.0
     },
     {
       "symbol": "217780",
-      "name": "TIGER 차이나CSI300인버스(합성)",
       "price": 6455,
       "market_cap": 100.0
     },
     {
       "symbol": "245360",
-      "name": "TIGER 차이나HSCEI",
       "price": 10975,
       "market_cap": 236.0
     },
     {
       "symbol": "414780",
-      "name": "TIGER 차이나과창판STAR50(합성)",
       "price": 10195,
       "market_cap": 1855.0
     },
     {
       "symbol": "0067V0",
-      "name": "TIGER 차이나글로벌리더스TOP3+",
       "price": 8340,
       "market_cap": 183.0
     },
     {
       "symbol": "371470",
-      "name": "TIGER 차이나바이오테크SOLACTIVE",
       "price": 7415,
       "market_cap": 392.0
     },
     {
       "symbol": "396520",
-      "name": "TIGER 차이나반도체FACTSET",
       "price": 9715,
       "market_cap": 4049.0
     },
     {
       "symbol": "371460",
-      "name": "TIGER 차이나전기차SOLACTIVE",
       "price": 8180,
       "market_cap": 5749.0
     },
     {
       "symbol": "456680",
-      "name": "TIGER 차이나전기차레버리지(합성)",
       "price": 3780,
       "market_cap": 154.0
     },
     {
       "symbol": "0133E0",
-      "name": "TIGER 차이나증권",
       "price": 7020,
       "market_cap": 74.0
     },
     {
       "symbol": "396510",
-      "name": "TIGER 차이나클린에너지SOLACTIVE",
       "price": 6060,
       "market_cap": 107.0
     },
     {
       "symbol": "0047A0",
-      "name": "TIGER 차이나테크TOP10",
       "price": 9040,
       "market_cap": 1374.0
     },
     {
       "symbol": "117690",
-      "name": "TIGER 차이나항셍30",
       "price": 17390,
       "market_cap": 87.0
     },
     {
       "symbol": "371160",
-      "name": "TIGER 차이나항셍테크",
       "price": 5415,
       "market_cap": 3934.0
     },
     {
       "symbol": "438320",
-      "name": "TIGER 차이나항셍테크레버리지(합성 H)",
       "price": 3340,
       "market_cap": 151.0
     },
     {
       "symbol": "0053L0",
-      "name": "TIGER 차이나휴머노이드로봇",
       "price": 8135,
       "market_cap": 2184.0
     },
     {
       "symbol": "0117V0",
-      "name": "TIGER 코리아AI전력기기TOP3플러스",
       "price": 11300,
       "market_cap": 6000.0
     },
     {
       "symbol": "292150",
-      "name": "TIGER 코리아TOP10",
       "price": 26515,
       "market_cap": 12595.0
     },
     {
       "symbol": "0052D0",
-      "name": "TIGER 코리아배당다우존스",
       "price": 13595,
       "market_cap": 2984.0
     },
     {
       "symbol": "0104P0",
-      "name": "TIGER 코리아배당다우존스위클리커버드콜",
       "price": 9660,
       "market_cap": 155.0
     },
     {
       "symbol": "496080",
-      "name": "TIGER 코리아밸류업",
       "price": 24205,
       "market_cap": 3570.0
     },
     {
       "symbol": "0091P0",
-      "name": "TIGER 코리아원자력",
       "price": 10500,
       "market_cap": 4704.0
     },
     {
       "symbol": "471780",
-      "name": "TIGER 코리아테크액티브",
       "price": 25495,
       "market_cap": 1991.0
     },
     {
       "symbol": "0148J0",
-      "name": "TIGER 코리아휴머노이드로봇산업",
       "price": 7610,
       "market_cap": 5350.0
     },
     {
       "symbol": "232080",
-      "name": "TIGER 코스닥150",
       "price": 11020,
       "market_cap": 10998.0
     },
     {
       "symbol": "233160",
-      "name": "TIGER 코스닥150 레버리지",
       "price": 4245,
       "market_cap": 1280.0
     },
     {
       "symbol": "261060",
-      "name": "TIGER 코스닥150IT",
       "price": 18730,
       "market_cap": 191.0
     },
     {
       "symbol": "261070",
-      "name": "TIGER 코스닥150바이오테크",
       "price": 8320,
       "market_cap": 391.0
     },
     {
       "symbol": "250780",
-      "name": "TIGER 코스닥150선물인버스",
       "price": 2980,
       "market_cap": 63.0
     },
     {
       "symbol": "461580",
-      "name": "TIGER 코스닥글로벌",
       "price": 11640,
       "market_cap": 76.0
     },
     {
       "symbol": "0204S0",
-      "name": "TIGER 코스닥액티브",
       "price": 5840,
       "market_cap": 246.0
     },
     {
       "symbol": "277630",
-      "name": "TIGER 코스피",
       "price": 52805,
       "market_cap": 4119.0
     },
     {
       "symbol": "210780",
-      "name": "TIGER 코스피고배당",
       "price": 20895,
       "market_cap": 677.0
     },
     {
       "symbol": "277640",
-      "name": "TIGER 코스피대형주",
       "price": 27340,
       "market_cap": 478.0
     },
     {
       "symbol": "277650",
-      "name": "TIGER 코스피중형주",
       "price": 18115,
       "market_cap": 72.0
     },
     {
       "symbol": "376410",
-      "name": "TIGER 탄소효율그린뉴딜",
       "price": 17950,
       "market_cap": 144.0
     },
     {
       "symbol": "447770",
-      "name": "TIGER 테슬라채권혼합Fn",
       "price": 14175,
       "market_cap": 4373.0
     },
     {
       "symbol": "0060H0",
-      "name": "TIGER 토탈월드스탁액티브",
       "price": 11525,
       "market_cap": 3803.0
     },
     {
       "symbol": "387280",
-      "name": "TIGER 퓨처모빌리티액티브",
       "price": 9075,
       "market_cap": 113.0
     },
     {
       "symbol": "449690",
-      "name": "TIGER 한중반도체(합성)",
       "price": 35090,
       "market_cap": 263.0
     },
     {
       "symbol": "449680",
-      "name": "TIGER 한중전기차(합성)",
       "price": 8010,
       "market_cap": 68.0
     },
     {
       "symbol": "143860",
-      "name": "TIGER 헬스케어",
       "price": 31840,
       "market_cap": 1299.0
     },
     {
       "symbol": "0241R0",
-      "name": "TIGER 현대차LG전자고정피지컬AI밸류체인",
       "price": 7675,
       "market_cap": 146.0
     },
     {
       "symbol": "138540",
-      "name": "TIGER 현대차그룹플러스",
       "price": 37980,
       "market_cap": 4732.0
     },
     {
       "symbol": "228790",
-      "name": "TIGER 화장품",
       "price": 3490,
       "market_cap": 1857.0
     },
     {
       "symbol": "441800",
-      "name": "TIME Korea플러스배당액티브",
       "price": 22475,
       "market_cap": 6306.0
     },
     {
       "symbol": "463050",
-      "name": "TIME K바이오액티브",
       "price": 9660,
       "market_cap": 1961.0
     },
     {
       "symbol": "404120",
-      "name": "TIME K신재생에너지액티브",
       "price": 18020,
       "market_cap": 144.0
     },
     {
       "symbol": "385710",
-      "name": "TIME K이노베이션액티브",
       "price": 9115,
       "market_cap": 91.0
     },
     {
       "symbol": "410870",
-      "name": "TIME K컬처액티브",
       "price": 8145,
       "market_cap": 114.0
     },
     {
       "symbol": "456600",
-      "name": "TIME 글로벌AI인공지능액티브",
       "price": 42450,
       "market_cap": 14492.0
     },
     {
       "symbol": "485810",
-      "name": "TIME 글로벌바이오액티브",
       "price": 11935,
       "market_cap": 149.0
     },
     {
       "symbol": "494180",
-      "name": "TIME 글로벌소비트렌드액티브",
       "price": 12245,
       "market_cap": 92.0
     },
     {
       "symbol": "478150",
-      "name": "TIME 글로벌우주테크&방산액티브",
       "price": 16540,
       "market_cap": 1894.0
     },
     {
       "symbol": "0113D0",
-      "name": "TIME 글로벌탑픽액티브",
       "price": 10890,
       "market_cap": 555.0
     },
     {
       "symbol": "0185L0",
-      "name": "TIME 글로벌휴머노이드로봇산업액티브",
       "price": 5945,
       "market_cap": 398.0
     },
     {
       "symbol": "426020",
-      "name": "TIME 미국S&P500액티브",
       "price": 28350,
       "market_cap": 3680.0
     },
     {
       "symbol": "426030",
-      "name": "TIME 미국나스닥100액티브",
       "price": 35270,
       "market_cap": 19906.0
     },
     {
       "symbol": "0019K0",
-      "name": "TIME 미국나스닥100채권혼합50액티브",
       "price": 11790,
       "market_cap": 5270.0
     },
     {
       "symbol": "0043Y0",
-      "name": "TIME 차이나AI테크액티브",
       "price": 13080,
       "market_cap": 1897.0
     },
     {
       "symbol": "495060",
-      "name": "TIME 코리아밸류업액티브",
       "price": 20745,
       "market_cap": 1286.0
     },
     {
       "symbol": "0162Y0",
-      "name": "TIME 코스닥액티브",
       "price": 5340,
       "market_cap": 1864.0
     },
     {
       "symbol": "385720",
-      "name": "TIME 코스피액티브",
       "price": 18610,
       "market_cap": 2587.0
     },
     {
       "symbol": "108590",
-      "name": "TREX 200",
       "price": 79140,
       "market_cap": 158.0
     },
     {
       "symbol": "145850",
-      "name": "TREX 펀더멘탈 200",
       "price": 95225,
       "market_cap": 238.0
     },
     {
       "symbol": "472720",
-      "name": "TRUSTON 주주가치액티브",
       "price": 20150,
       "market_cap": 105.0
     },
     {
       "symbol": "496130",
-      "name": "TRUSTON 코리아밸류업액티브",
       "price": 19725,
       "market_cap": 107.0
     },
     {
       "symbol": "0184V0",
-      "name": "UNICORN K바이오액티브",
       "price": 4215,
       "market_cap": 36.0
     },
     {
       "symbol": "433250",
-      "name": "UNICORN R&D 액티브",
       "price": 17145,
       "market_cap": 43.0
     },
     {
       "symbol": "494220",
-      "name": "UNICORN SK하이닉스밸류체인액티브",
       "price": 32660,
       "market_cap": 1061.0
     },
     {
       "symbol": "470310",
-      "name": "UNICORN 생성형AI강소기업액티브",
       "price": 17485,
       "market_cap": 52.0
     },
     {
       "symbol": "476000",
-      "name": "UNICORN 포스트IPO액티브",
       "price": 3530,
       "market_cap": 19.0
     },
     {
       "symbol": "448100",
-      "name": "WON 200",
       "price": 81580,
       "market_cap": 734.0
     },
     {
       "symbol": "413930",
-      "name": "WON AI ESG액티브",
       "price": 20440,
       "market_cap": 102.0
     },
     {
       "symbol": "0088N0",
-      "name": "WON K-글로벌수급상위",
       "price": 9160,
       "market_cap": 115.0
     },
     {
       "symbol": "458030",
-      "name": "WON 국공채머니마켓액티브",
       "price": 55450,
       "market_cap": 932.0
     },
     {
       "symbol": "426150",
-      "name": "WON 대한민국국고채액티브",
       "price": 53595,
       "market_cap": 312.0
     },
     {
       "symbol": "0177A0",
-      "name": "WON 두산그룹포커스",
       "price": 5550,
       "market_cap": 147.0
     },
     {
       "symbol": "444490",
-      "name": "WON 미국S&P500",
       "price": 18530,
       "market_cap": 843.0
     },
     {
       "symbol": "489290",
-      "name": "WON 미국빌리어네어",
       "price": 14095,
       "market_cap": 261.0
     },
     {
       "symbol": "440910",
-      "name": "WON 미국우주항공방산",
       "price": 20110,
       "market_cap": 442.0
     },
     {
       "symbol": "474590",
-      "name": "WON 반도체밸류체인액티브",
       "price": 32985,
       "market_cap": 2474.0
     },
     {
       "symbol": "0203S0",
-      "name": "WON 삼성전자현대차채권혼합50",
       "price": 7400,
       "market_cap": 222.0
     },
     {
       "symbol": "496020",
-      "name": "WON 전단채플러스액티브",
       "price": 52885,
       "market_cap": 9851.0
     },
     {
       "symbol": "488720",
-      "name": "WON 종합채권(AA-이상)액티브",
       "price": 50205,
       "market_cap": 1699.0
     },
     {
       "symbol": "0203R0",
-      "name": "WON 중단기종합채권(A-이상)액티브",
       "price": 50900,
       "market_cap": 404.0
     },
     {
       "symbol": "0154F0",
-      "name": "WON 초대형IB&금융지주",
       "price": 10380,
       "market_cap": 280.0
     },
     {
       "symbol": "0226G0",
-      "name": "WON 피지컬AI TOP2플러스액티브",
       "price": 8660,
       "market_cap": 61.0
     },
     {
       "symbol": "480460",
-      "name": "WON 한국부동산TOP3플러스",
       "price": 8220,
       "market_cap": 70.0
     },
     {
       "symbol": "0053M0",
-      "name": "더제이 중소형포커스액티브",
       "price": 9425,
       "market_cap": 42.0
     },
     {
       "symbol": "0112X0",
-      "name": "마이티 200TR",
       "price": 30040,
       "market_cap": 345.0
     },
     {
       "symbol": "0191M0",
-      "name": "마이티 5월만기자동연장특수채(AAA)액티브",
       "price": 101420,
       "market_cap": 420.0
     },
     {
       "symbol": "0222F0",
-      "name": "마이티 AI데이터센터밸류체인",
       "price": 9170,
       "market_cap": 101.0
     },
     {
       "symbol": "442260",
-      "name": "마이티 다이나믹퀀트액티브",
       "price": 27505,
       "market_cap": 352.0
     },
     {
       "symbol": "0236J0",
-      "name": "마이티 미국피지컬AI액티브",
       "price": 8780,
       "market_cap": 70.0
     },
     {
       "symbol": "0001P0",
-      "name": "마이티 바이오시밀러&CDMO액티브",
       "price": 7650,
       "market_cap": 86.0
     },
     {
       "symbol": "0255G0",
-      "name": "마이티 삼성그룹테크TOP3&하드웨어",
       "price": 7540,
       "market_cap": 83.0
     },
     {
       "symbol": "0229F0",
-      "name": "마이티 신약포커스바이오액티브",
       "price": 6630,
       "market_cap": 46.0
     },
     {
       "symbol": "159800",
-      "name": "마이티 코스피100",
       "price": 62750,
       "market_cap": 176.0
     },
     {
       "symbol": "0007N0",
-      "name": "아이엠에셋 200",
       "price": 79375,
       "market_cap": 635.0
     },
     {
       "symbol": "462340",
-      "name": "에셋플러스 글로벌다이나믹시니어액티브",
       "price": 15310,
       "market_cap": 77.0
     },
     {
       "symbol": "433220",
-      "name": "에셋플러스 글로벌대장장이액티브",
       "price": 23650,
       "market_cap": 175.0
     },
     {
       "symbol": "451150",
-      "name": "에셋플러스 글로벌영에이지액티브",
       "price": 16225,
       "market_cap": 101.0
     },
     {
       "symbol": "477490",
-      "name": "에셋플러스 글로벌일등기업포커스10액티브",
       "price": 16240,
       "market_cap": 146.0
     },
     {
       "symbol": "407830",
-      "name": "에셋플러스 글로벌플랫폼액티브",
       "price": 12360,
       "market_cap": 297.0
     },
     {
       "symbol": "0002C0",
-      "name": "에셋플러스 인도일등기업포커스20액티브",
       "price": 10415,
       "market_cap": 112.0
     },
     {
       "symbol": "474920",
-      "name": "에셋플러스 차이나일등기업포커스10액티브",
       "price": 15100,
       "market_cap": 142.0
     },
     {
       "symbol": "442090",
-      "name": "에셋플러스 코리아대장장이액티브",
       "price": 22275,
       "market_cap": 334.0
     },
     {
       "symbol": "407820",
-      "name": "에셋플러스 코리아플랫폼액티브",
       "price": 4820,
       "market_cap": 92.0
     },
     {
       "symbol": "152870",
-      "name": "파워 200",
       "price": 79930,
       "market_cap": 1159.0
     },
     {
       "symbol": "491510",
-      "name": "파워 K-주주가치액티브",
       "price": 15400,
       "market_cap": 131.0
     },
     {
       "symbol": "0242S0",
-      "name": "파워 SK그룹",
       "price": 7840,
       "market_cap": 137.0
     },
     {
       "symbol": "192720",
-      "name": "파워 고배당저변동성",
       "price": 52755,
       "market_cap": 269.0
     },
     {
       "symbol": "498180",
-      "name": "파워 종합채권(AA-이상)액티브",
       "price": 96160,
       "market_cap": 1399.0
     },
     {
       "symbol": "140950",
-      "name": "파워 코스피100",
       "price": 61805,
       "market_cap": 346.0
     }
