@@ -23,9 +23,10 @@
     scrollbar-width: none;
   }
   .ticker::-webkit-scrollbar { display: none; }
-  .ticker-track { display: flex; gap: 20px; min-width: max-content; }
+  .ticker-track { display: flex; flex-wrap: wrap; gap: 20px; }
+  .line-break { flex: 0 0 100%; height: 0; }
 
-  .item { display: block; grid-template-columns: auto auto; column-gap: 10px; align-items: end; }
+  .item { display: grid; grid-template-columns: auto auto; column-gap: 10px; align-items: end; }
   .item .name  { grid-column: 1 / -1; color: var(--name); font-weight: 600; font-size: 11px; line-height: 1.2; white-space: nowrap; }
   .item .price { grid-column: 1; color: var(--text); font-weight: 600; font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
   .item .chg   { grid-column: 1; font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -68,18 +69,20 @@ const CONFIG = {
   free: { proxy: "https://ticker-proxy.skykrkrk.workers.dev" },
 
   // 기본 표시 종목. 순서/종목은 여기서 바꾸면 됨.
+  // 각 항목에 chart: true를 설정하면 sparkline을 표시
 //    { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 },
   items: [
-    { name: "Nasdaq 100",     yahoo: "^NDX",  demo: 27400 },
-    { name: "Nasdaq Futures", yahoo: "NQ=F", demo: 27400 },
-    { name: "S&P 500",        yahoo: "^GSPC", demo: 7440  },
-    { name: "S&P Futures",    yahoo: "ES=F", demo: 7440  },
-    { name: "VIX",            yahoo: "^VIX", demo: 22.9 },
-    { name: "Bitcoin",        yahoo: "BTC-USD", demo: 7440  },
-    { name: "SPYM",           yahoo: "SPYM", demo: 7440  },
-    { name: "QQQM",           yahoo: "QQQM", demo: 7440  },
-    { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", demo: 5000 },
-    { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", demo: 600 },
+    { name: "Nasdaq 100",     yahoo: "^NDX", chart: true, demo: 27400 },
+    { name: "Nasdaq Futures", yahoo: "NQ=F", chart: true, demo: 27400 },
+    { name: "S&P 500",        yahoo: "^GSPC", chart: true, demo: 7440 },
+    { name: "S&P Futures",    yahoo: "ES=F", chart: true, demo: 7440  },
+    { name: "VIX",            yahoo: "^VIX", chart: true, demo: 22.9  },
+    { name: "BTC",            yahoo: "BTC-USD", chart: true, demo: 67440 },
+    { name: "SCHD",           yahoo: "SCHD", chart: true, demo: 86.5  },
+    { name: "SPYM",           yahoo: "SPYM", chart: true, demo: 86.5  },
+    { name: "QQQM",           yahoo: "QQQM", chart: true, demo: 270   },
+    { name: "KOSPI",          naver: "KOSPI", chart: false, demo: 5000 },
+    { name: "KOSDAQ",         naver: "KOSDAQ", chart: false, demo: 600 },
   ]
 };
 
@@ -201,6 +204,7 @@ function sparkline(series, prev, up, id) {
 }
 
 function renderItem(item, q, idx) {
+  if (item.name === "---") return '<div class="line-break" aria-hidden="true"></div>';
   if (!q) {
     return `<div class="item"><div class="name">${item.name}</div><div class="price na">—</div><div class="chg na">데이터 없음</div></div>`;
   }
@@ -212,20 +216,16 @@ function renderItem(item, q, idx) {
     <div class="name">${item.name}</div>
     <div class="price">${fmt(q.price)}</div>
     <div class="chg ${cls}">${sign(change)}${fmt(Math.abs(change))} ${sign(pct)}${fmt(Math.abs(pct))}%</div>
+    ${item.chart ? sparkline(q.series, q.prevClose, change >= 0, idx) : ""}
   </div>`;
-//  return `
-//  <div class="item">
-//    <div class="name">${item.name}</div>
-//    <div class="price">${fmt(q.price)}</div>
-//    <div class="chg ${cls}">${sign(change)}${fmt(Math.abs(change))} ${sign(pct)}${fmt(Math.abs(pct))}%</div>
-//    ${sparkline(q.series, q.prevClose, change >= 0, idx)}
-//  </div>`;
 }
 
 async function refresh() {
   const all = {};  // custom 어댑터용 1회 호출 캐시
   const fetcher = providers[CONFIG.provider];
-  const results = await Promise.allSettled(CONFIG.items.map(it => fetcher(it, all)));
+  const results = await Promise.allSettled(CONFIG.items.map(it =>
+    it.name === "---" ? Promise.resolve(null) : fetcher(it, all)
+  ));
   document.getElementById("track").innerHTML = CONFIG.items
     .map((it, i) => renderItem(it, results[i].status === "fulfilled" ? results[i].value : null, i))
     .join("");
