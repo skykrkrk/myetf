@@ -3,8 +3,8 @@ name: Update ETF Data and Deploy
 
 on:
   schedule:
-    # 가격: 한국시간 매일 오전 9시 1분, 오후 11시 1분
-    - cron: '1 0 * * *'
+    # 가격: 한국시간 매일 오전 8시 1분, 오후 11시 1분
+    - cron: '1 23 * * *'
     - cron: '1 14 * * *'
     # 상세: 한국시간 매월 1일과 15일 오전 9시 2분
     - cron: '2 0 1,15 * *'
@@ -51,7 +51,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Collect ETF prices
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 0 * * *' || github.event.schedule == '1 14 * * *'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 23 * * *' || github.event.schedule == '1 14 * * *'
         run: |
           python collector/update_data.py
 
@@ -62,7 +62,7 @@ jobs:
 
       # Collect Korea Fear & Greed data every day at 9 AM KST (0 UTC)
       - name: Collect Fear & Greed data
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 0 * * *'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '1 23 * * *'
         run: |
           python collector/update_feargreed.py
 
