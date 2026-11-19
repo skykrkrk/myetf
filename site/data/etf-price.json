@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-19 08:25:35",
+  "updated_at": "2026-11-19 09:21:45",
   "price_date": "2026-11-19",
   "price_date_note": "가격 조회일 기준. 실제 마지막 거래일과 차이가 있을 수 있음.",
   "source": {
     "listing": "FinanceDataReader / Naver Finance",
     "price": "FinanceDataReader / Naver Finance ETF listing",
-    "market_cap": "KRX ETF all-items quote (market cap in KRW 100M; date fallback)"
+    "market_cap": "FinanceDataReader / Naver Finance ETF listing (KRW 100M)"
   },
   "total_count": 1190,
   "funds": [
