@@ -27,11 +27,11 @@
   .line-break { flex: 0 0 100%; height: 0; }
 
   .item { display: grid; grid-template-columns: auto; column-gap: 0px; align-items: end; }
-  .item.has-chart { grid-template-columns: 100px 76px; }
+  .item.has-chart { grid-template-columns: 90px 76px; }
   .item .name  { grid-column: 1 / -1; color: var(--name); font-weight: 600; font-size: 11px; line-height: 1.2; white-space: nowrap; }
   .item .price { grid-column: 1; color: var(--text); font-weight: 600; font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
   .item .chg   { grid-column: 1; font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .item.has-chart .chg { max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+  .item.has-chart .chg { max-width: 110px; overflow: hidden; text-overflow: ellipsis; }
   .item .spark { grid-column: 2; grid-row: 2 / span 2; align-self: start; width: 54px; height: 24px; }
   .up   { color: var(--up); }
   .down { color: var(--down); }
@@ -225,8 +225,8 @@ function renderItem(item, q, idx) {
   return `
   <div class="${itemClass}">
     <div class="name">${item.name}</div>
-    <div class="price">${fmt(q.price)}</div>
-    <div class="chg ${cls}">${sign(change)}${fmt(Math.abs(change))} ${sign(pct)}${fmt(Math.abs(pct))}%</div>
+    <div class="price">${fmt(q.price, item.yahoo?.endsWith(".KS") ? 0 : 2)}</div>
+    <div class="chg ${cls}">${sign(change)}${fmt(Math.abs(change), item.yahoo?.endsWith(".KS") ? 0 : 2)} ${sign(pct)}${fmt(Math.abs(pct))}%</div>
     ${item.chart ? sparkline(q.series, q.prevClose, change >= 0, idx) : ""}
   </div>`;
 }
