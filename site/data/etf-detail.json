@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-19 08:25:39",
+  "updated_at": "2026-11-19 09:21:47",
   "source": {
     "distribution_details": "SEIBro ETF payment status for distribution amount and settlement tax standard price; daily standard-price history for ex-date tax standard price"
   },
-  "total_count": 1189,
+  "total_count": 1190,
   "monthly_count": 190,
-  "dividend_available_count": 961,
+  "dividend_available_count": 962,
   "classification_rule": "최근 12개월 분배월이 8개월 이상이거나, 상장 1년 미만이며 최근 3개 분배월 간격이 월 단위인 ETF",
   "funds": [
     {
@@ -23434,6 +23434,34 @@
           "settlement_tax_standard_price": 10083.5,
           "tax_base": 10.0,
           "distribution_yield": 0.0711
+        }
+      ]
+    },
+    {
+      "symbol": "363570",
+      "name": "KODEX 장기종합채권(AA-이상)액티브",
+      "dividend_12m": 1469.0,
+      "annual_yield": 1.5329,
+      "distribution_yield_12m": 1.5329,
+      "yield_event_count_12m": 1,
+      "yield_event_count_attempted_12m": 1,
+      "monthly_dividend_avg": 122.4167,
+      "is_monthly": false,
+      "category": "채권",
+      "region": "혼합/미분류",
+      "dividend_status": "available",
+      "event_count_12m": 1,
+      "dividend_months_12m": 1,
+      "tax_base_event_count": 1,
+      "events": [
+        {
+          "ex_date": "2025-12-12",
+          "distribution_record_date": "2025-12-15",
+          "amount": 1469.0,
+          "ex_date_tax_standard_price": 97051.07,
+          "settlement_tax_standard_price": 97051.07,
+          "tax_base": 0,
+          "distribution_yield": 1.5329
         }
       ]
     },
