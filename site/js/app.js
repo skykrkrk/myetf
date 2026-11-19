@@ -68,7 +68,11 @@ function fearRating(rating) {
 }
 
 function fearSegmentIndex(score) {
-  return Math.min(4, Math.floor(Math.max(0, Math.min(100, Number(score))) / 20));
+  if (score <=25) return 0;
+  if (score <=45) return 1;
+  if (score <=55) return 2;
+  if (score <=75) return 3;
+  return 4;
 }
 
 function fearDelta(current, previous, label) {
