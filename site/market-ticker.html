@@ -58,14 +58,15 @@ const CONFIG = {
   // "demo"  : 샘플(가짜) 데이터. UI 확인용. 화면에 DEMO 표시가 뜸
   // "eodhd" : EODHD API 직접 호출 (키가 페이지에 노출됨 → 개인 테스트용)
   // "custom": 내 서버/프록시가 주는 JSON 사용 (실서비스 권장)
-  // "free"  : API 키/라이선스 없이 네이버(KOSPI 200) + 야후(나스닥100, S&P500) 비공식 공개 엔드포인트 사용
+  // "free"  : 네이버/야후 시세. 야간선물은 apt2.me 시세를 별도 provider로 사용
   provider: "free",
   refreshSeconds: 5,
 
   eodhd:  { apiKey: "YOUR_API_KEY", interval: "5m" },
   custom: { endpoint: "/api/quotes" },   // GET {endpoint}?symbols=A,B,C
+  apt2: { endpoint: "https://apt2.me/apt/get_realtime_indices.jsp" },
 
-  // "free" 전용. 브라우저에서 직접 호출하면 CORS로 막힐 수 있음(미검증).
+  // Yahoo, Naver, apt2 시세용 CORS 프록시.
   // 막히면 worker.js를 Cloudflare Workers에 올리고 그 주소를 아래에 넣으세요.
   // 예) "https://ticker-proxy.내계정.workers.dev"   (빈 문자열이면 직접 호출)
   free: { proxy: "https://ticker-proxy.skykrkrk.workers.dev" },
@@ -90,17 +91,50 @@ const CONFIG = {
     { name: "QQQM",           yahoo: "QQQM", chart: true, demo: 270   },
     { name: "---" },
     { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", chart: true, demo: 5000 },
+    { name: "야간선물(K200)", code: "EUREX_FBK1", provider: "apt2", chart: true },
     { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", chart: true, demo: 600 },
     { name: "삼성전자",        yahoo: "005930.KS", chart: true, demo: 600 },
     { name: "SK하이닉스",      yahoo: "000660.KS", chart: true, demo: 600 },
   ]
 };
 
+// apt2 exposes no history here, so the sparkline uses distinct sampled quotes.
+const apt2Series = [];
+
 /* =========================================================
  * 데이터 공급자 어댑터
  * 반환 형식: { price, prevClose, series: [number, ...] }
  * ========================================================= */
 const providers = {
+
+  async apt2(item) {
+    const url = CONFIG.free.proxy
+      ? `${CONFIG.free.proxy}?url=${encodeURIComponent(CONFIG.apt2.endpoint)}`
+      : CONFIG.apt2.endpoint;
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error("apt2 " + res.status);
+    const rows = await res.json();
+    if (!Array.isArray(rows)) throw new Error("apt2 returned an invalid quote list");
+
+    const quote = rows.find(row => row && row.code === item.code);
+    if (!quote || quote.name !== item.name) throw new Error("apt2 quote not found: " + item.code);
+    const price = Number(quote.current);
+    const prevClose = Number(quote.open_val);
+    const change = Number(quote.change);
+    if (quote.current === null || quote.current === undefined ||
+        quote.open_val === null || quote.open_val === undefined ||
+        quote.change === null || quote.change === undefined ||
+        !Number.isFinite(price) || !Number.isFinite(prevClose) || prevClose <= 0 ||
+        !Number.isFinite(change)) {
+      throw new Error("apt2 quote has invalid price fields: " + item.code);
+    }
+
+    if (apt2Series.length === 0 || apt2Series[apt2Series.length - 1] !== price) {
+      apt2Series.push(price);
+      if (apt2Series.length > 80) apt2Series.shift();
+    }
+    return { price, prevClose, change, series: apt2Series.slice() };
+  },
 
   // 가짜 데이터 (랜덤워크)
   async demo(item) {
@@ -219,7 +253,7 @@ function renderItem(item, q, idx) {
   if (!q) {
     return `<div class="${itemClass}"><div class="name">${item.name}</div><div class="price na">—</div><div class="chg na">데이터 없음</div></div>`;
   }
-  const change = q.price - q.prevClose;
+  const change = Number.isFinite(q.change) ? q.change : q.price - q.prevClose;
   const pct = q.prevClose ? (change / q.prevClose) * 100 : 0;
   const cls = change >= 0 ? "up" : "down";
   return `
@@ -235,12 +269,12 @@ async function refresh() {
   const all = {};  // custom 어댑터용 1회 호출 캐시
   const fetcher = providers[CONFIG.provider];
   const results = await Promise.allSettled(CONFIG.items.map(it =>
-    it.name === "---" ? Promise.resolve(null) : fetcher(it, all)
+    it.name === "---" ? Promise.resolve(null) : (it.provider ? providers[it.provider] : fetcher)(it, all)
   ));
   document.getElementById("track").innerHTML = CONFIG.items
     .map((it, i) => renderItem(it, results[i].status === "fulfilled" ? results[i].value : null, i))
     .join("");
-  results.forEach((r, i) => r.status === "rejected" && console.warn(CONFIG.items[i].symbol, r.reason));
+  results.forEach((r, i) => r.status === "rejected" && console.warn(CONFIG.items[i].symbol || CONFIG.items[i].name, r.reason));
 }
 
 if (CONFIG.provider === "demo") {

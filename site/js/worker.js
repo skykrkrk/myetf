@@ -5,7 +5,8 @@
 const ALLOW_HOSTS = [
   "query1.finance.yahoo.com",
   "query2.finance.yahoo.com",
-  "polling.finance.naver.com"
+  "polling.finance.naver.com",
+  "apt2.me"
 ];
 
 // 내 사이트에서만 쓰게 하려면 "*" 대신 "https://내도메인.com" 으로 바꾸세요.
@@ -16,13 +17,19 @@ export default {
     const target = new URL(request.url).searchParams.get("url");
     let u;
     try { u = new URL(target); } catch { return new Response("bad url", { status: 400 }); }
-    if (u.protocol !== "https:" || !ALLOW_HOSTS.includes(u.hostname)) {
+    if (u.protocol !== "https:" || !ALLOW_HOSTS.includes(u.hostname) ||
+        (u.hostname === "apt2.me" && u.pathname !== "/apt/get_realtime_indices.jsp")) {
       return new Response("forbidden host", { status: 403 });
     }
 
+    const requestHeaders = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" };
+    if (u.hostname === "apt2.me") {
+      requestHeaders.Referer = "https://apt2.me";
+      requestHeaders["X-Requested-With"] = "XMLHttpRequest";
+    }
     const upstream = await fetch(u.toString(), {
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; ticker-proxy)" },
-      cf: { cacheTtl: 5, cacheEverything: true }   // 30초 캐시: 상대 서버에 부담을 줄임
+      headers: requestHeaders,
+      cf: { cacheTtl: 30, cacheEverything: true }   // 30초 캐시: 상대 서버에 부담을 줄임
     });
 
     const headers = new Headers(upstream.headers);
