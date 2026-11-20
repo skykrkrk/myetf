@@ -73,28 +73,26 @@ const CONFIG = {
 
   // 기본 표시 종목. 순서/종목은 여기서 바꾸면 됨.
   // 각 항목에 chart: true를 설정하면 sparkline을 표시
-//    { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 },
+  //  { name: "KOSPI 200",  symbol: "KS200.INDX", yahoo: "^KS200", naver: "KPI200", demo: 1090 },
+  //  { name: "---" },
   items: [
+    { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", chart: true, demo: 5000 },
+    { name: "K200 야간선물",   code:  "EUREX_FBK1", provider: "apt2", chart: true },
+    { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", chart: true, demo: 600 },
+    { name: "삼성전자",        yahoo: "005930.KS", chart: true, demo: 600 },
+    { name: "SK하이닉스",      yahoo: "000660.KS", chart: true, demo: 600 },
     { name: "Nasdaq 100",     yahoo: "^NDX", chart: true, demo: 27400 },
     { name: "Nasdaq Futures", yahoo: "NQ=F", chart: true, demo: 27400 },
     { name: "S&P 500",        yahoo: "^GSPC", chart: true, demo: 7440 },
     { name: "S&P Futures",    yahoo: "ES=F", chart: true, demo: 7440  },
-    { name: "---" },
     { name: "VIX",            yahoo: "^VIX", chart: true, demo: 22.9  },
     { name: "Bitcoin USD",    yahoo: "BTC-USD", chart: true, demo: 67440 },
     { name: "Brent Oil",      yahoo: "BZ=F", chart: true, demo: 80.00 },
     { name: "10-Yr Bond",     yahoo: "^TNX", chart: true, demo: 5.00 },
-    { name: "---" },
     { name: "NVDA",           yahoo: "NVDA", chart: true, demo: 200   },
     { name: "SCHD",           yahoo: "SCHD", chart: true, demo: 86.5  },
     { name: "SPYM",           yahoo: "SPYM", chart: true, demo: 86.5  },
-    { name: "QQQM",           yahoo: "QQQM", chart: true, demo: 270   },
-    { name: "---" },
-    { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", chart: true, demo: 5000 },
-    { name: "야간선물(K200)", code: "EUREX_FBK1", provider: "apt2", chart: true },
-    { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", chart: true, demo: 600 },
-    { name: "삼성전자",        yahoo: "005930.KS", chart: true, demo: 600 },
-    { name: "SK하이닉스",      yahoo: "000660.KS", chart: true, demo: 600 },
+    { name: "QQQM",           yahoo: "QQQM", chart: true, demo: 270   }
   ]
 };
 
