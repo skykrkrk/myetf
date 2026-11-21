@@ -12,16 +12,16 @@
   "probabilities": [
     {
       "range": "3.75%–4.00%",
-      "probability": 7.0,
+      "probability": 9.8,
       "move": 0,
       "type": "hold"
     },
     {
       "range": "4.00%–4.25%",
-      "probability": 93.0,
+      "probability": 90.2,
       "move": 1,
       "type": "hike"
     }
   ],
-  "generated_at": "2026-11-20T21:44+00:00"
+  "generated_at": "2026-11-21T20:26+00:00"
 }
