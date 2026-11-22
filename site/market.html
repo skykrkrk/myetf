@@ -131,7 +131,7 @@
         <div class="card" id="card-${asset.id}">
           <div class="card-top">
             <div>
-              <div class="name">${asset.name}<span class="badge">${asset.source === "hl" ? "PERP" : "INDEX"}</span></div>
+              <div class="name">${asset.name}${asset.source === "hl" ? '<span class="badge">PERP</span>' : ""}</div>
               <div class="symbol" id="sym-${asset.id}">심볼 확인 중...</div>
             </div>
             <div class="price-box">
