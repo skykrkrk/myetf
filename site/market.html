@@ -6,45 +6,52 @@
   <title>실시간 지수 & 영구선물 Sparkline 모니터</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --up: #22c55e;
-      --down: #ef4444;
-      --border: #334155;
+      --bg: #101319;
+      --card: #191e27;
+      --text: #edf0f5;
+      --muted: #a1aaba;
+      --up: #80c6a2;
+      --down: #f0575b;
+      --border: #2a313d;
+      --shadow: 0 12px 35px rgba(0, 0, 0, .18);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      padding: 24px;
+      font-family: "DM Sans", "Noto Sans KR", sans-serif;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
+      min-height: 84px;
+      padding: 16px max(calc((100% - 1400px) / 2 + 24px), 24px);
       border-bottom: 1px solid var(--border);
+      background: #141820;
     }
-    h1 { font-size: 1.25rem; font-weight: 700; }
-    .status { font-size: 0.85rem; color: var(--muted); }
+    h1 { font-size: 19px; font-weight: 800; letter-spacing: -.5px; }
+    .status { font-size: 11px; color: var(--muted); }
     .status span { color: var(--up); font-weight: 600; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
+      border-radius: 16px;
+      padding: 18px 19px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      box-shadow: var(--shadow);
     }
     .card-top {
       display: flex;
@@ -55,9 +62,9 @@
     .badge {
       font-size: 0.7rem;
       padding: 2px 6px;
-      border-radius: 4px;
-      background: #334155;
-      color: #cbd5e1;
+      border-radius: 5px;
+      background: #3a2927;
+      color: #ffad91;
       margin-left: 6px;
     }
     .symbol { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
@@ -70,6 +77,11 @@
       width: 100%;
       height: 54px;
       overflow: visible;
+    }
+    @media (max-width: 760px) {
+      header { min-height: 62px; padding: 12px 17px; flex-wrap: wrap; gap: 8px; }
+      h1 { font-size: 15px; }
+      .grid { gap: 11px; padding: 19px 13px; }
     }
   </style>
 </head>
@@ -85,23 +97,32 @@
     const HL_INFO_URL = "https://api.hyperliquid.xyz/info";
     const HL_WS_URL = "wss://api.hyperliquid.xyz/ws";
 
-    // 모니터링 대상 12개 자산 정의
+    // 모니터링 대상 12개 자산 정의 (정확한 Hyperliquid HIP-3 심볼 우선 매칭 적용)
     const ASSETS = [
-      { id: "SP500",    name: "S&P 500",          source: "hl", keywords: ["SP500", "US500", "SPY"],       fallbackDex: "xyz" },
-      { id: "NASDAQ",   name: "나스닥 100",        source: "hl", keywords: ["XYZ100", "NDX", "NAS100"],   fallbackDex: "xyz" },
-      { id: "KOSPI200", name: "코스피 200",        source: "yahoo", yahooSymbol: "^KS200" },
-      { id: "BRENT",    name: "Brent Oil",        source: "hl", keywords: ["BRENTOIL", "BRENT", "UKOIL"], fallbackDex: "xyz" },
-      { id: "BTC",      name: "비트코인",          source: "hl", exactSymbol: "BTC" },
-      { id: "USDKRW",   name: "원달러환율",        source: "yahoo", yahooSymbol: "KRW=X" },
-      { id: "DXY",      name: "US Dollar Index",  source: "yahoo", yahooSymbol: "DX-Y.NYB" },
-      { id: "ANTHROPIC",name: "Anthropic",        source: "hl", keywords: ["ANT", "ANTHROPIC"],        fallbackDex: "xyz" },
-      { id: "AAPL",     name: "Apple",            source: "hl", keywords: ["AAPL"],                    fallbackDex: "xyz" },
-      { id: "GOOG",     name: "Alphabet C",       source: "hl", keywords: ["GOOG", "GOOGL"],           fallbackDex: "xyz" },
-      { id: "NVDA",     name: "NVIDIA",           source: "hl", keywords: ["NVDA"],                    fallbackDex: "xyz" },
-      { id: "SPACEX",   name: "SpaceX",           source: "hl", keywords: ["SPCX", "SPACEX"],          fallbackDex: "xyz" }
+      { id: "KOSPI200",   name: "코스피 200",       source: "yahoo", yahooSymbol: "^KS200" },
+      { id: "KOSPI200PF", name: "코스피 200",       source: "hl", exactCandidates: ["xyz:KR200"], keywords: ["KR200"], fallbackDex: "xyz" },
+      { id: "USDKRW",     name: "원달러환율",        source: "yahoo", yahooSymbol: "KRW=X" },
+      { id: "BTCPF",      name: "Bitcoin",          source: "hl", exactSymbol: "BTC" },
+      { id: "SP500",      name: "S&P 500",          source: "yahoo", yahooSymbol: "^GSPC" },
+      { id: "SP500PF",    name: "S&P 500",          source: "hl", exactCandidates: ["xyz:SP500", "xyz:US500"], keywords: ["SP500", "US500", "SPY"], fallbackDex: "xyz" },
+      { id: "NASDAQ",     name: "NASDAQ 100",       source: "yahoo", yahooSymbol: "^NDX" },
+      { id: "NASDAQPF",   name: "NASDAQ 100",       source: "hl", exactCandidates: ["xyz:XYZ100", "xyz:NDX"],  keywords: ["XYZ100", "NDX", "NAS100"], fallbackDex: "xyz" },
+      { id: "GOOG",       name: "Alphabet C",       source: "yahoo", yahooSymbol: "GOOG" },
+      { id: "GOOGPF",     name: "Alphabet C",       source: "hl", exactCandidates: ["xyz:GOOG", "xyz:GOOGL"], keywords: ["GOOG", "GOOGL"], fallbackDex: "xyz" },
+      { id: "ANT",        name: "Anthropic",        source: "yahoo", yahooSymbol: "ANT" },
+      { id: "ANTPF",      name: "Anthropic",        source: "hl", exactCandidates: ["xyz:ANT", "io:ANTH", "para:ANTH", "vntl:ANTHROPIC"], keywords: ["ANTH", "ANTHROPIC"], fallbackDex: "xyz" },
+      { id: "AAPL",       name: "Apple",            source: "yahoo", yahooSymbol: "AAPL" },
+      { id: "AAPLPF",     name: "Apple",            source: "hl", exactCandidates: ["xyz:AAPL"], keywords: ["AAPL"], fallbackDex: "xyz" },
+      { id: "NVDA",       name: "NVIDIA",           source: "yahoo", yahooSymbol: "NVDA" },
+      { id: "NVDAPF",     name: "NVIDIA",           source: "hl", exactCandidates: ["xyz:NVDA"], keywords: ["NVDA"], fallbackDex: "xyz" },
+      { id: "SPCX",       name: "SpaceX",           source: "yahoo", yahooSymbol: "SPCX" },
+      { id: "SPCXPF",     name: "SpaceX",           source: "hl", exactCandidates: ["xyz:SPCX", "io:SPCX", "xyz:SPACEX"], keywords: ["SPCX", "SPACEX"], fallbackDex: "xyz" },
+      { id: "BRENT",      name: "Brent Oil",        source: "yahoo", yahooSymbol: "BZ=F" },
+      { id: "BRENTPF",    name: "Brent Oil",        source: "hl", exactCandidates: ["xyz:BRENTOIL", "xyz:BRENT"], keywords: ["BRENTOIL", "BRENT", "UKOIL"], fallbackDex: "xyz" },
+      { id: "DXY",        name: "US Dollar Index",  source: "yahoo", yahooSymbol: "DX-Y.NYB" },
     ];
 
-    const state = {}; // id -> { resolvedSymbol, points: number[], currentPrice: number }
+    const state = {}; // id -> { resolvedSymbol, points: number[] }
 
     // 1. 초기 카드 UI 렌더링
     function initCards() {
@@ -135,7 +156,6 @@
       const isUp = pct >= 0;
       const color = isUp ? "#22c55e" : "#ef4444";
 
-      // 가격 포맷팅
       const decimals = last >= 1000 ? 2 : last >= 10 ? 2 : 4;
       document.getElementById(`price-${id}`).textContent = last.toLocaleString("en-US", {
         minimumFractionDigits: decimals,
@@ -146,13 +166,17 @@
       chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
       chgEl.className = `change ${isUp ? "up" : "down"}`;
 
-      // SVG 좌표 계산
-      const min = Math.min(...pts);
-      const max = Math.max(...pts);
+      const hasReferencePrice = Number.isFinite(item.referencePrice) && item.referencePrice > 0;
+      const scalePoints = hasReferencePrice ? [...pts, item.referencePrice] : pts;
+      const min = Math.min(...scalePoints);
+      const max = Math.max(...scalePoints);
       const range = max - min || 1;
       const w = 240;
       const h = 54;
       const pad = 4;
+      const referenceY = hasReferencePrice
+        ? h - pad - ((item.referencePrice - min) / range) * (h - pad * 2)
+        : null;
 
       const coords = pts.map((val, idx) => {
         const x = (idx / (pts.length - 1)) * w;
@@ -162,6 +186,7 @@
 
       const svg = document.getElementById(`svg-${id}`);
       svg.innerHTML = `
+        ${referenceY === null ? "" : `<line x1="0" y1="${referenceY.toFixed(1)}" x2="${w}" y2="${referenceY.toFixed(1)}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />`}
         <polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords}" />
       `;
     }
@@ -176,7 +201,7 @@
       return res.json();
     }
 
-    // 4. HIP-3 활성 DEX 목록에서 정확한 심볼 동적 탐색
+    // 4. HIP-3 활성 DEX 목록에서 정확한 심볼 동적 탐색 (부분문자열 오매칭 방지)
     async function resolveHyperliquidSymbols() {
       const hlAssets = ASSETS.filter(a => a.source === "hl");
       const discoveredUniverse = [];
@@ -189,8 +214,8 @@
         }
       } catch (e) { console.warn("Main meta 조회 실패:", e); }
 
-      // HIP-3 빌더 DEX 목록 (xyz 등)
-      let dexNames = ["xyz"];
+      // HIP-3 빌더 DEX 목록 (xyz, io, para, vntl 등)
+      let dexNames = ["xyz", "io", "para", "vntl"];
       try {
         const dexs = await postHL({ type: "perpDexs" });
         if (Array.isArray(dexs)) {
@@ -212,16 +237,37 @@
         } catch (_) {}
       }
 
-      // 키워드 매칭
+      const universeUpperMap = new Map(
+        discoveredUniverse.map(sym => [sym.toUpperCase(), sym])
+      );
+
       for (const asset of hlAssets) {
         if (asset.exactSymbol) {
           asset.resolvedSymbol = asset.exactSymbol;
         } else {
-          const matched = discoveredUniverse.find(sym => {
-            const coinPart = sym.includes(":") ? sym.split(":")[1].toUpperCase() : sym.toUpperCase();
-            return asset.keywords.some(k => coinPart === k || coinPart.includes(k));
-          });
-          asset.resolvedSymbol = matched || `${asset.fallbackDex}:${asset.keywords[0]}`;
+          let matched = null;
+
+          // 1순위: exactCandidates 목록에서 순서대로 정확히 일치하는 심볼 탐색
+          if (Array.isArray(asset.exactCandidates)) {
+            for (const cand of asset.exactCandidates) {
+              const found = universeUpperMap.get(cand.toUpperCase());
+              if (found) {
+                matched = found;
+                break;
+              }
+            }
+          }
+
+          // 2순위: 코인명(콜론 뒤 티커) 완전 일치 탐색 (CANTO 등 오매칭 방지)
+          if (!matched && Array.isArray(asset.keywords)) {
+            matched = discoveredUniverse.find(sym => {
+              const coinPart = sym.includes(":") ? sym.split(":")[1].toUpperCase() : sym.toUpperCase();
+              return asset.keywords.some(k => coinPart === k.toUpperCase());
+            });
+          }
+
+          // 폴백: 기본 후보 또는 키워드 첫 번째 값
+          asset.resolvedSymbol = matched || (asset.exactCandidates?.[0]) || `${asset.fallbackDex}:${asset.keywords[0]}`;
         }
         document.getElementById(`sym-${asset.id}`).textContent = asset.resolvedSymbol;
       }
@@ -231,6 +277,7 @@
     async function loadHyperliquidCandles() {
       const now = Date.now();
       const startTime = now - 24 * 60 * 60 * 1000;
+      const candleStartTime = startTime - 15 * 60 * 1000;
       const hlAssets = ASSETS.filter(a => a.source === "hl");
 
       await Promise.all(hlAssets.map(async (asset) => {
@@ -240,15 +287,21 @@
             req: {
               coin: asset.resolvedSymbol,
               interval: "15m",
-              startTime,
+              startTime: candleStartTime,
               endTime: now
             }
           });
           if (Array.isArray(candles) && candles.length > 0) {
-            const closes = candles.map(c => parseFloat(c.c));
+            const previousCandle = candles
+              .filter(c => Number(c.t) < startTime)
+              .slice(-1)[0];
+            const chartCandles = candles.filter(c => Number(c.t) >= startTime);
+            const closes = chartCandles.map(c => parseFloat(c.c));
+            const referencePrice = previousCandle ? parseFloat(previousCandle.c) : null;
             state[asset.id] = {
               resolvedSymbol: asset.resolvedSymbol,
-              points: closes
+              points: closes,
+              referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
             };
             renderCard(asset.id);
           } else {
@@ -265,9 +318,8 @@
       const wsStatus = document.getElementById("ws-status");
       const ws = new WebSocket(HL_WS_URL);
 
-      // 구독할 DEX 목록 추출
       const hlAssets = ASSETS.filter(a => a.source === "hl");
-      const dexSet = new Set([""]); // 기본 마켓("") 포함
+      const dexSet = new Set([""]);
       hlAssets.forEach(a => {
         if (a.resolvedSymbol && a.resolvedSymbol.includes(":")) {
           dexSet.add(a.resolvedSymbol.split(":")[0]);
@@ -292,14 +344,13 @@
           hlAssets.forEach(asset => {
             const sym = asset.resolvedSymbol;
             if (!sym) return;
-            // allMids 응답 키가 "xyz:NVDA" 또는 "NVDA" 형태일 수 있으므로 모두 확인
             const rawKey = sym.includes(":") ? sym.split(":")[1] : sym;
             const midStr = mids[sym] ?? mids[rawKey];
 
             if (midStr !== undefined && state[asset.id]) {
               const newPrice = parseFloat(midStr);
               const pts = state[asset.id].points;
-              pts[pts.length - 1] = newPrice; // 스파크라인 마지막 포인트 실시간 갱신
+              pts[pts.length - 1] = newPrice;
               renderCard(asset.id);
             }
           });
@@ -316,9 +367,11 @@
     // 7. 보조 지수(코스피200, 원달러환율, DXY) 1일 차트 및 주기적 폴링
     async function loadYahooIndex(asset) {
       document.getElementById(`sym-${asset.id}`).textContent = asset.yahooSymbol;
-      const targetUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=1d`;
+      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=1d`;
       // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+      //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+      const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
+      
 
       try {
         const res = await fetch(proxyUrl);
@@ -327,7 +380,11 @@
         const closes = result?.indicators?.quote?.[0]?.close?.filter(v => v !== null);
 
         if (closes && closes.length > 1) {
-          state[asset.id] = { points: closes };
+          const referencePrice = Number(result.meta?.previousClose);
+          state[asset.id] = {
+            points: closes,
+            referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
+          };
           renderCard(asset.id);
         }
       } catch (e) {
@@ -340,7 +397,7 @@
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
-      }, 30000); // 30초마다 갱신
+      }, 5000); // 30초마다 갱신
     }
 
     // 앱 시작
