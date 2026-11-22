@@ -16,7 +16,7 @@ on:
       - chatgpt
     paths:
       - "collector/**"
-      - "site/**"
+      - "docs/**"
       - "requirements.txt"
       - ".github/workflows/update-and-deploy.yml"
 
@@ -78,7 +78,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A site/data/etf-price.json site/data/etf-detail.json site/data/fedwatch.json site/data/feargreed.json site/data/kfeargreed.json
+          git add -A docs/data/etf-price.json docs/data/etf-detail.json docs/data/fedwatch.json docs/data/feargreed.json docs/data/kfeargreed.json
 
           if ! git diff --cached --quiet; then
             git commit -m "Update daily ETF dividend data"
@@ -94,7 +94,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           name: github-pages-${{ github.run_attempt }}
-          path: site
+          path: docs
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
