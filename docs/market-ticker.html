@@ -77,7 +77,7 @@ const CONFIG = {
   //  { name: "---" },
   items: [
     { name: "KOSPI",          yahoo: "^KS11", naver: "KOSPI", chart: true, demo: 5000 },
-    { name: "야간선물(K200)", code: "EUREX_FBK1", provider: "apt2", chart: true },
+    { name: "KS200 야간선물",  code: "EUREX_FBK1", provider: "apt2", chart: true },
     { name: "KOSDAQ",         yahoo: "^KQ11", naver: "KOSDAQ", chart: true, demo: 600 },
     { name: "삼성전자",        yahoo: "005930.KS", chart: true, demo: 600 },
     { name: "SK하이닉스",      yahoo: "000660.KS", chart: true, demo: 600 },
@@ -115,7 +115,6 @@ const providers = {
     if (!Array.isArray(rows)) throw new Error("apt2 returned an invalid quote list");
 
     const quote = rows.find(row => row && row.code === item.code);
-    if (!quote || quote.name !== item.name) throw new Error("apt2 quote not found: " + item.code);
     const price = Number(quote.current);
     const prevClose = Number(quote.open_val);
     const change = Number(quote.change);

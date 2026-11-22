@@ -10,7 +10,7 @@ const ALLOW_HOSTS = [
 ];
 
 // 내 사이트에서만 쓰게 하려면 "*" 대신 "https://내도메인.com" 으로 바꾸세요.
-const ALLOW_ORIGIN = "*";
+const ALLOW_ORIGIN = "https://skykrkrk.github.io";
 
 export default {
   async fetch(request) {
