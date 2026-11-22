@@ -20,7 +20,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: "DM Sans", "Noto Sans KR", sans-serif;
-      font-size: 14px;
+      font-size: 12.5px;
       -webkit-font-smoothing: antialiased;
     }
     header {
@@ -32,25 +32,25 @@
       border-bottom: 1px solid var(--border);
       background: #141820;
     }
-    h1 { font-size: 19px; font-weight: 800; letter-spacing: -.5px; }
-    .status { font-size: 11px; color: var(--muted); }
+    h1 { font-size: 16px; font-weight: 800; letter-spacing: -.5px; }
+    .status { font-size: 9px; color: var(--muted); }
     .status span { color: var(--up); font-weight: 600; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 12px;
       max-width: 1400px;
       margin: 0 auto;
-      padding: 24px;
+      padding: 20px;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 19px;
+      border-radius: 15px;
+      padding: 16px 17px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       box-shadow: var(--shadow);
     }
     .card-top {
@@ -58,30 +58,30 @@
       justify-content: space-between;
       align-items: flex-start;
     }
-    .name { font-weight: 600; font-size: 1rem; }
+    .name { font-weight: 600; font-size: 0.92rem; }
     .badge {
-      font-size: 0.7rem;
-      padding: 2px 6px;
+      font-size: 0.62rem;
+      padding: 2px 5px;
       border-radius: 5px;
       background: #3a2927;
       color: #ffad91;
       margin-left: 6px;
     }
-    .symbol { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .symbol { font-size: 0.70rem; color: var(--muted); margin-top: 2px; }
     .price-box { text-align: right; }
-    .price { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-    .change { font-size: 0.82rem; font-weight: 600; margin-top: 2px; }
+    .price { font-size: 1.04rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .change { font-size: 0.74rem; font-weight: 600; margin-top: 2px; }
     .up { color: var(--up); }
     .down { color: var(--down); }
     svg.sparkline {
       width: 100%;
-      height: 54px;
+      height: 50px;
       overflow: visible;
     }
     @media (max-width: 760px) {
       header { min-height: 62px; padding: 12px 17px; flex-wrap: wrap; gap: 8px; }
-      h1 { font-size: 15px; }
-      .grid { gap: 11px; padding: 19px 13px; }
+      h1 { font-size: 13px; }
+      .grid { gap: 10px; padding: 16px 12px; }
     }
   </style>
 </head>
