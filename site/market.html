@@ -162,14 +162,24 @@
       const pts = item.points;
       const first = pts[0];
       const last = pts[pts.length - 1];
-      const pct = ((last - first) / first) * 100;
+      const currentPrice = item.source === "yahoo" && Number.isFinite(item.currentPrice)
+        ? item.currentPrice
+        : last;
+      const changeReference = item.source === "yahoo" && item.referencePrice > 0
+        ? item.referencePrice
+        : first;
+      const pct = item.source === "yahoo" && Number.isFinite(item.changePercent)
+        ? item.changePercent
+        : changeReference > 0
+          ? ((currentPrice - changeReference) / changeReference) * 100
+          : 0;
       const isUp = pct >= 0;
       const color = isUp ? "#22c55e" : "#ef4444";
 
-      const decimals = last >= 1000 ? 2 : last >= 10 ? 2 : 4;
+      const decimals = currentPrice >= 1000 ? 2 : currentPrice >= 10 ? 2 : 4;
       const priceEl = document.getElementById(`price-${id}`);
       const previousText = priceEl.textContent;
-      const formattedPrice = last.toLocaleString("en-US", {
+      const formattedPrice = currentPrice.toLocaleString("en-US", {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals
       });
@@ -177,12 +187,18 @@
         const previousPrice = Number(previousText.replace(/,/g, ""));
         priceEl.classList.remove("price-flash-up", "price-flash-down");
         void priceEl.offsetWidth;
-        priceEl.classList.add(last > previousPrice ? "price-flash-up" : "price-flash-down");
+        priceEl.classList.add(currentPrice > previousPrice ? "price-flash-up" : "price-flash-down");
       }
       priceEl.textContent = formattedPrice;
 
       const chgEl = document.getElementById(`chg-${id}`);
-      chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
+      if (item.source === "yahoo") {
+        const change = Number.isFinite(item.change) ? item.change : currentPrice - changeReference;
+        const changeDecimals = Math.abs(change) >= 1 ? 2 : 4;
+        chgEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(changeDecimals)} ${isUp ? "+" : ""}${pct.toFixed(2)}%`;
+      } else {
+        chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
+      }
       chgEl.className = `change ${isUp ? "up" : "down"}`;
 
       const hasReferencePrice = Number.isFinite(item.referencePrice) && item.referencePrice > 0;
@@ -318,6 +334,7 @@
             const closes = chartCandles.map(c => parseFloat(c.c));
             const referencePrice = previousCandle ? parseFloat(previousCandle.c) : null;
             state[asset.id] = {
+              source: asset.source,
               resolvedSymbol: asset.resolvedSymbol,
               points: closes,
               referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
@@ -386,7 +403,7 @@
     // 7. 보조 지수(코스피200, 원달러환율, DXY) 1일 차트 및 주기적 폴링
     async function loadYahooIndex(asset) {
       document.getElementById(`sym-${asset.id}`).textContent = asset.yahooSymbol;
-      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=1d`;
+      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=5m&range=1d`;
       // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
       //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
       const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
@@ -400,9 +417,16 @@
 
         if (closes && closes.length > 1) {
           const referencePrice = Number(result.meta?.previousClose);
+          const change = Number(result.meta?.fulldayChange);
+          const changePercent = Number(result.meta?.fulldayChangePercent);
+          const currentPrice = Number(result.meta?.fulldayPrice);
           state[asset.id] = {
+            source: asset.source,
             points: closes,
-            referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
+            currentPrice: Number.isFinite(currentPrice) && currentPrice > 0 ? currentPrice : null,
+            referencePrice: Number.isFinite(referencePrice) ? referencePrice : null,
+            change: Number.isFinite(change) ? change : null,
+            changePercent: Number.isFinite(changePercent) ? changePercent : null
           };
           renderCard(asset.id);
         }
