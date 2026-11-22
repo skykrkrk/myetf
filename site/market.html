@@ -69,14 +69,14 @@
     }
     .symbol { font-size: 0.66rem; color: var(--muted); margin-top: 2px; }
     .price-box { text-align: right; }
-    .price { font-size: 1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .price { display: inline-block; padding: 0 2px; border-radius: 3px; font-size: 0.88rem; font-weight: 700; font-variant-numeric: tabular-nums; }
     @keyframes price-flash-up {
-      from { color: var(--up); text-shadow: 0 0 9px rgba(128, 198, 162, .7); }
-      to { color: var(--text); text-shadow: 0 0 0 transparent; }
+      from { background-color: rgba(128, 198, 162, .3); }
+      to { background-color: transparent; }
     }
     @keyframes price-flash-down {
-      from { color: var(--down); text-shadow: 0 0 9px rgba(240, 87, 91, .7); }
-      to { color: var(--text); text-shadow: 0 0 0 transparent; }
+      from { background-color: rgba(240, 87, 91, .3); }
+      to { background-color: transparent; }
     }
     .price-flash-up { animation: price-flash-up 3000ms ease-out; }
     .price-flash-down { animation: price-flash-down 3000ms ease-out; }
