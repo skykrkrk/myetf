@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실시간 지수 & 영구선물 Sparkline 모니터</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --up: #22c55e;
+      --down: #ef4444;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 24px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { font-size: 1.25rem; font-weight: 700; }
+    .status { font-size: 0.85rem; color: var(--muted); }
+    .status span { color: var(--up); font-weight: 600; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .name { font-weight: 600; font-size: 1rem; }
+    .badge {
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #334155;
+      color: #cbd5e1;
+      margin-left: 6px;
+    }
+    .symbol { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .price-box { text-align: right; }
+    .price { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .change { font-size: 0.82rem; font-weight: 600; margin-top: 2px; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    svg.sparkline {
+      width: 100%;
+      height: 54px;
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>실시간 글로벌 지수 & 영구선물 모니터 (24H Sparkline)</h1>
+    <div class="status">WebSocket: <span id="ws-status">연결 중...</span></div>
+  </header>
+
+  <div class="grid" id="dashboard"></div>
+
+  <script>
+    const HL_INFO_URL = "https://api.hyperliquid.xyz/info";
+    const HL_WS_URL = "wss://api.hyperliquid.xyz/ws";
+
+    // 모니터링 대상 12개 자산 정의
+    const ASSETS = [
+      { id: "SP500",    name: "S&P 500",          source: "hl", keywords: ["SP500", "US500", "SPY"],       fallbackDex: "xyz" },
+      { id: "NASDAQ",   name: "나스닥 100",        source: "hl", keywords: ["XYZ100", "NDX", "NAS100"],   fallbackDex: "xyz" },
+      { id: "KOSPI200", name: "코스피 200",        source: "yahoo", yahooSymbol: "^KS200" },
+      { id: "BRENT",    name: "Brent Oil",        source: "hl", keywords: ["BRENTOIL", "BRENT", "UKOIL"], fallbackDex: "xyz" },
+      { id: "BTC",      name: "비트코인",          source: "hl", exactSymbol: "BTC" },
+      { id: "USDKRW",   name: "원달러환율",        source: "yahoo", yahooSymbol: "KRW=X" },
+      { id: "DXY",      name: "US Dollar Index",  source: "yahoo", yahooSymbol: "DX-Y.NYB" },
+      { id: "ANTHROPIC",name: "Anthropic",        source: "hl", keywords: ["ANT", "ANTHROPIC"],        fallbackDex: "xyz" },
+      { id: "AAPL",     name: "Apple",            source: "hl", keywords: ["AAPL"],                    fallbackDex: "xyz" },
+      { id: "GOOG",     name: "Alphabet C",       source: "hl", keywords: ["GOOG", "GOOGL"],           fallbackDex: "xyz" },
+      { id: "NVDA",     name: "NVIDIA",           source: "hl", keywords: ["NVDA"],                    fallbackDex: "xyz" },
+      { id: "SPACEX",   name: "SpaceX",           source: "hl", keywords: ["SPCX", "SPACEX"],          fallbackDex: "xyz" }
+    ];
+
+    const state = {}; // id -> { resolvedSymbol, points: number[], currentPrice: number }
+
+    // 1. 초기 카드 UI 렌더링
+    function initCards() {
+      const container = document.getElementById("dashboard");
+      container.innerHTML = ASSETS.map(asset => `
+        <div class="card" id="card-${asset.id}">
+          <div class="card-top">
+            <div>
+              <div class="name">${asset.name}<span class="badge">${asset.source === "hl" ? "PERP" : "INDEX"}</span></div>
+              <div class="symbol" id="sym-${asset.id}">심볼 확인 중...</div>
+            </div>
+            <div class="price-box">
+              <div class="price" id="price-${asset.id}">-</div>
+              <div class="change" id="chg-${asset.id}">0.00%</div>
+            </div>
+          </div>
+          <svg class="sparkline" id="svg-${asset.id}" viewBox="0 0 240 54" preserveAspectRatio="none"></svg>
+        </div>
+      `).join("");
+    }
+
+    // 2. SVG Sparkline 그리기
+    function renderCard(id) {
+      const item = state[id];
+      if (!item || !item.points || item.points.length < 2) return;
+
+      const pts = item.points;
+      const first = pts[0];
+      const last = pts[pts.length - 1];
+      const pct = ((last - first) / first) * 100;
+      const isUp = pct >= 0;
+      const color = isUp ? "#22c55e" : "#ef4444";
+
+      // 가격 포맷팅
+      const decimals = last >= 1000 ? 2 : last >= 10 ? 2 : 4;
+      document.getElementById(`price-${id}`).textContent = last.toLocaleString("en-US", {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      });
+
+      const chgEl = document.getElementById(`chg-${id}`);
+      chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
+      chgEl.className = `change ${isUp ? "up" : "down"}`;
+
+      // SVG 좌표 계산
+      const min = Math.min(...pts);
+      const max = Math.max(...pts);
+      const range = max - min || 1;
+      const w = 240;
+      const h = 54;
+      const pad = 4;
+
+      const coords = pts.map((val, idx) => {
+        const x = (idx / (pts.length - 1)) * w;
+        const y = h - pad - ((val - min) / range) * (h - pad * 2);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(" ");
+
+      const svg = document.getElementById(`svg-${id}`);
+      svg.innerHTML = `
+        <polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords}" />
+      `;
+    }
+
+    // 3. Hyperliquid POST 요청 헬퍼
+    async function postHL(payload) {
+      const res = await fetch(HL_INFO_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      return res.json();
+    }
+
+    // 4. HIP-3 활성 DEX 목록에서 정확한 심볼 동적 탐색
+    async function resolveHyperliquidSymbols() {
+      const hlAssets = ASSETS.filter(a => a.source === "hl");
+      const discoveredUniverse = [];
+
+      // 기본 Perp 목록
+      try {
+        const mainMeta = await postHL({ type: "meta" });
+        if (mainMeta?.universe) {
+          mainMeta.universe.forEach(u => discoveredUniverse.push(u.name));
+        }
+      } catch (e) { console.warn("Main meta 조회 실패:", e); }
+
+      // HIP-3 빌더 DEX 목록 (xyz 등)
+      let dexNames = ["xyz"];
+      try {
+        const dexs = await postHL({ type: "perpDexs" });
+        if (Array.isArray(dexs)) {
+          dexs.forEach(d => {
+            if (d && d.name && !dexNames.includes(d.name)) dexNames.push(d.name);
+          });
+        }
+      } catch (e) { console.warn("perpDexs 조회 실패:", e); }
+
+      for (const dex of dexNames) {
+        try {
+          const dexMeta = await postHL({ type: "meta", dex });
+          if (dexMeta?.universe) {
+            dexMeta.universe.forEach(u => {
+              const fullName = u.name.includes(":") ? u.name : `${dex}:${u.name}`;
+              discoveredUniverse.push(fullName);
+            });
+          }
+        } catch (_) {}
+      }
+
+      // 키워드 매칭
+      for (const asset of hlAssets) {
+        if (asset.exactSymbol) {
+          asset.resolvedSymbol = asset.exactSymbol;
+        } else {
+          const matched = discoveredUniverse.find(sym => {
+            const coinPart = sym.includes(":") ? sym.split(":")[1].toUpperCase() : sym.toUpperCase();
+            return asset.keywords.some(k => coinPart === k || coinPart.includes(k));
+          });
+          asset.resolvedSymbol = matched || `${asset.fallbackDex}:${asset.keywords[0]}`;
+        }
+        document.getElementById(`sym-${asset.id}`).textContent = asset.resolvedSymbol;
+      }
+    }
+
+    // 5. Hyperliquid 24시간 캔들(15m) 초기 로드
+    async function loadHyperliquidCandles() {
+      const now = Date.now();
+      const startTime = now - 24 * 60 * 60 * 1000;
+      const hlAssets = ASSETS.filter(a => a.source === "hl");
+
+      await Promise.all(hlAssets.map(async (asset) => {
+        try {
+          const candles = await postHL({
+            type: "candleSnapshot",
+            req: {
+              coin: asset.resolvedSymbol,
+              interval: "15m",
+              startTime,
+              endTime: now
+            }
+          });
+          if (Array.isArray(candles) && candles.length > 0) {
+            const closes = candles.map(c => parseFloat(c.c));
+            state[asset.id] = {
+              resolvedSymbol: asset.resolvedSymbol,
+              points: closes
+            };
+            renderCard(asset.id);
+          } else {
+            document.getElementById(`sym-${asset.id}`).textContent += " (데이터 없음)";
+          }
+        } catch (err) {
+          console.error(`${asset.name} 캔들 로드 오류:`, err);
+        }
+      }));
+    }
+
+    // 6. Hyperliquid WebSocket 실시간 스트리밍 (allMids)
+    function connectHyperliquidWS() {
+      const wsStatus = document.getElementById("ws-status");
+      const ws = new WebSocket(HL_WS_URL);
+
+      // 구독할 DEX 목록 추출
+      const hlAssets = ASSETS.filter(a => a.source === "hl");
+      const dexSet = new Set([""]); // 기본 마켓("") 포함
+      hlAssets.forEach(a => {
+        if (a.resolvedSymbol && a.resolvedSymbol.includes(":")) {
+          dexSet.add(a.resolvedSymbol.split(":")[0]);
+        }
+      });
+
+      ws.onopen = () => {
+        wsStatus.textContent = "실시간 수신 중";
+        wsStatus.style.color = "#22c55e";
+
+        dexSet.forEach(dex => {
+          const sub = { type: "allMids" };
+          if (dex) sub.dex = dex;
+          ws.send(JSON.stringify({ method: "subscribe", subscription: sub }));
+        });
+      };
+
+      ws.onmessage = (event) => {
+        const msg = JSON.parse(event.data);
+        if (msg.channel === "allMids" && msg.data?.mids) {
+          const mids = msg.data.mids;
+          hlAssets.forEach(asset => {
+            const sym = asset.resolvedSymbol;
+            if (!sym) return;
+            // allMids 응답 키가 "xyz:NVDA" 또는 "NVDA" 형태일 수 있으므로 모두 확인
+            const rawKey = sym.includes(":") ? sym.split(":")[1] : sym;
+            const midStr = mids[sym] ?? mids[rawKey];
+
+            if (midStr !== undefined && state[asset.id]) {
+              const newPrice = parseFloat(midStr);
+              const pts = state[asset.id].points;
+              pts[pts.length - 1] = newPrice; // 스파크라인 마지막 포인트 실시간 갱신
+              renderCard(asset.id);
+            }
+          });
+        }
+      };
+
+      ws.onclose = () => {
+        wsStatus.textContent = "재연결 중...";
+        wsStatus.style.color = "#ef4444";
+        setTimeout(connectHyperliquidWS, 3000);
+      };
+    }
+
+    // 7. 보조 지수(코스피200, 원달러환율, DXY) 1일 차트 및 주기적 폴링
+    async function loadYahooIndex(asset) {
+      document.getElementById(`sym-${asset.id}`).textContent = asset.yahooSymbol;
+      const targetUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=1d`;
+      // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+
+      try {
+        const res = await fetch(proxyUrl);
+        const json = await res.json();
+        const result = json?.chart?.result?.[0];
+        const closes = result?.indicators?.quote?.[0]?.close?.filter(v => v !== null);
+
+        if (closes && closes.length > 1) {
+          state[asset.id] = { points: closes };
+          renderCard(asset.id);
+        }
+      } catch (e) {
+        console.warn(`${asset.name} 조회 실패:`, e);
+      }
+    }
+
+    async function initYahooPolling() {
+      const yahooAssets = ASSETS.filter(a => a.source === "yahoo");
+      await Promise.all(yahooAssets.map(loadYahooIndex));
+      setInterval(() => {
+        yahooAssets.forEach(loadYahooIndex);
+      }, 30000); // 30초마다 갱신
+    }
+
+    // 앱 시작
+    (async function bootstrap() {
+      initCards();
+      await resolveHyperliquidSymbols();
+      await Promise.all([
+        loadHyperliquidCandles(),
+        initYahooPolling()
+      ]);
+      connectHyperliquidWS();
+    })();
+  </script>
+</body>
+</html>
