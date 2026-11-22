@@ -70,6 +70,16 @@
     .symbol { font-size: 0.66rem; color: var(--muted); margin-top: 2px; }
     .price-box { text-align: right; }
     .price { font-size: 1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    @keyframes price-flash-up {
+      from { color: var(--up); text-shadow: 0 0 9px rgba(128, 198, 162, .7); }
+      to { color: var(--text); text-shadow: 0 0 0 transparent; }
+    }
+    @keyframes price-flash-down {
+      from { color: var(--down); text-shadow: 0 0 9px rgba(240, 87, 91, .7); }
+      to { color: var(--text); text-shadow: 0 0 0 transparent; }
+    }
+    .price-flash-up { animation: price-flash-up 3000ms ease-out; }
+    .price-flash-down { animation: price-flash-down 3000ms ease-out; }
     .change { font-size: 0.70rem; font-weight: 600; margin-top: 2px; }
     .up { color: var(--up); }
     .down { color: var(--down); }
@@ -157,10 +167,19 @@
       const color = isUp ? "#22c55e" : "#ef4444";
 
       const decimals = last >= 1000 ? 2 : last >= 10 ? 2 : 4;
-      document.getElementById(`price-${id}`).textContent = last.toLocaleString("en-US", {
+      const priceEl = document.getElementById(`price-${id}`);
+      const previousText = priceEl.textContent;
+      const formattedPrice = last.toLocaleString("en-US", {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals
       });
+      if (previousText !== "-" && previousText !== formattedPrice) {
+        const previousPrice = Number(previousText.replace(/,/g, ""));
+        priceEl.classList.remove("price-flash-up", "price-flash-down");
+        void priceEl.offsetWidth;
+        priceEl.classList.add(last > previousPrice ? "price-flash-up" : "price-flash-down");
+      }
+      priceEl.textContent = formattedPrice;
 
       const chgEl = document.getElementById(`chg-${id}`);
       chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
