@@ -179,7 +179,9 @@
       const baseChangeReference = baseItem
         ? baseItem.source === "yahoo"
           ? baseItem.marketOpen === false
-            ? baseClosePrice
+            ? baseItem.referencePrice > 0
+              ? baseItem.referencePrice
+              : baseClosePrice
             : baseItem.referencePrice > 0
               ? baseItem.referencePrice
               : baseItem.points[0]
@@ -370,9 +372,20 @@
       const baseMarketClosed = baseItem?.source === "yahoo"
         && baseItem.marketOpen === false
         && Number.isFinite(baseItem.sessionEnd);
-      const startTime = baseMarketClosed
-        ? baseItem.sessionEnd
-        : now - 24 * 60 * 60 * 1000;
+      const inPreMarket = baseMarketClosed
+        && Number.isFinite(baseItem.preMarketStart)
+        && baseItem.preMarketStart > 0
+        && Number.isFinite(baseItem.regularStart)
+        && now >= baseItem.preMarketStart
+        && now < baseItem.regularStart;
+      const closedSessionStart = Number.isFinite(baseItem?.regularEnd) && baseItem.regularEnd <= now
+        ? baseItem.regularEnd
+        : baseItem?.sessionEnd;
+      const startTime = inPreMarket
+        ? baseItem.preMarketStart
+        : baseMarketClosed
+          ? closedSessionStart
+          : now - 24 * 60 * 60 * 1000;
       const candleStartTime = startTime - 15 * 60 * 1000;
 
       try {
@@ -398,7 +411,9 @@
               : baseItem.points[baseItem.points.length - 1]
             : null;
           const referencePrice = baseMarketClosed
-            ? baseClosePrice
+            ? baseItem.referencePrice > 0
+              ? baseItem.referencePrice
+              : baseClosePrice
             : previousCandle
               ? parseFloat(previousCandle.c)
               : null;
@@ -477,7 +492,7 @@
     // 7. 보조 지수(코스피200, 원달러환율, DXY) 1일 차트 및 주기적 폴링
     async function loadYahooIndex(asset) {
       document.getElementById(`sym-${asset.id}`).textContent = asset.yahooSymbol;
-      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=5m&range=1d`;
+      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=5m&range=1d&includePrePost=true`;
       // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
       //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
       const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
@@ -497,17 +512,20 @@
         if (closes && closes.length > 1) {
           const previousMarketOpen = state[asset.id]?.marketOpen;
           const previousSessionEnd = state[asset.id]?.sessionEnd;
-          const referencePrice = Number(result.meta?.previousClose);
           const change = Number(result.meta?.fulldayChange);
           const changePercent = Number(result.meta?.fulldayChangePercent);
           const currentPrice = Number(result.meta?.fulldayPrice);
           const regularPeriod = result.meta?.currentTradingPeriod?.regular;
+          const preMarketStart = Number(result.meta?.currentTradingPeriod?.pre?.start) * 1000;
           const regularStart = Number(regularPeriod?.start) * 1000;
           const regularEnd = Number(regularPeriod?.end) * 1000;
           const now = Date.now();
           const marketOpen = Number.isFinite(regularStart) && Number.isFinite(regularEnd)
             ? now >= regularStart && now < regularEnd
             : null;
+          const referencePrice = Number(marketOpen === false
+            ? result.meta?.regularMarketPrice ?? result.meta?.previousClose
+            : result.meta?.previousClose);
           const sessionTimestamps = chartData
             .map(point => Number(point.timestamp) * 1000)
             .filter(Number.isFinite);
@@ -520,6 +538,9 @@
             marketOpen,
             sessionStart,
             sessionEnd,
+            preMarketStart,
+            regularStart,
+            regularEnd,
             currentPrice: Number.isFinite(currentPrice) && currentPrice > 0 ? currentPrice : null,
             referencePrice: Number.isFinite(referencePrice) ? referencePrice : null,
             change: Number.isFinite(change) ? change : null,
