@@ -109,20 +109,20 @@
 
     // Yahoo 시세와 Hyperliquid 장외 시세를 자산별로 연결
     const ASSETS = [
-      { id: "KOSPI",     name: "코스피",          yahooSymbol: "^KS11" },
-      { id: "KOSDAQ",    name: "코스닥",          yahooSymbol: "^KQ11" },
-      { id: "KOSPI200",  name: "코스피 200",      yahooSymbol: "^KS200", hlSymbol: "xyz:KR200" },
-      { id: "USDKRW",    name: "원달러환율",       yahooSymbol: "KRW=X" },
-      { id: "BTC",       name: "Bitcoin",         hlSymbol: "BTC" },
-      { id: "SP500",     name: "S&P 500",         yahooSymbol: "^GSPC", hlSymbol: "xyz:SP500" },
-      { id: "NASDAQ",    name: "NASDAQ 100",      yahooSymbol: "^NDX", hlSymbol: "xyz:XYZ100" },
-      { id: "GOOGL",     name: "Alphabet A",      yahooSymbol: "GOOGL", hlSymbol: "xyz:GOOGL" },
-      { id: "ANT",       name: "Anthropic",       yahooSymbol: "ANT", hlSymbol: "xyz:ANT" },
-      { id: "AAPL",      name: "Apple",           yahooSymbol: "AAPL", hlSymbol: "xyz:AAPL" },
-      { id: "NVDA",      name: "Nvidia",          yahooSymbol: "NVDA", hlSymbol: "xyz:NVDA" },
-      { id: "SPCX",      name: "SpaceX",          yahooSymbol: "SPCX", hlSymbol: "xyz:SPCX" },
-      { id: "BRENT",     name: "Brent Oil",       yahooSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yahooSparkline: true },
-      { id: "DXY",       name: "US Dollar Index", yahooSymbol: "DX-Y.NYB" },
+      { id: "KOSPI",    name: "코스피",     yahooSymbol: "^KS11" },
+      { id: "KOSDAQ",   name: "코스닥",     yahooSymbol: "^KQ11" },
+      { id: "KOSPI200", name: "코스피200",  yahooSymbol: "^KS200", hlSymbol: "xyz:KR200" },
+      { id: "USDKRW",   name: "원달러환율", yahooSymbol: "KRW=X" },
+      { id: "BTC",      name: "Bitcoin",   hlSymbol: "BTC" },
+      { id: "SP500",    name: "S&P500",    yahooSymbol: "^GSPC", hlSymbol: "xyz:SP500" },
+      { id: "NASDAQ",   name: "NASDAQ100", yahooSymbol: "^NDX", hlSymbol: "xyz:XYZ100" },
+      { id: "GOOGL",    name: "AlphabetA", yahooSymbol: "GOOGL", hlSymbol: "xyz:GOOGL" },
+      { id: "ANT",      name: "Anthropic", yahooSymbol: "ANT", hlSymbol: "xyz:ANT" },
+      { id: "AAPL",     name: "Apple",     yahooSymbol: "AAPL", hlSymbol: "xyz:AAPL" },
+      { id: "NVDA",     name: "Nvidia",    yahooSymbol: "NVDA", hlSymbol: "xyz:NVDA" },
+      { id: "SPCX",     name: "SpaceX",    yahooSymbol: "SPCX", hlSymbol: "xyz:SPCX" },
+      { id: "BRENT",    name: "Brent Oil", yahooSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yahooSparkline: true },
+      { id: "DXY",      name: "USD Index", yahooSymbol: "DX-Y.NYB" },
     ];
 
     const state = {}; // id -> { yahoo?: quote data, hl?: chart data }
@@ -217,7 +217,7 @@
       }
       priceEl.textContent = formattedPrice;
 
-      const changeDecimals = Math.abs(change) >= 1 ? 2 : 4;
+      const changeDecimals = 2;
       chgEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(changeDecimals)} ${isUp ? "+" : ""}${pct.toFixed(2)}%`;
       chgEl.className = `change ${isUp ? "up" : "down"}`;
 
