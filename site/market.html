@@ -97,7 +97,7 @@
 </head>
 <body>
   <header>
-    <h1>실시간 글로벌 지수 & 영구선물 모니터 (24H Sparkline)</h1>
+    <h1>실시간 글로벌 지수 & 영구선물 모니터 (시장 구간 Sparkline)</h1>
     <div class="status">WebSocket: <span id="ws-status">연결 중...</span></div>
   </header>
 
@@ -114,7 +114,7 @@
       { id: "KOSPI200",   name: "코스피 200",      source: "yahoo", yahooSymbol: "^KS200" },
       { id: "KOSPI200PF", name: "코스피 200",      source: "hl", exactCandidates: ["xyz:KR200"], keywords: ["KR200"], fallbackDex: "xyz" },
       { id: "USDKRW",     name: "원달러환율",       source: "yahoo", yahooSymbol: "KRW=X" },
-      { id: "BTCPF",      name: "Bitcoin",         source: "hl", exactSymbol: "BTC" },
+      { id: "BTC",        name: "Bitcoin",         source: "hl", exactSymbol: "BTC" },
       { id: "SP500",      name: "S&P 500",         source: "yahoo", yahooSymbol: "^GSPC" },
       { id: "SP500PF",    name: "S&P 500",         source: "hl", exactCandidates: ["xyz:SP500", "xyz:US500"], keywords: ["SP500", "US500", "SPY"], fallbackDex: "xyz" },
       { id: "NASDAQ",     name: "NASDAQ 100",      source: "yahoo", yahooSymbol: "^NDX" },
@@ -167,9 +167,29 @@
       const currentPrice = item.source === "yahoo" && Number.isFinite(item.currentPrice)
         ? item.currentPrice
         : last;
+      const baseAsset = item.source !== "yahoo" && id.endsWith("PF")
+        ? ASSETS.find(asset => asset.id === id.slice(0, -2))
+        : null;
+      const baseItem = baseAsset ? state[baseAsset.id] : null;
+      const baseClosePrice = baseItem?.source === "yahoo"
+        ? Number.isFinite(baseItem.currentPrice) && baseItem.currentPrice > 0
+          ? baseItem.currentPrice
+          : baseItem.points[baseItem.points.length - 1]
+        : null;
+      const baseChangeReference = baseItem
+        ? baseItem.source === "yahoo"
+          ? baseItem.marketOpen === false
+            ? baseClosePrice
+            : baseItem.referencePrice > 0
+              ? baseItem.referencePrice
+              : baseItem.points[0]
+          : baseItem.points[0]
+        : null;
       const changeReference = item.source === "yahoo" && item.referencePrice > 0
         ? item.referencePrice
-        : first;
+        : baseChangeReference > 0
+          ? baseChangeReference
+          : first;
       const pct = item.source === "yahoo" && Number.isFinite(item.changePercent)
         ? item.changePercent
         : changeReference > 0
@@ -199,12 +219,15 @@
         const changeDecimals = Math.abs(change) >= 1 ? 2 : 4;
         chgEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(changeDecimals)} ${isUp ? "+" : ""}${pct.toFixed(2)}%`;
       } else {
-        chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (24h)`;
+        chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (기준가 대비)`;
       }
       chgEl.className = `change ${isUp ? "up" : "down"}`;
 
-      const hasReferencePrice = Number.isFinite(item.referencePrice) && item.referencePrice > 0;
-      const scalePoints = hasReferencePrice ? [...pts, item.referencePrice] : pts;
+      const referenceLinePrice = baseAsset
+        ? baseChangeReference > 0 ? baseChangeReference : first
+        : item.referencePrice;
+      const hasReferencePrice = Number.isFinite(referenceLinePrice) && referenceLinePrice > 0;
+      const scalePoints = hasReferencePrice ? [...pts, referenceLinePrice] : pts;
       const min = Math.min(...scalePoints);
       const max = Math.max(...scalePoints);
       const range = max - min || 1;
@@ -212,19 +235,46 @@
       const h = 54;
       const pad = 4;
       const referenceY = hasReferencePrice
-        ? h - pad - ((item.referencePrice - min) / range) * (h - pad * 2)
+        ? h - pad - ((referenceLinePrice - min) / range) * (h - pad * 2)
         : null;
 
       const coords = pts.map((val, idx) => {
         const x = (idx / (pts.length - 1)) * w;
         const y = h - pad - ((val - min) / range) * (h - pad * 2);
         return `${x.toFixed(1)},${y.toFixed(1)}`;
-      }).join(" ");
+      });
+
+      let marketSessionBackground = "";
+      const canHighlightBaseSession = baseItem
+        && Number.isFinite(baseItem.sessionStart)
+        && Number.isFinite(baseItem.sessionEnd)
+        && Array.isArray(item.timestamps)
+        && item.timestamps.length === pts.length;
+      if (canHighlightBaseSession) {
+        const timestampToX = timestamp => {
+          const nextIndex = item.timestamps.findIndex(value => value >= timestamp);
+          if (nextIndex < 0) return w;
+          if (nextIndex === 0) return 0;
+
+          const previousTimestamp = item.timestamps[nextIndex - 1];
+          const nextTimestamp = item.timestamps[nextIndex];
+          const ratio = nextTimestamp > previousTimestamp
+            ? (timestamp - previousTimestamp) / (nextTimestamp - previousTimestamp)
+            : 0;
+          return ((nextIndex - 1 + ratio) / (pts.length - 1)) * w;
+        };
+        const startX = timestampToX(baseItem.sessionStart);
+        const endX = timestampToX(baseItem.sessionEnd);
+        if (endX > startX) {
+          marketSessionBackground = `<rect x="${startX.toFixed(1)}" y="0" width="${(endX - startX).toFixed(1)}" height="${h}" fill="#fff" fill-opacity="0.08" />`;
+        }
+      }
 
       const svg = document.getElementById(`svg-${id}`);
       svg.innerHTML = `
+        ${marketSessionBackground}
         ${referenceY === null ? "" : `<line x1="0" y1="${referenceY.toFixed(1)}" x2="${w}" y2="${referenceY.toFixed(1)}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4" />`}
-        <polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords}" />
+        <polyline fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="${coords.join(" ")}" />
       `;
     }
 
@@ -310,45 +360,67 @@
       }
     }
 
-    // 5. Hyperliquid 24시간 캔들(15m) 초기 로드
-    async function loadHyperliquidCandles() {
+    // 5. Hyperliquid 캔들(15m) 로드
+    async function loadHyperliquidCandlesForAsset(asset) {
       const now = Date.now();
-      const startTime = now - 24 * 60 * 60 * 1000;
+      const baseAsset = asset.id.endsWith("PF")
+        ? ASSETS.find(candidate => candidate.id === asset.id.slice(0, -2))
+        : null;
+      const baseItem = baseAsset ? state[baseAsset.id] : null;
+      const baseMarketClosed = baseItem?.source === "yahoo"
+        && baseItem.marketOpen === false
+        && Number.isFinite(baseItem.sessionEnd);
+      const startTime = baseMarketClosed
+        ? baseItem.sessionEnd
+        : now - 24 * 60 * 60 * 1000;
       const candleStartTime = startTime - 15 * 60 * 1000;
-      const hlAssets = ASSETS.filter(a => a.source === "hl");
 
-      await Promise.all(hlAssets.map(async (asset) => {
-        try {
-          const candles = await postHL({
-            type: "candleSnapshot",
-            req: {
-              coin: asset.resolvedSymbol,
-              interval: "15m",
-              startTime: candleStartTime,
-              endTime: now
-            }
-          });
-          if (Array.isArray(candles) && candles.length > 0) {
-            const previousCandle = candles
-              .filter(c => Number(c.t) < startTime)
-              .slice(-1)[0];
-            const chartCandles = candles.filter(c => Number(c.t) >= startTime);
-            const closes = chartCandles.map(c => parseFloat(c.c));
-            const referencePrice = previousCandle ? parseFloat(previousCandle.c) : null;
-            state[asset.id] = {
-              source: asset.source,
-              resolvedSymbol: asset.resolvedSymbol,
-              points: closes,
-              referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
-            };
-            renderCard(asset.id);
-          } else {
-            document.getElementById(`sym-${asset.id}`).textContent += " (데이터 없음)";
+      try {
+        const candles = await postHL({
+          type: "candleSnapshot",
+          req: {
+            coin: asset.resolvedSymbol,
+            interval: "15m",
+            startTime: candleStartTime,
+            endTime: now
           }
-        } catch (err) {
-          console.error(`${asset.name} 캔들 로드 오류:`, err);
+        });
+        if (Array.isArray(candles) && candles.length > 0) {
+          const previousCandle = candles
+            .filter(c => Number(c.t) < startTime)
+            .slice(-1)[0];
+          const chartCandles = candles.filter(c => Number(c.t) >= startTime);
+          const closes = chartCandles.map(c => parseFloat(c.c));
+          const timestamps = chartCandles.map(c => Number(c.t));
+          const baseClosePrice = baseItem?.source === "yahoo"
+            ? Number.isFinite(baseItem.currentPrice) && baseItem.currentPrice > 0
+              ? baseItem.currentPrice
+              : baseItem.points[baseItem.points.length - 1]
+            : null;
+          const referencePrice = baseMarketClosed
+            ? baseClosePrice
+            : previousCandle
+              ? parseFloat(previousCandle.c)
+              : null;
+          state[asset.id] = {
+            source: asset.source,
+            resolvedSymbol: asset.resolvedSymbol,
+            points: closes,
+            timestamps,
+            referencePrice: Number.isFinite(referencePrice) ? referencePrice : null
+          };
+          renderCard(asset.id);
+        } else {
+          document.getElementById(`sym-${asset.id}`).textContent += " (데이터 없음)";
         }
-      }));
+      } catch (err) {
+        console.error(`${asset.name} 캔들 로드 오류:`, err);
+      }
+    }
+
+    async function loadHyperliquidCandles() {
+      const hlAssets = ASSETS.filter(asset => asset.source === "hl");
+      await Promise.all(hlAssets.map(loadHyperliquidCandlesForAsset));
     }
 
     // 6. Hyperliquid WebSocket 실시간 스트리밍 (allMids)
@@ -415,22 +487,53 @@
         const res = await fetch(proxyUrl);
         const json = await res.json();
         const result = json?.chart?.result?.[0];
-        const closes = result?.indicators?.quote?.[0]?.close?.filter(v => v !== null);
+        const quoteCloses = result?.indicators?.quote?.[0]?.close || [];
+        const quoteTimestamps = result?.timestamp || [];
+        const chartData = quoteCloses
+          .map((close, index) => ({ close, timestamp: quoteTimestamps[index] }))
+          .filter(point => point.close !== null);
+        const closes = chartData.map(point => point.close);
 
         if (closes && closes.length > 1) {
+          const previousMarketOpen = state[asset.id]?.marketOpen;
+          const previousSessionEnd = state[asset.id]?.sessionEnd;
           const referencePrice = Number(result.meta?.previousClose);
           const change = Number(result.meta?.fulldayChange);
           const changePercent = Number(result.meta?.fulldayChangePercent);
           const currentPrice = Number(result.meta?.fulldayPrice);
+          const regularPeriod = result.meta?.currentTradingPeriod?.regular;
+          const regularStart = Number(regularPeriod?.start) * 1000;
+          const regularEnd = Number(regularPeriod?.end) * 1000;
+          const now = Date.now();
+          const marketOpen = Number.isFinite(regularStart) && Number.isFinite(regularEnd)
+            ? now >= regularStart && now < regularEnd
+            : null;
+          const sessionTimestamps = chartData
+            .map(point => Number(point.timestamp) * 1000)
+            .filter(Number.isFinite);
+          const sessionStart = sessionTimestamps[0];
+          const sessionEnd = sessionTimestamps[sessionTimestamps.length - 1];
           state[asset.id] = {
             source: asset.source,
             points: closes,
+            timestamps: chartData.map(point => Number(point.timestamp) * 1000),
+            marketOpen,
+            sessionStart,
+            sessionEnd,
             currentPrice: Number.isFinite(currentPrice) && currentPrice > 0 ? currentPrice : null,
             referencePrice: Number.isFinite(referencePrice) ? referencePrice : null,
             change: Number.isFinite(change) ? change : null,
             changePercent: Number.isFinite(changePercent) ? changePercent : null
           };
           renderCard(asset.id);
+          const pairedAsset = ASSETS.find(candidate => candidate.id === `${asset.id}PF`);
+          if (pairedAsset && state[pairedAsset.id]) {
+            renderCard(pairedAsset.id);
+            if (previousMarketOpen !== marketOpen
+              || (marketOpen === false && previousSessionEnd !== sessionEnd)) {
+              loadHyperliquidCandlesForAsset(pairedAsset);
+            }
+          }
         }
       } catch (e) {
         console.warn(`${asset.name} 조회 실패:`, e);
@@ -449,10 +552,8 @@
     (async function bootstrap() {
       initCards();
       await resolveHyperliquidSymbols();
-      await Promise.all([
-        loadHyperliquidCandles(),
-        initYahooPolling()
-      ]);
+      await initYahooPolling();
+      await loadHyperliquidCandles();
       connectHyperliquidWS();
     })();
   </script>
