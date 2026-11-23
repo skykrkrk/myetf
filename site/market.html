@@ -469,7 +469,7 @@
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
-      }, 5000); // 30초마다 갱신
+      }, 30000); // 30초마다 갱신
     }
 
     // 앱 시작
