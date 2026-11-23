@@ -492,7 +492,7 @@
     // 7. 보조 지수(코스피200, 원달러환율, DXY) 1일 차트 및 주기적 폴링
     async function loadYahooIndex(asset) {
       document.getElementById(`sym-${asset.id}`).textContent = asset.yahooSymbol;
-      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=5m&range=1d&includePrePost=true`;
+      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=1d&includePrePost=true`;
       // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
       //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
       const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
