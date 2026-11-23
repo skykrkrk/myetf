@@ -219,7 +219,7 @@
         const changeDecimals = Math.abs(change) >= 1 ? 2 : 4;
         chgEl.textContent = `${change >= 0 ? "+" : ""}${change.toFixed(changeDecimals)} ${isUp ? "+" : ""}${pct.toFixed(2)}%`;
       } else {
-        chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (기준가 대비)`;
+        chgEl.textContent = `${isUp ? "+" : ""}${pct.toFixed(2)}% (종가대비)`;
       }
       chgEl.className = `change ${isUp ? "up" : "down"}`;
 
