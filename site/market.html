@@ -197,16 +197,19 @@
       const badgeEl = document.getElementById(`badge-${id}`);
       const symbolEl = document.getElementById(`sym-${id}`);
       if (badgeEl) badgeEl.style.display = useHlSparkline ? "" : "none";
-      if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yfSymbol + " : " + referencePrice.toFixed(2): asset.hlSymbol || asset.yfSymbol;
+      const formattedreferencePrice = referencePrice.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+      if (symbolEl) symbolEl.textContent = (useYahooPrice ? asset.yfSymbol : asset.hlSymbol || asset.yfSymbol)  + " : " + formattedreferencePrice;
       svg.style.display = showSparkline ? "" : "none";
       if (!showSparkline) svg.innerHTML = "";
 
       if (!Number.isFinite(currentPrice) || currentPrice <= 0) return;
-      const decimals = currentPrice >= 1000 ? 2 : currentPrice >= 10 ? 2 : 4;
       const previousText = priceEl.textContent;
       const formattedPrice = currentPrice.toLocaleString("en-US", {
-        minimumFractionDigits: decimals,
-        maximumFractionDigits: decimals
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
       });
       if (previousText !== "-" && previousText !== formattedPrice) {
         const previousPrice = Number(previousText.replace(/,/g, ""));
