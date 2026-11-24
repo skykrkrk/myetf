@@ -111,11 +111,11 @@
     const ASSETS = [
       { id: "KOSPI",    name: "코스피",     yahooSymbol: "^KS11" },
       { id: "KOSDAQ",   name: "코스닥",     yahooSymbol: "^KQ11" },
-      { id: "KOSPI200", name: "코스피200",  yahooSymbol: "^KS200", hlSymbol: "xyz:KR200" },
-      { id: "USDKRW",   name: "원달러환율", yahooSymbol: "KRW=X" },
+      { id: "KOSPI200", name: "코스피200",  yahooSymbol: "^KS200", hlSymbol: "xyz:KR200", yahooSparkline: true },
+      { id: "USDKRW",   name: "원달러환율",  yahooSymbol: "KRW=X" },
       { id: "BTC",      name: "Bitcoin",   hlSymbol: "BTC" },
       { id: "SP500",    name: "S&P500",    yahooSymbol: "^GSPC", hlSymbol: "xyz:SP500", yahooSparkline: true },
-      { id: "NASDAQ",   name: "Nasdaq100",   yahooSymbol: "^NDX", hlSymbol: "xyz:XYZ100", yahooSparkline: true },
+      { id: "NASDAQ",   name: "Nasdaq100", yahooSymbol: "^NDX", hlSymbol: "xyz:XYZ100", yahooSparkline: true },
       { id: "GOOGL",    name: "Google",    yahooSymbol: "GOOGL", hlSymbol: "xyz:GOOGL", yahooSparkline: true },
       { id: "ANT",      name: "Anthropic", yahooSymbol: "ANT", hlSymbol: "xyz:ANT", yahooSparkline: true },
       { id: "AAPL",     name: "Apple",     yahooSymbol: "AAPL", hlSymbol: "xyz:AAPL", yahooSparkline: true },
@@ -469,7 +469,7 @@
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
-      }, 30000); // 30초마다 갱신
+      }, 30000); // 10초마다 갱신
     }
 
     // 앱 시작
