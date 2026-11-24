@@ -197,7 +197,7 @@
       const badgeEl = document.getElementById(`badge-${id}`);
       const symbolEl = document.getElementById(`sym-${id}`);
       if (badgeEl) badgeEl.style.display = useHlSparkline ? "" : "none";
-      if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yfSymbol : asset.hlSymbol || asset.yfSymbol;
+      if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yfSymbol + " : " + referencePrice.toFixed(2): asset.hlSymbol || asset.yfSymbol;
       svg.style.display = showSparkline ? "" : "none";
       if (!showSparkline) svg.innerHTML = "";
 
@@ -425,11 +425,11 @@
           const regularPeriod = result.meta?.currentTradingPeriod?.regular;
           const regularStart = Number(regularPeriod?.start) * 1000;
           const regularEnd = Number(regularPeriod?.end) * 1000;
-          const now = Date.now();
+          const now = result.meta?.regularMarketTime ? Number(result.meta.regularMarketTime) * 1000 : Date.now();
           const marketOpen = Number.isFinite(regularStart) && Number.isFinite(regularEnd)
             ? now >= regularStart && now < regularEnd
             : null;
-          const referencePrice = Number((asset.hlSymbol && marketOpen === false) || (!asset.hlSymbol && Boolean(result.meta?.hasPrePostMarketData))
+          const referencePrice = Number((asset.hlSymbol && marketOpen === false) || (!asset.hlSymbol && Boolean(result.meta?.hasPrePostMarketData) && marketOpen === false)
             ? result.meta?.regularMarketPrice ?? result.meta?.previousClose
             : result.meta?.previousClose);
           const sessionTimestamps = chartData
