@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>실시간 지수 & 영구선물 Sparkline 모니터</title>
+  <title>실시간 지수 & 영구선물 모니터</title>
   <style>
     :root {
       --bg: #101319;
@@ -441,7 +441,7 @@
           const marketOpen = Number.isFinite(regularStart) && Number.isFinite(regularEnd)
             ? now >= regularStart && now < regularEnd
             : null;
-          const referencePrice = Number(marketOpen === false
+          const referencePrice = Number((asset.hlSymbol && marketOpen === false) || (!asset.hlSymbol && Boolean(result.meta?.hasPrePostMarketData))
             ? result.meta?.regularMarketPrice ?? result.meta?.previousClose
             : result.meta?.previousClose);
           const sessionTimestamps = chartData
