@@ -102,15 +102,15 @@
       { id: "KOSDAQ",   name: "코스닥",     category: "index", yfSymbol: "^KQ11" },
       { id: "KOSPI200", name: "코스피200",  category: "index", yfSymbol: "^KS200", hlSymbol: "xyz:KR200", yfSparkline: true },
       { id: "USDKRW",   name: "원달러환율",  category: "etc",  yfSymbol: "KRW=X" },
-      { id: "BTC",      name: "Bitcoin",   category: "etc",   hlSymbol: "BTC" },
-      { id: "BRENT",    name: "Brent Oil", category: "etc",   yfSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yfSparkline: true },
       { id: "DXY",      name: "USD Index", category: "index", yfSymbol: "DX-Y.NYB" },
+      { id: "BRENT",    name: "Brent Oil", category: "etc",   yfSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yfSparkline: true },
+      { id: "BTC",      name: "Bitcoin",   category: "etc",   hlSymbol: "BTC" },
       { id: "VIX",      name: "VIX",       category: "index", yfSymbol: "^VIX" },
       { id: "SP500",    name: "S&P500",    category: "index", yfSymbol: "^GSPC", hlSymbol: "xyz:SP500", yfSparkline: true },
       { id: "NASDAQ",   name: "Nasdaq100", category: "index", yfSymbol: "^NDX", hlSymbol: "xyz:XYZ100", yfSparkline: true },
-      { id: "GOOGL",    name: "Google",    category: "stock", yfSymbol: "GOOGL", hlSymbol: "xyz:GOOGL", yfSparkline: true },
       { id: "ANT",      name: "Anthropic", category: "stock", yfSymbol: "ANT", hlSymbol: "xyz:ANT", yfSparkline: true },
       { id: "AAPL",     name: "Apple",     category: "stock", yfSymbol: "AAPL", hlSymbol: "xyz:AAPL", yfSparkline: true },
+      { id: "GOOGL",    name: "Google",    category: "stock", yfSymbol: "GOOGL", hlSymbol: "xyz:GOOGL", yfSparkline: true },
       { id: "NVDA",     name: "Nvidia",    category: "stock", yfSymbol: "NVDA", hlSymbol: "xyz:NVDA", yfSparkline: true },
       { id: "SPCX",     name: "SpaceX",    category: "stock", yfSymbol: "SPCX", hlSymbol: "xyz:SPCX", yfSparkline: true },
       { id: "SCHD",     name: "SCHD",      category: "etf",   yfSymbol: "SCHD" },
@@ -201,7 +201,8 @@
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
       });
-      if (symbolEl) symbolEl.textContent = (useYahooPrice ? asset.yfSymbol : asset.hlSymbol || asset.yfSymbol)  + " : " + formattedreferencePrice;
+      //if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yfSymbol : asset.hlSymbol || asset.yfSymbol;
+      if (symbolEl) symbolEl.textContent = formattedreferencePrice;
       svg.style.display = showSparkline ? "" : "none";
       if (!showSparkline) svg.innerHTML = "";
 
