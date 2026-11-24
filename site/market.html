@@ -53,6 +53,10 @@
       gap: 8px;
       box-shadow: var(--shadow);
     }
+    .card[data-category="index"] { border-color: #60a5fa; }
+    .card[data-category="stock"] { border-color: #c084fc; }
+    .card[data-category="etf"] { border-color: #34d399; }
+    .card[data-category="etc"] { border-color: #fbbf24; }
     .card-top {
       display: flex;
       justify-content: space-between;
@@ -109,21 +113,25 @@
 
     // Yahoo 시세와 Hyperliquid 장외 시세를 자산별로 연결
     const ASSETS = [
-      { id: "KOSPI",    name: "코스피",     yahooSymbol: "^KS11" },
-      { id: "KOSDAQ",   name: "코스닥",     yahooSymbol: "^KQ11" },
-      { id: "KOSPI200", name: "코스피200",  yahooSymbol: "^KS200", hlSymbol: "xyz:KR200", yahooSparkline: true },
-      { id: "USDKRW",   name: "원달러환율",  yahooSymbol: "KRW=X" },
-      { id: "BTC",      name: "Bitcoin",   hlSymbol: "BTC" },
-      { id: "BRENT",    name: "Brent Oil", yahooSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yahooSparkline: true },
-      { id: "DXY",      name: "USD Index", yahooSymbol: "DX-Y.NYB" },
-      { id: "VIX",      name: "VIX",       yahooSymbol: "^VIX" },
-      { id: "SP500",    name: "S&P500",    yahooSymbol: "^GSPC", hlSymbol: "xyz:SP500", yahooSparkline: true },
-      { id: "NASDAQ",   name: "Nasdaq100", yahooSymbol: "^NDX", hlSymbol: "xyz:XYZ100", yahooSparkline: true },
-      { id: "GOOGL",    name: "Google",    yahooSymbol: "GOOGL", hlSymbol: "xyz:GOOGL", yahooSparkline: true },
-      { id: "ANT",      name: "Anthropic", yahooSymbol: "ANT", hlSymbol: "xyz:ANT", yahooSparkline: true },
-      { id: "AAPL",     name: "Apple",     yahooSymbol: "AAPL", hlSymbol: "xyz:AAPL", yahooSparkline: true },
-      { id: "NVDA",     name: "Nvidia",    yahooSymbol: "NVDA", hlSymbol: "xyz:NVDA", yahooSparkline: true },
-      { id: "SPCX",     name: "Space X",   yahooSymbol: "SPCX", hlSymbol: "xyz:SPCX", yahooSparkline: true },
+      { id: "KOSPI",    name: "코스피",     category: "index", yfSymbol: "^KS11" },
+      { id: "KOSDAQ",   name: "코스닥",     category: "index", yfSymbol: "^KQ11" },
+      { id: "KOSPI200", name: "코스피200",  category: "index", yfSymbol: "^KS200", hlSymbol: "xyz:KR200", yfSparkline: true },
+      { id: "USDKRW",   name: "원달러환율",  category: "etc",  yfSymbol: "KRW=X" },
+      { id: "BTC",      name: "Bitcoin",   category: "etc",   hlSymbol: "BTC" },
+      { id: "BRENT",    name: "Brent Oil", category: "etc",   yfSymbol: "BZ=F", hlSymbol: "xyz:BRENTOIL", yfSparkline: true },
+      { id: "DXY",      name: "USD Index", category: "index", yfSymbol: "DX-Y.NYB" },
+      { id: "VIX",      name: "VIX",       category: "index", yfSymbol: "^VIX" },
+      { id: "SP500",    name: "S&P500",    category: "index", yfSymbol: "^GSPC", hlSymbol: "xyz:SP500", yfSparkline: true },
+      { id: "NASDAQ",   name: "Nasdaq100", category: "index", yfSymbol: "^NDX", hlSymbol: "xyz:XYZ100", yfSparkline: true },
+      { id: "GOOGL",    name: "Google",    category: "stock", yfSymbol: "GOOGL", hlSymbol: "xyz:GOOGL", yfSparkline: true },
+      { id: "ANT",      name: "Anthropic", category: "stock", yfSymbol: "ANT", hlSymbol: "xyz:ANT", yfSparkline: true },
+      { id: "AAPL",     name: "Apple",     category: "stock", yfSymbol: "AAPL", hlSymbol: "xyz:AAPL", yfSparkline: true },
+      { id: "NVDA",     name: "Nvidia",    category: "stock", yfSymbol: "NVDA", hlSymbol: "xyz:NVDA", yfSparkline: true },
+      { id: "SPCX",     name: "SpaceX",    category: "stock", yfSymbol: "SPCX", hlSymbol: "xyz:SPCX", yfSparkline: true },
+      { id: "SCHD",     name: "SCHD",      category: "etf",   yfSymbol: "SCHD" },
+      { id: "JEPI",     name: "JEPI",      category: "etf",  yfSymbol: "JEPI" },
+      { id: "SPYM",     name: "SPYM",      category: "etf",  yfSymbol: "SPYM" },
+      { id: "QQQM",     name: "QQQM",      category: "etf",  yfSymbol: "QQQM" },
     ];
 
     const state = {}; // id -> { yahoo?: quote data, hl?: chart data }
@@ -132,7 +140,7 @@
     function initCards() {
       const container = document.getElementById("dashboard");
       container.innerHTML = ASSETS.map(asset => `
-        <div class="card" id="card-${asset.id}">
+        <div class="card" id="card-${asset.id}" data-category="${asset.category}">
           <div class="card-top">
             <div>
               <div class="name">${asset.name}${asset.hlSymbol ? `<span class="badge" id="badge-${asset.id}">PF</span>` : ""}</div>
@@ -163,10 +171,10 @@
       const yahooPoints = Array.isArray(yahoo?.points) ? yahoo.points : [];
       const hlPoints = Array.isArray(hl?.points) ? hl.points : [];
       const marketClosed = yahoo?.marketOpen === false;
-      const useHlSparkline = Boolean(asset.hlSymbol && (!asset.yahooSymbol || marketClosed));
-      const useYahooSparkline = Boolean(asset.yahooSymbol
-        && (!asset.hlSymbol || (asset.yahooSparkline && !marketClosed)));
-      const showSparkline = useHlSparkline || useYahooSparkline;
+      const useHlSparkline = Boolean(asset.hlSymbol && (!asset.yfSymbol || marketClosed));
+      const useyfSparkline = Boolean(asset.yfSymbol
+        && (!asset.hlSymbol || (asset.yfSparkline && !marketClosed)));
+      const showSparkline = useHlSparkline || useyfSparkline;
       const chartPoints = useHlSparkline ? hlPoints : yahooPoints;
       const chartTimestamps = useHlSparkline ? hl?.timestamps : yahoo?.timestamps;
       const yahooLast = Number.isFinite(yahoo?.currentPrice) && yahoo.currentPrice > 0
@@ -176,12 +184,12 @@
         ? hl.currentPrice
         : hlPoints[hlPoints.length - 1];
       const hasHlPrice = Number.isFinite(hlLast) && hlLast > 0;
-      const useYahooPrice = Boolean(asset.yahooSymbol && yahoo
+      const useYahooPrice = Boolean(asset.yfSymbol && yahoo
         && (!asset.hlSymbol || !marketClosed || !hasHlPrice));
       const currentPrice = useYahooPrice ? yahooLast : hlLast;
       const referencePrice = useYahooPrice
         ? yahoo.referencePrice > 0 ? yahoo.referencePrice : hl?.referencePrice
-        : asset.yahooSymbol && yahoo?.referencePrice > 0
+        : asset.yfSymbol && yahoo?.referencePrice > 0
           ? yahoo.referencePrice
           : hl?.referencePrice;
       const change = useYahooPrice && Number.isFinite(yahoo.change)
@@ -199,7 +207,7 @@
       const badgeEl = document.getElementById(`badge-${id}`);
       const symbolEl = document.getElementById(`sym-${id}`);
       if (badgeEl) badgeEl.style.display = useHlSparkline ? "" : "none";
-      if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yahooSymbol : asset.hlSymbol || asset.yahooSymbol;
+      if (symbolEl) symbolEl.textContent = useYahooPrice ? asset.yfSymbol : asset.hlSymbol || asset.yfSymbol;
       svg.style.display = showSparkline ? "" : "none";
       if (!showSparkline) svg.innerHTML = "";
 
@@ -224,7 +232,7 @@
 
       if (!showSparkline || chartPoints.length < 2) return;
 
-      const referenceLinePrice = asset.yahooSymbol && yahoo?.referencePrice > 0
+      const referenceLinePrice = asset.yfSymbol && yahoo?.referencePrice > 0
         ? yahoo.referencePrice
         : hl?.referencePrice;
       const hasReferencePrice = Number.isFinite(referenceLinePrice) && referenceLinePrice > 0;
@@ -295,7 +303,7 @@
       const now = Date.now();
       const item = state[asset.id] || (state[asset.id] = {});
       const yahoo = item.yahoo;
-      const baseMarketClosed = asset.yahooSymbol && yahoo?.marketOpen === false;
+      const baseMarketClosed = asset.yfSymbol && yahoo?.marketOpen === false;
       const startTime = now - 48 * 60 * 60 * 1000;
       const candleStartTime = startTime - 15 * 60 * 1000;
 
@@ -402,8 +410,8 @@
     // 6. 야후 시세 48시간 차트 데이터 및 주기적 폴링
     async function loadYahooIndex(asset) {
       const symbolEl = document.getElementById(`sym-${asset.id}`);
-      if (symbolEl) symbolEl.textContent = asset.yahooSymbol;
-      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yahooSymbol)}?interval=15m&range=2d&includePrePost=true`;
+      if (symbolEl) symbolEl.textContent = asset.yfSymbol;
+      const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yfSymbol)}?interval=15m&range=2d&includePrePost=true`;
       // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
       //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
       const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
@@ -466,7 +474,7 @@
     }
 
     async function initYahooPolling() {
-      const yahooAssets = ASSETS.filter(asset => asset.yahooSymbol);
+      const yahooAssets = ASSETS.filter(asset => asset.yfSymbol);
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
