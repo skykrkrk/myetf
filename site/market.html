@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>실시간 지수 & 영구선물 모니터</title>
+  <title>48시간 지수 & 영구선물 모니터</title>
   <style>
     :root {
       --bg: #101319;
@@ -140,7 +140,7 @@
         </div>
       `).join("") + `
         <div class="card status-card" data-category="etc">
-          <div class="name">실시간 지수 &amp; 영구선물 모니터</div>
+          <div class="name">48시간 지수 &amp; 영구선물 모니터</div>
           <div class="status">WebSocket: <span id="ws-status">연결 중...</span></div>
         </div>
       `;
@@ -402,8 +402,6 @@
       const symbolEl = document.getElementById(`sym-${asset.id}`);
       if (symbolEl) symbolEl.textContent = asset.yfSymbol;
       const targetUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(asset.yfSymbol)}?interval=15m&range=2d&includePrePost=true`;
-      // 브라우저 CORS 우회용 공개 프록시 (실서비스 배포 시 자체 Edge/서버 프록시 교체 권장)
-      //const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
       const proxyUrl = `https://ticker-proxy.skykrkrk.workers.dev/?url=${encodeURIComponent(targetUrl)}`;
       
 
@@ -468,7 +466,7 @@
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
-      }, 30000); // 10초마다 갱신
+      }, 30000); // 30초마다 갱신
     }
 
     // 앱 시작
