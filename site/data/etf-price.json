@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 10:32:23",
+  "updated_at": "2026-11-24 11:31:36",
   "price_date": "2026-11-24",
   "price_date_note": "가격 조회일 기준. 실제 마지막 거래일과 차이가 있을 수 있음.",
   "source": {
@@ -11,28 +11,28 @@
   "funds": [
     {
       "symbol": "451060",
-      "price": 25100,
-      "market_cap": 3276.0
+      "price": 25060,
+      "market_cap": 3270.0
     },
     {
       "symbol": "0184E0",
-      "price": 9450,
+      "price": 9440,
       "market_cap": 293.0
     },
     {
       "symbol": "491610",
-      "price": 103085,
+      "price": 103080,
       "market_cap": 1502.0
     },
     {
       "symbol": "0182R0",
-      "price": 7230,
-      "market_cap": 2502.0
+      "price": 7195,
+      "market_cap": 2489.0
     },
     {
       "symbol": "0182S0",
-      "price": 10640,
-      "market_cap": 2006.0
+      "price": 10605,
+      "market_cap": 1999.0
     },
     {
       "symbol": "0103T0",
@@ -41,112 +41,112 @@
     },
     {
       "symbol": "0198D0",
-      "price": 3715,
-      "market_cap": 90.0
+      "price": 3680,
+      "market_cap": 89.0
     },
     {
       "symbol": "463290",
-      "price": 106745,
+      "price": 106740,
       "market_cap": 1214.0
     },
     {
       "symbol": "0131W0",
-      "price": 100360,
+      "price": 100355,
       "market_cap": 1366.0
     },
     {
       "symbol": "479080",
-      "price": 52675,
-      "market_cap": 8032.0
+      "price": 52680,
+      "market_cap": 8033.0
     },
     {
       "symbol": "0258B0",
-      "price": 9260,
-      "market_cap": 153.0
+      "price": 9210,
+      "market_cap": 152.0
     },
     {
       "symbol": "0026S0",
-      "price": 11850,
-      "market_cap": 3282.0
+      "price": 11810,
+      "market_cap": 3271.0
     },
     {
       "symbol": "0052S0",
-      "price": 10935,
-      "market_cap": 3149.0
+      "price": 10910,
+      "market_cap": 3142.0
     },
     {
       "symbol": "0069M0",
-      "price": 11965,
-      "market_cap": 1879.0
+      "price": 11905,
+      "market_cap": 1869.0
     },
     {
       "symbol": "0111P0",
-      "price": 10030,
-      "market_cap": 2989.0
+      "price": 10005,
+      "market_cap": 2981.0
     },
     {
       "symbol": "0083S0",
-      "price": 9640,
-      "market_cap": 251.0
+      "price": 9610,
+      "market_cap": 250.0
     },
     {
       "symbol": "0004G0",
-      "price": 8800,
-      "market_cap": 141.0
+      "price": 8760,
+      "market_cap": 140.0
     },
     {
       "symbol": "0131V0",
-      "price": 8590,
-      "market_cap": 2766.0
+      "price": 8540,
+      "market_cap": 2750.0
     },
     {
       "symbol": "0198B0",
-      "price": 5665,
-      "market_cap": 72.0
+      "price": 5585,
+      "market_cap": 71.0
     },
     {
       "symbol": "0094X0",
-      "price": 6220,
-      "market_cap": 56.0
+      "price": 6090,
+      "market_cap": 55.0
     },
     {
       "symbol": "0256C0",
-      "price": 8440,
-      "market_cap": 135.0
+      "price": 8380,
+      "market_cap": 134.0
     },
     {
       "symbol": "0224X0",
-      "price": 8595,
-      "market_cap": 271.0
+      "price": 8470,
+      "market_cap": 267.0
     },
     {
       "symbol": "0172V0",
-      "price": 5530,
-      "market_cap": 429.0
+      "price": 5455,
+      "market_cap": 423.0
     },
     {
       "symbol": "0017Y0",
-      "price": 95160,
+      "price": 95230,
       "market_cap": 853.0
     },
     {
       "symbol": "0052T0",
-      "price": 49260,
+      "price": 49270,
       "market_cap": 1021.0
     },
     {
       "symbol": "495330",
-      "price": 23775,
-      "market_cap": 1022.0
+      "price": 23825,
+      "market_cap": 1024.0
     },
     {
       "symbol": "0186S0",
-      "price": 7470,
+      "price": 7480,
       "market_cap": 441.0
     },
     {
       "symbol": "492500",
-      "price": 49975,
+      "price": 50005,
       "market_cap": 571.0
     },
     {
@@ -156,23 +156,23 @@
     },
     {
       "symbol": "473440",
-      "price": 10935,
+      "price": 10930,
       "market_cap": 951.0
     },
     {
       "symbol": "105190",
-      "price": 79485,
-      "market_cap": 13473.0
+      "price": 79395,
+      "market_cap": 13457.0
     },
     {
       "symbol": "332500",
-      "price": 53325,
-      "market_cap": 1173.0
+      "price": 53150,
+      "market_cap": 1169.0
     },
     {
       "symbol": "0254W0",
-      "price": 10135,
-      "market_cap": 340.0
+      "price": 10130,
+      "market_cap": 339.0
     },
     {
       "symbol": "475260",
@@ -181,8 +181,8 @@
     },
     {
       "symbol": "385600",
-      "price": 9290,
-      "market_cap": 139.0
+      "price": 9335,
+      "market_cap": 140.0
     },
     {
       "symbol": "475270",
@@ -196,12 +196,12 @@
     },
     {
       "symbol": "469150",
-      "price": 41520,
-      "market_cap": 8138.0
+      "price": 41505,
+      "market_cap": 8135.0
     },
     {
       "symbol": "0079X0",
-      "price": 7535,
+      "price": 7495,
       "market_cap": 26.0
     },
     {
@@ -211,127 +211,127 @@
     },
     {
       "symbol": "226380",
-      "price": 5220,
+      "price": 5230,
       "market_cap": 37.0
     },
     {
       "symbol": "475050",
-      "price": 7635,
-      "market_cap": 1130.0
+      "price": 7710,
+      "market_cap": 1141.0
     },
     {
       "symbol": "411060",
-      "price": 22080,
-      "market_cap": 33098.0
+      "price": 21960,
+      "market_cap": 32918.0
     },
     {
       "symbol": "0221Z0",
-      "price": 7905,
+      "price": 7845,
       "market_cap": 63.0
     },
     {
       "symbol": "0210A0",
-      "price": 5170,
-      "market_cap": 3118.0
+      "price": 5140,
+      "market_cap": 3099.0
     },
     {
       "symbol": "0216Z0",
-      "price": 5735,
+      "price": 5710,
       "market_cap": 63.0
     },
     {
       "symbol": "0172Y0",
-      "price": 6635,
+      "price": 6645,
       "market_cap": 53.0
     },
     {
       "symbol": "0177X0",
-      "price": 8570,
-      "market_cap": 938.0
+      "price": 8795,
+      "market_cap": 963.0
     },
     {
       "symbol": "291130",
-      "price": 16970,
+      "price": 16865,
       "market_cap": 34.0
     },
     {
       "symbol": "256440",
-      "price": 4315,
-      "market_cap": 285.0
+      "price": 4395,
+      "market_cap": 290.0
     },
     {
       "symbol": "0194T0",
-      "price": 3640,
-      "market_cap": 207.0
+      "price": 3535,
+      "market_cap": 201.0
     },
     {
       "symbol": "0139P0",
-      "price": 11130,
+      "price": 11120,
       "market_cap": 406.0
     },
     {
       "symbol": "0199C0",
-      "price": 7045,
-      "market_cap": 1088.0
+      "price": 7065,
+      "market_cap": 1092.0
     },
     {
       "symbol": "225130",
-      "price": 32640,
+      "price": 32510,
       "market_cap": 163.0
     },
     {
       "symbol": "483340",
-      "price": 16235,
-      "market_cap": 1875.0
+      "price": 16125,
+      "market_cap": 1862.0
     },
     {
       "symbol": "365780",
-      "price": 86565,
-      "market_cap": 5877.0
+      "price": 86745,
+      "market_cap": 5889.0
     },
     {
       "symbol": "114460",
-      "price": 101845,
+      "price": 101855,
       "market_cap": 153.0
     },
     {
       "symbol": "494340",
-      "price": 13970,
-      "market_cap": 203.0
+      "price": 13815,
+      "market_cap": 200.0
     },
     {
       "symbol": "0259R0",
-      "price": 9105,
+      "price": 9080,
       "market_cap": 182.0
     },
     {
       "symbol": "446770",
-      "price": 59150,
-      "market_cap": 11741.0
+      "price": 58730,
+      "market_cap": 11658.0
     },
     {
       "symbol": "435040",
-      "price": 18515,
+      "price": 18470,
       "market_cap": 83.0
     },
     {
       "symbol": "497510",
-      "price": 13325,
+      "price": 13300,
       "market_cap": 93.0
     },
     {
       "symbol": "460960",
-      "price": 9915,
-      "market_cap": 783.0
+      "price": 9900,
+      "market_cap": 782.0
     },
     {
       "symbol": "414270",
-      "price": 9510,
-      "market_cap": 238.0
+      "price": 9450,
+      "market_cap": 236.0
     },
     {
       "symbol": "440640",
-      "price": 113650,
+      "price": 113630,
       "market_cap": 594.0
     },
     {
@@ -341,8 +341,8 @@
     },
     {
       "symbol": "494330",
-      "price": 27345,
-      "market_cap": 1600.0
+      "price": 27290,
+      "market_cap": 1596.0
     },
     {
       "symbol": "265690",
@@ -351,48 +351,48 @@
     },
     {
       "symbol": "152500",
-      "price": 22125,
-      "market_cap": 177.0
+      "price": 22060,
+      "market_cap": 176.0
     },
     {
       "symbol": "0153P0",
-      "price": 8695,
+      "price": 8665,
       "market_cap": 113.0
     },
     {
       "symbol": "483330",
-      "price": 13065,
-      "market_cap": 131.0
+      "price": 13000,
+      "market_cap": 130.0
     },
     {
       "symbol": "487340",
-      "price": 106770,
-      "market_cap": 13294.0
+      "price": 106775,
+      "market_cap": 13295.0
     },
     {
       "symbol": "0085P0",
-      "price": 9470,
-      "market_cap": 2055.0
+      "price": 9455,
+      "market_cap": 2052.0
     },
     {
       "symbol": "0085N0",
-      "price": 9650,
+      "price": 9655,
       "market_cap": 425.0
     },
     {
       "symbol": "452250",
-      "price": 4625,
-      "market_cap": 291.0
+      "price": 4640,
+      "market_cap": 292.0
     },
     {
       "symbol": "476760",
-      "price": 8650,
-      "market_cap": 4654.0
+      "price": 8660,
+      "market_cap": 4659.0
     },
     {
       "symbol": "453850",
-      "price": 7120,
-      "market_cap": 14596.0
+      "price": 7125,
+      "market_cap": 14606.0
     },
     {
       "symbol": "476750",
@@ -401,132 +401,132 @@
     },
     {
       "symbol": "480030",
-      "price": 8395,
-      "market_cap": 1452.0
+      "price": 8365,
+      "market_cap": 1447.0
     },
     {
       "symbol": "0118Z0",
-      "price": 6810,
-      "market_cap": 402.0
+      "price": 6770,
+      "market_cap": 399.0
     },
     {
       "symbol": "0252V0",
-      "price": 7950,
-      "market_cap": 64.0
+      "price": 7870,
+      "market_cap": 63.0
     },
     {
       "symbol": "360200",
-      "price": 24520,
-      "market_cap": 37883.0
+      "price": 24415,
+      "market_cap": 37721.0
     },
     {
       "symbol": "438080",
-      "price": 13385,
-      "market_cap": 12287.0
+      "price": 13340,
+      "market_cap": 12246.0
     },
     {
       "symbol": "0155M0",
-      "price": 3970,
-      "market_cap": 181.0
+      "price": 3940,
+      "market_cap": 179.0
     },
     {
       "symbol": "309230",
-      "price": 30345,
-      "market_cap": 1092.0
+      "price": 30270,
+      "market_cap": 1090.0
     },
     {
       "symbol": "367380",
-      "price": 27505,
-      "market_cap": 32648.0
+      "price": 27360,
+      "market_cap": 32476.0
     },
     {
       "symbol": "438100",
-      "price": 14220,
-      "market_cap": 9101.0
+      "price": 14175,
+      "market_cap": 9072.0
     },
     {
       "symbol": "456880",
-      "price": 11930,
-      "market_cap": 3290.0
+      "price": 11920,
+      "market_cap": 3288.0
     },
     {
       "symbol": "440650",
-      "price": 11385,
-      "market_cap": 433.0
+      "price": 11360,
+      "market_cap": 432.0
     },
     {
       "symbol": "0127M0",
-      "price": 11500,
-      "market_cap": 1403.0
+      "price": 11400,
+      "market_cap": 1391.0
     },
     {
       "symbol": "0127P0",
-      "price": 9145,
-      "market_cap": 5624.0
+      "price": 9105,
+      "market_cap": 5600.0
     },
     {
       "symbol": "480040",
-      "price": 10315,
-      "market_cap": 1661.0
+      "price": 10150,
+      "market_cap": 1634.0
     },
     {
       "symbol": "402970",
-      "price": 14910,
-      "market_cap": 9900.0
+      "price": 14885,
+      "market_cap": 9884.0
     },
     {
       "symbol": "0046Y0",
-      "price": 11655,
-      "market_cap": 501.0
+      "price": 11625,
+      "market_cap": 500.0
     },
     {
       "symbol": "0049M0",
-      "price": 10270,
+      "price": 10265,
       "market_cap": 688.0
     },
     {
       "symbol": "0049K0",
-      "price": 10675,
+      "price": 10660,
       "market_cap": 267.0
     },
     {
       "symbol": "181480",
-      "price": 81600,
+      "price": 81450,
       "market_cap": 98.0
     },
     {
       "symbol": "480020",
-      "price": 8415,
-      "market_cap": 1708.0
+      "price": 8370,
+      "market_cap": 1699.0
     },
     {
       "symbol": "465580",
-      "price": 22120,
-      "market_cap": 11978.0
+      "price": 22010,
+      "market_cap": 11918.0
     },
     {
       "symbol": "465610",
-      "price": 34300,
-      "market_cap": 823.0
+      "price": 33740,
+      "market_cap": 810.0
     },
     {
       "symbol": "0180V0",
-      "price": 6055,
-      "market_cap": 1135.0
+      "price": 6015,
+      "market_cap": 1128.0
     },
     {
       "symbol": "473590",
-      "price": 15885,
-      "market_cap": 357.0
+      "price": 15815,
+      "market_cap": 356.0
     },
     {
       "symbol": "0008E0",
-      "price": 10395,
+      "price": 10370,
       "market_cap": 73.0
     },
     {
       "symbol": "391600",
-      "price": 8830,
+      "price": 8810,
       "market_cap": 40.0
     },
     {
@@ -536,53 +536,53 @@
     },
     {
       "symbol": "0228G0",
-      "price": 6690,
-      "market_cap": 1713.0
+      "price": 6680,
+      "market_cap": 1710.0
     },
     {
       "symbol": "245710",
-      "price": 26090,
-      "market_cap": 3366.0
+      "price": 26050,
+      "market_cap": 3360.0
     },
     {
       "symbol": "131890",
-      "price": 34975,
-      "market_cap": 105.0
+      "price": 34825,
+      "market_cap": 104.0
     },
     {
       "symbol": "108450",
-      "price": 32100,
+      "price": 32120,
       "market_cap": 642.0
     },
     {
       "symbol": "0233A0",
-      "price": 8830,
-      "market_cap": 450.0
+      "price": 8785,
+      "market_cap": 448.0
     },
     {
       "symbol": "0194M0",
-      "price": 5495,
-      "market_cap": 206.0
+      "price": 5450,
+      "market_cap": 204.0
     },
     {
       "symbol": "316300",
-      "price": 11345,
+      "price": 11375,
       "market_cap": 57.0
     },
     {
       "symbol": "277540",
-      "price": 25590,
-      "market_cap": 205.0
+      "price": 25270,
+      "market_cap": 202.0
     },
     {
       "symbol": "483320",
-      "price": 17255,
-      "market_cap": 2027.0
+      "price": 17070,
+      "market_cap": 2006.0
     },
     {
       "symbol": "448540",
-      "price": 24600,
-      "market_cap": 1943.0
+      "price": 24525,
+      "market_cap": 1937.0
     },
     {
       "symbol": "0099L0",
@@ -591,12 +591,12 @@
     },
     {
       "symbol": "433500",
-      "price": 32720,
-      "market_cap": 1243.0
+      "price": 32760,
+      "market_cap": 1245.0
     },
     {
       "symbol": "0102X0",
-      "price": 7655,
+      "price": 7645,
       "market_cap": 46.0
     },
     {
@@ -606,23 +606,23 @@
     },
     {
       "symbol": "487910",
-      "price": 8625,
-      "market_cap": 104.0
+      "price": 8610,
+      "market_cap": 103.0
     },
     {
       "symbol": "145670",
-      "price": 1684,
+      "price": 1681,
       "market_cap": 30.0
     },
     {
       "symbol": "497520",
-      "price": 14015,
-      "market_cap": 84.0
+      "price": 13910,
+      "market_cap": 83.0
     },
     {
       "symbol": "238720",
-      "price": 43150,
-      "market_cap": 388.0
+      "price": 42910,
+      "market_cap": 386.0
     },
     {
       "symbol": "196030",
@@ -631,32 +631,32 @@
     },
     {
       "symbol": "205720",
-      "price": 1535,
+      "price": 1540,
       "market_cap": 46.0
     },
     {
       "symbol": "469160",
-      "price": 18725,
-      "market_cap": 159.0
+      "price": 18465,
+      "market_cap": 157.0
     },
     {
       "symbol": "356540",
-      "price": 104580,
-      "market_cap": 11500.0
+      "price": 104685,
+      "market_cap": 11511.0
     },
     {
       "symbol": "447430",
-      "price": 14700,
-      "market_cap": 412.0
+      "price": 14810,
+      "market_cap": 415.0
     },
     {
       "symbol": "416090",
-      "price": 9540,
+      "price": 9590,
       "market_cap": 153.0
     },
     {
       "symbol": "168580",
-      "price": 29620,
+      "price": 29605,
       "market_cap": 906.0
     },
     {
@@ -666,53 +666,53 @@
     },
     {
       "symbol": "272910",
-      "price": 108425,
+      "price": 108445,
       "market_cap": 756.0
     },
     {
       "symbol": "0087F0",
-      "price": 9715,
+      "price": 9670,
       "market_cap": 44.0
     },
     {
       "symbol": "371870",
-      "price": 5135,
-      "market_cap": 82.0
+      "price": 5060,
+      "market_cap": 81.0
     },
     {
       "symbol": "0209Z0",
-      "price": 4410,
+      "price": 4425,
       "market_cap": 157.0
     },
     {
       "symbol": "380340",
-      "price": 20210,
-      "market_cap": 243.0
+      "price": 20110,
+      "market_cap": 241.0
     },
     {
       "symbol": "496120",
-      "price": 24950,
-      "market_cap": 187.0
+      "price": 24805,
+      "market_cap": 186.0
     },
     {
       "symbol": "354500",
-      "price": 11130,
-      "market_cap": 1258.0
+      "price": 11160,
+      "market_cap": 1261.0
     },
     {
       "symbol": "305050",
-      "price": 52660,
-      "market_cap": 395.0
+      "price": 52560,
+      "market_cap": 394.0
     },
     {
       "symbol": "457480",
-      "price": 16105,
-      "market_cap": 6563.0
+      "price": 15960,
+      "market_cap": 6504.0
     },
     {
       "symbol": "469170",
-      "price": 5145,
-      "market_cap": 1001.0
+      "price": 5160,
+      "market_cap": 1004.0
     },
     {
       "symbol": "0193M0",
@@ -721,12 +721,12 @@
     },
     {
       "symbol": "466810",
-      "price": 4580,
+      "price": 4600,
       "market_cap": 71.0
     },
     {
       "symbol": "457930",
-      "price": 21595,
+      "price": 21580,
       "market_cap": 65.0
     },
     {
@@ -736,8 +736,8 @@
     },
     {
       "symbol": "487750",
-      "price": 25315,
-      "market_cap": 101.0
+      "price": 24920,
+      "market_cap": 100.0
     },
     {
       "symbol": "445690",
@@ -746,13 +746,13 @@
     },
     {
       "symbol": "0120J0",
-      "price": 7745,
-      "market_cap": 93.0
+      "price": 7795,
+      "market_cap": 94.0
     },
     {
       "symbol": "486240",
-      "price": 21200,
-      "market_cap": 657.0
+      "price": 20960,
+      "market_cap": 650.0
     },
     {
       "symbol": "434960",
@@ -761,23 +761,23 @@
     },
     {
       "symbol": "0189Z0",
-      "price": 8800,
+      "price": 8820,
       "market_cap": 88.0
     },
     {
       "symbol": "0174J0",
-      "price": 7890,
+      "price": 7860,
       "market_cap": 39.0
     },
     {
       "symbol": "0243M0",
-      "price": 6535,
-      "market_cap": 118.0
+      "price": 6510,
+      "market_cap": 117.0
     },
     {
       "symbol": "0220B0",
-      "price": 8760,
-      "market_cap": 858.0
+      "price": 8720,
+      "market_cap": 855.0
     },
     {
       "symbol": "0098Z0",
@@ -786,12 +786,12 @@
     },
     {
       "symbol": "0176P0",
-      "price": 9560,
-      "market_cap": 53.0
+      "price": 9450,
+      "market_cap": 52.0
     },
     {
       "symbol": "448570",
-      "price": 22630,
+      "price": 22610,
       "market_cap": 283.0
     },
     {
@@ -806,48 +806,48 @@
     },
     {
       "symbol": "0255D0",
-      "price": 9570,
-      "market_cap": 77.0
+      "price": 9530,
+      "market_cap": 76.0
     },
     {
       "symbol": "0073X0",
-      "price": 8000,
+      "price": 7990,
       "market_cap": 44.0
     },
     {
       "symbol": "293180",
-      "price": 79630,
-      "market_cap": 3265.0
+      "price": 79585,
+      "market_cap": 3263.0
     },
     {
       "symbol": "407310",
-      "price": 11705,
+      "price": 11710,
       "market_cap": 135.0
     },
     {
       "symbol": "332930",
-      "price": 104310,
-      "market_cap": 1304.0
+      "price": 104105,
+      "market_cap": 1301.0
     },
     {
       "symbol": "304780",
-      "price": 61110,
-      "market_cap": 275.0
+      "price": 60340,
+      "market_cap": 272.0
     },
     {
       "symbol": "306520",
-      "price": 3140,
+      "price": 3165,
       "market_cap": 19.0
     },
     {
       "symbol": "0123S0",
-      "price": 10260,
+      "price": 10262,
       "market_cap": 631.0
     },
     {
       "symbol": "0091M0",
-      "price": 10150,
-      "market_cap": 1306.0
+      "price": 10140,
+      "market_cap": 1305.0
     },
     {
       "symbol": "448490",
@@ -856,23 +856,23 @@
     },
     {
       "symbol": "454320",
-      "price": 26590,
-      "market_cap": 572.0
+      "price": 26640,
+      "market_cap": 573.0
     },
     {
       "symbol": "395290",
-      "price": 5550,
-      "market_cap": 352.0
+      "price": 5620,
+      "market_cap": 357.0
     },
     {
       "symbol": "395280",
-      "price": 2910,
-      "market_cap": 65.0
+      "price": 2920,
+      "market_cap": 66.0
     },
     {
       "symbol": "368190",
-      "price": 6590,
-      "market_cap": 204.0
+      "price": 6645,
+      "market_cap": 206.0
     },
     {
       "symbol": "402460",
@@ -881,18 +881,18 @@
     },
     {
       "symbol": "395270",
-      "price": 39285,
-      "market_cap": 23807.0
+      "price": 39080,
+      "market_cap": 23682.0
     },
     {
       "symbol": "438900",
-      "price": 10150,
-      "market_cap": 127.0
+      "price": 10200,
+      "market_cap": 128.0
     },
     {
       "symbol": "367740",
-      "price": 32665,
-      "market_cap": 180.0
+      "price": 32575,
+      "market_cap": 179.0
     },
     {
       "symbol": "407300",
@@ -901,22 +901,22 @@
     },
     {
       "symbol": "381560",
-      "price": 13065,
+      "price": 13100,
       "market_cap": 131.0
     },
     {
       "symbol": "441540",
-      "price": 18910,
-      "market_cap": 501.0
+      "price": 18995,
+      "market_cap": 503.0
     },
     {
       "symbol": "381570",
-      "price": 7445,
+      "price": 7450,
       "market_cap": 63.0
     },
     {
       "symbol": "479850",
-      "price": 15200,
+      "price": 15195,
       "market_cap": 190.0
     },
     {
@@ -926,43 +926,43 @@
     },
     {
       "symbol": "304760",
-      "price": 34710,
-      "market_cap": 139.0
+      "price": 34305,
+      "market_cap": 137.0
     },
     {
       "symbol": "322410",
-      "price": 19685,
-      "market_cap": 344.0
+      "price": 19825,
+      "market_cap": 347.0
     },
     {
       "symbol": "0155N0",
-      "price": 6895,
-      "market_cap": 300.0
+      "price": 7050,
+      "market_cap": 307.0
     },
     {
       "symbol": "332940",
-      "price": 35300,
-      "market_cap": 812.0
+      "price": 35010,
+      "market_cap": 805.0
     },
     {
       "symbol": "322400",
-      "price": 8400,
+      "price": 8395,
       "market_cap": 273.0
     },
     {
       "symbol": "473640",
-      "price": 26120,
-      "market_cap": 522.0
+      "price": 25860,
+      "market_cap": 517.0
     },
     {
       "symbol": "354350",
-      "price": 17900,
+      "price": 17980,
       "market_cap": 93.0
     },
     {
       "symbol": "461340",
-      "price": 34945,
-      "market_cap": 367.0
+      "price": 34685,
+      "market_cap": 364.0
     },
     {
       "symbol": "401590",
@@ -971,8 +971,8 @@
     },
     {
       "symbol": "314700",
-      "price": 9105,
-      "market_cap": 50.0
+      "price": 9195,
+      "market_cap": 51.0
     },
     {
       "symbol": "486830",
@@ -981,58 +981,58 @@
     },
     {
       "symbol": "0215T0",
-      "price": 5595,
+      "price": 5525,
       "market_cap": 50.0
     },
     {
       "symbol": "0181B0",
-      "price": 6220,
-      "market_cap": 712.0
+      "price": 6165,
+      "market_cap": 706.0
     },
     {
       "symbol": "432840",
-      "price": 18300,
+      "price": 18195,
       "market_cap": 146.0
     },
     {
       "symbol": "0219Z0",
-      "price": 9280,
+      "price": 9340,
       "market_cap": 121.0
     },
     {
       "symbol": "0227L0",
-      "price": 9105,
-      "market_cap": 105.0
+      "price": 9065,
+      "market_cap": 104.0
     },
     {
       "symbol": "498050",
-      "price": 8360,
+      "price": 8335,
       "market_cap": 79.0
     },
     {
       "symbol": "476260",
-      "price": 8960,
-      "market_cap": 327.0
+      "price": 8910,
+      "market_cap": 325.0
     },
     {
       "symbol": "0256E0",
-      "price": 8587,
+      "price": 8560,
       "market_cap": 137.0
     },
     {
       "symbol": "434730",
-      "price": 34345,
-      "market_cap": 3864.0
+      "price": 34425,
+      "market_cap": 3873.0
     },
     {
       "symbol": "0082F0",
-      "price": 8800,
+      "price": 8810,
       "market_cap": 62.0
     },
     {
       "symbol": "491820",
-      "price": 26435,
-      "market_cap": 912.0
+      "price": 26505,
+      "market_cap": 914.0
     },
     {
       "symbol": "461500",
@@ -1046,32 +1046,32 @@
     },
     {
       "symbol": "0111J0",
-      "price": 8950,
+      "price": 8945,
       "market_cap": 385.0
     },
     {
       "symbol": "495750",
-      "price": 24040,
-      "market_cap": 589.0
+      "price": 23935,
+      "market_cap": 586.0
     },
     {
       "symbol": "304770",
-      "price": 11015,
-      "market_cap": 156.0
+      "price": 11075,
+      "market_cap": 157.0
     },
     {
       "symbol": "306530",
-      "price": 3960,
+      "price": 4010,
       "market_cap": 25.0
     },
     {
       "symbol": "375760",
-      "price": 17965,
-      "market_cap": 162.0
+      "price": 17775,
+      "market_cap": 160.0
     },
     {
       "symbol": "491700",
-      "price": 79855,
+      "price": 79795,
       "market_cap": 279.0
     },
     {
@@ -1091,28 +1091,28 @@
     },
     {
       "symbol": "391670",
-      "price": 18680,
-      "market_cap": 112.0
+      "price": 19845,
+      "market_cap": 119.0
     },
     {
       "symbol": "472920",
-      "price": 101630,
+      "price": 101655,
       "market_cap": 2404.0
     },
     {
       "symbol": "472840",
-      "price": 78820,
-      "market_cap": 296.0
+      "price": 78690,
+      "market_cap": 295.0
     },
     {
       "symbol": "0005G0",
-      "price": 36645,
-      "market_cap": 1264.0
+      "price": 36570,
+      "market_cap": 1262.0
     },
     {
       "symbol": "0178H0",
-      "price": 9350,
-      "market_cap": 439.0
+      "price": 9230,
+      "market_cap": 434.0
     },
     {
       "symbol": "0135Y0",
@@ -1121,58 +1121,58 @@
     },
     {
       "symbol": "0221V0",
-      "price": 101285,
-      "market_cap": 1535.0
+      "price": 101295,
+      "market_cap": 1536.0
     },
     {
       "symbol": "0191S0",
-      "price": 11090,
+      "price": 11120,
       "market_cap": 82.0
     },
     {
       "symbol": "0208N0",
-      "price": 5375,
+      "price": 5355,
       "market_cap": 91.0
     },
     {
       "symbol": "0238C0",
-      "price": 8790,
+      "price": 8785,
       "market_cap": 198.0
     },
     {
       "symbol": "0260F0",
-      "price": 9775,
-      "market_cap": 225.0
+      "price": 9865,
+      "market_cap": 227.0
     },
     {
       "symbol": "483570",
-      "price": 14140,
-      "market_cap": 226.0
+      "price": 14230,
+      "market_cap": 228.0
     },
     {
       "symbol": "069660",
-      "price": 78800,
+      "price": 78795,
       "market_cap": 5240.0
     },
     {
       "symbol": "294400",
-      "price": 104250,
-      "market_cap": 12927.0
+      "price": 104080,
+      "market_cap": 12906.0
     },
     {
       "symbol": "253250",
-      "price": 49060,
-      "market_cap": 118.0
+      "price": 48630,
+      "market_cap": 117.0
     },
     {
       "symbol": "253240",
-      "price": 1698,
+      "price": 1710,
       "market_cap": 18.0
     },
     {
       "symbol": "253230",
-      "price": 119,
-      "market_cap": 29.0
+      "price": 121,
+      "market_cap": 30.0
     },
     {
       "symbol": "458210",
@@ -1181,62 +1181,62 @@
     },
     {
       "symbol": "100910",
-      "price": 12445,
-      "market_cap": 299.0
+      "price": 12375,
+      "market_cap": 297.0
     },
     {
       "symbol": "0194R0",
-      "price": 3575,
-      "market_cap": 48.0
+      "price": 3460,
+      "market_cap": 47.0
     },
     {
       "symbol": "435530",
-      "price": 14710,
-      "market_cap": 74.0
+      "price": 14660,
+      "market_cap": 73.0
     },
     {
       "symbol": "435540",
-      "price": 16190,
+      "price": 16125,
       "market_cap": 81.0
     },
     {
       "symbol": "435550",
-      "price": 16395,
-      "market_cap": 115.0
+      "price": 16280,
+      "market_cap": 114.0
     },
     {
       "symbol": "148070",
-      "price": 109805,
-      "market_cap": 3999.0
+      "price": 110010,
+      "market_cap": 4007.0
     },
     {
       "symbol": "167860",
-      "price": 101125,
-      "market_cap": 303.0
+      "price": 101485,
+      "market_cap": 304.0
     },
     {
       "symbol": "471460",
-      "price": 50520,
-      "market_cap": 232.0
+      "price": 50680,
+      "market_cap": 233.0
     },
     {
       "symbol": "114470",
-      "price": 109275,
+      "price": 109325,
       "market_cap": 525.0
     },
     {
       "symbol": "473490",
-      "price": 25710,
-      "market_cap": 373.0
+      "price": 25450,
+      "market_cap": 369.0
     },
     {
       "symbol": "0247S0",
-      "price": 5715,
+      "price": 5710,
       "market_cap": 220.0
     },
     {
       "symbol": "489860",
-      "price": 12575,
+      "price": 12555,
       "market_cap": 107.0
     },
     {
@@ -1251,68 +1251,68 @@
     },
     {
       "symbol": "411860",
-      "price": 15265,
+      "price": 15280,
       "market_cap": 46.0
     },
     {
       "symbol": "476450",
-      "price": 53200,
+      "price": 53205,
       "market_cap": 2395.0
     },
     {
       "symbol": "430500",
-      "price": 118345,
+      "price": 118460,
       "market_cap": 118.0
     },
     {
       "symbol": "0190M0",
-      "price": 5150,
-      "market_cap": 136.0
+      "price": 5080,
+      "market_cap": 135.0
     },
     {
       "symbol": "0224D0",
-      "price": 7555,
-      "market_cap": 64.0
+      "price": 7465,
+      "market_cap": 63.0
     },
     {
       "symbol": "449770",
-      "price": 19400,
-      "market_cap": 737.0
+      "price": 19325,
+      "market_cap": 734.0
     },
     {
       "symbol": "0127V0",
-      "price": 9945,
+      "price": 9915,
       "market_cap": 124.0
     },
     {
       "symbol": "0137W0",
-      "price": 9460,
-      "market_cap": 246.0
+      "price": 9430,
+      "market_cap": 245.0
     },
     {
       "symbol": "0127T0",
-      "price": 10400,
-      "market_cap": 125.0
+      "price": 10365,
+      "market_cap": 124.0
     },
     {
       "symbol": "449780",
-      "price": 17525,
-      "market_cap": 315.0
+      "price": 17530,
+      "market_cap": 316.0
     },
     {
       "symbol": "0137V0",
-      "price": 9500,
-      "market_cap": 936.0
+      "price": 9387,
+      "market_cap": 925.0
     },
     {
       "symbol": "0107F0",
-      "price": 10155,
+      "price": 10145,
       "market_cap": 254.0
     },
     {
       "symbol": "453080",
-      "price": 20750,
-      "market_cap": 851.0
+      "price": 20690,
+      "market_cap": 848.0
     },
     {
       "symbol": "460270",
@@ -1321,7 +1321,7 @@
     },
     {
       "symbol": "138230",
-      "price": 15890,
+      "price": 15875,
       "market_cap": 230.0
     },
     {
@@ -1341,17 +1341,17 @@
     },
     {
       "symbol": "0084E0",
-      "price": 9460,
-      "market_cap": 184.0
+      "price": 9380,
+      "market_cap": 183.0
     },
     {
       "symbol": "373790",
-      "price": 15725,
+      "price": 15785,
       "market_cap": 44.0
     },
     {
       "symbol": "483030",
-      "price": 11945,
+      "price": 11905,
       "market_cap": 54.0
     },
     {
@@ -1361,53 +1361,53 @@
     },
     {
       "symbol": "0174R0",
-      "price": 10215,
-      "market_cap": 87.0
+      "price": 10120,
+      "market_cap": 86.0
     },
     {
       "symbol": "498270",
-      "price": 10805,
-      "market_cap": 1642.0
+      "price": 10725,
+      "market_cap": 1630.0
     },
     {
       "symbol": "0207Z0",
-      "price": 5475,
-      "market_cap": 112.0
+      "price": 5425,
+      "market_cap": 111.0
     },
     {
       "symbol": "0216K0",
-      "price": 7930,
+      "price": 7900,
       "market_cap": 79.0
     },
     {
       "symbol": "474800",
-      "price": 14400,
+      "price": 14390,
       "market_cap": 302.0
     },
     {
       "symbol": "0084D0",
-      "price": 10610,
+      "price": 10600,
       "market_cap": 85.0
     },
     {
       "symbol": "104520",
-      "price": 11900,
+      "price": 11895,
       "market_cap": 119.0
     },
     {
       "symbol": "0234N0",
-      "price": 7265,
-      "market_cap": 578.0
+      "price": 7245,
+      "market_cap": 576.0
     },
     {
       "symbol": "0183V0",
-      "price": 9730,
-      "market_cap": 2452.0
+      "price": 9720,
+      "market_cap": 2449.0
     },
     {
       "symbol": "0194N0",
-      "price": 5540,
-      "market_cap": 42.0
+      "price": 5460,
+      "market_cap": 41.0
     },
     {
       "symbol": "0015E0",
@@ -1416,13 +1416,13 @@
     },
     {
       "symbol": "483020",
-      "price": 9140,
+      "price": 9145,
       "market_cap": 59.0
     },
     {
       "symbol": "200250",
-      "price": 22460,
-      "market_cap": 1774.0
+      "price": 22410,
+      "market_cap": 1770.0
     },
     {
       "symbol": "454780",
@@ -1436,38 +1436,38 @@
     },
     {
       "symbol": "496090",
-      "price": 24010,
-      "market_cap": 792.0
+      "price": 23930,
+      "market_cap": 790.0
     },
     {
       "symbol": "469790",
-      "price": 30985,
-      "market_cap": 217.0
+      "price": 30730,
+      "market_cap": 215.0
     },
     {
       "symbol": "316670",
-      "price": 5490,
-      "market_cap": 423.0
+      "price": 5515,
+      "market_cap": 425.0
     },
     {
       "symbol": "291630",
-      "price": 1981,
-      "market_cap": 43.0
+      "price": 2005,
+      "market_cap": 44.0
     },
     {
       "symbol": "291620",
-      "price": 5160,
+      "price": 5130,
       "market_cap": 19.0
     },
     {
       "symbol": "0198A0",
-      "price": 6130,
-      "market_cap": 1085.0
+      "price": 6140,
+      "market_cap": 1087.0
     },
     {
       "symbol": "153270",
-      "price": 60575,
-      "market_cap": 218.0
+      "price": 60335,
+      "market_cap": 217.0
     },
     {
       "symbol": "122260",
@@ -1476,43 +1476,43 @@
     },
     {
       "symbol": "0015F0",
-      "price": 10330,
-      "market_cap": 114.0
+      "price": 10410,
+      "market_cap": 115.0
     },
     {
       "symbol": "0097L0",
-      "price": 10560,
+      "price": 10555,
       "market_cap": 206.0
     },
     {
       "symbol": "0220A0",
-      "price": 7915,
+      "price": 7935,
       "market_cap": 95.0
     },
     {
       "symbol": "069500",
-      "price": 79355,
-      "market_cap": 203982.0
+      "price": 79205,
+      "market_cap": 203596.0
     },
     {
       "symbol": "226980",
-      "price": 17310,
+      "price": 17380,
       "market_cap": 156.0
     },
     {
       "symbol": "337160",
-      "price": 35305,
-      "market_cap": 1236.0
+      "price": 35290,
+      "market_cap": 1235.0
     },
     {
       "symbol": "363580",
-      "price": 38865,
-      "market_cap": 1613.0
+      "price": 38755,
+      "market_cap": 1608.0
     },
     {
       "symbol": "278530",
-      "price": 28790,
-      "market_cap": 57522.0
+      "price": 28730,
+      "market_cap": 57403.0
     },
     {
       "symbol": "337150",
@@ -1521,48 +1521,48 @@
     },
     {
       "symbol": "223190",
-      "price": 21840,
-      "market_cap": 218.0
+      "price": 21950,
+      "market_cap": 220.0
     },
     {
       "symbol": "252650",
-      "price": 15040,
-      "market_cap": 90.0
+      "price": 15120,
+      "market_cap": 91.0
     },
     {
       "symbol": "360140",
-      "price": 20665,
-      "market_cap": 455.0
+      "price": 20490,
+      "market_cap": 451.0
     },
     {
       "symbol": "284430",
-      "price": 17630,
-      "market_cap": 16671.0
+      "price": 17620,
+      "market_cap": 16661.0
     },
     {
       "symbol": "252670",
-      "price": 119,
-      "market_cap": 8773.0
+      "price": 120,
+      "market_cap": 8847.0
     },
     {
       "symbol": "494890",
-      "price": 22740,
-      "market_cap": 7049.0
+      "price": 22715,
+      "market_cap": 7042.0
     },
     {
       "symbol": "0219E0",
-      "price": 5865,
-      "market_cap": 10375.0
+      "price": 5852,
+      "market_cap": 10352.0
     },
     {
       "symbol": "498400",
-      "price": 14410,
-      "market_cap": 48994.0
+      "price": 14385,
+      "market_cap": 48909.0
     },
     {
       "symbol": "0117L0",
-      "price": 10225,
-      "market_cap": 5433.0
+      "price": 10227,
+      "market_cap": 5434.0
     },
     {
       "symbol": "473290",
@@ -1571,7 +1571,7 @@
     },
     {
       "symbol": "0254C0",
-      "price": 100482,
+      "price": 100485,
       "market_cap": 5760.0
     },
     {
@@ -1586,18 +1586,18 @@
     },
     {
       "symbol": "305720",
-      "price": 11900,
-      "market_cap": 15042.0
+      "price": 11955,
+      "market_cap": 15111.0
     },
     {
       "symbol": "462330",
-      "price": 616,
-      "market_cap": 5595.0
+      "price": 624,
+      "market_cap": 5667.0
     },
     {
       "symbol": "461950",
-      "price": 4020,
-      "market_cap": 1530.0
+      "price": 4050,
+      "market_cap": 1541.0
     },
     {
       "symbol": "457690",
@@ -1606,37 +1606,37 @@
     },
     {
       "symbol": "271060",
-      "price": 7740,
-      "market_cap": 211.0
+      "price": 7750,
+      "market_cap": 212.0
     },
     {
       "symbol": "457700",
-      "price": 10130,
-      "market_cap": 134.0
+      "price": 10190,
+      "market_cap": 135.0
     },
     {
       "symbol": "395160",
-      "price": 27605,
-      "market_cap": 28461.0
+      "price": 27470,
+      "market_cap": 28322.0
     },
     {
       "symbol": "471990",
-      "price": 18435,
-      "market_cap": 4388.0
+      "price": 18415,
+      "market_cap": 4383.0
     },
     {
       "symbol": "487240",
-      "price": 22040,
-      "market_cap": 19748.0
+      "price": 22080,
+      "market_cap": 19784.0
     },
     {
       "symbol": "481050",
-      "price": 1024310,
+      "price": 1024307,
       "market_cap": 26746.0
     },
     {
       "symbol": "459580",
-      "price": 1075760,
+      "price": 1075762,
       "market_cap": 63998.0
     },
     {
@@ -1646,13 +1646,13 @@
     },
     {
       "symbol": "266370",
-      "price": 48360,
-      "market_cap": 725.0
+      "price": 48385,
+      "market_cap": 726.0
     },
     {
       "symbol": "368680",
-      "price": 6605,
-      "market_cap": 53.0
+      "price": 6690,
+      "market_cap": 54.0
     },
     {
       "symbol": "423160",
@@ -1661,18 +1661,18 @@
     },
     {
       "symbol": "292190",
-      "price": 35040,
-      "market_cap": 526.0
+      "price": 34965,
+      "market_cap": 524.0
     },
     {
       "symbol": "306950",
-      "price": 38110,
-      "market_cap": 305.0
+      "price": 37520,
+      "market_cap": 300.0
     },
     {
       "symbol": "229720",
-      "price": 27340,
-      "market_cap": 137.0
+      "price": 27110,
+      "market_cap": 136.0
     },
     {
       "symbol": "266360",
@@ -1681,93 +1681,93 @@
     },
     {
       "symbol": "291890",
-      "price": 10690,
+      "price": 10630,
       "market_cap": 53.0
     },
     {
       "symbol": "289040",
-      "price": 24935,
-      "market_cap": 150.0
+      "price": 24805,
+      "market_cap": 149.0
     },
     {
       "symbol": "156080",
-      "price": 37650,
+      "price": 37740,
       "market_cap": 226.0
     },
     {
       "symbol": "278540",
-      "price": 28115,
-      "market_cap": 17234.0
+      "price": 27995,
+      "market_cap": 17161.0
     },
     {
       "symbol": "251350",
-      "price": 35710,
-      "market_cap": 4607.0
+      "price": 35575,
+      "market_cap": 4589.0
     },
     {
       "symbol": "269420",
-      "price": 21300,
+      "price": 21345,
       "market_cap": 220.0
     },
     {
       "symbol": "0193T0",
-      "price": 4215,
-      "market_cap": 9972.0
+      "price": 4155,
+      "market_cap": 9830.0
     },
     {
       "symbol": "433970",
-      "price": 13310,
-      "market_cap": 925.0
+      "price": 13260,
+      "market_cap": 922.0
     },
     {
       "symbol": "433980",
-      "price": 14775,
-      "market_cap": 1884.0
+      "price": 14705,
+      "market_cap": 1875.0
     },
     {
       "symbol": "434060",
-      "price": 15235,
-      "market_cap": 5835.0
+      "price": 15175,
+      "market_cap": 5812.0
     },
     {
       "symbol": "0082V0",
-      "price": 10205,
-      "market_cap": 1755.0
+      "price": 10165,
+      "market_cap": 1748.0
     },
     {
       "symbol": "329650",
-      "price": 13955,
-      "market_cap": 2233.0
+      "price": 13935,
+      "market_cap": 2230.0
     },
     {
       "symbol": "329660",
-      "price": 17100,
-      "market_cap": 804.0
+      "price": 17070,
+      "market_cap": 802.0
     },
     {
       "symbol": "329670",
-      "price": 20570,
-      "market_cap": 823.0
+      "price": 20555,
+      "market_cap": 822.0
     },
     {
       "symbol": "395170",
-      "price": 11735,
+      "price": 11760,
       "market_cap": 235.0
     },
     {
       "symbol": "315930",
-      "price": 60350,
-      "market_cap": 7212.0
+      "price": 60390,
+      "market_cap": 7217.0
     },
     {
       "symbol": "261220",
-      "price": 23890,
+      "price": 23910,
       "market_cap": 400.0
     },
     {
       "symbol": "271050",
-      "price": 1903,
-      "market_cap": 2066.0
+      "price": 1902,
+      "market_cap": 2065.0
     },
     {
       "symbol": "468370",
@@ -1776,72 +1776,72 @@
     },
     {
       "symbol": "468630",
-      "price": 10390,
+      "price": 10385,
       "market_cap": 313.0
     },
     {
       "symbol": "468380",
-      "price": 10255,
+      "price": 10250,
       "market_cap": 903.0
     },
     {
       "symbol": "275290",
-      "price": 25650,
-      "market_cap": 231.0
+      "price": 25350,
+      "market_cap": 228.0
     },
     {
       "symbol": "117700",
-      "price": 5240,
-      "market_cap": 1661.0
+      "price": 5270,
+      "market_cap": 1671.0
     },
     {
       "symbol": "300950",
-      "price": 4655,
+      "price": 4675,
       "market_cap": 196.0
     },
     {
       "symbol": "266390",
-      "price": 14605,
+      "price": 14655,
       "market_cap": 88.0
     },
     {
       "symbol": "279530",
-      "price": 15005,
-      "market_cap": 3616.0
+      "price": 15050,
+      "market_cap": 3627.0
     },
     {
       "symbol": "132030",
-      "price": 20425,
-      "market_cap": 2890.0
+      "price": 20355,
+      "market_cap": 2880.0
     },
     {
       "symbol": "280940",
-      "price": 4075,
+      "price": 4080,
       "market_cap": 29.0
     },
     {
       "symbol": "138910",
-      "price": 8435,
-      "market_cap": 253.0
+      "price": 8355,
+      "market_cap": 251.0
     },
     {
       "symbol": "471230",
-      "price": 108940,
-      "market_cap": 5190.0
+      "price": 109150,
+      "market_cap": 5200.0
     },
     {
       "symbol": "439870",
-      "price": 97570,
-      "market_cap": 2801.0
+      "price": 97995,
+      "market_cap": 2813.0
     },
     {
       "symbol": "114260",
-      "price": 62805,
-      "market_cap": 4823.0
+      "price": 62870,
+      "market_cap": 4828.0
     },
     {
       "symbol": "152380",
-      "price": 68235,
+      "price": 68380,
       "market_cap": 217.0
     },
     {
@@ -1856,37 +1856,37 @@
     },
     {
       "symbol": "276990",
-      "price": 20450,
-      "market_cap": 362.0
+      "price": 20420,
+      "market_cap": 361.0
     },
     {
       "symbol": "476070",
-      "price": 10825,
-      "market_cap": 276.0
+      "price": 10900,
+      "market_cap": 278.0
     },
     {
       "symbol": "0064K0",
-      "price": 10325,
-      "market_cap": 1355.0
+      "price": 10275,
+      "market_cap": 1348.0
     },
     {
       "symbol": "0089D0",
-      "price": 11345,
-      "market_cap": 2076.0
+      "price": 11420,
+      "market_cap": 2090.0
     },
     {
       "symbol": "498410",
-      "price": 9870,
-      "market_cap": 7896.0
+      "price": 9925,
+      "market_cap": 7940.0
     },
     {
       "symbol": "0162M0",
-      "price": 10200,
-      "market_cap": 3689.0
+      "price": 10195,
+      "market_cap": 3688.0
     },
     {
       "symbol": "102960",
-      "price": 8675,
+      "price": 8715,
       "market_cap": 87.0
     },
     {
@@ -1896,43 +1896,43 @@
     },
     {
       "symbol": "273140",
-      "price": 114665,
+      "price": 114670,
       "market_cap": 2788.0
     },
     {
       "symbol": "153130",
-      "price": 113265,
-      "market_cap": 8038.0
+      "price": 113270,
+      "market_cap": 8039.0
     },
     {
       "symbol": "214980",
-      "price": 114625,
+      "price": 114622,
       "market_cap": 18993.0
     },
     {
       "symbol": "487950",
-      "price": 10700,
-      "market_cap": 161.0
+      "price": 10525,
+      "market_cap": 158.0
     },
     {
       "symbol": "122630",
-      "price": 53740,
-      "market_cap": 37591.0
+      "price": 53540,
+      "market_cap": 37451.0
     },
     {
       "symbol": "445290",
-      "price": 25915,
-      "market_cap": 9057.0
+      "price": 26230,
+      "market_cap": 9167.0
     },
     {
       "symbol": "488770",
-      "price": 106270,
-      "market_cap": 127110.0
+      "price": 106275,
+      "market_cap": 127116.0
     },
     {
       "symbol": "337120",
-      "price": 25580,
-      "market_cap": 153.0
+      "price": 25365,
+      "market_cap": 152.0
     },
     {
       "symbol": "401470",
@@ -1941,122 +1941,122 @@
     },
     {
       "symbol": "244620",
-      "price": 15380,
-      "market_cap": 108.0
+      "price": 15275,
+      "market_cap": 107.0
     },
     {
       "symbol": "275280",
-      "price": 30420,
-      "market_cap": 274.0
+      "price": 30310,
+      "market_cap": 273.0
     },
     {
       "symbol": "308620",
-      "price": 11160,
+      "price": 11155,
       "market_cap": 1049.0
     },
     {
       "symbol": "0091C0",
-      "price": 9425,
-      "market_cap": 2075.0
+      "price": 9420,
+      "market_cap": 2074.0
     },
     {
       "symbol": "484790",
-      "price": 8130,
-      "market_cap": 5926.0
+      "price": 8140,
+      "market_cap": 5933.0
     },
     {
       "symbol": "304660",
-      "price": 7250,
-      "market_cap": 1225.0
+      "price": 7265,
+      "market_cap": 1228.0
     },
     {
       "symbol": "304670",
-      "price": 12435,
-      "market_cap": 75.0
+      "price": 12415,
+      "market_cap": 74.0
     },
     {
       "symbol": "481060",
-      "price": 7200,
-      "market_cap": 7006.0
+      "price": 7205,
+      "market_cap": 7010.0
     },
     {
       "symbol": "0173Y0",
-      "price": 7270,
-      "market_cap": 2606.0
+      "price": 7170,
+      "market_cap": 2570.0
     },
     {
       "symbol": "0238F0",
-      "price": 6300,
-      "market_cap": 271.0
+      "price": 6205,
+      "market_cap": 267.0
     },
     {
       "symbol": "0151S0",
-      "price": 10705,
-      "market_cap": 1472.0
+      "price": 10595,
+      "market_cap": 1457.0
     },
     {
       "symbol": "0041D0",
-      "price": 11475,
-      "market_cap": 465.0
+      "price": 11410,
+      "market_cap": 462.0
     },
     {
       "symbol": "0241D0",
-      "price": 7375,
-      "market_cap": 325.0
+      "price": 7335,
+      "market_cap": 323.0
     },
     {
       "symbol": "487230",
-      "price": 14040,
-      "market_cap": 9968.0
+      "price": 13900,
+      "market_cap": 9869.0
     },
     {
       "symbol": "485540",
-      "price": 13110,
-      "market_cap": 2720.0
+      "price": 13030,
+      "market_cap": 2704.0
     },
     {
       "symbol": "483280",
-      "price": 9810,
-      "market_cap": 3816.0
+      "price": 9750,
+      "market_cap": 3793.0
     },
     {
       "symbol": "0225V0",
-      "price": 7590,
-      "market_cap": 288.0
+      "price": 7525,
+      "market_cap": 286.0
     },
     {
       "symbol": "428560",
-      "price": 16915,
-      "market_cap": 127.0
+      "price": 16860,
+      "market_cap": 126.0
     },
     {
       "symbol": "379800",
-      "price": 21985,
-      "market_cap": 102516.0
+      "price": 21895,
+      "market_cap": 102096.0
     },
     {
       "symbol": "449180",
-      "price": 16175,
-      "market_cap": 10595.0
+      "price": 16170,
+      "market_cap": 10591.0
     },
     {
       "symbol": "453660",
-      "price": 17075,
-      "market_cap": 120.0
+      "price": 16970,
+      "market_cap": 119.0
     },
     {
       "symbol": "453650",
-      "price": 18355,
-      "market_cap": 450.0
+      "price": 18275,
+      "market_cap": 448.0
     },
     {
       "symbol": "0005A0",
-      "price": 8320,
-      "market_cap": 1889.0
+      "price": 8280,
+      "market_cap": 1880.0
     },
     {
       "symbol": "276970",
-      "price": 8105,
+      "price": 8100,
       "market_cap": 381.0
     },
     {
@@ -2071,58 +2071,58 @@
     },
     {
       "symbol": "0089C0",
-      "price": 10250,
-      "market_cap": 241.0
+      "price": 10205,
+      "market_cap": 240.0
     },
     {
       "symbol": "200030",
-      "price": 37670,
-      "market_cap": 425.0
+      "price": 37485,
+      "market_cap": 422.0
     },
     {
       "symbol": "219480",
-      "price": 31205,
-      "market_cap": 1389.0
+      "price": 31135,
+      "market_cap": 1386.0
     },
     {
       "symbol": "0041E0",
-      "price": 13880,
-      "market_cap": 1263.0
+      "price": 13810,
+      "market_cap": 1257.0
     },
     {
       "symbol": "218420",
-      "price": 18725,
-      "market_cap": 460.0
+      "price": 18680,
+      "market_cap": 459.0
     },
     {
       "symbol": "463640",
-      "price": 13485,
+      "price": 13450,
       "market_cap": 101.0
     },
     {
       "symbol": "463690",
-      "price": 16130,
-      "market_cap": 73.0
+      "price": 16070,
+      "market_cap": 72.0
     },
     {
       "symbol": "463680",
-      "price": 19025,
-      "market_cap": 1094.0
+      "price": 18795,
+      "market_cap": 1081.0
     },
     {
       "symbol": "453630",
-      "price": 12990,
-      "market_cap": 162.0
+      "price": 12785,
+      "market_cap": 160.0
     },
     {
       "symbol": "453640",
-      "price": 14560,
-      "market_cap": 677.0
+      "price": 14530,
+      "market_cap": 676.0
     },
     {
       "symbol": "185680",
-      "price": 42160,
-      "market_cap": 224.0
+      "price": 42005,
+      "market_cap": 223.0
     },
     {
       "symbol": "0028X0",
@@ -2131,248 +2131,248 @@
     },
     {
       "symbol": "379810",
-      "price": 23885,
-      "market_cap": 92280.0
+      "price": 23765,
+      "market_cap": 91816.0
     },
     {
       "symbol": "449190",
-      "price": 20125,
-      "market_cap": 5343.0
+      "price": 20065,
+      "market_cap": 5327.0
     },
     {
       "symbol": "494300",
-      "price": 7660,
-      "market_cap": 9330.0
+      "price": 7630,
+      "market_cap": 9293.0
     },
     {
       "symbol": "409820",
-      "price": 15780,
-      "market_cap": 2020.0
+      "price": 15670,
+      "market_cap": 2006.0
     },
     {
       "symbol": "0261H0",
-      "price": 9910,
-      "market_cap": 1516.0
+      "price": 9870,
+      "market_cap": 1510.0
     },
     {
       "symbol": "304940",
-      "price": 29350,
-      "market_cap": 998.0
+      "price": 29220,
+      "market_cap": 993.0
     },
     {
       "symbol": "409810",
-      "price": 6030,
+      "price": 6055,
       "market_cap": 148.0
     },
     {
       "symbol": "411420",
-      "price": 21820,
-      "market_cap": 1015.0
+      "price": 21600,
+      "market_cap": 1004.0
     },
     {
       "symbol": "455030",
-      "price": 11565,
-      "market_cap": 5360.0
+      "price": 11540,
+      "market_cap": 5349.0
     },
     {
       "symbol": "261240",
-      "price": 14005,
-      "market_cap": 602.0
+      "price": 13965,
+      "market_cap": 600.0
     },
     {
       "symbol": "261250",
-      "price": 15205,
-      "market_cap": 272.0
+      "price": 15165,
+      "market_cap": 271.0
     },
     {
       "symbol": "261270",
-      "price": 8320,
-      "market_cap": 513.0
+      "price": 8345,
+      "market_cap": 514.0
     },
     {
       "symbol": "261260",
-      "price": 5605,
-      "market_cap": 1859.0
+      "price": 5610,
+      "market_cap": 1860.0
     },
     {
       "symbol": "0144M0",
-      "price": 4360,
+      "price": 4335,
       "market_cap": 126.0
     },
     {
       "symbol": "280930",
-      "price": 15070,
-      "market_cap": 196.0
+      "price": 15030,
+      "market_cap": 195.0
     },
     {
       "symbol": "0048J0",
-      "price": 13410,
-      "market_cap": 10584.0
+      "price": 13395,
+      "market_cap": 10572.0
     },
     {
       "symbol": "390390",
-      "price": 42200,
-      "market_cap": 10381.0
+      "price": 41785,
+      "market_cap": 10279.0
     },
     {
       "symbol": "489250",
-      "price": 12625,
-      "market_cap": 6199.0
+      "price": 12595,
+      "market_cap": 6184.0
     },
     {
       "symbol": "0254S0",
-      "price": 10065,
-      "market_cap": 966.0
+      "price": 10040,
+      "market_cap": 964.0
     },
     {
       "symbol": "483290",
-      "price": 9960,
-      "market_cap": 1753.0
+      "price": 9945,
+      "market_cap": 1750.0
     },
     {
       "symbol": "441640",
-      "price": 11380,
-      "market_cap": 16217.0
+      "price": 11335,
+      "market_cap": 16152.0
     },
     {
       "symbol": "352560",
-      "price": 11810,
-      "market_cap": 472.0
+      "price": 11840,
+      "market_cap": 474.0
     },
     {
       "symbol": "314250",
-      "price": 55085,
-      "market_cap": 5795.0
+      "price": 54880,
+      "market_cap": 5773.0
     },
     {
       "symbol": "473460",
-      "price": 19510,
-      "market_cap": 1453.0
+      "price": 19385,
+      "market_cap": 1444.0
     },
     {
       "symbol": "0144L0",
-      "price": 8480,
-      "market_cap": 3095.0
+      "price": 8430,
+      "market_cap": 3077.0
     },
     {
       "symbol": "390400",
-      "price": 5437,
+      "price": 5412,
       "market_cap": 43.0
     },
     {
       "symbol": "0167Z0",
-      "price": 5320,
-      "market_cap": 2516.0
+      "price": 5280,
+      "market_cap": 2497.0
     },
     {
       "symbol": "0132H0",
-      "price": 4820,
-      "market_cap": 301.0
+      "price": 4830,
+      "market_cap": 302.0
     },
     {
       "symbol": "437080",
-      "price": 95140,
-      "market_cap": 2092.0
+      "price": 95270,
+      "market_cap": 2095.0
     },
     {
       "symbol": "419420",
-      "price": 7075,
+      "price": 7070,
       "market_cap": 78.0
     },
     {
       "symbol": "491090",
-      "price": 15770,
-      "market_cap": 229.0
+      "price": 15670,
+      "market_cap": 227.0
     },
     {
       "symbol": "0038A0",
-      "price": 12965,
-      "market_cap": 2366.0
+      "price": 12900,
+      "market_cap": 2354.0
     },
     {
       "symbol": "244580",
-      "price": 7000,
-      "market_cap": 1887.0
+      "price": 7025,
+      "market_cap": 1894.0
     },
     {
       "symbol": "091160",
-      "price": 90505,
-      "market_cap": 38012.0
+      "price": 90215,
+      "market_cap": 37890.0
     },
     {
       "symbol": "494310",
-      "price": 33230,
-      "market_cap": 6015.0
+      "price": 33085,
+      "market_cap": 5988.0
     },
     {
       "symbol": "0190G0",
-      "price": 6215,
-      "market_cap": 1106.0
+      "price": 6180,
+      "market_cap": 1100.0
     },
     {
       "symbol": "0080G0",
-      "price": 6135,
-      "market_cap": 2141.0
+      "price": 6110,
+      "market_cap": 2132.0
     },
     {
       "symbol": "0100K0",
-      "price": 2020,
-      "market_cap": 178.0
+      "price": 2000,
+      "market_cap": 176.0
     },
     {
       "symbol": "325020",
-      "price": 24265,
-      "market_cap": 728.0
+      "price": 24300,
+      "market_cap": 729.0
     },
     {
       "symbol": "244670",
-      "price": 9830,
-      "market_cap": 39.0
+      "price": 9880,
+      "market_cap": 40.0
     },
     {
       "symbol": "140700",
-      "price": 16350,
-      "market_cap": 425.0
+      "price": 16460,
+      "market_cap": 428.0
     },
     {
       "symbol": "102780",
-      "price": 19800,
-      "market_cap": 24493.0
+      "price": 19820,
+      "market_cap": 24517.0
     },
     {
       "symbol": "213610",
-      "price": 18500,
-      "market_cap": 2202.0
+      "price": 18550,
+      "market_cap": 2207.0
     },
     {
       "symbol": "0177N0",
-      "price": 12160,
-      "market_cap": 13157.0
+      "price": 12135,
+      "market_cap": 13130.0
     },
     {
       "symbol": "0193W0",
-      "price": 5950,
-      "market_cap": 7176.0
+      "price": 5930,
+      "market_cap": 7152.0
     },
     {
       "symbol": "448330",
-      "price": 16015,
-      "market_cap": 11899.0
+      "price": 16020,
+      "market_cap": 11903.0
     },
     {
       "symbol": "325010",
-      "price": 31240,
-      "market_cap": 968.0
+      "price": 31015,
+      "market_cap": 961.0
     },
     {
       "symbol": "385510",
-      "price": 28090,
-      "market_cap": 2458.0
+      "price": 28255,
+      "market_cap": 2472.0
     },
     {
       "symbol": "446690",
-      "price": 38265,
-      "market_cap": 191.0
+      "price": 38385,
+      "market_cap": 192.0
     },
     {
       "symbol": "437070",
@@ -2381,33 +2381,33 @@
     },
     {
       "symbol": "117460",
-      "price": 9720,
+      "price": 9725,
       "market_cap": 245.0
     },
     {
       "symbol": "275300",
-      "price": 22130,
-      "market_cap": 376.0
+      "price": 21895,
+      "market_cap": 372.0
     },
     {
       "symbol": "140710",
-      "price": 6575,
+      "price": 6580,
       "market_cap": 125.0
     },
     {
       "symbol": "0098F0",
-      "price": 9080,
-      "market_cap": 1566.0
+      "price": 9120,
+      "market_cap": 1573.0
     },
     {
       "symbol": "395150",
-      "price": 1802,
-      "market_cap": 88.0
+      "price": 1810,
+      "market_cap": 89.0
     },
     {
       "symbol": "456250",
-      "price": 7440,
-      "market_cap": 86.0
+      "price": 7430,
+      "market_cap": 85.0
     },
     {
       "symbol": "400570",
@@ -2416,133 +2416,133 @@
     },
     {
       "symbol": "144600",
-      "price": 6990,
-      "market_cap": 5040.0
+      "price": 6915,
+      "market_cap": 4986.0
     },
     {
       "symbol": "091170",
-      "price": 14205,
-      "market_cap": 2521.0
+      "price": 14275,
+      "market_cap": 2534.0
     },
     {
       "symbol": "453810",
-      "price": 12235,
-      "market_cap": 3493.0
+      "price": 12230,
+      "market_cap": 3492.0
     },
     {
       "symbol": "453820",
-      "price": 12320,
-      "market_cap": 160.0
+      "price": 12350,
+      "market_cap": 161.0
     },
     {
       "symbol": "0000H0",
-      "price": 10020,
-      "market_cap": 115.0
+      "price": 10080,
+      "market_cap": 116.0
     },
     {
       "symbol": "477730",
-      "price": 7460,
+      "price": 7450,
       "market_cap": 220.0
     },
     {
       "symbol": "114800",
-      "price": 1318,
-      "market_cap": 7709.0
+      "price": 1320,
+      "market_cap": 7721.0
     },
     {
       "symbol": "101280",
-      "price": 27285,
-      "market_cap": 447.0
+      "price": 27095,
+      "market_cap": 444.0
     },
     {
       "symbol": "352540",
-      "price": 10445,
+      "price": 10450,
       "market_cap": 355.0
     },
     {
       "symbol": "091180",
-      "price": 21700,
-      "market_cap": 2984.0
+      "price": 21775,
+      "market_cap": 2994.0
     },
     {
       "symbol": "385520",
-      "price": 12875,
+      "price": 12865,
       "market_cap": 264.0
     },
     {
       "symbol": "363570",
-      "price": 91965,
-      "market_cap": 1880.0
+      "price": 92170,
+      "market_cap": 1884.0
     },
     {
       "symbol": "0209D0",
-      "price": 7155,
-      "market_cap": 2705.0
+      "price": 7230,
+      "market_cap": 2733.0
     },
     {
       "symbol": "0115D0",
-      "price": 4525,
-      "market_cap": 1219.0
+      "price": 4515,
+      "market_cap": 1217.0
     },
     {
       "symbol": "273130",
-      "price": 113650,
-      "market_cap": 32202.0
+      "price": 113720,
+      "market_cap": 32221.0
     },
     {
       "symbol": "0153K0",
-      "price": 10435,
-      "market_cap": 2118.0
+      "price": 10460,
+      "market_cap": 2123.0
     },
     {
       "symbol": "102970",
-      "price": 13115,
-      "market_cap": 4636.0
+      "price": 13135,
+      "market_cap": 4643.0
     },
     {
       "symbol": "419430",
-      "price": 6380,
+      "price": 6405,
       "market_cap": 179.0
     },
     {
       "symbol": "169950",
-      "price": 21560,
+      "price": 21470,
       "market_cap": 172.0
     },
     {
       "symbol": "0162L0",
-      "price": 8380,
-      "market_cap": 645.0
+      "price": 8340,
+      "market_cap": 642.0
     },
     {
       "symbol": "428510",
-      "price": 15775,
-      "market_cap": 268.0
+      "price": 15635,
+      "market_cap": 266.0
     },
     {
       "symbol": "283580",
-      "price": 12960,
-      "market_cap": 2087.0
+      "price": 12945,
+      "market_cap": 2084.0
     },
     {
       "symbol": "099140",
-      "price": 18540,
-      "market_cap": 287.0
+      "price": 18400,
+      "market_cap": 285.0
     },
     {
       "symbol": "204450",
-      "price": 1839,
-      "market_cap": 175.0
+      "price": 1810,
+      "market_cap": 172.0
     },
     {
       "symbol": "415340",
-      "price": 10700,
+      "price": 10690,
       "market_cap": 221.0
     },
     {
       "symbol": "256750",
-      "price": 10285,
-      "market_cap": 315.0
+      "price": 10190,
+      "market_cap": 312.0
     },
     {
       "symbol": "0065G0",
@@ -2551,17 +2551,17 @@
     },
     {
       "symbol": "372330",
-      "price": 5185,
-      "market_cap": 837.0
+      "price": 5140,
+      "market_cap": 830.0
     },
     {
       "symbol": "0048K0",
-      "price": 7240,
-      "market_cap": 1227.0
+      "price": 7280,
+      "market_cap": 1234.0
     },
     {
       "symbol": "117680",
-      "price": 9205,
+      "price": 9195,
       "market_cap": 200.0
     },
     {
@@ -2571,87 +2571,87 @@
     },
     {
       "symbol": "445150",
-      "price": 20010,
-      "market_cap": 330.0
+      "price": 20080,
+      "market_cap": 331.0
     },
     {
       "symbol": "0231Z0",
-      "price": 8020,
+      "price": 8010,
       "market_cap": 144.0
     },
     {
       "symbol": "211900",
-      "price": 23585,
-      "market_cap": 767.0
+      "price": 23650,
+      "market_cap": 769.0
     },
     {
       "symbol": "237370",
-      "price": 14930,
-      "market_cap": 1553.0
+      "price": 14940,
+      "market_cap": 1554.0
     },
     {
       "symbol": "495850",
-      "price": 23965,
-      "market_cap": 5212.0
+      "price": 23915,
+      "market_cap": 5202.0
     },
     {
       "symbol": "0115E0",
-      "price": 10540,
+      "price": 10530,
       "market_cap": 437.0
     },
     {
       "symbol": "373490",
-      "price": 18935,
+      "price": 18900,
       "market_cap": 104.0
     },
     {
       "symbol": "229200",
-      "price": 10992,
-      "market_cap": 41566.0
+      "price": 11040,
+      "market_cap": 41748.0
     },
     {
       "symbol": "233740",
-      "price": 3930,
-      "market_cap": 29404.0
+      "price": 3955,
+      "market_cap": 29591.0
     },
     {
       "symbol": "360150",
-      "price": 3340,
-      "market_cap": 137.0
+      "price": 3355,
+      "market_cap": 138.0
     },
     {
       "symbol": "251340",
-      "price": 2905,
-      "market_cap": 1647.0
+      "price": 2890,
+      "market_cap": 1639.0
     },
     {
       "symbol": "461450",
-      "price": 11600,
+      "price": 11555,
       "market_cap": 162.0
     },
     {
       "symbol": "226490",
-      "price": 51950,
-      "market_cap": 10572.0
+      "price": 51925,
+      "market_cap": 10567.0
     },
     {
       "symbol": "237350",
-      "price": 63230,
-      "market_cap": 7303.0
+      "price": 63120,
+      "market_cap": 7290.0
     },
     {
       "symbol": "359210",
-      "price": 26250,
-      "market_cap": 735.0
+      "price": 26190,
+      "market_cap": 733.0
     },
     {
       "symbol": "337140",
-      "price": 26500,
-      "market_cap": 530.0
+      "price": 26450,
+      "market_cap": 529.0
     },
     {
       "symbol": "138920",
-      "price": 11970,
+      "price": 12025,
       "market_cap": 60.0
     },
     {
@@ -2661,122 +2661,122 @@
     },
     {
       "symbol": "459560",
-      "price": 19695,
-      "market_cap": 305.0
+      "price": 19595,
+      "market_cap": 304.0
     },
     {
       "symbol": "475080",
-      "price": 7805,
-      "market_cap": 2767.0
+      "price": 7795,
+      "market_cap": 2763.0
     },
     {
       "symbol": "266410",
-      "price": 8685,
+      "price": 8700,
       "market_cap": 104.0
     },
     {
       "symbol": "298770",
-      "price": 60965,
-      "market_cap": 628.0
+      "price": 60645,
+      "market_cap": 625.0
     },
     {
       "symbol": "476800",
-      "price": 3752,
-      "market_cap": 4506.0
+      "price": 3740,
+      "market_cap": 4492.0
     },
     {
       "symbol": "450190",
-      "price": 35745,
-      "market_cap": 214.0
+      "price": 36170,
+      "market_cap": 217.0
     },
     {
       "symbol": "450180",
-      "price": 8275,
+      "price": 8380,
       "market_cap": 54.0
     },
     {
       "symbol": "266420",
-      "price": 14300,
-      "market_cap": 601.0
+      "price": 14295,
+      "market_cap": 600.0
     },
     {
       "symbol": "364690",
-      "price": 27355,
+      "price": 27260,
       "market_cap": 164.0
     },
     {
       "symbol": "0204D0",
-      "price": 4765,
-      "market_cap": 1637.0
+      "price": 4770,
+      "market_cap": 1638.0
     },
     {
       "symbol": "487130",
-      "price": 20775,
-      "market_cap": 280.0
+      "price": 20780,
+      "market_cap": 281.0
     },
     {
       "symbol": "0074K0",
-      "price": 11960,
-      "market_cap": 855.0
+      "price": 11980,
+      "market_cap": 857.0
     },
     {
       "symbol": "0222D0",
-      "price": 8465,
-      "market_cap": 643.0
+      "price": 8485,
+      "market_cap": 645.0
     },
     {
       "symbol": "0219B0",
-      "price": 9060,
+      "price": 9085,
       "market_cap": 91.0
     },
     {
       "symbol": "471040",
-      "price": 20065,
-      "market_cap": 1756.0
+      "price": 19945,
+      "market_cap": 1745.0
     },
     {
       "symbol": "0174B0",
-      "price": 9900,
-      "market_cap": 678.0
+      "price": 9810,
+      "market_cap": 672.0
     },
     {
       "symbol": "0132D0",
-      "price": 8125,
+      "price": 8110,
       "market_cap": 45.0
     },
     {
       "symbol": "0020H0",
-      "price": 13940,
-      "market_cap": 300.0
+      "price": 13805,
+      "market_cap": 297.0
     },
     {
       "symbol": "475070",
-      "price": 22275,
-      "market_cap": 234.0
+      "price": 22150,
+      "market_cap": 233.0
     },
     {
       "symbol": "0015B0",
-      "price": 13330,
-      "market_cap": 4765.0
+      "price": 13235,
+      "market_cap": 4732.0
     },
     {
       "symbol": "0104H0",
-      "price": 10165,
-      "market_cap": 1210.0
+      "price": 10080,
+      "market_cap": 1200.0
     },
     {
       "symbol": "0186L0",
-      "price": 7040,
-      "market_cap": 162.0
+      "price": 6985,
+      "market_cap": 161.0
     },
     {
       "symbol": "0113G0",
-      "price": 11140,
+      "price": 11120,
       "market_cap": 100.0
     },
     {
       "symbol": "497780",
-      "price": 9310,
+      "price": 9305,
       "market_cap": 172.0
     },
     {
@@ -2786,58 +2786,58 @@
     },
     {
       "symbol": "462900",
-      "price": 10670,
-      "market_cap": 2860.0
+      "price": 10665,
+      "market_cap": 2858.0
     },
     {
       "symbol": "482030",
-      "price": 7045,
+      "price": 7025,
       "market_cap": 74.0
     },
     {
       "symbol": "476850",
-      "price": 15935,
+      "price": 15940,
       "market_cap": 845.0
     },
     {
       "symbol": "0051A0",
-      "price": 17650,
-      "market_cap": 115.0
+      "price": 17360,
+      "market_cap": 113.0
     },
     {
       "symbol": "0150K0",
-      "price": 8100,
-      "market_cap": 223.0
+      "price": 8155,
+      "market_cap": 224.0
     },
     {
       "symbol": "0154H0",
-      "price": 7550,
-      "market_cap": 38.0
+      "price": 7425,
+      "market_cap": 37.0
     },
     {
       "symbol": "0252P0",
-      "price": 9525,
+      "price": 9490,
       "market_cap": 90.0
     },
     {
       "symbol": "495230",
-      "price": 23245,
-      "market_cap": 1755.0
+      "price": 23190,
+      "market_cap": 1751.0
     },
     {
       "symbol": "0163Y0",
-      "price": 7515,
-      "market_cap": 3829.0
+      "price": 7520,
+      "market_cap": 3831.0
     },
     {
       "symbol": "0193G0",
-      "price": 5960,
-      "market_cap": 1010.0
+      "price": 5950,
+      "market_cap": 1009.0
     },
     {
       "symbol": "0093D0",
-      "price": 13345,
-      "market_cap": 147.0
+      "price": 13250,
+      "market_cap": 146.0
     },
     {
       "symbol": "0232A0",
@@ -2851,8 +2851,8 @@
     },
     {
       "symbol": "488290",
-      "price": 29220,
-      "market_cap": 102.0
+      "price": 29780,
+      "market_cap": 104.0
     },
     {
       "symbol": "0258N0",
@@ -2866,8 +2866,8 @@
     },
     {
       "symbol": "0191B0",
-      "price": 22765,
-      "market_cap": 46.0
+      "price": 22535,
+      "market_cap": 45.0
     },
     {
       "symbol": "403790",
@@ -2876,48 +2876,48 @@
     },
     {
       "symbol": "152100",
-      "price": 80035,
-      "market_cap": 11365.0
+      "price": 79960,
+      "market_cap": 11354.0
     },
     {
       "symbol": "491220",
-      "price": 94240,
-      "market_cap": 424.0
+      "price": 93530,
+      "market_cap": 421.0
     },
     {
       "symbol": "253150",
-      "price": 99000,
+      "price": 99105,
       "market_cap": 248.0
     },
     {
       "symbol": "253160",
-      "price": 241,
+      "price": 242,
       "market_cap": 18.0
     },
     {
       "symbol": "0203D0",
-      "price": 7700,
+      "price": 7675,
       "market_cap": 100.0
     },
     {
       "symbol": "0210E0",
-      "price": 5130,
-      "market_cap": 667.0
+      "price": 5115,
+      "market_cap": 665.0
     },
     {
       "symbol": "0239Z0",
-      "price": 8185,
+      "price": 8175,
       "market_cap": 446.0
     },
     {
       "symbol": "395750",
-      "price": 14870,
+      "price": 14760,
       "market_cap": 59.0
     },
     {
       "symbol": "395760",
-      "price": 15735,
-      "market_cap": 87.0
+      "price": 15595,
+      "market_cap": 86.0
     },
     {
       "symbol": "453010",
@@ -2926,27 +2926,27 @@
     },
     {
       "symbol": "429740",
-      "price": 5255,
+      "price": 5235,
       "market_cap": 47.0
     },
     {
       "symbol": "449450",
-      "price": 29980,
-      "market_cap": 5813.0
+      "price": 29915,
+      "market_cap": 5801.0
     },
     {
       "symbol": "0104G0",
-      "price": 1772,
+      "price": 1770,
       "market_cap": 48.0
     },
     {
       "symbol": "0090B0",
-      "price": 5275,
+      "price": 5250,
       "market_cap": 108.0
     },
     {
       "symbol": "0166S0",
-      "price": 7580,
+      "price": 7590,
       "market_cap": 349.0
     },
     {
@@ -2956,47 +2956,47 @@
     },
     {
       "symbol": "0226A0",
-      "price": 8275,
-      "market_cap": 339.0
+      "price": 8230,
+      "market_cap": 337.0
     },
     {
       "symbol": "433880",
-      "price": 16895,
+      "price": 16885,
       "market_cap": 625.0
     },
     {
       "symbol": "251590",
-      "price": 15945,
+      "price": 15965,
       "market_cap": 112.0
     },
     {
       "symbol": "161510",
-      "price": 20700,
-      "market_cap": 20499.0
+      "price": 20745,
+      "market_cap": 20544.0
     },
     {
       "symbol": "0018C0",
-      "price": 8625,
-      "market_cap": 690.0
+      "price": 8650,
+      "market_cap": 692.0
     },
     {
       "symbol": "489030",
-      "price": 5300,
-      "market_cap": 2536.0
+      "price": 5320,
+      "market_cap": 2546.0
     },
     {
       "symbol": "251600",
-      "price": 14070,
-      "market_cap": 5473.0
+      "price": 14085,
+      "market_cap": 5479.0
     },
     {
       "symbol": "461460",
-      "price": 53835,
-      "market_cap": 1105.0
+      "price": 53935,
+      "market_cap": 1107.0
     },
     {
       "symbol": "451600",
-      "price": 93825,
+      "price": 94245,
       "market_cap": 205.0
     },
     {
@@ -3006,38 +3006,38 @@
     },
     {
       "symbol": "289670",
-      "price": 54930,
+      "price": 55035,
       "market_cap": 70.0
     },
     {
       "symbol": "298340",
-      "price": 57490,
+      "price": 57520,
       "market_cap": 775.0
     },
     {
       "symbol": "442580",
-      "price": 69765,
-      "market_cap": 11100.0
+      "price": 69145,
+      "market_cap": 11001.0
     },
     {
       "symbol": "189400",
-      "price": 23675,
+      "price": 23800,
       "market_cap": 71.0
     },
     {
       "symbol": "496770",
-      "price": 15165,
-      "market_cap": 265.0
+      "price": 15095,
+      "market_cap": 264.0
     },
     {
       "symbol": "419650",
-      "price": 3415,
+      "price": 3400,
       "market_cap": 116.0
     },
     {
       "symbol": "0007G0",
-      "price": 9655,
-      "market_cap": 352.0
+      "price": 9680,
+      "market_cap": 353.0
     },
     {
       "symbol": "0166T0",
@@ -3046,18 +3046,18 @@
     },
     {
       "symbol": "0035T0",
-      "price": 16525,
-      "market_cap": 777.0
+      "price": 16570,
+      "market_cap": 779.0
     },
     {
       "symbol": "415920",
-      "price": 4215,
-      "market_cap": 207.0
+      "price": 4160,
+      "market_cap": 204.0
     },
     {
       "symbol": "0138Y0",
-      "price": 8960,
-      "market_cap": 977.0
+      "price": 8925,
+      "market_cap": 973.0
     },
     {
       "symbol": "278620",
@@ -3066,272 +3066,272 @@
     },
     {
       "symbol": "477050",
-      "price": 53970,
-      "market_cap": 6441.0
+      "price": 53965,
+      "market_cap": 6440.0
     },
     {
       "symbol": "0050E0",
-      "price": 7645,
+      "price": 7630,
       "market_cap": 34.0
     },
     {
       "symbol": "429760",
-      "price": 18060,
-      "market_cap": 957.0
+      "price": 17970,
+      "market_cap": 952.0
     },
     {
       "symbol": "269540",
-      "price": 28405,
-      "market_cap": 824.0
+      "price": 28300,
+      "market_cap": 821.0
     },
     {
       "symbol": "0057H0",
-      "price": 11130,
-      "market_cap": 1369.0
+      "price": 11095,
+      "market_cap": 1365.0
     },
     {
       "symbol": "494410",
-      "price": 12710,
-      "market_cap": 330.0
+      "price": 12650,
+      "market_cap": 329.0
     },
     {
       "symbol": "0153X0",
-      "price": 10545,
-      "market_cap": 185.0
+      "price": 10500,
+      "market_cap": 184.0
     },
     {
       "symbol": "0089B0",
-      "price": 10475,
-      "market_cap": 346.0
+      "price": 10450,
+      "market_cap": 345.0
     },
     {
       "symbol": "287180",
-      "price": 45250,
-      "market_cap": 407.0
+      "price": 45005,
+      "market_cap": 405.0
     },
     {
       "symbol": "213630",
-      "price": 20345,
+      "price": 20275,
       "market_cap": 187.0
     },
     {
       "symbol": "332610",
-      "price": 122185,
+      "price": 122100,
       "market_cap": 117.0
     },
     {
       "symbol": "456200",
-      "price": 58880,
+      "price": 58810,
       "market_cap": 65.0
     },
     {
       "symbol": "0078V0",
-      "price": 6920,
+      "price": 6905,
       "market_cap": 35.0
     },
     {
       "symbol": "494420",
-      "price": 8515,
+      "price": 8525,
       "market_cap": 162.0
     },
     {
       "symbol": "0023B0",
-      "price": 10590,
-      "market_cap": 233.0
+      "price": 10480,
+      "market_cap": 231.0
     },
     {
       "symbol": "332620",
-      "price": 84760,
+      "price": 84815,
       "market_cap": 159.0
     },
     {
       "symbol": "464470",
-      "price": 46330,
+      "price": 46335,
       "market_cap": 396.0
     },
     {
       "symbol": "461900",
-      "price": 20305,
-      "market_cap": 162.0
+      "price": 20155,
+      "market_cap": 161.0
     },
     {
       "symbol": "461910",
-      "price": 29120,
-      "market_cap": 146.0
+      "price": 28750,
+      "market_cap": 144.0
     },
     {
       "symbol": "0193K0",
-      "price": 6110,
-      "market_cap": 69.0
+      "price": 6030,
+      "market_cap": 68.0
     },
     {
       "symbol": "0193L0",
-      "price": 12765,
-      "market_cap": 202.0
+      "price": 12840,
+      "market_cap": 203.0
     },
     {
       "symbol": "195970",
-      "price": 15195,
-      "market_cap": 222.0
+      "price": 15155,
+      "market_cap": 221.0
     },
     {
       "symbol": "238670",
-      "price": 12965,
+      "price": 12985,
       "market_cap": 52.0
     },
     {
       "symbol": "195980",
-      "price": 13365,
-      "market_cap": 821.0
+      "price": 13220,
+      "market_cap": 812.0
     },
     {
       "symbol": "256450",
-      "price": 9910,
+      "price": 9990,
       "market_cap": 50.0
     },
     {
       "symbol": "447660",
-      "price": 14125,
+      "price": 14095,
       "market_cap": 240.0
     },
     {
       "symbol": "239660",
-      "price": 122885,
+      "price": 122895,
       "market_cap": 221.0
     },
     {
       "symbol": "421320",
-      "price": 20670,
-      "market_cap": 1705.0
+      "price": 20530,
+      "market_cap": 1694.0
     },
     {
       "symbol": "0184N0",
-      "price": 7270,
+      "price": 7250,
       "market_cap": 80.0
     },
     {
       "symbol": "464920",
-      "price": 19765,
-      "market_cap": 247.0
+      "price": 19425,
+      "market_cap": 243.0
     },
     {
       "symbol": "489000",
-      "price": 8985,
-      "market_cap": 198.0
+      "price": 8975,
+      "market_cap": 197.0
     },
     {
       "symbol": "0098N0",
-      "price": 11320,
-      "market_cap": 696.0
+      "price": 11355,
+      "market_cap": 698.0
     },
     {
       "symbol": "451000",
-      "price": 111155,
-      "market_cap": 5801.0
+      "price": 111265,
+      "market_cap": 5807.0
     },
     {
       "symbol": "280920",
-      "price": 16370,
-      "market_cap": 82.0
+      "price": 16280,
+      "market_cap": 81.0
     },
     {
       "symbol": "0184L0",
-      "price": 101865,
-      "market_cap": 1428.0
+      "price": 101900,
+      "market_cap": 1429.0
     },
     {
       "symbol": "266550",
-      "price": 15590,
+      "price": 15620,
       "market_cap": 39.0
     },
     {
       "symbol": "0047N0",
-      "price": 7050,
-      "market_cap": 49.0
+      "price": 6715,
+      "market_cap": 47.0
     },
     {
       "symbol": "0128D0",
-      "price": 5145,
-      "market_cap": 36.0
+      "price": 5070,
+      "market_cap": 35.0
     },
     {
       "symbol": "0239Y0",
-      "price": 6975,
-      "market_cap": 101.0
+      "price": 6910,
+      "market_cap": 100.0
     },
     {
       "symbol": "495040",
-      "price": 23785,
-      "market_cap": 642.0
+      "price": 23660,
+      "market_cap": 639.0
     },
     {
       "symbol": "301400",
-      "price": 11125,
+      "price": 11130,
       "market_cap": 72.0
     },
     {
       "symbol": "0166N0",
-      "price": 6270,
-      "market_cap": 201.0
+      "price": 6255,
+      "market_cap": 200.0
     },
     {
       "symbol": "227830",
-      "price": 51995,
+      "price": 51940,
       "market_cap": 130.0
     },
     {
       "symbol": "122090",
-      "price": 58740,
-      "market_cap": 1269.0
+      "price": 58695,
+      "market_cap": 1268.0
     },
     {
       "symbol": "328370",
-      "price": 28525,
-      "market_cap": 927.0
+      "price": 28195,
+      "market_cap": 916.0
     },
     {
       "symbol": "457990",
-      "price": 25055,
-      "market_cap": 1516.0
+      "price": 25180,
+      "market_cap": 1523.0
     },
     {
       "symbol": "0132K0",
-      "price": 7685,
-      "market_cap": 1057.0
+      "price": 7710,
+      "market_cap": 1060.0
     },
     {
       "symbol": "0000J0",
-      "price": 16675,
-      "market_cap": 692.0
+      "price": 16655,
+      "market_cap": 691.0
     },
     {
       "symbol": "148020",
-      "price": 79570,
-      "market_cap": 33499.0
+      "price": 79425,
+      "market_cap": 33438.0
     },
     {
       "symbol": "361580",
-      "price": 45070,
-      "market_cap": 3673.0
+      "price": 45045,
+      "market_cap": 3671.0
     },
     {
       "symbol": "290080",
-      "price": 6915,
-      "market_cap": 111.0
+      "price": 6905,
+      "market_cap": 110.0
     },
     {
       "symbol": "284980",
-      "price": 18810,
-      "market_cap": 154.0
+      "price": 18915,
+      "market_cap": 155.0
     },
     {
       "symbol": "252400",
-      "price": 49590,
-      "market_cap": 298.0
+      "price": 49540,
+      "market_cap": 297.0
     },
     {
       "symbol": "252410",
-      "price": 1719,
+      "price": 1722,
       "market_cap": 36.0
     },
     {
@@ -3341,13 +3341,13 @@
     },
     {
       "symbol": "475720",
-      "price": 9065,
-      "market_cap": 6645.0
+      "price": 9050,
+      "market_cap": 6634.0
     },
     {
       "symbol": "183700",
-      "price": 85510,
-      "market_cap": 359.0
+      "price": 85350,
+      "market_cap": 358.0
     },
     {
       "symbol": "0122W0",
@@ -3361,132 +3361,132 @@
     },
     {
       "symbol": "465330",
-      "price": 8995,
-      "market_cap": 560.0
+      "price": 9075,
+      "market_cap": 565.0
     },
     {
       "symbol": "465350",
-      "price": 18965,
-      "market_cap": 379.0
+      "price": 18795,
+      "market_cap": 376.0
     },
     {
       "symbol": "422420",
-      "price": 5130,
-      "market_cap": 1977.0
+      "price": 5170,
+      "market_cap": 1993.0
     },
     {
       "symbol": "105780",
-      "price": 11965,
+      "price": 11950,
       "market_cap": 239.0
     },
     {
       "symbol": "469070",
-      "price": 9240,
-      "market_cap": 3128.0
+      "price": 9370,
+      "market_cap": 3172.0
     },
     {
       "symbol": "0093A0",
-      "price": 23740,
-      "market_cap": 1318.0
+      "price": 23630,
+      "market_cap": 1311.0
     },
     {
       "symbol": "0101N0",
-      "price": 13765,
-      "market_cap": 4315.0
+      "price": 13820,
+      "market_cap": 4333.0
     },
     {
       "symbol": "427120",
-      "price": 4335,
+      "price": 4320,
       "market_cap": 29.0
     },
     {
       "symbol": "477080",
-      "price": 108255,
+      "price": 108250,
       "market_cap": 16173.0
     },
     {
       "symbol": "290130",
-      "price": 34185,
-      "market_cap": 4837.0
+      "price": 34135,
+      "market_cap": 4830.0
     },
     {
       "symbol": "326240",
-      "price": 32245,
-      "market_cap": 787.0
+      "price": 31950,
+      "market_cap": 780.0
     },
     {
       "symbol": "385560",
-      "price": 58190,
-      "market_cap": 4266.0
+      "price": 58370,
+      "market_cap": 4279.0
     },
     {
       "symbol": "479520",
-      "price": 107102,
+      "price": 107100,
       "market_cap": 9914.0
     },
     {
       "symbol": "270800",
-      "price": 13905,
+      "price": 13895,
       "market_cap": 76.0
     },
     {
       "symbol": "292050",
-      "price": 35995,
-      "market_cap": 126.0
+      "price": 35765,
+      "market_cap": 125.0
     },
     {
       "symbol": "388280",
-      "price": 6735,
-      "market_cap": 222.0
+      "price": 6775,
+      "market_cap": 224.0
     },
     {
       "symbol": "0192L0",
-      "price": 3775,
-      "market_cap": 160.0
+      "price": 3645,
+      "market_cap": 155.0
     },
     {
       "symbol": "442550",
-      "price": 14095,
+      "price": 14105,
       "market_cap": 226.0
     },
     {
       "symbol": "442560",
-      "price": 15230,
-      "market_cap": 556.0
+      "price": 15210,
+      "market_cap": 555.0
     },
     {
       "symbol": "442570",
-      "price": 15960,
-      "market_cap": 3336.0
+      "price": 15895,
+      "market_cap": 3322.0
     },
     {
       "symbol": "234310",
-      "price": 21700,
+      "price": 21845,
       "market_cap": 109.0
     },
     {
       "symbol": "241390",
-      "price": 14485,
-      "market_cap": 319.0
+      "price": 14470,
+      "market_cap": 318.0
     },
     {
       "symbol": "300640",
-      "price": 5630,
-      "market_cap": 180.0
+      "price": 5645,
+      "market_cap": 181.0
     },
     {
       "symbol": "266160",
-      "price": 25250,
-      "market_cap": 1578.0
+      "price": 25285,
+      "market_cap": 1580.0
     },
     {
       "symbol": "481430",
-      "price": 102955,
+      "price": 103060,
       "market_cap": 542.0
     },
     {
       "symbol": "114100",
-      "price": 107795,
+      "price": 107855,
       "market_cap": 950.0
     },
     {
@@ -3501,7 +3501,7 @@
     },
     {
       "symbol": "295000",
-      "price": 54025,
+      "price": 54050,
       "market_cap": 54.0
     },
     {
@@ -3516,22 +3516,22 @@
     },
     {
       "symbol": "0233N0",
-      "price": 6545,
-      "market_cap": 92.0
+      "price": 6450,
+      "market_cap": 90.0
     },
     {
       "symbol": "0114X0",
-      "price": 7830,
-      "market_cap": 51.0
+      "price": 7765,
+      "market_cap": 50.0
     },
     {
       "symbol": "437370",
-      "price": 9765,
+      "price": 9715,
       "market_cap": 68.0
     },
     {
       "symbol": "375270",
-      "price": 11220,
+      "price": 11230,
       "market_cap": 73.0
     },
     {
@@ -3546,33 +3546,33 @@
     },
     {
       "symbol": "417450",
-      "price": 11390,
+      "price": 11385,
       "market_cap": 97.0
     },
     {
       "symbol": "442320",
-      "price": 24740,
-      "market_cap": 1509.0
+      "price": 24675,
+      "market_cap": 1505.0
     },
     {
       "symbol": "461490",
-      "price": 14205,
-      "market_cap": 2649.0
+      "price": 14165,
+      "market_cap": 2642.0
     },
     {
       "symbol": "459750",
-      "price": 16035,
+      "price": 16060,
       "market_cap": 249.0
     },
     {
       "symbol": "399580",
-      "price": 7380,
+      "price": 7350,
       "market_cap": 81.0
     },
     {
       "symbol": "276650",
-      "price": 39690,
-      "market_cap": 298.0
+      "price": 40050,
+      "market_cap": 300.0
     },
     {
       "symbol": "336160",
@@ -3581,27 +3581,27 @@
     },
     {
       "symbol": "326230",
-      "price": 9455,
-      "market_cap": 53.0
+      "price": 9585,
+      "market_cap": 54.0
     },
     {
       "symbol": "367760",
-      "price": 40490,
-      "market_cap": 4494.0
+      "price": 40290,
+      "market_cap": 4472.0
     },
     {
       "symbol": "272560",
-      "price": 115760,
+      "price": 115775,
       "market_cap": 1798.0
     },
     {
       "symbol": "385550",
-      "price": 115060,
-      "market_cap": 4595.0
+      "price": 115180,
+      "market_cap": 4600.0
     },
     {
       "symbol": "196230",
-      "price": 117640,
+      "price": 117650,
       "market_cap": 2425.0
     },
     {
@@ -3611,12 +3611,12 @@
     },
     {
       "symbol": "315960",
-      "price": 58610,
-      "market_cap": 3780.0
+      "price": 58650,
+      "market_cap": 3783.0
     },
     {
       "symbol": "0138D0",
-      "price": 8480,
+      "price": 8490,
       "market_cap": 47.0
     },
     {
@@ -3626,12 +3626,12 @@
     },
     {
       "symbol": "401170",
-      "price": 9070,
-      "market_cap": 345.0
+      "price": 9095,
+      "market_cap": 346.0
     },
     {
       "symbol": "481340",
-      "price": 8290,
+      "price": 8300,
       "market_cap": 307.0
     },
     {
@@ -3646,53 +3646,53 @@
     },
     {
       "symbol": "485690",
-      "price": 17060,
-      "market_cap": 640.0
+      "price": 16885,
+      "market_cap": 633.0
     },
     {
       "symbol": "490590",
-      "price": 10720,
-      "market_cap": 6250.0
+      "price": 10625,
+      "market_cap": 6194.0
     },
     {
       "symbol": "0176E0",
-      "price": 7625,
-      "market_cap": 526.0
+      "price": 7605,
+      "market_cap": 525.0
     },
     {
       "symbol": "0127R0",
-      "price": 9465,
-      "market_cap": 133.0
+      "price": 9300,
+      "market_cap": 130.0
     },
     {
       "symbol": "495940",
-      "price": 14825,
-      "market_cap": 437.0
+      "price": 14705,
+      "market_cap": 434.0
     },
     {
       "symbol": "379780",
-      "price": 21205,
-      "market_cap": 15140.0
+      "price": 21110,
+      "market_cap": 15073.0
     },
     {
       "symbol": "453330",
-      "price": 17140,
-      "market_cap": 823.0
+      "price": 17095,
+      "market_cap": 821.0
     },
     {
       "symbol": "0138T0",
-      "price": 8540,
-      "market_cap": 299.0
+      "price": 8485,
+      "market_cap": 297.0
     },
     {
       "symbol": "0005C0",
-      "price": 10230,
-      "market_cap": 66.0
+      "price": 10255,
+      "market_cap": 67.0
     },
     {
       "symbol": "460660",
-      "price": 11930,
-      "market_cap": 185.0
+      "price": 11885,
+      "market_cap": 184.0
     },
     {
       "symbol": "219390",
@@ -3701,77 +3701,77 @@
     },
     {
       "symbol": "0115C0",
-      "price": 10795,
+      "price": 10810,
       "market_cap": 286.0
     },
     {
       "symbol": "354240",
-      "price": 9660,
-      "market_cap": 106.0
+      "price": 9565,
+      "market_cap": 105.0
     },
     {
       "symbol": "368590",
-      "price": 26685,
-      "market_cap": 14917.0
+      "price": 26545,
+      "market_cap": 14839.0
     },
     {
       "symbol": "437350",
-      "price": 11880,
+      "price": 11870,
       "market_cap": 261.0
     },
     {
       "symbol": "455960",
-      "price": 11915,
-      "market_cap": 652.0
+      "price": 11890,
+      "market_cap": 650.0
     },
     {
       "symbol": "469530",
-      "price": 9685,
+      "price": 9645,
       "market_cap": 62.0
     },
     {
       "symbol": "469060",
-      "price": 27185,
-      "market_cap": 625.0
+      "price": 26925,
+      "market_cap": 619.0
     },
     {
       "symbol": "469050",
-      "price": 25290,
-      "market_cap": 291.0
+      "price": 25005,
+      "market_cap": 288.0
     },
     {
       "symbol": "491630",
-      "price": 5920,
+      "price": 5970,
       "market_cap": 34.0
     },
     {
       "symbol": "490600",
-      "price": 8610,
-      "market_cap": 1571.0
+      "price": 8580,
+      "market_cap": 1566.0
     },
     {
       "symbol": "0018Z0",
-      "price": 13635,
-      "market_cap": 143.0
+      "price": 13510,
+      "market_cap": 142.0
     },
     {
       "symbol": "0218J0",
-      "price": 8967,
-      "market_cap": 439.0
+      "price": 8920,
+      "market_cap": 437.0
     },
     {
       "symbol": "0227K0",
-      "price": 6925,
-      "market_cap": 69.0
+      "price": 6845,
+      "market_cap": 68.0
     },
     {
       "symbol": "0013P0",
-      "price": 10540,
+      "price": 10520,
       "market_cap": 116.0
     },
     {
       "symbol": "267440",
-      "price": 8015,
+      "price": 8060,
       "market_cap": 48.0
     },
     {
@@ -3781,133 +3781,133 @@
     },
     {
       "symbol": "267450",
-      "price": 11185,
+      "price": 11105,
       "market_cap": 56.0
     },
     {
       "symbol": "0036Z0",
-      "price": 11640,
+      "price": 11655,
       "market_cap": 64.0
     },
     {
       "symbol": "0269N0",
-      "price": 9755,
-      "market_cap": 195.0
+      "price": 9680,
+      "market_cap": 194.0
     },
     {
       "symbol": "491620",
-      "price": 9140,
-      "market_cap": 5351.0
+      "price": 9100,
+      "market_cap": 5328.0
     },
     {
       "symbol": "0036R0",
-      "price": 17350,
-      "market_cap": 954.0
+      "price": 17270,
+      "market_cap": 950.0
     },
     {
       "symbol": "0000Z0",
-      "price": 7175,
+      "price": 7170,
       "market_cap": 409.0
     },
     {
       "symbol": "0254H0",
-      "price": 6710,
+      "price": 6690,
       "market_cap": 151.0
     },
     {
       "symbol": "446700",
-      "price": 7905,
+      "price": 7955,
       "market_cap": 84.0
     },
     {
       "symbol": "475350",
-      "price": 14495,
-      "market_cap": 754.0
+      "price": 14450,
+      "market_cap": 751.0
     },
     {
       "symbol": "388420",
-      "price": 19000,
-      "market_cap": 1642.0
+      "price": 18840,
+      "market_cap": 1628.0
     },
     {
       "symbol": "0240J0",
-      "price": 7560,
+      "price": 7565,
       "market_cap": 106.0
     },
     {
       "symbol": "448630",
-      "price": 14295,
-      "market_cap": 3073.0
+      "price": 14300,
+      "market_cap": 3075.0
     },
     {
       "symbol": "0162Z0",
-      "price": 11500,
-      "market_cap": 34868.0
+      "price": 11470,
+      "market_cap": 34777.0
     },
     {
       "symbol": "0192M0",
-      "price": 5605,
-      "market_cap": 139.0
+      "price": 5510,
+      "market_cap": 136.0
     },
     {
       "symbol": "367770",
-      "price": 14810,
-      "market_cap": 748.0
+      "price": 14835,
+      "market_cap": 749.0
     },
     {
       "symbol": "140570",
-      "price": 19670,
+      "price": 19765,
       "market_cap": 79.0
     },
     {
       "symbol": "0093B0",
-      "price": 11005,
-      "market_cap": 88.0
+      "price": 10925,
+      "market_cap": 87.0
     },
     {
       "symbol": "140580",
-      "price": 20515,
+      "price": 20565,
       "market_cap": 103.0
     },
     {
       "symbol": "379790",
-      "price": 16425,
-      "market_cap": 197.0
+      "price": 16365,
+      "market_cap": 196.0
     },
     {
       "symbol": "498610",
-      "price": 8255,
+      "price": 8260,
       "market_cap": 50.0
     },
     {
       "symbol": "488480",
-      "price": 11115,
-      "market_cap": 61.0
+      "price": 10975,
+      "market_cap": 60.0
     },
     {
       "symbol": "385540",
-      "price": 106650,
-      "market_cap": 22103.0
+      "price": 106750,
+      "market_cap": 22124.0
     },
     {
       "symbol": "183710",
-      "price": 75500,
-      "market_cap": 151.0
+      "price": 75010,
+      "market_cap": 150.0
     },
     {
       "symbol": "310080",
-      "price": 8055,
-      "market_cap": 93.0
+      "price": 8020,
+      "market_cap": 92.0
     },
     {
       "symbol": "463300",
-      "price": 11280,
+      "price": 11265,
       "market_cap": 180.0
     },
     {
       "symbol": "174360",
-      "price": 19840,
-      "market_cap": 278.0
+      "price": 19730,
+      "market_cap": 276.0
     },
     {
       "symbol": "136340",
@@ -3916,22 +3916,22 @@
     },
     {
       "symbol": "281990",
-      "price": 15605,
+      "price": 15660,
       "market_cap": 78.0
     },
     {
       "symbol": "272570",
-      "price": 110430,
+      "price": 110450,
       "market_cap": 53.0
     },
     {
       "symbol": "0164G0",
-      "price": 8460,
-      "market_cap": 165.0
+      "price": 8550,
+      "market_cap": 167.0
     },
     {
       "symbol": "250730",
-      "price": 8900,
+      "price": 8895,
       "market_cap": 151.0
     },
     {
@@ -3941,77 +3941,77 @@
     },
     {
       "symbol": "0094L0",
-      "price": 5835,
+      "price": 5865,
       "market_cap": 82.0
     },
     {
       "symbol": "371150",
-      "price": 5095,
+      "price": 5050,
       "market_cap": 66.0
     },
     {
       "symbol": "498860",
-      "price": 13380,
-      "market_cap": 268.0
+      "price": 13430,
+      "market_cap": 269.0
     },
     {
       "symbol": "495050",
-      "price": 24090,
-      "market_cap": 7034.0
+      "price": 24100,
+      "market_cap": 7037.0
     },
     {
       "symbol": "0094M0",
-      "price": 12275,
-      "market_cap": 4806.0
+      "price": 12280,
+      "market_cap": 4808.0
     },
     {
       "symbol": "0151P0",
-      "price": 9460,
-      "market_cap": 908.0
+      "price": 9430,
+      "market_cap": 905.0
     },
     {
       "symbol": "270810",
-      "price": 10940,
-      "market_cap": 2558.0
+      "price": 11000,
+      "market_cap": 2572.0
     },
     {
       "symbol": "278240",
-      "price": 4405,
-      "market_cap": 332.0
+      "price": 4460,
+      "market_cap": 336.0
     },
     {
       "symbol": "275750",
-      "price": 2910,
+      "price": 2915,
       "market_cap": 28.0
     },
     {
       "symbol": "0223A0",
-      "price": 7350,
+      "price": 7340,
       "market_cap": 316.0
     },
     {
       "symbol": "302450",
-      "price": 52070,
-      "market_cap": 2604.0
+      "price": 51970,
+      "market_cap": 2599.0
     },
     {
       "symbol": "0047P0",
-      "price": 13580,
-      "market_cap": 210.0
+      "price": 13480,
+      "market_cap": 209.0
     },
     {
       "symbol": "0013R0",
-      "price": 7650,
+      "price": 7625,
       "market_cap": 275.0
     },
     {
       "symbol": "449580",
-      "price": 16595,
-      "market_cap": 183.0
+      "price": 16555,
+      "market_cap": 182.0
     },
     {
       "symbol": "334690",
-      "price": 4030,
+      "price": 4010,
       "market_cap": 28.0
     },
     {
@@ -4021,23 +4021,23 @@
     },
     {
       "symbol": "0047R0",
-      "price": 13725,
-      "market_cap": 226.0
+      "price": 13650,
+      "market_cap": 225.0
     },
     {
       "symbol": "253280",
-      "price": 10880,
+      "price": 10855,
       "market_cap": 65.0
     },
     {
       "symbol": "253290",
-      "price": 11300,
+      "price": 11295,
       "market_cap": 203.0
     },
     {
       "symbol": "0190C0",
-      "price": 6140,
-      "market_cap": 3592.0
+      "price": 6175,
+      "market_cap": 3612.0
     },
     {
       "symbol": "411540",
@@ -4046,22 +4046,22 @@
     },
     {
       "symbol": "295040",
-      "price": 29880,
-      "market_cap": 7664.0
+      "price": 29765,
+      "market_cap": 7635.0
     },
     {
       "symbol": "0262Y0",
-      "price": 9180,
-      "market_cap": 450.0
+      "price": 9165,
+      "market_cap": 449.0
     },
     {
       "symbol": "0167B0",
-      "price": 8410,
-      "market_cap": 4970.0
+      "price": 8390,
+      "market_cap": 4958.0
     },
     {
       "symbol": "488980",
-      "price": 52510,
+      "price": 52505,
       "market_cap": 2116.0
     },
     {
@@ -4071,22 +4071,22 @@
     },
     {
       "symbol": "455860",
-      "price": 3660,
-      "market_cap": 913.0
+      "price": 3685,
+      "market_cap": 919.0
     },
     {
       "symbol": "0167A0",
-      "price": 12275,
-      "market_cap": 38298.0
+      "price": 12210,
+      "market_cap": 38095.0
     },
     {
       "symbol": "455850",
-      "price": 18475,
-      "market_cap": 9579.0
+      "price": 18440,
+      "market_cap": 9561.0
     },
     {
       "symbol": "497880",
-      "price": 50160,
+      "price": 50157,
       "market_cap": 3216.0
     },
     {
@@ -4096,73 +4096,73 @@
     },
     {
       "symbol": "292500",
-      "price": 35590,
-      "market_cap": 178.0
+      "price": 35715,
+      "market_cap": 179.0
     },
     {
       "symbol": "404650",
-      "price": 17010,
-      "market_cap": 102.0
+      "price": 17295,
+      "market_cap": 104.0
     },
     {
       "symbol": "490480",
-      "price": 16775,
+      "price": 16770,
       "market_cap": 436.0
     },
     {
       "symbol": "0197W0",
-      "price": 3530,
-      "market_cap": 204.0
+      "price": 3485,
+      "market_cap": 201.0
     },
     {
       "symbol": "0197X0",
-      "price": 9320,
-      "market_cap": 687.0
+      "price": 9530,
+      "market_cap": 703.0
     },
     {
       "symbol": "438570",
-      "price": 103030,
-      "market_cap": 1209.0
+      "price": 103150,
+      "market_cap": 1210.0
     },
     {
       "symbol": "474390",
-      "price": 45110,
-      "market_cap": 51.0
+      "price": 45240,
+      "market_cap": 52.0
     },
     {
       "symbol": "438560",
-      "price": 102120,
+      "price": 102150,
       "market_cap": 1114.0
     },
     {
       "symbol": "0066W0",
-      "price": 10440,
-      "market_cap": 788.0
+      "price": 10385,
+      "market_cap": 784.0
     },
     {
       "symbol": "0022T0",
-      "price": 10630,
-      "market_cap": 606.0
+      "price": 10580,
+      "market_cap": 603.0
     },
     {
       "symbol": "423170",
-      "price": 43170,
-      "market_cap": 1882.0
+      "price": 42855,
+      "market_cap": 1868.0
     },
     {
       "symbol": "0246X0",
-      "price": 6520,
-      "market_cap": 652.0
+      "price": 6470,
+      "market_cap": 647.0
     },
     {
       "symbol": "400590",
-      "price": 13220,
+      "price": 13265,
       "market_cap": 66.0
     },
     {
       "symbol": "484880",
-      "price": 19025,
-      "market_cap": 2987.0
+      "price": 19135,
+      "market_cap": 3004.0
     },
     {
       "symbol": "484890",
@@ -4171,168 +4171,168 @@
     },
     {
       "symbol": "461600",
-      "price": 8300,
-      "market_cap": 220.0
+      "price": 8325,
+      "market_cap": 221.0
     },
     {
       "symbol": "473330",
-      "price": 7680,
-      "market_cap": 2815.0
+      "price": 7670,
+      "market_cap": 2811.0
     },
     {
       "symbol": "494210",
-      "price": 9600,
+      "price": 9605,
       "market_cap": 77.0
     },
     {
       "symbol": "479620",
-      "price": 19470,
-      "market_cap": 652.0
+      "price": 19255,
+      "market_cap": 645.0
     },
     {
       "symbol": "481180",
-      "price": 13750,
-      "market_cap": 1093.0
+      "price": 13655,
+      "market_cap": 1086.0
     },
     {
       "symbol": "486450",
-      "price": 14940,
-      "market_cap": 1673.0
+      "price": 14850,
+      "market_cap": 1663.0
     },
     {
       "symbol": "433330",
-      "price": 20280,
-      "market_cap": 2859.0
+      "price": 20200,
+      "market_cap": 2848.0
     },
     {
       "symbol": "399110",
-      "price": 18740,
-      "market_cap": 1087.0
-    },
-    {
-      "symbol": "0080X0",
-      "price": 10350,
-      "market_cap": 745.0
-    },
-    {
-      "symbol": "499150",
-      "price": 9930,
-      "market_cap": 40.0
-    },
-    {
-      "symbol": "447620",
-      "price": 15150,
-      "market_cap": 1257.0
-    },
-    {
-      "symbol": "476030",
-      "price": 15160,
-      "market_cap": 1266.0
-    },
-    {
-      "symbol": "0118S0",
-      "price": 7370,
-      "market_cap": 339.0
-    },
-    {
-      "symbol": "446720",
-      "price": 13445,
-      "market_cap": 10514.0
-    },
-    {
-      "symbol": "452360",
-      "price": 13435,
-      "market_cap": 2284.0
-    },
-    {
-      "symbol": "493420",
-      "price": 12445,
-      "market_cap": 274.0
-    },
-    {
-      "symbol": "490490",
-      "price": 10795,
-      "market_cap": 4793.0
-    },
-    {
-      "symbol": "0023A0",
-      "price": 15170,
-      "market_cap": 2837.0
-    },
-    {
-      "symbol": "0181L0",
-      "price": 5165,
-      "market_cap": 455.0
-    },
-    {
-      "symbol": "0051G0",
-      "price": 8880,
+      "price": 18680,
       "market_cap": 1083.0
     },
     {
+      "symbol": "0080X0",
+      "price": 10325,
+      "market_cap": 743.0
+    },
+    {
+      "symbol": "499150",
+      "price": 9870,
+      "market_cap": 39.0
+    },
+    {
+      "symbol": "447620",
+      "price": 15125,
+      "market_cap": 1255.0
+    },
+    {
+      "symbol": "476030",
+      "price": 15085,
+      "market_cap": 1260.0
+    },
+    {
+      "symbol": "0118S0",
+      "price": 7290,
+      "market_cap": 335.0
+    },
+    {
+      "symbol": "446720",
+      "price": 13415,
+      "market_cap": 10491.0
+    },
+    {
+      "symbol": "452360",
+      "price": 13410,
+      "market_cap": 2280.0
+    },
+    {
+      "symbol": "493420",
+      "price": 12395,
+      "market_cap": 273.0
+    },
+    {
+      "symbol": "490490",
+      "price": 10760,
+      "market_cap": 4777.0
+    },
+    {
+      "symbol": "0023A0",
+      "price": 15030,
+      "market_cap": 2811.0
+    },
+    {
+      "symbol": "0181L0",
+      "price": 5120,
+      "market_cap": 451.0
+    },
+    {
+      "symbol": "0051G0",
+      "price": 8830,
+      "market_cap": 1077.0
+    },
+    {
       "symbol": "481190",
-      "price": 15080,
-      "market_cap": 2609.0
+      "price": 15005,
+      "market_cap": 2596.0
     },
     {
       "symbol": "475300",
-      "price": 15900,
-      "market_cap": 2480.0
+      "price": 15820,
+      "market_cap": 2468.0
     },
     {
       "symbol": "475310",
-      "price": 19235,
-      "market_cap": 1385.0
+      "price": 19285,
+      "market_cap": 1389.0
     },
     {
       "symbol": "0152E0",
-      "price": 8835,
+      "price": 8845,
       "market_cap": 203.0
     },
     {
       "symbol": "0207G0",
-      "price": 5810,
-      "market_cap": 447.0
+      "price": 5815,
+      "market_cap": 448.0
     },
     {
       "symbol": "400580",
-      "price": 11675,
-      "market_cap": 58.0
+      "price": 11727,
+      "market_cap": 59.0
     },
     {
       "symbol": "464610",
-      "price": 5885,
+      "price": 5850,
       "market_cap": 85.0
     },
     {
       "symbol": "466930",
-      "price": 18255,
-      "market_cap": 1323.0
+      "price": 18280,
+      "market_cap": 1325.0
     },
     {
       "symbol": "464600",
-      "price": 17905,
-      "market_cap": 161.0
+      "price": 17975,
+      "market_cap": 162.0
     },
     {
       "symbol": "0005D0",
-      "price": 13375,
-      "market_cap": 1598.0
+      "price": 13510,
+      "market_cap": 1614.0
     },
     {
       "symbol": "466920",
-      "price": 16770,
-      "market_cap": 8360.0
+      "price": 16740,
+      "market_cap": 8345.0
     },
     {
       "symbol": "0080Y0",
-      "price": 2960,
-      "market_cap": 444.0
+      "price": 2950,
+      "market_cap": 443.0
     },
     {
       "symbol": "0141S0",
-      "price": 5355,
-      "market_cap": 345.0
+      "price": 5360,
+      "market_cap": 346.0
     },
     {
       "symbol": "436140",
@@ -4346,28 +4346,28 @@
     },
     {
       "symbol": "0016X0",
-      "price": 52110,
-      "market_cap": 3826.0
+      "price": 52120,
+      "market_cap": 3827.0
     },
     {
       "symbol": "220130",
-      "price": 5470,
-      "market_cap": 44.0
+      "price": 5585,
+      "market_cap": 45.0
     },
     {
       "symbol": "0131A0",
-      "price": 6715,
-      "market_cap": 34.0
+      "price": 6640,
+      "market_cap": 33.0
     },
     {
       "symbol": "415760",
-      "price": 9910,
-      "market_cap": 135.0
+      "price": 9990,
+      "market_cap": 136.0
     },
     {
       "symbol": "413220",
-      "price": 3575,
-      "market_cap": 43.0
+      "price": 3510,
+      "market_cap": 42.0
     },
     {
       "symbol": "469830",
@@ -4376,63 +4376,63 @@
     },
     {
       "symbol": "0105E0",
-      "price": 10740,
-      "market_cap": 4683.0
+      "price": 10765,
+      "market_cap": 4694.0
     },
     {
       "symbol": "444200",
-      "price": 31635,
-      "market_cap": 3464.0
+      "price": 31615,
+      "market_cap": 3462.0
     },
     {
       "symbol": "495550",
-      "price": 24645,
-      "market_cap": 1380.0
+      "price": 24625,
+      "market_cap": 1379.0
     },
     {
       "symbol": "450910",
-      "price": 10770,
-      "market_cap": 302.0
+      "price": 10830,
+      "market_cap": 303.0
     },
     {
       "symbol": "0192T0",
-      "price": 5280,
-      "market_cap": 246.0
+      "price": 5325,
+      "market_cap": 248.0
     },
     {
       "symbol": "0192S0",
-      "price": 8180,
+      "price": 8175,
       "market_cap": 221.0
     },
     {
       "symbol": "0040X0",
-      "price": 8690,
-      "market_cap": 1599.0
+      "price": 8680,
+      "market_cap": 1597.0
     },
     {
       "symbol": "0040Y0",
-      "price": 7400,
-      "market_cap": 3463.0
+      "price": 7415,
+      "market_cap": 3470.0
     },
     {
       "symbol": "0105D0",
-      "price": 7680,
+      "price": 7675,
       "market_cap": 142.0
     },
     {
       "symbol": "0092B0",
-      "price": 9325,
-      "market_cap": 751.0
+      "price": 9340,
+      "market_cap": 752.0
     },
     {
       "symbol": "429980",
-      "price": 13520,
-      "market_cap": 68.0
+      "price": 13360,
+      "market_cap": 67.0
     },
     {
       "symbol": "0008T0",
-      "price": 14040,
-      "market_cap": 716.0
+      "price": 14105,
+      "market_cap": 719.0
     },
     {
       "symbol": "0139F0",
@@ -4441,18 +4441,18 @@
     },
     {
       "symbol": "102110",
-      "price": 79105,
-      "market_cap": 81201.0
+      "price": 78955,
+      "market_cap": 81047.0
     },
     {
       "symbol": "139260",
-      "price": 95710,
-      "market_cap": 16711.0
+      "price": 95520,
+      "market_cap": 16678.0
     },
     {
       "symbol": "139220",
-      "price": 6095,
-      "market_cap": 1052.0
+      "price": 6115,
+      "market_cap": 1055.0
     },
     {
       "symbol": "139290",
@@ -4461,58 +4461,58 @@
     },
     {
       "symbol": "139270",
-      "price": 14165,
-      "market_cap": 241.0
+      "price": 14270,
+      "market_cap": 243.0
     },
     {
       "symbol": "227550",
-      "price": 9085,
+      "price": 9105,
       "market_cap": 27.0
     },
     {
       "symbol": "227560",
-      "price": 11260,
+      "price": 11285,
       "market_cap": 27.0
     },
     {
       "symbol": "139250",
-      "price": 12705,
+      "price": 12735,
       "market_cap": 160.0
     },
     {
       "symbol": "139230",
-      "price": 7460,
-      "market_cap": 1404.0
+      "price": 7490,
+      "market_cap": 1410.0
     },
     {
       "symbol": "139240",
-      "price": 8000,
+      "price": 7990,
       "market_cap": 56.0
     },
     {
       "symbol": "227540",
-      "price": 18615,
-      "market_cap": 283.0
+      "price": 18545,
+      "market_cap": 282.0
     },
     {
       "symbol": "243880",
-      "price": 141310,
-      "market_cap": 1908.0
+      "price": 140275,
+      "market_cap": 1894.0
     },
     {
       "symbol": "310960",
-      "price": 46365,
-      "market_cap": 2550.0
+      "price": 46320,
+      "market_cap": 2548.0
     },
     {
       "symbol": "252000",
-      "price": 15775,
+      "price": 15805,
       "market_cap": 63.0
     },
     {
       "symbol": "267770",
-      "price": 41060,
-      "market_cap": 1437.0
+      "price": 40915,
+      "market_cap": 1432.0
     },
     {
       "symbol": "252710",
@@ -4521,33 +4521,33 @@
     },
     {
       "symbol": "243890",
-      "price": 3990,
+      "price": 4000,
       "market_cap": 24.0
     },
     {
       "symbol": "315270",
-      "price": 16215,
+      "price": 16190,
       "market_cap": 32.0
     },
     {
       "symbol": "289480",
-      "price": 10420,
-      "market_cap": 261.0
+      "price": 10400,
+      "market_cap": 260.0
     },
     {
       "symbol": "166400",
-      "price": 18990,
-      "market_cap": 95.0
+      "price": 18850,
+      "market_cap": 94.0
     },
     {
       "symbol": "0262B0",
-      "price": 8865,
-      "market_cap": 5062.0
+      "price": 8855,
+      "market_cap": 5056.0
     },
     {
       "symbol": "0104N0",
-      "price": 15090,
-      "market_cap": 1600.0
+      "price": 15065,
+      "market_cap": 1597.0
     },
     {
       "symbol": "480260",
@@ -4556,93 +4556,93 @@
     },
     {
       "symbol": "0094K0",
-      "price": 100880,
-      "market_cap": 2983.0
+      "price": 100900,
+      "market_cap": 2984.0
     },
     {
       "symbol": "364980",
-      "price": 8255,
-      "market_cap": 5915.0
+      "price": 8310,
+      "market_cap": 5954.0
     },
     {
       "symbol": "412570",
-      "price": 730,
-      "market_cap": 1322.0
+      "price": 739,
+      "market_cap": 1338.0
     },
     {
       "symbol": "462010",
-      "price": 3990,
-      "market_cap": 4483.0
+      "price": 4010,
+      "market_cap": 4505.0
     },
     {
       "symbol": "305540",
-      "price": 14845,
-      "market_cap": 7482.0
+      "price": 14925,
+      "market_cap": 7522.0
     },
     {
       "symbol": "471760",
-      "price": 9465,
-      "market_cap": 1855.0
+      "price": 9440,
+      "market_cap": 1850.0
     },
     {
       "symbol": "365040",
-      "price": 26445,
-      "market_cap": 555.0
+      "price": 26395,
+      "market_cap": 554.0
     },
     {
       "symbol": "364960",
-      "price": 5385,
-      "market_cap": 619.0
+      "price": 5400,
+      "market_cap": 621.0
     },
     {
       "symbol": "412560",
-      "price": 1163,
+      "price": 1160,
       "market_cap": 8.0
     },
     {
       "symbol": "475630",
-      "price": 1084625,
+      "price": 1084630,
       "market_cap": 12975.0
     },
     {
       "symbol": "357870",
-      "price": 58430,
-      "market_cap": 38023.0
+      "price": 58427,
+      "market_cap": 38021.0
     },
     {
       "symbol": "499660",
-      "price": 1002555,
+      "price": 1002550,
       "market_cap": 4420.0
     },
     {
       "symbol": "400970",
-      "price": 6280,
-      "market_cap": 311.0
+      "price": 6325,
+      "market_cap": 313.0
     },
     {
       "symbol": "377990",
-      "price": 15070,
-      "market_cap": 761.0
+      "price": 15160,
+      "market_cap": 766.0
     },
     {
       "symbol": "417630",
-      "price": 14225,
+      "price": 14235,
       "market_cap": 149.0
     },
     {
       "symbol": "449170",
-      "price": 112525,
-      "market_cap": 22999.0
+      "price": 112530,
+      "market_cap": 23000.0
     },
     {
       "symbol": "292160",
-      "price": 35120,
-      "market_cap": 176.0
+      "price": 34835,
+      "market_cap": 174.0
     },
     {
       "symbol": "0072R0",
-      "price": 10565,
-      "market_cap": 9905.0
+      "price": 10525,
+      "market_cap": 9867.0
     },
     {
       "symbol": "404540",
@@ -4651,23 +4651,23 @@
     },
     {
       "symbol": "228820",
-      "price": 13715,
-      "market_cap": 137.0
+      "price": 13645,
+      "market_cap": 136.0
     },
     {
       "symbol": "300610",
-      "price": 4795,
+      "price": 4815,
       "market_cap": 108.0
     },
     {
       "symbol": "463250",
-      "price": 20245,
-      "market_cap": 3077.0
+      "price": 20155,
+      "market_cap": 3064.0
     },
     {
       "symbol": "138530",
-      "price": 9650,
-      "market_cap": 585.0
+      "price": 9645,
+      "market_cap": 584.0
     },
     {
       "symbol": "445910",
@@ -4676,42 +4676,42 @@
     },
     {
       "symbol": "289260",
-      "price": 21430,
-      "market_cap": 122.0
+      "price": 21245,
+      "market_cap": 121.0
     },
     {
       "symbol": "289250",
-      "price": 25745,
-      "market_cap": 139.0
+      "price": 25595,
+      "market_cap": 138.0
     },
     {
       "symbol": "310970",
-      "price": 35320,
-      "market_cap": 32812.0
+      "price": 35270,
+      "market_cap": 32766.0
     },
     {
       "symbol": "269370",
-      "price": 16310,
+      "price": 16240,
       "market_cap": 114.0
     },
     {
       "symbol": "248270",
-      "price": 27190,
+      "price": 27195,
       "market_cap": 315.0
     },
     {
       "symbol": "0195S0",
-      "price": 3600,
-      "market_cap": 5992.0
+      "price": 3550,
+      "market_cap": 5909.0
     },
     {
       "symbol": "0025N0",
-      "price": 11250,
-      "market_cap": 7493.0
+      "price": 11205,
+      "market_cap": 7463.0
     },
     {
       "symbol": "453950",
-      "price": 26795,
+      "price": 26810,
       "market_cap": 536.0
     },
     {
@@ -4721,37 +4721,37 @@
     },
     {
       "symbol": "139280",
-      "price": 11615,
-      "market_cap": 365.0
+      "price": 11575,
+      "market_cap": 363.0
     },
     {
       "symbol": "237440",
-      "price": 10155,
-      "market_cap": 102.0
+      "price": 10075,
+      "market_cap": 101.0
     },
     {
       "symbol": "319640",
-      "price": 21375,
-      "market_cap": 737.0
+      "price": 21280,
+      "market_cap": 734.0
     },
     {
       "symbol": "0190Y0",
-      "price": 6570,
-      "market_cap": 542.0
+      "price": 6530,
+      "market_cap": 539.0
     },
     {
       "symbol": "160580",
-      "price": 13750,
-      "market_cap": 1248.0
+      "price": 13640,
+      "market_cap": 1238.0
     },
     {
       "symbol": "451530",
-      "price": 42165,
-      "market_cap": 1199.0
+      "price": 42355,
+      "market_cap": 1205.0
     },
     {
       "symbol": "114820",
-      "price": 106875,
+      "price": 106885,
       "market_cap": 1125.0
     },
     {
@@ -4761,93 +4761,93 @@
     },
     {
       "symbol": "464310",
-      "price": 11395,
-      "market_cap": 895.0
+      "price": 11230,
+      "market_cap": 882.0
     },
     {
       "symbol": "418670",
-      "price": 19275,
-      "market_cap": 910.0
+      "price": 19130,
+      "market_cap": 903.0
     },
     {
       "symbol": "466950",
-      "price": 22975,
-      "market_cap": 4299.0
+      "price": 22820,
+      "market_cap": 4270.0
     },
     {
       "symbol": "491010",
-      "price": 17455,
-      "market_cap": 4104.0
+      "price": 17320,
+      "market_cap": 4072.0
     },
     {
       "symbol": "412770",
-      "price": 9840,
-      "market_cap": 554.0
+      "price": 9760,
+      "market_cap": 549.0
     },
     {
       "symbol": "0255E0",
-      "price": 6810,
-      "market_cap": 742.0
+      "price": 6685,
+      "market_cap": 729.0
     },
     {
       "symbol": "394670",
-      "price": 8130,
-      "market_cap": 1180.0
+      "price": 8100,
+      "market_cap": 1176.0
     },
     {
       "symbol": "440340",
-      "price": 11275,
-      "market_cap": 254.0
+      "price": 11250,
+      "market_cap": 253.0
     },
     {
       "symbol": "476690",
-      "price": 10580,
+      "price": 10585,
       "market_cap": 307.0
     },
     {
       "symbol": "480310",
-      "price": 16885,
-      "market_cap": 431.0
+      "price": 16765,
+      "market_cap": 428.0
     },
     {
       "symbol": "387270",
-      "price": 19915,
-      "market_cap": 219.0
+      "price": 19830,
+      "market_cap": 218.0
     },
     {
       "symbol": "276000",
-      "price": 18390,
+      "price": 18405,
       "market_cap": 166.0
     },
     {
       "symbol": "394660",
-      "price": 11870,
-      "market_cap": 774.0
+      "price": 11800,
+      "market_cap": 769.0
     },
     {
       "symbol": "371450",
-      "price": 11945,
+      "price": 11910,
       "market_cap": 172.0
     },
     {
       "symbol": "464930",
-      "price": 19030,
-      "market_cap": 942.0
+      "price": 19050,
+      "market_cap": 943.0
     },
     {
       "symbol": "139320",
-      "price": 14785,
-      "market_cap": 325.0
+      "price": 14725,
+      "market_cap": 324.0
     },
     {
       "symbol": "0168K0",
-      "price": 4810,
-      "market_cap": 970.0
+      "price": 4815,
+      "market_cap": 971.0
     },
     {
       "symbol": "137610",
-      "price": 5115,
-      "market_cap": 113.0
+      "price": 5095,
+      "market_cap": 112.0
     },
     {
       "symbol": "182490",
@@ -4856,8 +4856,8 @@
     },
     {
       "symbol": "272580",
-      "price": 57505,
-      "market_cap": 7775.0
+      "price": 57500,
+      "market_cap": 7774.0
     },
     {
       "symbol": "157450",
@@ -4871,18 +4871,18 @@
     },
     {
       "symbol": "123320",
-      "price": 54200,
-      "market_cap": 1572.0
+      "price": 54025,
+      "market_cap": 1567.0
     },
     {
       "symbol": "174350",
-      "price": 18700,
-      "market_cap": 135.0
+      "price": 18865,
+      "market_cap": 136.0
     },
     {
       "symbol": "329200",
-      "price": 3675,
-      "market_cap": 14728.0
+      "price": 3670,
+      "market_cap": 14708.0
     },
     {
       "symbol": "0086C0",
@@ -4891,8 +4891,8 @@
     },
     {
       "symbol": "0086B0",
-      "price": 8590,
-      "market_cap": 382.0
+      "price": 8560,
+      "market_cap": 381.0
     },
     {
       "symbol": "341850",
@@ -4901,93 +4901,93 @@
     },
     {
       "symbol": "0043B0",
-      "price": 104420,
-      "market_cap": 42013.0
+      "price": 104417,
+      "market_cap": 42012.0
     },
     {
       "symbol": "147970",
-      "price": 55715,
+      "price": 55755,
       "market_cap": 201.0
     },
     {
       "symbol": "458250",
-      "price": 34530,
-      "market_cap": 3630.0
+      "price": 34650,
+      "market_cap": 3642.0
     },
     {
       "symbol": "476550",
-      "price": 6585,
-      "market_cap": 7421.0
+      "price": 6592,
+      "market_cap": 7429.0
     },
     {
       "symbol": "0142D0",
-      "price": 5780,
-      "market_cap": 581.0
+      "price": 5715,
+      "market_cap": 574.0
     },
     {
       "symbol": "491830",
-      "price": 16680,
-      "market_cap": 309.0
+      "price": 16495,
+      "market_cap": 305.0
     },
     {
       "symbol": "490090",
-      "price": 14025,
-      "market_cap": 1872.0
+      "price": 13950,
+      "market_cap": 1862.0
     },
     {
       "symbol": "493810",
-      "price": 9675,
-      "market_cap": 2070.0
+      "price": 9620,
+      "market_cap": 2059.0
     },
     {
       "symbol": "0102A0",
-      "price": 6845,
-      "market_cap": 541.0
+      "price": 6835,
+      "market_cap": 540.0
     },
     {
       "symbol": "0123G0",
-      "price": 4060,
-      "market_cap": 855.0
+      "price": 4040,
+      "market_cap": 850.0
     },
     {
       "symbol": "182480",
-      "price": 13145,
-      "market_cap": 1019.0
+      "price": 13125,
+      "market_cap": 1017.0
     },
     {
       "symbol": "360750",
-      "price": 24255,
-      "market_cap": 203875.0
+      "price": 24155,
+      "market_cap": 203035.0
     },
     {
       "symbol": "448290",
-      "price": 16755,
-      "market_cap": 5370.0
+      "price": 16710,
+      "market_cap": 5356.0
     },
     {
       "symbol": "488500",
-      "price": 12115,
-      "market_cap": 1121.0
+      "price": 12065,
+      "market_cap": 1116.0
     },
     {
       "symbol": "225040",
-      "price": 58990,
-      "market_cap": 519.0
+      "price": 58665,
+      "market_cap": 516.0
     },
     {
       "symbol": "0238P0",
-      "price": 9765,
-      "market_cap": 571.0
+      "price": 9745,
+      "market_cap": 570.0
     },
     {
       "symbol": "429000",
-      "price": 13570,
-      "market_cap": 2022.0
+      "price": 13525,
+      "market_cap": 2015.0
     },
     {
       "symbol": "143850",
-      "price": 72760,
-      "market_cap": 855.0
+      "price": 72595,
+      "market_cap": 853.0
     },
     {
       "symbol": "225030",
@@ -4996,67 +4996,67 @@
     },
     {
       "symbol": "482730",
-      "price": 10570,
-      "market_cap": 6664.0
+      "price": 10530,
+      "market_cap": 6639.0
     },
     {
       "symbol": "133690",
-      "price": 159870,
-      "market_cap": 110486.0
+      "price": 159095,
+      "market_cap": 109951.0
     },
     {
       "symbol": "448300",
-      "price": 20760,
-      "market_cap": 4079.0
+      "price": 20700,
+      "market_cap": 4068.0
     },
     {
       "symbol": "418660",
-      "price": 30590,
-      "market_cap": 6562.0
+      "price": 30285,
+      "market_cap": 6496.0
     },
     {
       "symbol": "435420",
-      "price": 13430,
-      "market_cap": 5124.0
+      "price": 13395,
+      "market_cap": 5110.0
     },
     {
       "symbol": "441680",
-      "price": 9500,
-      "market_cap": 2503.0
+      "price": 9480,
+      "market_cap": 2498.0
     },
     {
       "symbol": "486290",
-      "price": 9080,
-      "market_cap": 24870.0
+      "price": 9040,
+      "market_cap": 24761.0
     },
     {
       "symbol": "429010",
-      "price": 17550,
-      "market_cap": 88.0
+      "price": 17460,
+      "market_cap": 87.0
     },
     {
       "symbol": "203780",
-      "price": 34420,
-      "market_cap": 1046.0
+      "price": 34325,
+      "market_cap": 1043.0
     },
     {
       "symbol": "245340",
-      "price": 32615,
-      "market_cap": 1344.0
+      "price": 32485,
+      "market_cap": 1338.0
     },
     {
       "symbol": "456610",
-      "price": 58980,
-      "market_cap": 7495.0
+      "price": 58875,
+      "market_cap": 7482.0
     },
     {
       "symbol": "329750",
-      "price": 12805,
-      "market_cap": 7460.0
+      "price": 12780,
+      "market_cap": 7446.0
     },
     {
       "symbol": "261110",
-      "price": 15275,
+      "price": 15225,
       "market_cap": 76.0
     },
     {
@@ -5066,197 +5066,197 @@
     },
     {
       "symbol": "494840",
-      "price": 11890,
-      "market_cap": 392.0
+      "price": 11860,
+      "market_cap": 391.0
     },
     {
       "symbol": "458730",
-      "price": 14690,
-      "market_cap": 45319.0
+      "price": 14645,
+      "market_cap": 45180.0
     },
     {
       "symbol": "0008S0",
-      "price": 9520,
-      "market_cap": 3104.0
+      "price": 9485,
+      "market_cap": 3092.0
     },
     {
       "symbol": "458750",
-      "price": 12650,
-      "market_cap": 683.0
+      "price": 12610,
+      "market_cap": 681.0
     },
     {
       "symbol": "458760",
-      "price": 10645,
-      "market_cap": 6728.0
+      "price": 10620,
+      "market_cap": 6712.0
     },
     {
       "symbol": "0015K0",
-      "price": 6890,
-      "market_cap": 50.0
+      "price": 6850,
+      "market_cap": 49.0
     },
     {
       "symbol": "0183J0",
-      "price": 5535,
-      "market_cap": 8322.0
+      "price": 5480,
+      "market_cap": 8239.0
     },
     {
       "symbol": "305080",
-      "price": 11865,
-      "market_cap": 2563.0
+      "price": 11850,
+      "market_cap": 2560.0
     },
     {
       "symbol": "0046A0",
-      "price": 9320,
-      "market_cap": 4603.0
+      "price": 9310,
+      "market_cap": 4598.0
     },
     {
       "symbol": "465670",
-      "price": 16060,
-      "market_cap": 193.0
+      "price": 16125,
+      "market_cap": 194.0
     },
     {
       "symbol": "0223R0",
-      "price": 7205,
-      "market_cap": 208.0
+      "price": 7160,
+      "market_cap": 207.0
     },
     {
       "symbol": "381170",
-      "price": 27715,
-      "market_cap": 34519.0
+      "price": 27550,
+      "market_cap": 34314.0
     },
     {
       "symbol": "472160",
-      "price": 17285,
-      "market_cap": 1590.0
+      "price": 17195,
+      "market_cap": 1582.0
     },
     {
       "symbol": "472170",
-      "price": 13420,
-      "market_cap": 3301.0
+      "price": 13400,
+      "market_cap": 3296.0
     },
     {
       "symbol": "474220",
-      "price": 13250,
-      "market_cap": 3717.0
+      "price": 13180,
+      "market_cap": 3697.0
     },
     {
       "symbol": "458260",
-      "price": 45255,
-      "market_cap": 2040.0
+      "price": 45310,
+      "market_cap": 2043.0
     },
     {
       "symbol": "497570",
-      "price": 16960,
-      "market_cap": 7479.0
+      "price": 16790,
+      "market_cap": 7404.0
     },
     {
       "symbol": "381180",
-      "price": 33570,
-      "market_cap": 46276.0
+      "price": 33250,
+      "market_cap": 45835.0
     },
     {
       "symbol": "423920",
-      "price": 45495,
-      "market_cap": 3353.0
+      "price": 44760,
+      "market_cap": 3299.0
     },
     {
       "symbol": "228810",
-      "price": 3365,
-      "market_cap": 815.0
+      "price": 3410,
+      "market_cap": 826.0
     },
     {
       "symbol": "364970",
-      "price": 6130,
-      "market_cap": 2296.0
+      "price": 6120,
+      "market_cap": 2292.0
     },
     {
       "symbol": "091230",
-      "price": 95425,
-      "market_cap": 9333.0
+      "price": 95030,
+      "market_cap": 9294.0
     },
     {
       "symbol": "396500",
-      "price": 25840,
-      "market_cap": 66822.0
+      "price": 25745,
+      "market_cap": 66577.0
     },
     {
       "symbol": "488080",
-      "price": 15190,
-      "market_cap": 4291.0
+      "price": 15080,
+      "market_cap": 4260.0
     },
     {
       "symbol": "0177R0",
-      "price": 7540,
-      "market_cap": 5896.0
+      "price": 7510,
+      "market_cap": 5873.0
     },
     {
       "symbol": "211560",
-      "price": 29500,
-      "market_cap": 602.0
+      "price": 29590,
+      "market_cap": 604.0
     },
     {
       "symbol": "472150",
-      "price": 14185,
-      "market_cap": 23228.0
+      "price": 14150,
+      "market_cap": 23171.0
     },
     {
       "symbol": "138520",
-      "price": 28995,
-      "market_cap": 1090.0
+      "price": 29050,
+      "market_cap": 1092.0
     },
     {
       "symbol": "0233J0",
-      "price": 8855,
-      "market_cap": 1771.0
+      "price": 8790,
+      "market_cap": 1758.0
     },
     {
       "symbol": "0195R0",
-      "price": 5410,
-      "market_cap": 4181.0
+      "price": 5385,
+      "market_cap": 4161.0
     },
     {
       "symbol": "157490",
-      "price": 6905,
-      "market_cap": 616.0
+      "price": 6900,
+      "market_cap": 615.0
     },
     {
       "symbol": "0000D0",
-      "price": 8005,
-      "market_cap": 508.0
+      "price": 7990,
+      "market_cap": 507.0
     },
     {
       "symbol": "228800",
-      "price": 2530,
-      "market_cap": 653.0
+      "price": 2535,
+      "market_cap": 655.0
     },
     {
       "symbol": "227570",
-      "price": 17875,
+      "price": 17930,
       "market_cap": 48.0
     },
     {
       "symbol": "438330",
-      "price": 117370,
-      "market_cap": 4815.0
+      "price": 117425,
+      "market_cap": 4817.0
     },
     {
       "symbol": "261140",
-      "price": 18170,
+      "price": 18215,
       "market_cap": 211.0
     },
     {
       "symbol": "130680",
-      "price": 7035,
+      "price": 7010,
       "market_cap": 130.0
     },
     {
       "symbol": "217770",
-      "price": 1197,
+      "price": 1196,
       "market_cap": 315.0
     },
     {
       "symbol": "195930",
-      "price": 22330,
+      "price": 22340,
       "market_cap": 357.0
     },
     {
@@ -5266,58 +5266,58 @@
     },
     {
       "symbol": "245350",
-      "price": 17485,
-      "market_cap": 245.0
+      "price": 17425,
+      "market_cap": 244.0
     },
     {
       "symbol": "0189B0",
-      "price": 5335,
-      "market_cap": 293.0
+      "price": 5265,
+      "market_cap": 290.0
     },
     {
       "symbol": "091220",
-      "price": 14850,
-      "market_cap": 160.0
+      "price": 14965,
+      "market_cap": 162.0
     },
     {
       "symbol": "466940",
-      "price": 22695,
-      "market_cap": 9021.0
+      "price": 22825,
+      "market_cap": 9073.0
     },
     {
       "symbol": "307510",
-      "price": 10400,
-      "market_cap": 47.0
+      "price": 10310,
+      "market_cap": 46.0
     },
     {
       "symbol": "225060",
-      "price": 11285,
-      "market_cap": 120.0
+      "price": 11640,
+      "market_cap": 123.0
     },
     {
       "symbol": "453870",
-      "price": 11990,
-      "market_cap": 2986.0
+      "price": 11995,
+      "market_cap": 2987.0
     },
     {
       "symbol": "236350",
-      "price": 29600,
+      "price": 29665,
       "market_cap": 160.0
     },
     {
       "symbol": "479730",
-      "price": 10175,
-      "market_cap": 580.0
+      "price": 10190,
+      "market_cap": 581.0
     },
     {
       "symbol": "123310",
-      "price": 1465,
-      "market_cap": 500.0
+      "price": 1468,
+      "market_cap": 501.0
     },
     {
       "symbol": "365000",
-      "price": 3120,
-      "market_cap": 315.0
+      "price": 3125,
+      "market_cap": 316.0
     },
     {
       "symbol": "195920",
@@ -5326,13 +5326,13 @@
     },
     {
       "symbol": "241180",
-      "price": 30270,
-      "market_cap": 3118.0
+      "price": 30015,
+      "market_cap": 3092.0
     },
     {
       "symbol": "465660",
-      "price": 17335,
-      "market_cap": 364.0
+      "price": 17095,
+      "market_cap": 359.0
     },
     {
       "symbol": "292560",
@@ -5341,18 +5341,18 @@
     },
     {
       "symbol": "494670",
-      "price": 13355,
-      "market_cap": 3252.0
+      "price": 13335,
+      "market_cap": 3247.0
     },
     {
       "symbol": "451540",
-      "price": 54785,
-      "market_cap": 10592.0
+      "price": 54845,
+      "market_cap": 10604.0
     },
     {
       "symbol": "150460",
-      "price": 6640,
-      "market_cap": 478.0
+      "price": 6630,
+      "market_cap": 477.0
     },
     {
       "symbol": "0192Z0",
@@ -5361,8 +5361,8 @@
     },
     {
       "symbol": "302190",
-      "price": 51740,
-      "market_cap": 2039.0
+      "price": 51820,
+      "market_cap": 2042.0
     },
     {
       "symbol": "157500",
@@ -5371,218 +5371,218 @@
     },
     {
       "symbol": "307520",
-      "price": 17695,
-      "market_cap": 2017.0
+      "price": 17645,
+      "market_cap": 2012.0
     },
     {
       "symbol": "0067Y0",
-      "price": 7455,
-      "market_cap": 71.0
+      "price": 7265,
+      "market_cap": 69.0
     },
     {
       "symbol": "192090",
-      "price": 10700,
-      "market_cap": 1150.0
+      "price": 10685,
+      "market_cap": 1149.0
     },
     {
       "symbol": "204480",
-      "price": 17370,
-      "market_cap": 396.0
+      "price": 17150,
+      "market_cap": 391.0
     },
     {
       "symbol": "217780",
-      "price": 6370,
+      "price": 6395,
       "market_cap": 96.0
     },
     {
       "symbol": "245360",
-      "price": 10725,
-      "market_cap": 231.0
+      "price": 10655,
+      "market_cap": 229.0
     },
     {
       "symbol": "414780",
-      "price": 10330,
-      "market_cap": 1859.0
+      "price": 10340,
+      "market_cap": 1861.0
     },
     {
       "symbol": "0067V0",
-      "price": 8270,
-      "market_cap": 182.0
+      "price": 8230,
+      "market_cap": 181.0
     },
     {
       "symbol": "371470",
-      "price": 7540,
-      "market_cap": 398.0
+      "price": 7380,
+      "market_cap": 390.0
     },
     {
       "symbol": "396520",
-      "price": 9930,
-      "market_cap": 4111.0
+      "price": 9990,
+      "market_cap": 4136.0
     },
     {
       "symbol": "371460",
-      "price": 8220,
-      "market_cap": 5770.0
+      "price": 8190,
+      "market_cap": 5749.0
     },
     {
       "symbol": "456680",
-      "price": 3780,
-      "market_cap": 154.0
+      "price": 3745,
+      "market_cap": 153.0
     },
     {
       "symbol": "0133E0",
-      "price": 7105,
-      "market_cap": 75.0
+      "price": 6895,
+      "market_cap": 72.0
     },
     {
       "symbol": "396510",
-      "price": 6060,
+      "price": 6065,
       "market_cap": 107.0
     },
     {
       "symbol": "0047A0",
-      "price": 9025,
-      "market_cap": 1381.0
+      "price": 9015,
+      "market_cap": 1379.0
     },
     {
       "symbol": "117690",
-      "price": 17025,
+      "price": 16930,
       "market_cap": 85.0
     },
     {
       "symbol": "371160",
-      "price": 5210,
-      "market_cap": 3793.0
+      "price": 5150,
+      "market_cap": 3749.0
     },
     {
       "symbol": "438320",
-      "price": 2990,
-      "market_cap": 134.0
+      "price": 2955,
+      "market_cap": 132.0
     },
     {
       "symbol": "0053L0",
-      "price": 8295,
-      "market_cap": 2206.0
+      "price": 8340,
+      "market_cap": 2218.0
     },
     {
       "symbol": "0117V0",
-      "price": 11710,
-      "market_cap": 6212.0
+      "price": 11735,
+      "market_cap": 6225.0
     },
     {
       "symbol": "292150",
-      "price": 26625,
-      "market_cap": 12634.0
+      "price": 26590,
+      "market_cap": 12617.0
     },
     {
       "symbol": "0052D0",
-      "price": 13135,
-      "market_cap": 2883.0
+      "price": 13170,
+      "market_cap": 2891.0
     },
     {
       "symbol": "0104P0",
-      "price": 9295,
+      "price": 9300,
       "market_cap": 149.0
     },
     {
       "symbol": "496080",
-      "price": 24080,
-      "market_cap": 3552.0
+      "price": 24070,
+      "market_cap": 3550.0
     },
     {
       "symbol": "0091P0",
-      "price": 9925,
-      "market_cap": 4466.0
+      "price": 9945,
+      "market_cap": 4475.0
     },
     {
       "symbol": "471780",
-      "price": 25910,
-      "market_cap": 2024.0
+      "price": 25860,
+      "market_cap": 2020.0
     },
     {
       "symbol": "0148J0",
-      "price": 8385,
-      "market_cap": 5974.0
+      "price": 8590,
+      "market_cap": 6120.0
     },
     {
       "symbol": "232080",
-      "price": 11212,
-      "market_cap": 11364.0
+      "price": 11260,
+      "market_cap": 11413.0
     },
     {
       "symbol": "233160",
-      "price": 4335,
-      "market_cap": 1344.0
+      "price": 4370,
+      "market_cap": 1355.0
     },
     {
       "symbol": "261060",
-      "price": 19210,
+      "price": 19230,
       "market_cap": 196.0
     },
     {
       "symbol": "261070",
-      "price": 8250,
-      "market_cap": 388.0
+      "price": 8230,
+      "market_cap": 387.0
     },
     {
       "symbol": "250780",
-      "price": 2905,
+      "price": 2890,
       "market_cap": 61.0
     },
     {
       "symbol": "461580",
-      "price": 11905,
+      "price": 11880,
       "market_cap": 77.0
     },
     {
       "symbol": "0204S0",
-      "price": 5945,
+      "price": 5940,
       "market_cap": 251.0
     },
     {
       "symbol": "277630",
-      "price": 52590,
-      "market_cap": 4128.0
+      "price": 52455,
+      "market_cap": 4118.0
     },
     {
       "symbol": "210780",
-      "price": 20155,
+      "price": 20145,
       "market_cap": 647.0
     },
     {
       "symbol": "277640",
-      "price": 27225,
-      "market_cap": 476.0
+      "price": 27170,
+      "market_cap": 475.0
     },
     {
       "symbol": "277650",
-      "price": 17475,
+      "price": 17500,
       "market_cap": 70.0
     },
     {
       "symbol": "376410",
-      "price": 18015,
-      "market_cap": 144.0
+      "price": 17860,
+      "market_cap": 143.0
     },
     {
       "symbol": "447770",
-      "price": 14380,
-      "market_cap": 4429.0
+      "price": 14350,
+      "market_cap": 4420.0
     },
     {
       "symbol": "0060H0",
-      "price": 11455,
-      "market_cap": 3780.0
+      "price": 11405,
+      "market_cap": 3764.0
     },
     {
       "symbol": "387280",
-      "price": 9180,
-      "market_cap": 114.0
+      "price": 9240,
+      "market_cap": 115.0
     },
     {
       "symbol": "449690",
-      "price": 35565,
-      "market_cap": 267.0
+      "price": 35780,
+      "market_cap": 268.0
     },
     {
       "symbol": "449680",
@@ -5591,18 +5591,18 @@
     },
     {
       "symbol": "143860",
-      "price": 31395,
-      "market_cap": 1281.0
+      "price": 31410,
+      "market_cap": 1282.0
     },
     {
       "symbol": "0241R0",
-      "price": 7960,
-      "market_cap": 151.0
+      "price": 7975,
+      "market_cap": 152.0
     },
     {
       "symbol": "138540",
-      "price": 37385,
-      "market_cap": 4651.0
+      "price": 37365,
+      "market_cap": 4648.0
     },
     {
       "symbol": "228790",
@@ -5611,83 +5611,83 @@
     },
     {
       "symbol": "441800",
-      "price": 21790,
-      "market_cap": 6114.0
+      "price": 21825,
+      "market_cap": 6124.0
     },
     {
       "symbol": "463050",
-      "price": 9780,
-      "market_cap": 1980.0
+      "price": 9785,
+      "market_cap": 1981.0
     },
     {
       "symbol": "404120",
-      "price": 18070,
-      "market_cap": 145.0
+      "price": 18055,
+      "market_cap": 144.0
     },
     {
       "symbol": "385710",
-      "price": 8910,
+      "price": 8932,
       "market_cap": 89.0
     },
     {
       "symbol": "410870",
-      "price": 8350,
-      "market_cap": 125.0
+      "price": 8375,
+      "market_cap": 126.0
     },
     {
       "symbol": "456600",
-      "price": 42050,
-      "market_cap": 14305.0
+      "price": 41655,
+      "market_cap": 14171.0
     },
     {
       "symbol": "485810",
-      "price": 11940,
+      "price": 11910,
       "market_cap": 149.0
     },
     {
       "symbol": "494180",
-      "price": 12170,
+      "price": 12165,
       "market_cap": 85.0
     },
     {
       "symbol": "478150",
-      "price": 16340,
-      "market_cap": 1830.0
+      "price": 16305,
+      "market_cap": 1826.0
     },
     {
       "symbol": "0113D0",
-      "price": 10895,
-      "market_cap": 556.0
+      "price": 10840,
+      "market_cap": 553.0
     },
     {
       "symbol": "0185L0",
-      "price": 6285,
-      "market_cap": 421.0
+      "price": 6320,
+      "market_cap": 423.0
     },
     {
       "symbol": "426020",
-      "price": 28120,
-      "market_cap": 3656.0
+      "price": 27995,
+      "market_cap": 3639.0
     },
     {
       "symbol": "426030",
-      "price": 34755,
-      "market_cap": 19623.0
+      "price": 34560,
+      "market_cap": 19513.0
     },
     {
       "symbol": "0019K0",
-      "price": 11750,
-      "market_cap": 5241.0
+      "price": 11710,
+      "market_cap": 5223.0
     },
     {
       "symbol": "0043Y0",
-      "price": 12975,
-      "market_cap": 1868.0
+      "price": 12855,
+      "market_cap": 1851.0
     },
     {
       "symbol": "495060",
-      "price": 20595,
-      "market_cap": 1277.0
+      "price": 20560,
+      "market_cap": 1275.0
     },
     {
       "symbol": "0162Y0",
@@ -5696,13 +5696,13 @@
     },
     {
       "symbol": "385720",
-      "price": 18315,
-      "market_cap": 2546.0
+      "price": 18265,
+      "market_cap": 2539.0
     },
     {
       "symbol": "108590",
-      "price": 79205,
-      "market_cap": 158.0
+      "price": 78450,
+      "market_cap": 157.0
     },
     {
       "symbol": "145850",
@@ -5711,17 +5711,17 @@
     },
     {
       "symbol": "472720",
-      "price": 19735,
+      "price": 19800,
       "market_cap": 103.0
     },
     {
       "symbol": "496130",
-      "price": 19450,
-      "market_cap": 105.0
+      "price": 19335,
+      "market_cap": 104.0
     },
     {
       "symbol": "0184V0",
-      "price": 4395,
+      "price": 4390,
       "market_cap": 37.0
     },
     {
@@ -5731,33 +5731,33 @@
     },
     {
       "symbol": "494220",
-      "price": 34045,
-      "market_cap": 1123.0
+      "price": 33895,
+      "market_cap": 1119.0
     },
     {
       "symbol": "470310",
-      "price": 16215,
+      "price": 16205,
       "market_cap": 49.0
     },
     {
       "symbol": "476000",
-      "price": 3560,
-      "market_cap": 20.0
+      "price": 3525,
+      "market_cap": 19.0
     },
     {
       "symbol": "448100",
-      "price": 81395,
-      "market_cap": 733.0
+      "price": 80600,
+      "market_cap": 725.0
     },
     {
       "symbol": "413930",
-      "price": 20510,
-      "market_cap": 103.0
+      "price": 20300,
+      "market_cap": 102.0
     },
     {
       "symbol": "0088N0",
-      "price": 9155,
-      "market_cap": 114.0
+      "price": 9225,
+      "market_cap": 115.0
     },
     {
       "symbol": "458030",
@@ -5766,18 +5766,18 @@
     },
     {
       "symbol": "426150",
-      "price": 54020,
-      "market_cap": 314.0
+      "price": 54055,
+      "market_cap": 315.0
     },
     {
       "symbol": "0177A0",
-      "price": 5610,
-      "market_cap": 146.0
+      "price": 5635,
+      "market_cap": 147.0
     },
     {
       "symbol": "444490",
-      "price": 18505,
-      "market_cap": 842.0
+      "price": 18415,
+      "market_cap": 838.0
     },
     {
       "symbol": "489290",
@@ -5786,17 +5786,17 @@
     },
     {
       "symbol": "440910",
-      "price": 19845,
-      "market_cap": 437.0
+      "price": 19790,
+      "market_cap": 435.0
     },
     {
       "symbol": "474590",
-      "price": 33110,
-      "market_cap": 2467.0
+      "price": 33030,
+      "market_cap": 2461.0
     },
     {
       "symbol": "0203S0",
-      "price": 7415,
+      "price": 7400,
       "market_cap": 222.0
     },
     {
@@ -5806,8 +5806,8 @@
     },
     {
       "symbol": "488720",
-      "price": 50450,
-      "market_cap": 1707.0
+      "price": 50540,
+      "market_cap": 1710.0
     },
     {
       "symbol": "0203R0",
@@ -5816,17 +5816,17 @@
     },
     {
       "symbol": "0154F0",
-      "price": 10110,
-      "market_cap": 273.0
+      "price": 10130,
+      "market_cap": 274.0
     },
     {
       "symbol": "0226G0",
-      "price": 8790,
+      "price": 8830,
       "market_cap": 62.0
     },
     {
       "symbol": "480460",
-      "price": 8080,
+      "price": 8085,
       "market_cap": 69.0
     },
     {
@@ -5836,7 +5836,7 @@
     },
     {
       "symbol": "0112X0",
-      "price": 29745,
+      "price": 29735,
       "market_cap": 342.0
     },
     {
@@ -5846,8 +5846,8 @@
     },
     {
       "symbol": "0222F0",
-      "price": 9060,
-      "market_cap": 100.0
+      "price": 9030,
+      "market_cap": 99.0
     },
     {
       "symbol": "442260",
@@ -5856,22 +5856,22 @@
     },
     {
       "symbol": "0236J0",
-      "price": 8750,
-      "market_cap": 70.0
+      "price": 8560,
+      "market_cap": 68.0
     },
     {
       "symbol": "0001P0",
-      "price": 7600,
+      "price": 7550,
       "market_cap": 85.0
     },
     {
       "symbol": "0255G0",
-      "price": 7645,
+      "price": 7665,
       "market_cap": 92.0
     },
     {
       "symbol": "0229F0",
-      "price": 6770,
+      "price": 6690,
       "market_cap": 47.0
     },
     {
@@ -5881,18 +5881,18 @@
     },
     {
       "symbol": "0007N0",
-      "price": 79540,
-      "market_cap": 636.0
+      "price": 78615,
+      "market_cap": 629.0
     },
     {
       "symbol": "462340",
-      "price": 15320,
-      "market_cap": 77.0
+      "price": 15215,
+      "market_cap": 76.0
     },
     {
       "symbol": "433220",
-      "price": 23320,
-      "market_cap": 173.0
+      "price": 23265,
+      "market_cap": 172.0
     },
     {
       "symbol": "451150",
@@ -5901,53 +5901,53 @@
     },
     {
       "symbol": "477490",
-      "price": 16265,
+      "price": 16170,
       "market_cap": 146.0
     },
     {
       "symbol": "407830",
-      "price": 12250,
-      "market_cap": 294.0
+      "price": 12315,
+      "market_cap": 296.0
     },
     {
       "symbol": "0002C0",
-      "price": 10415,
-      "market_cap": 112.0
+      "price": 10470,
+      "market_cap": 113.0
     },
     {
       "symbol": "474920",
-      "price": 14815,
-      "market_cap": 139.0
+      "price": 14960,
+      "market_cap": 141.0
     },
     {
       "symbol": "442090",
-      "price": 22070,
+      "price": 22065,
       "market_cap": 331.0
     },
     {
       "symbol": "407820",
-      "price": 4755,
-      "market_cap": 90.0
+      "price": 4765,
+      "market_cap": 91.0
     },
     {
       "symbol": "152870",
-      "price": 79975,
-      "market_cap": 1160.0
+      "price": 79355,
+      "market_cap": 1151.0
     },
     {
       "symbol": "491510",
-      "price": 14925,
+      "price": 14950,
       "market_cap": 127.0
     },
     {
       "symbol": "0242S0",
-      "price": 7480,
+      "price": 7470,
       "market_cap": 131.0
     },
     {
       "symbol": "192720",
-      "price": 50445,
-      "market_cap": 257.0
+      "price": 50690,
+      "market_cap": 259.0
     },
     {
       "symbol": "498180",
@@ -5956,8 +5956,8 @@
     },
     {
       "symbol": "140950",
-      "price": 62095,
-      "market_cap": 348.0
+      "price": 61610,
+      "market_cap": 345.0
     }
   ]
 }
