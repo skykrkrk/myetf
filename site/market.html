@@ -423,9 +423,6 @@
         if (closes && closes.length > 1) {
           const item = state[asset.id] || (state[asset.id] = {});
           const previousYahoo = item.yahoo;
-          const change = Number(result.meta?.fulldayChange);
-          const changePercent = Number(result.meta?.fulldayChangePercent);
-          const currentPrice = Number(result.meta?.fulldayPrice);
           const regularPeriod = result.meta?.currentTradingPeriod?.regular;
           const regularStart = Number(regularPeriod?.start) * 1000;
           const regularEnd = Number(regularPeriod?.end) * 1000;
@@ -433,13 +430,15 @@
           const marketOpen = Number.isFinite(regularStart) && Number.isFinite(regularEnd)
             ? now >= regularStart && now < regularEnd
             : null;
-          const referencePrice = Number((asset.hlSymbol && marketOpen === false) || (!asset.hlSymbol && Boolean(result.meta?.hasPrePostMarketData) && marketOpen === false)
-            ? result.meta?.regularMarketPrice ?? result.meta?.previousClose
-            : result.meta?.previousClose);
           const sessionTimestamps = chartData
             .map(point => Number(point.timestamp) * 1000)
             .filter(Number.isFinite);
           const sessionEnd = sessionTimestamps[sessionTimestamps.length - 1];
+          const useRegularMarketPrice = ((asset.hlSymbol && marketOpen === false) || ((!asset.hlSymbol) && Boolean(result.meta?.hasPrePostMarketData) && marketOpen === false))
+          const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice ?? result.meta?.previousClose) : Number(result.meta?.previousClose)
+          const currentPrice = Number(result.meta?.fulldayPrice);
+          const change = useRegularMarketPrice ? currentPrice - referencePrice : Number(result.meta?.fulldayChange);
+          const changePercent = useRegularMarketPrice ? (change * 100 / referencePrice) : Number(result.meta?.fulldayChangePercent);
           item.yahoo = {
             points: closes,
             timestamps: chartData.map(point => Number(point.timestamp) * 1000),
