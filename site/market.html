@@ -435,7 +435,10 @@
             .filter(Number.isFinite);
           const sessionEnd = sessionTimestamps[sessionTimestamps.length - 1];
           const useRegularMarketPrice = ((asset.hlSymbol && marketOpen === false) || ((!asset.hlSymbol) && Boolean(result.meta?.hasPrePostMarketData) && marketOpen === false))
-          const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice ?? result.meta?.previousClose) : Number(result.meta?.previousClose)
+          const closingPrice = Number(result.meta?.fulldayPrice) - Number(result.meta?.fulldayChange);
+          // 기준 가격: 장중 시세가 아닌 경우, 종가를 기준으로 삼음. 종가 계산은 yahoo에서 제공하는 fulldayPrice와 fulldayChange를 이용하여 계산함. previousClose는 오류인경우가 있음.
+          //const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice ?? result.meta?.previousClose) : Number(result.meta?.previousClose)
+          const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice) : closingPrice;
           const currentPrice = Number(result.meta?.fulldayPrice);
           const change = useRegularMarketPrice ? currentPrice - referencePrice : Number(result.meta?.fulldayChange);
           const changePercent = useRegularMarketPrice ? (change * 100 / referencePrice) : Number(result.meta?.fulldayChangePercent);
