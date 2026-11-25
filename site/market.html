@@ -436,7 +436,12 @@
           const sessionEnd = sessionTimestamps[sessionTimestamps.length - 1];
           const useRegularMarketPrice = ((asset.hlSymbol && marketOpen === false) || ((!asset.hlSymbol) && Boolean(result.meta?.hasPrePostMarketData) && marketOpen === false))
           const closingPrice = Number(result.meta?.fulldayPrice) - Number(result.meta?.fulldayChange);
-          // 기준 가격: 장중 시세가 아닌 경우, 종가를 기준으로 삼음. 종가 계산은 yahoo에서 제공하는 fulldayPrice와 fulldayChange를 이용하여 계산함. previousClose는 오류인경우가 있음.
+          // 기준가격:
+          //   장중이면, previousClose.
+          //   장종료면,
+          //     hl 데이터가 없으면
+          //       장외가가 있으면 종가(regularMarketPrice), 없으면 previousClose(yf 데이터는 previousClose값이 오류인 경우가 있음. fulldayPrice와 fulldayChange를 이용하여 계산).
+          //     hl 데이터가 있으면 yf regularMarketPrice.
           //const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice ?? result.meta?.previousClose) : Number(result.meta?.previousClose)
           const referencePrice = useRegularMarketPrice ? Number(result.meta?.regularMarketPrice) : closingPrice;
           const currentPrice = Number(result.meta?.fulldayPrice);
@@ -472,7 +477,7 @@
       await Promise.all(yahooAssets.map(loadYahooIndex));
       setInterval(() => {
         yahooAssets.forEach(loadYahooIndex);
-      }, 30000); // 30초마다 갱신
+      }, 15000); // 15초마다 갱신
     }
 
     // 앱 시작
